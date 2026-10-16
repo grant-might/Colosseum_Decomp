@@ -82,13 +82,12 @@ def main() -> None:
     # PORTING NOTE (current tree, 2026-07): no live XD (GXXE01) reference is
     # wired into this tree yet (see README "Enabling The XD Port"). Degrade
     # gracefully instead of crashing so `run.py` stays turnkey without XD -
-    # `salvage_xd_archive.py` fills xd_port.json from the archived campaign's
-    # evidence in that case.
+      # An archived port map would fill xd_port.json from that evidence.
     if args.xd_symbols.is_file():
         xd_named = load_named_functions(args.xd_symbols)
     else:
         print(f"[xd] no XD symbols at {args.xd_symbols} - skipping live "
-              "VALIDATE/PORT (see tools/symbolmap/salvage_xd_archive.py)")
+              "VALIDATE/PORT")
         xd_named = {}
     xd_name_set = set(xd_named)
     proposals = json.loads(

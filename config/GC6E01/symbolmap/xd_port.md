@@ -1,6 +1,6 @@
 # XD (GXXE01) port salvage report
 
-Source: the previous campaign's symbolmap outputs (not distributed here) (0 archived shared-string ports, 25 archived self-name validations against XD's vocabulary), revalidated against the CURRENT `/Users/douglaswhittingham/pkmn-colosseum/config/GC6E01/symbols.txt`.
+Source: the previous campaign's symbolmap outputs (not distributed here) (0 archived shared-string ports, 25 archived self-name validations against XD's vocabulary), revalidated against the CURRENT `config/GC6E01/symbols.txt`.
 
 | status | count |
 |---|---|

@@ -22,7 +22,7 @@ not edit `symbols.txt`, source files, asm, or `.inc` truth files.
 > (mine_xrefs / attribute_tus / propose_names / port_xd / structural_port /
 > build_symbol_map) is unchanged from the archived campaign - only the
 > asm-tree layout and splits-file format changed, so two small adapters were
-> added: `convert_splits.py` and `salvage_xd_archive.py`. See "What changed
+> added: `convert_splits.py`. See "What changed
 > in this port" below.
 
 ## Why This Helps Naming Work
@@ -55,8 +55,7 @@ the still-unattributed GAP regions keep the `auto_NN_ADDR_section.s` form.
 | `mine_xrefs.py` / `structural_port.py` scan `asm_dir.rglob("*.s")` and track the active section from the `.text`/`.rodata`/`.section .sdata2, "a"` directives themselves, instead of matching filenames | strings and functions now live in named per-unit files too, not just `auto_*.s` |
 | `convert_splits.py` (new) | the live tree uses dtk-template `config/GC6E01/splits.txt` (`unit.c:` blocks with `.text start:0x.. end:0x..` rows), not the archived `splits_refined.txt` three-state `KNOWN\|LIKELY\|GAP 0xSTART 0xEND src` row format `attribute_tus.py` expects. This script converts one to the other by treating dtk's own auto-named placeholder units (`*_range_ADDR.c`, `*_fn_ADDR.c`) as GAP and everything else as KNOWN. `attribute_tus.py` itself is unmodified. |
 | `port_xd.py` | now degrades gracefully (skips VALIDATE/PORT with a message) instead of crashing when `--xd-symbols` doesn't exist, so `run.py` stays turnkey without live XD data |
-| `salvage_xd_archive.py` (new) | no XD (GXXE01) disc/asm is available in this tree. The archived campaign's `xd_port.json` / `structural_ports.json` are still valid evidence (they're keyed by Colosseum's own, unchanged, DOL addresses) - this script re-validates every archived proposal against the *current* `symbols.txt` and classifies it `still-open` / `already-applied` / `already-conflict` / `address-not-found`. Only `still-open` entries feed back into the native `xd_port.json`/`structural_ports.json` outputs. |
-| `run.py` | wires `convert_splits.py` and `salvage_xd_archive.py` into the stage order; default `--splits` now points at `config/GC6E01/splits.txt` |
+| `run.py` | wires `convert_splits.py` into the stage order; default `--splits` now points at `config/GC6E01/splits.txt` |
 
 `apply_names.py`, `partition_apply.py`, `apply_tu_attribution.py`,
 `wire_leads.py`, `finalize_leads.py`, `regen_named_incs.py`, and
@@ -125,8 +124,7 @@ python tools/symbolmap/run.py
 3. `attribute_tus.py` - map functions/ranges to source files via `__FILE__`.
 4. `propose_names.py` - mine self-identifying log/assert names.
 5. `port_xd.py` - port XD names live, if `--xd-asm`/`--xd-symbols` are wired up (no-op otherwise).
-6. `salvage_xd_archive.py` - revalidate the archived campaign's XD/structural evidence against current addresses (skip with `--skip-salvage`).
-7. `build_symbol_map.py` - merge high-confidence evidence into review maps.
+6. `build_symbol_map.py` - merge high-confidence evidence into review maps.
 
 Use explicit paths if you are working from a different build/output tree:
 
@@ -190,7 +188,6 @@ committed) - point `--xd-asm`/`--xd-symbols` anywhere you like.
 | `propose_names.py` | Mines names from self-identifying strings. Unmodified from the archive. |
 | `port_xd.py` | Ports names from a *live* XD split using shared string evidence; skips gracefully without one. |
 | `structural_port.py` | Ports names from a *live* XD split using identical mnemonic fingerprints (recursive glob, otherwise unmodified). |
-| `salvage_xd_archive.py` | **New.** Revalidates the archived campaign's `xd_port.json`/`structural_ports.json` against current `symbols.txt` addresses when no live XD data is available. |
 | `build_symbol_map.py` | Merges high-confidence proposals into `proposed_symbols.txt`. Unmodified from the archive. |
 | `partition_apply.py` | Splits proposals into mechanical renames vs. wiring-needed leads. |
 | `apply_names.py` | Applies an approved rename map to symbols/source. Use carefully. |

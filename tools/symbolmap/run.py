@@ -8,10 +8,7 @@ Runs, in order:
   3. propose_names    log/assert strings -> name_proposals.*
   4. port_xd          live XD (GXXE01) validate/port - a no-op unless XD
                       data has been wired up (see README).
-  5. salvage_xd_archive  revalidate the archived campaign's XD/structural
-                      port evidence against CURRENT symbols.txt - fills in
-                      for stage 4 when no live XD data is available.
-  6. build_symbol_map merge -> proposed_symbols.txt / symbols.with_proposals.txt
+  5. build_symbol_map merge -> proposed_symbols.txt / symbols.with_proposals.txt
 
 Defaults assume invocation from the repo root. Build the Colosseum asm first
 with `python configure.py && ninja` (or it already exists in build/GC6E01/asm).
