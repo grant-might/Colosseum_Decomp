@@ -4,7 +4,7 @@
   "purpose": "Freeze the dtk/objdiff denominator and object topology used for published GC6E01 progress. Progress counters may increase without updating this file.",
   "invariants": {
     "total_code": 2504940,
-    "total_data": 3566024,
+    "total_data": 3565912,
     "total_functions": 8677,
     "total_units": 2168
   },
@@ -19,8 +19,8 @@
   "baseline_progress": {
     "matched_code": "2304736",
     "matched_code_percent": 92.00763,
-    "matched_data": "3521464",
-    "matched_data_percent": 98.75043,
+    "matched_data": "3527272",
+    "matched_data_percent": 98.916405,
     "matched_functions": 8542,
     "matched_functions_percent": 98.44416,
     "fuzzy_match_percent": 99.691696
@@ -1438,7 +1438,7 @@
         },
         {
           "name": ".rodata",
-          "size": 16,
+          "size": 12,
           "virtual_address": 2150001696
         },
         {
@@ -1453,7 +1453,7 @@
         }
       ],
       "total_code": 6240,
-      "total_data": 632,
+      "total_data": 628,
       "total_functions": 20
     },
     {
@@ -5055,7 +5055,7 @@
       "sections": [
         {
           "name": ".rodata",
-          "size": 448,
+          "size": 447,
           "virtual_address": 2150005784
         },
         {
@@ -5065,7 +5065,7 @@
         }
       ],
       "total_code": 2640,
-      "total_data": 448,
+      "total_data": 447,
       "total_functions": 1
     },
     {
@@ -6428,7 +6428,7 @@
       "sections": [
         {
           "name": ".rodata",
-          "size": 288,
+          "size": 285,
           "virtual_address": 2150035912
         },
         {
@@ -6443,7 +6443,7 @@
         }
       ],
       "total_code": 5284,
-      "total_data": 304,
+      "total_data": 301,
       "total_functions": 11
     },
     {
@@ -6659,7 +6659,7 @@
       "sections": [
         {
           "name": ".rodata",
-          "size": 112,
+          "size": 105,
           "virtual_address": 2150036728
         },
         {
@@ -6669,7 +6669,7 @@
         }
       ],
       "total_code": 636,
-      "total_data": 112,
+      "total_data": 105,
       "total_functions": 1
     },
     {
@@ -7220,7 +7220,7 @@
         },
         {
           "name": ".data",
-          "size": 504,
+          "size": 503,
           "virtual_address": 2150694816
         },
         {
@@ -7235,7 +7235,7 @@
         }
       ],
       "total_code": 2384,
-      "total_data": 596,
+      "total_data": 595,
       "total_functions": 9
     },
     {
@@ -7352,7 +7352,7 @@
       "sections": [
         {
           "name": ".data",
-          "size": 920,
+          "size": 914,
           "virtual_address": 2150695320
         },
         {
@@ -7362,7 +7362,7 @@
         }
       ],
       "total_code": 884,
-      "total_data": 920,
+      "total_data": 914,
       "total_functions": 2
     },
     {
@@ -7414,7 +7414,7 @@
       "sections": [
         {
           "name": ".data",
-          "size": 560,
+          "size": 554,
           "virtual_address": 2150696368
         },
         {
@@ -7424,7 +7424,7 @@
         }
       ],
       "total_code": 1668,
-      "total_data": 560,
+      "total_data": 554,
       "total_functions": 20
     },
     {
@@ -9194,7 +9194,7 @@
       "sections": [
         {
           "name": ".data",
-          "size": 320,
+          "size": 315,
           "virtual_address": 2150704744
         },
         {
@@ -9204,7 +9204,7 @@
         }
       ],
       "total_code": 2180,
-      "total_data": 320,
+      "total_data": 315,
       "total_functions": 5
     },
     {
@@ -10112,7 +10112,7 @@
       "sections": [
         {
           "name": ".data",
-          "size": 120,
+          "size": 116,
           "virtual_address": 2150708624
         },
         {
@@ -10122,7 +10122,7 @@
         }
       ],
       "total_code": 2020,
-      "total_data": 120,
+      "total_data": 116,
       "total_functions": 16
     },
     {
@@ -10713,7 +10713,7 @@
       "sections": [
         {
           "name": ".rodata",
-          "size": 168,
+          "size": 165,
           "virtual_address": 2150038080
         },
         {
@@ -10723,7 +10723,7 @@
         }
       ],
       "total_code": 480,
-      "total_data": 168,
+      "total_data": 165,
       "total_functions": 1
     },
     {
@@ -11499,7 +11499,7 @@
         },
         {
           "name": ".rodata",
-          "size": 224,
+          "size": 221,
           "virtual_address": 2150039296
         },
         {
@@ -11514,7 +11514,7 @@
         }
       ],
       "total_code": 8436,
-      "total_data": 524,
+      "total_data": 521,
       "total_functions": 7
     },
     {
@@ -16052,7 +16052,7 @@
         },
         {
           "name": ".sdata2",
-          "size": 40,
+          "size": 36,
           "virtual_address": 2152189472
         },
         {
@@ -16062,7 +16062,7 @@
         }
       ],
       "total_code": 8792,
-      "total_data": 224,
+      "total_data": 220,
       "total_functions": 16
     },
     {
@@ -17518,7 +17518,7 @@
       "sections": [
         {
           "name": ".sdata2",
-          "size": 48,
+          "size": 44,
           "virtual_address": 2152189936
         },
         {
@@ -17528,7 +17528,7 @@
         }
       ],
       "total_code": 4996,
-      "total_data": 48,
+      "total_data": 44,
       "total_functions": 11
     },
     {
@@ -17754,12 +17754,12 @@
       "sections": [
         {
           "name": ".rodata",
-          "size": 40,
+          "size": 36,
           "virtual_address": 2150050200
         },
         {
           "name": ".sdata2",
-          "size": 8,
+          "size": 4,
           "virtual_address": 2152189984
         },
         {
@@ -17769,7 +17769,7 @@
         }
       ],
       "total_code": 1224,
-      "total_data": 48,
+      "total_data": 40,
       "total_functions": 2
     },
     {
@@ -18804,7 +18804,7 @@
       "sections": [
         {
           "name": ".rodata",
-          "size": 240,
+          "size": 233,
           "virtual_address": 2150050624
         },
         {
@@ -18814,7 +18814,7 @@
         }
       ],
       "total_code": 228,
-      "total_data": 240,
+      "total_data": 233,
       "total_functions": 1
     },
     {
@@ -20388,7 +20388,7 @@
         },
         {
           "name": ".rodata",
-          "size": 272,
+          "size": 270,
           "virtual_address": 2150052664
         },
         {
@@ -20398,7 +20398,7 @@
         }
       ],
       "total_code": 7380,
-      "total_data": 27036,
+      "total_data": 27034,
       "total_functions": 30
     },
     {
@@ -20463,7 +20463,7 @@
         },
         {
           "name": ".sdata",
-          "size": 16,
+          "size": 14,
           "virtual_address": 2152172536
         },
         {
@@ -20478,7 +20478,7 @@
         }
       ],
       "total_code": 4088,
-      "total_data": 296,
+      "total_data": 294,
       "total_functions": 47
     },
     {
@@ -20882,12 +20882,12 @@
         },
         {
           "name": ".rodata",
-          "size": 152,
+          "size": 146,
           "virtual_address": 2150053920
         },
         {
           "name": ".sdata2",
-          "size": 16,
+          "size": 12,
           "virtual_address": 2152191408
         },
         {
@@ -20897,7 +20897,7 @@
         }
       ],
       "total_code": 5648,
-      "total_data": 1772,
+      "total_data": 1762,
       "total_functions": 25
     },
     {
@@ -21211,7 +21211,7 @@
         },
         {
           "name": ".sdata2",
-          "size": 112,
+          "size": 108,
           "virtual_address": 2152191776
         },
         {
@@ -21221,7 +21221,7 @@
         }
       ],
       "total_code": 14344,
-      "total_data": 244,
+      "total_data": 240,
       "total_functions": 58
     },
     {
@@ -22024,7 +22024,7 @@
         },
         {
           "name": ".rodata",
-          "size": 616,
+          "size": 609,
           "virtual_address": 2150055824
         },
         {
@@ -22034,7 +22034,7 @@
         },
         {
           "name": ".sdata2",
-          "size": 272,
+          "size": 268,
           "virtual_address": 2152191896
         },
         {
@@ -22044,7 +22044,7 @@
         }
       ],
       "total_code": 57772,
-      "total_data": 980,
+      "total_data": 969,
       "total_functions": 93
     },
     {
@@ -23479,7 +23479,7 @@
         },
         {
           "name": ".sdata2",
-          "size": 16,
+          "size": 12,
           "virtual_address": 2152193840
         },
         {
@@ -23489,7 +23489,7 @@
         }
       ],
       "total_code": 4224,
-      "total_data": 5784,
+      "total_data": 5780,
       "total_functions": 13
     },
     {
@@ -24227,7 +24227,7 @@
         },
         {
           "name": ".sdata2",
-          "size": 32,
+          "size": 25,
           "virtual_address": 2152194400
         },
         {
@@ -24237,7 +24237,7 @@
         }
       ],
       "total_code": 20212,
-      "total_data": 16042,
+      "total_data": 16035,
       "total_functions": 23
     },
     {
@@ -24882,7 +24882,7 @@
         },
         {
           "name": ".rodata",
-          "size": 360,
+          "size": 354,
           "virtual_address": 2150078344
         },
         {
@@ -24892,7 +24892,7 @@
         }
       ],
       "total_code": 1104,
-      "total_data": 456,
+      "total_data": 450,
       "total_functions": 1
     },
     {

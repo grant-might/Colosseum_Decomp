@@ -329,7 +329,7 @@ game/menuPokemon_r50_8001D624_suffix.c:
 
 game/menuSub.c:
 	.text       start:0x8001D718 end:0x8001EF78
-	.rodata     start:0x80266C20 end:0x80266C30
+	.rodata     start:0x80266C20 end:0x80266C2C
 	.bss        start:0x803A1D60 end:0x803A1F88
 	.sdata2     start:0x8047B7C8 end:0x8047B808
 
@@ -1161,7 +1161,7 @@ game/menu/menuCB_Battle.c:
 
 game/menu/menu_middle_range_80069C0C.c:
 	.text       start:0x80069C0C end:0x8006A65C
-	.rodata     start:0x80267C18 end:0x80267DD8
+	.rodata     start:0x80267C18 end:0x80267DD7
 
 game/data/rodata_80267DD8.c:
 	.rodata     start:0x80267DD8 end:0x80268424
@@ -1476,7 +1476,7 @@ game/data/data_802EEB78.c:
 
 game/menu/cardesavedata_grid_80082650.c:
 	.text       start:0x80082650 end:0x80083AF4
-	.rodata     start:0x8026F1C8 end:0x8026F2E8
+	.rodata     start:0x8026F1C8 end:0x8026F2E5
 	.sdata2     start:0x8047C180 end:0x8047C190
 
 game/data/sdata2_8047C190.c:
@@ -1529,7 +1529,7 @@ game/gba/gba_conv_r59_80088964_middle.c:
 
 game/gba/gba_conv_r59_800889E4_o1.c:
 	.text       start:0x800889E4 end:0x80088C60
-	.rodata     start:0x8026F4F8 end:0x8026F568
+	.rodata     start:0x8026F4F8 end:0x8026F561
 
 game/data/rodata_8026F568.c:
 	.rodata     start:0x8026F568 end:0x8026F610
@@ -1657,7 +1657,7 @@ dolphin/sdk_r48_80099400_o2.c:
 
 dolphin/sdk_r48_80099790_suffix.c:
 	.text       start:0x80099790 end:0x8009A0E0
-	.data       start:0x8030FFA0 end:0x80310198
+	.data       start:0x8030FFA0 end:0x80310197
 	.bss        start:0x803FB4A0 end:0x803FB4F0
 	.sdata      start:0x80478970 end:0x8047897C
 
@@ -1685,7 +1685,7 @@ dolphin/sdk_exact_8009ABD0.c:
 
 dolphin/sdk_candidate_8009AC50.c:
 	.text       start:0x8009AC3C end:0x8009AFB0
-	.data       start:0x80310198 end:0x80310530
+	.data       start:0x80310198 end:0x8031052A
 
 dolphin/os/OSArena.c:
 	.text       start:0x8009AFB0 end:0x8009AFD0
@@ -1699,7 +1699,7 @@ dolphin/os/OSAudioSystem.c:
 
 dolphin/os/OSCache.c:
 	.text       start:0x8009B290 end:0x8009B914
-	.data       start:0x803105B0 end:0x803107E0
+	.data       start:0x803105B0 end:0x803107DA
 
 dolphin/os/OSContext.c:
 	.text       start:0x8009B914 end:0x8009C2E0
@@ -2093,7 +2093,7 @@ dolphin/ar_dsp_exact_800AE3F0.c:
 
 dolphin/dsp_task.c:
 	.text       start:0x800AE9FC end:0x800AF280
-	.data       start:0x80312668 end:0x803127A8
+	.data       start:0x80312668 end:0x803127A3
 
 game/data/data_803127A8.c:
 	.data       start:0x803127A8 end:0x803127F0
@@ -2303,7 +2303,7 @@ dolphin/sdk_range_800BB81C.c:
 
 dolphin/gx/GXTev.c:
 	.text       start:0x800BC114 end:0x800BC8F8
-	.data       start:0x80313590 end:0x80313608
+	.data       start:0x80313590 end:0x80313604
 
 game/data/data_80313608.c:
 	.data       start:0x80313608 end:0x80313628
@@ -2440,7 +2440,7 @@ trk/TRKDispatch_r52_800C0504_prefix.c:
 
 trk/TRKDispatch_r52_800C08C0_inline_noauto.c:
 	.text       start:0x800C08C0 end:0x800C0AA0
-	.rodata     start:0x8026FA40 end:0x8026FAE8
+	.rodata     start:0x8026FA40 end:0x8026FAE5
 
 game/data/rodata_8026FAE8.c:
 	.rodata     start:0x8026FAE8 end:0x8026FB80
@@ -2619,7 +2619,7 @@ crt/exit.c:
 
 dolphin/sdk_range_800C5458.c:
 	.text       start:0x800C5458 end:0x800C754C
-	.rodata     start:0x8026FF00 end:0x8026FFE0
+	.rodata     start:0x8026FF00 end:0x8026FFDD
 	.data       start:0x803139F0 end:0x80313B14
 	.sdata2     start:0x8047C400 end:0x8047C408
 
@@ -3656,7 +3656,7 @@ game/win_sprite.c:
 	.text       start:0x80107170 end:0x801093C8
 	.data       start:0x8035B400 end:0x8035B430
 	.bss        start:0x80404B68 end:0x80404BF0
-	.sdata2     start:0x8047CE20 end:0x8047CE48
+	.sdata2     start:0x8047CE20 end:0x8047CE44
 
 game/data/bss_80404BF0.c:
 	.bss        start:0x80404BF0 end:0x80408400
@@ -3989,7 +3989,7 @@ game/pokemon_range_exact_8011F5FC.c:
 
 game/pokemon_range_8011F77C.c:
 	.text       start:0x8011F77C end:0x80120B00
-	.sdata2     start:0x8047CFF0 end:0x8047D020
+	.sdata2     start:0x8047CFF0 end:0x8047D01C
 
 game/pokemon_range_exact_80120B00.c:
 	.text       start:0x80120B00 end:0x80121C18
@@ -4043,8 +4043,8 @@ game/pokemon_range_8012795C.c:
 
 game/pokemon_evolution_exact_8012805C.c:
 	.text       start:0x8012805C end:0x80128524
-	.rodata     start:0x80272998 end:0x802729C0
-	.sdata2     start:0x8047D020 end:0x8047D028
+	.rodata     start:0x80272998 end:0x802729BC
+	.sdata2     start:0x8047D020 end:0x8047D024
 
 game/data/sdata2_8047D028.c:
 	.sdata2     start:0x8047D028 end:0x8047D030
@@ -4283,7 +4283,7 @@ game/effect/effect_visual_exact_80138630.c:
 
 game/effect/effect_visual_candidate_801386DC.c:
 	.text       start:0x801386DC end:0x801387C0
-	.rodata     start:0x80272B40 end:0x80272C30
+	.rodata     start:0x80272B40 end:0x80272C29
 
 game/data/rodata_80272C30.c:
 	.rodata     start:0x80272C30 end:0x80273338
@@ -4638,7 +4638,7 @@ musyx/runtime/snd_math.c:
 
 musyx/runtime/snd_midictrl.c:
 	.text       start:0x8016039C end:0x80162070
-	.rodata     start:0x80273338 end:0x80273448
+	.rodata     start:0x80273338 end:0x80273446
 	.data       start:0x80369C90 end:0x80369D1C
 	.bss        start:0x80449390 end:0x8044FB90
 
@@ -4657,7 +4657,7 @@ musyx/runtime/snd_service_exact_80162070.c:
 musyx/runtime/hardware.c:
 	.text       start:0x8016221C end:0x80163214
 	.rodata     start:0x80273448 end:0x80273548
-	.sdata      start:0x80478BF8 end:0x80478C08
+	.sdata      start:0x80478BF8 end:0x80478C06
 	.sdata2     start:0x8047D4D8 end:0x8047D4F0
 
 game/data/sdata_80478C08.c:
@@ -4750,10 +4750,10 @@ game/pslist.c:
 
 game/particle.c:
 	.text       start:0x80169034 end:0x8016A644
-	.rodata     start:0x80273820 end:0x802738B8
+	.rodata     start:0x80273820 end:0x802738B2
 	.data       start:0x8036BF80 end:0x8036BFA4
 	.bss        start:0x804527C8 end:0x80452DE8
-	.sdata2     start:0x8047D5B0 end:0x8047D5C0
+	.sdata2     start:0x8047D5B0 end:0x8047D5BC
 
 game/data/sdata2_8047D5C0.c:
 	.sdata2     start:0x8047D5C0 end:0x8047D5C8
@@ -4825,7 +4825,7 @@ game/camera_801765F4.c:
 	.text       start:0x801765F4 end:0x80179DFC
 	.rodata     start:0x80273D98 end:0x80273DC8
 	.data       start:0x8036C248 end:0x8036C29C
-	.sdata2     start:0x8047D720 end:0x8047D790
+	.sdata2     start:0x8047D720 end:0x8047D78C
 
 game/data/data_8036C2A0.c:
 	.data       start:0x8036C2A0 end:0x8036C4E8
@@ -5011,10 +5011,10 @@ game/gs_range_8017FA5C_exact_80180C78.c:
 
 game/people/people.c:
 	.text       start:0x801812C4 end:0x8018F470
-	.rodata     start:0x80273F90 end:0x802741F8
+	.rodata     start:0x80273F90 end:0x802741F1
 	.data       start:0x8036C4E8 end:0x8036C53C
 	.sbss       start:0x8047B1F0 end:0x8047B1F8
-	.sdata2     start:0x8047D798 end:0x8047D8A8
+	.sdata2     start:0x8047D798 end:0x8047D8A4
 
 game/data/sdata2_8047D8A8.c:
 	.sdata2     start:0x8047D8A8 end:0x8047D908
@@ -5331,7 +5331,7 @@ hsd/video.c:
 	.rodata     start:0x802756F8 end:0x80275780
 	.bss        start:0x804657C0 end:0x80466DB8
 	.sbss       start:0x8047B380 end:0x8047B388
-	.sdata2     start:0x8047DF30 end:0x8047DF40
+	.sdata2     start:0x8047DF30 end:0x8047DF3C
 
 hsd/aobj.c:
 	.text       start:0x801C0270 end:0x801C2AE8
@@ -5501,7 +5501,7 @@ game/memcard.c:
 	.data       start:0x8036DE70 end:0x8036E030
 	.bss        start:0x804670E8 end:0x80467378
 	.sbss       start:0x8047B3D0 end:0x8047B3D8
-	.sdata2     start:0x8047E160 end:0x8047E180
+	.sdata2     start:0x8047E160 end:0x8047E179
 
 game/data/sbss_8047B3D8.c:
 	.sbss       start:0x8047B3D8 end:0x8047B460
@@ -5649,7 +5649,7 @@ game/wazaSequenceSys_tail_candidate_801DB288.c:
 
 game/wazaSequenceSys_tail_candidate_801DB3F8.c:
 	.text       start:0x801DB3F8 end:0x801DB848
-	.rodata     start:0x80279788 end:0x802798F0
+	.rodata     start:0x80279788 end:0x802798EA
 	.data       start:0x80372700 end:0x80372760
 
 game/data/rodata_802798F0.c:
