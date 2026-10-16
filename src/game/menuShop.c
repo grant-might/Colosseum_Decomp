@@ -41,11 +41,6 @@ extern u32 GSmsgGetRect(u32 id);
 /* fn_80029850 - 0x80029850 | size: 0x8c */
 extern u16 itemBiosGetItemDataId(void*);
 extern u16 itemBiosGetNum(void*);
-#if 0
-asm void fn_80029850(void) {
-#include "src/game/gs_worldmap_fn_80029850.inc"
-}
-#else
 /* RULE-EXCEPTION(user-approved): local compiler-control pragma — see docs/RULE_EXCEPTIONS.md */
 #pragma push
 #pragma peephole off
@@ -69,7 +64,6 @@ u32 fn_80029850(u8* slot, u16 count, u16 item_id, u16 maximum) {
     return space;
 }
 #pragma pop
-#endif
 
 #endif /* guard split */
 #if !defined(MENUSHOP_ISLAND_ONLY) || defined(MENUSHOP_ISLAND_80029850_ONLY) || defined(MENUSHOP_ISLAND_80029EF4_ONLY)
@@ -249,11 +243,6 @@ s32 fn_800298DC(ShopItemSlot* slots, s32 count, s32 item_id, s32 quantity,
 #endif /* guard split */
 #if !defined(MENUSHOP_ISLAND_ONLY)
 /* fn_80029AC8 - 0x80029AC8 | size: 0x1f8 */
-#if 0
-asm void fn_80029AC8(void) {
-#include "src/game/gs_worldmap_fn_80029AC8.inc"
-}
-#else
 #pragma push
 #pragma optimization_level 4
 #pragma peephole off
@@ -270,7 +259,6 @@ void fn_80029AC8(s32 price, s32 item_id, s32 quantity, ShopInventory* inventory)
     inventory->modified = 1;
 }
 #pragma pop
-#endif
 
 /* fn_80029CC0 - 0x80029CC0 | size: 0x234 */
 extern void fn_80142A88(void*, s32);
@@ -287,11 +275,6 @@ typedef struct WorldMapBuf {
     u16 count;
     WorldMapEntry items[48];
 } WorldMapBuf;
-#if 0
-asm void fn_80029CC0(void) {
-#include "src/game/gs_worldmap_fn_80029CC0.inc"
-}
-#else
 #pragma push
 #pragma optimization_level 4
 #pragma peephole off
@@ -320,7 +303,6 @@ s32 fn_80029CC0(u8* r30) {
     return 1;
 }
 #pragma pop
-#endif
 
 #endif /* guard split */
 #if !defined(MENUSHOP_ISLAND_ONLY) || defined(MENUSHOP_ISLAND_80029EF4_ONLY)
@@ -331,11 +313,6 @@ void fn_80029AC8(s32 price, s32 item_id, s32 quantity, ShopInventory* inventory)
 extern void heroDecPokecoupon(s32, void*);
 extern void pcboxDelItem(s32, s32, u16);
 extern void heroItemAddItemDataId(s32, s32, u16, s32);
-#if 0
-asm void fn_80029EF4(void) {
-#include "src/game/gs_worldmap_fn_80029EF4.inc"
-}
-#else
 /* RULE-EXCEPTION(user-approved): local compiler-control pragma — see docs/RULE_EXCEPTIONS.md */
 #pragma push
 #pragma peephole off
@@ -358,7 +335,6 @@ void fn_80029EF4(void* price, s32 item_id, s32 quantity, s32 currency, ShopInven
     }
 }
 #pragma pop
-#endif
 
 #endif /* guard split */
 #if !defined(MENUSHOP_ISLAND_ONLY)
@@ -374,11 +350,6 @@ typedef struct WorldMapVaList {
     u32* reg_save_area;
 } WorldMapVaList;
 typedef WorldMapVaList WorldMapVaListArray[1];
-#if 0
-asm void fn_80029FAC(void) {
-#include "src/game/gs_worldmap_fn_80029FAC.inc"
-}
-#else
 u32 fn_80029FAC(u8* r3, s32 r4, s32 r5, s32 r6, ...) {
     WorldMapVaListArray list;
     s32 r31;
@@ -414,16 +385,10 @@ u32 fn_80029FAC(u8* r3, s32 r4, s32 r5, s32 r6, ...) {
     }
     return *(u32*)(r28 + r31);
 }
-#endif
 
 /* fn_8002A0B8 - 0x8002A0B8 | size: 0x10c | WALL 97%: slwi scheduling */
 extern u32 lbl_80478E54;
 extern u32 lbl_80478E3C;
-#if 0
-asm void fn_8002A0B8(void) {
-#include "src/game/gs_worldmap_fn_8002A0B8.inc"
-}
-#else
 u32 fn_8002A0B8(u8* r3, s32 r4, s32 r5, s32 r6, ...) {
     WorldMapVaListArray list;
     s32 r31;
@@ -460,17 +425,11 @@ u32 fn_8002A0B8(u8* r3, s32 r4, s32 r5, s32 r6, ...) {
     }
     return *(u32*)(r28 + r31);
 }
-#endif
 
 /* fn_8002A1C4 - 0x8002A1C4 | size: 0x108 | WALL 97%: slwi scheduling */
 extern void winMsgOpenWithSE(s32, u32, s32, s32, u8);
 extern u32 lbl_80478E54;
 extern u32 lbl_80478E4C;
-#if 0
-asm void fn_8002A1C4(void) {
-#include "src/game/gs_worldmap_fn_8002A1C4.inc"
-}
-#else
 void fn_8002A1C4(u8* r3, s32 r4, s32 r5, ...) {
     WorldMapVaListArray list;
     s32 r31;
@@ -504,16 +463,10 @@ void fn_8002A1C4(u8* r3, s32 r4, s32 r5, ...) {
     winMsgOpenWithSE(2, *(u32*)(r28 + r31), 1, 0, r27);
     winMsgClose(1);
 }
-#endif
 
 /* fn_8002A2CC - 0x8002A2CC | size: 0x108 | WALL 97%: slwi scheduling */
 extern u32 lbl_80478E54;
 extern u32 lbl_80478E3C;
-#if 0
-asm void fn_8002A2CC(void) {
-#include "src/game/gs_worldmap_fn_8002A2CC.inc"
-}
-#else
 void fn_8002A2CC(u8* r3, s32 r4, s32 r5, ...) {
     WorldMapVaListArray list;
     s32 r31;
@@ -548,14 +501,8 @@ void fn_8002A2CC(u8* r3, s32 r4, s32 r5, ...) {
     winMsgOpenWithSE(2, *(u32*)(r28 + r31), 1, 0, r27);
     winMsgClose(1);
 }
-#endif
 
 /* fn_8002A3D4 - 0x8002A3D4 | size: 0x2c */
-#if 0
-asm void fn_8002A3D4(void) {
-#include "src/game/gs_worldmap_fn_8002A3D4.inc"
-}
-#else
 s32 fn_8002A3D4(void* r3, u8* r4) {
     void* ctx;
     ctx = *(void**)((u8*)r3 + 0x60);
@@ -565,14 +512,8 @@ s32 fn_8002A3D4(void* r3, u8* r4) {
     r4[0x67] = 0xff;
     return 0;
 }
-#endif
 
 /* fn_8002A400 - 0x8002A400 | size: 0x8c */
-#if 0
-asm void fn_8002A400(void) {
-#include "src/game/gs_worldmap_fn_8002A400.inc"
-}
-#else
 s32 fn_8002A400(void* r3, u8* r4) {
     u8* r30;
     void* r31;
@@ -590,7 +531,6 @@ s32 fn_8002A400(void* r3, u8* r4) {
     fn_800FB680((s32)*(s16*)(r30 + 0x54) - (s32)(ret >> 16), 0, -1, id);
     return 0;
 }
-#endif
 
 /* fn_8002A48C - 0x8002A48C | size: 0x124 */
 extern void fn_800FB8C8(s32, s32, s16, s16, s32, s32);
@@ -619,11 +559,6 @@ typedef struct ShopDrawData {
 } ShopDrawData;
 
 extern u8 lbl_80266E58[];
-#if 0
-asm void fn_8002A48C(void) {
-#include "src/game/gs_worldmap_fn_8002A48C.inc"
-}
-#else
 s32 fn_8002A48C(ShopMenuOwner* owner, ShopDrawData* draw) {
     ShopDigitContext* context = owner->context;
     ShopDisplayEntry* entry;
@@ -660,14 +595,8 @@ s32 fn_8002A48C(ShopMenuOwner* owner, ShopDrawData* draw) {
     fn_800FB8C8(0, 0, draw->x, draw->y, -1, 0xC9);
     return 0;
 }
-#endif
 
 /* fn_8002AA68 - 0x8002AA68 | size: 0x98 */
-#if 0
-asm void fn_8002AA68(void) {
-#include "src/game/gs_worldmap_fn_8002AA68.inc"
-}
-#endif
 #endif /* !MENUSHOP_ISLAND_ONLY */
 
 /* fn_8002A618 - 0x8002A618 | size: 0x450 */
@@ -847,11 +776,6 @@ s32 fn_8002AB00(void* r3, u8* r4) {
 extern u8 lbl_80266E80[];
 extern u32 lbl_804788F0;
 extern u8 lbl_802E61D8[];
-#if 0
-asm void fn_8002AB40(void) {
-#include "src/game/gs_worldmap_fn_8002AB40.inc"
-}
-#else
 s32 fn_8002AB40(void* r3, u8* r4) {
     u8* ctx;
     u32 table[4];
@@ -914,16 +838,10 @@ s32 fn_8002AB40(void* r3, u8* r4) {
     }
     return 0;
 }
-#endif
 
 /* fn_8002ACB8 - 0x8002ACB8 | size: 0x18c */
 extern u32 lbl_8047A660;
 extern u32 lbl_8047A664;
-#if 0
-asm void fn_8002ACB8(void) {
-#include "src/game/gs_worldmap_fn_8002ACB8.inc"
-}
-#else
 s32 fn_8002ACB8(void* r3, u8* r4) {
     u8* ctx;
     u32 value;
@@ -978,14 +896,8 @@ s32 fn_8002ACB8(void* r3, u8* r4) {
 done:
     return 0;
 }
-#endif
 
 /* fn_8002AE44 - 0x8002AE44 | size: 0x24 */
-#if 0
-asm void fn_8002AE44(void) {
-#include "src/game/gs_worldmap_fn_8002AE44.inc"
-}
-#else
 s32 fn_8002AE44(void* r3, u8* r4) {
     void* ctx;
     ctx = *(void**)((u8*)r3 + 0x60);
@@ -994,14 +906,8 @@ s32 fn_8002AE44(void* r3, u8* r4) {
     }
     return 0;
 }
-#endif
 
 /* fn_8002AE68 - 0x8002AE68 | size: 0x34 */
-#if 0
-asm void fn_8002AE68(void) {
-#include "src/game/gs_worldmap_fn_8002AE68.inc"
-}
-#else
 s32 fn_8002AE68(void* r3, u8* r4) {
     void* ctx;
     u8 v;
@@ -1014,7 +920,6 @@ s32 fn_8002AE68(void* r3, u8* r4) {
     }
     return 0;
 }
-#endif
 #endif
 
 #endif /* !MENUSHOP_ISLAND_ONLY */
@@ -1113,11 +1018,6 @@ s32 fn_8002AEF8(void* r3, u8* r4) {
 
 #if 0
 /* fn_8002B03C - 0x8002B03C | size: 0x4c */
-#if 0
-asm void fn_8002B03C(void) {
-#include "src/game/gs_worldmap_fn_8002B03C.inc"
-}
-#else
 s32 fn_8002B03C(void* r3) {
     void* ctx;
     u8 v;
@@ -1128,30 +1028,18 @@ s32 fn_8002B03C(void* r3) {
     }
     return 0;
 }
-#endif
 
 /* fn_8002B088 - 0x8002B088 | size: 0x34 */
 extern u32 lbl_8047A3E4;
-#if 0
-asm void fn_8002B088(void) {
-#include "src/game/gs_worldmap_fn_8002B088.inc"
-}
-#else
 s32 fn_8002B088(void) {
     fn_800FB680(0, 0, -1, lbl_8047A3E4);
     return 0;
 }
-#endif
 
 /* fn_8002B0BC - 0x8002B0BC | size: 0x78 */
 extern const f32 lbl_8047B97C;
 extern f32 lbl_8047A3E8;
 extern const f32 lbl_8047B978;
-#if 0
-asm void fn_8002B0BC(void) {
-#include "src/game/gs_worldmap_fn_8002B0BC.inc"
-}
-#else
 s32 fn_8002B0BC(void* r3, u8* r4) {
     u16 hv;
     u8* ctx;
@@ -1169,17 +1057,11 @@ s32 fn_8002B0BC(void* r3, u8* r4) {
 end:
     return 0;
 }
-#endif
 
 /* fn_8002B134 - 0x8002B134 | size: 0x6c */
 extern const f32 lbl_8047B97C;
 extern f32 lbl_8047A3E8;
 extern const f32 lbl_8047B978;
-#if 0
-asm void fn_8002B134(void) {
-#include "src/game/gs_worldmap_fn_8002B134.inc"
-}
-#else
 s32 fn_8002B134(void* r3, u8* r4) {
     u16 hv;
     void* ctx;
@@ -1198,7 +1080,6 @@ end:
     return 0;
 }
 #endif
-#endif
 
 /* menuShopDrawListText - 0x8002B1A0 | size: 0x26c */
 extern void fn_800FE38C(void);
@@ -1207,11 +1088,6 @@ extern u32 itemDataBiosGetPrice(void);
 extern u32 itemDataBiosGetCoupon(void);
 extern void fn_800FE35C(void);
 extern const f32 lbl_8047B980;
-#if 0
-asm void menuShopDrawListText(void) {
-#include "src/game/gs_worldmap_menuShopDrawListText.inc"
-}
-#else
 /*
  * GSmap_DrawWeatherOverlay  0x8002B1A0  size: 0x26C
  *
@@ -1330,7 +1206,6 @@ s32 menuShopDrawListText(void* arg0, u8* arg1)
     return 0;
 }
 #pragma pop
-#endif
 
 /* fn_8002B40C - 0x8002B40C | size: 0x188 */
 extern u8 lbl_802E4F68[];
@@ -1339,11 +1214,6 @@ extern f32 lbl_8047B984;
 extern f32 lbl_8047B988;
 extern f32 lbl_8047B98C;
 extern f32 lbl_8047B990;
-#if 0
-asm void fn_8002B40C(void) {
-#include "src/game/gs_worldmap_fn_8002B40C.inc"
-}
-#else
 typedef struct ShopAngleEntry {
     s32 key;
     s16 position;
@@ -1430,7 +1300,6 @@ s32 fn_8002B40C(ShopAngleOwner* owner, ShopAngleDrawData* draw) {
     return 0;
 }
 #pragma pop
-#endif
 
 /* fn_8002B594 - 0x8002B594 | size: 0x2ec */
 extern void fn_800CDBE0(void);
@@ -1445,11 +1314,6 @@ extern f32 lbl_8047B9A8;
 f64 cos(f64);
 f64 sin(f64);
 void windowDrawSprite2(s32, s32, s32, s32, s32, void*, u32, s32);
-#if 0
-asm void fn_8002B594(void) {
-#include "src/game/gs_worldmap_fn_8002B594.inc"
-}
-#else
 /*
  * GSmap_DrawPartyIcons  0x8002B594 | 0x2EC bytes
  *
@@ -1560,7 +1424,6 @@ void fn_8002B594(void* ctx, u8* data, u32 sprite_id, u32 color_byte, f32 pos)
     windowDrawSprite2(x, y, 2, 2, color, ctx, sprite_id & 0xFFFF, 0);
 }
 #pragma pop
-#endif
 
 /* fn_8002B880 - 0x8002B880 | size: 0x468 */
 extern void fn_800FE6D0(void);
@@ -1575,11 +1438,6 @@ extern const f32 lbl_8047B9AC;
 extern const f32 lbl_8047B97C;
 extern f32 lbl_8047B9B0;
 extern f32 lbl_8047B9B4;
-#if 0
-asm void fn_8002B880(void) {
-#include "src/game/gs_worldmap_fn_8002B880.inc"
-}
-#else
 /* fn_8002B880  GSmap_DrawInfoPanel - 0x8002B880, size 0x468
  *
  * Worldmap info-panel draw. r3 = worldmap state object (its +0x60 is the
@@ -1742,7 +1600,6 @@ s32 fn_8002B880(u8* state, u8* entity)
     return 0;
 }
 #pragma pop
-#endif
 
 #endif /* guard split */
 #if !defined(MENUSHOP_ISLAND_ONLY) || defined(MENUSHOP_ISLAND_8002BCE8_ONLY)
@@ -1784,11 +1641,6 @@ typedef struct ShopPositionDrawData {
 } ShopPositionDrawData;
 
 extern u8 lbl_802E4F68[];
-#if 0
-asm void fn_8002BCE8(void) {
-#include "src/game/gs_worldmap_fn_8002BCE8.inc"
-}
-#else
 /* RULE-EXCEPTION(user-approved): local compiler-control pragma (push; peephole off; optimization_level 4) needed for the byte match of the code it covers - see docs/RULE_EXCEPTIONS.md */
 #pragma push
 #pragma peephole off
@@ -1841,18 +1693,12 @@ s32 fn_8002BCE8(ShopPositionOwner* owner, ShopPositionDrawData* draw) {
     return 0;
 }
 #pragma pop
-#endif
 
 /* fn_8002BE08 - 0x8002BE08 | size: 0x20c */
 extern u32 itemDataBiosGetDoc(void);
 extern f32 lbl_8047B9B8;
 extern f32 lbl_8047B9BC;
 extern u32 lbl_8047A3E4;
-#if 0
-asm void fn_8002BE08(void) {
-#include "src/game/gs_worldmap_fn_8002BE08.inc"
-}
-#else
 /* RULE-EXCEPTION(user-approved): local compiler-control pragma (push; peephole off; scheduling on) needed for the byte match of the code it covers - see docs/RULE_EXCEPTIONS.md */
 #pragma push
 #pragma peephole off
@@ -1916,15 +1762,9 @@ u32 fn_8002BE08(u8* arg0) {
     return 0;
 }
 #pragma pop
-#endif
 
 /* fn_8002C014 - 0x8002C014 | size: 0xd0 */
 extern void menuButtonNormal(void*);
-#if 0
-asm void fn_8002C014(void) {
-#include "src/game/gs_worldmap_fn_8002C014.inc"
-}
-#else
 /* RULE-EXCEPTION(user-approved): local compiler-control pragma — see docs/RULE_EXCEPTIONS.md */
 #pragma push
 #pragma peephole off
@@ -1959,7 +1799,6 @@ s32 fn_8002C014(void* r3) {
     return 0;
 }
 #pragma pop
-#endif
 
 /* fn_8002C0E4 - 0x8002C0E4 | size: 0x1a0 */
 extern const f32 lbl_8047B980;
@@ -1967,11 +1806,6 @@ extern const f32 lbl_8047B9C0;
 extern const f32 lbl_8047B9C4;
 extern const f32 lbl_8047B97C;
 extern const f32 lbl_8047B9C8;
-#if 0
-asm void fn_8002C0E4(void) {
-#include "src/game/gs_worldmap_fn_8002C0E4.inc"
-}
-#else
 /*
  * GSmap_FadeFromBlack  (0x8002C0E4, 0x1A0 bytes)
  *
@@ -2046,7 +1880,6 @@ s32 fn_8002C0E4(u8* self)
     return 0;
 }
 #pragma pop
-#endif
 
 #endif /* guard split */
 #if !defined(MENUSHOP_ISLAND_ONLY) || defined(MENUSHOP_ISLAND_8002CE6C_ONLY)
@@ -2164,11 +1997,6 @@ extern u32 lbl_80478E54;
 extern u32 lbl_80478E44;
 extern u16 lbl_8047A3F4;
 extern u16 lbl_8047A3EC;
-#if 0
-asm void fn_8002C284(void) {
-#include "src/game/gs_worldmap_fn_8002C284.inc"
-}
-#else
 /*
  * fn_8002C284  GSmap_ShowTravelDialog  0x8002C284 | 0x184 bytes
  *
@@ -2218,7 +2046,6 @@ void fn_8002C284(u32 loc_idx, u8 mode)
     menuCloseCustom(0x60, 0, 1);
 }
 #pragma pop
-#endif
 
 /* fn_8002C408 - 0x8002C408 | size: 0xa64 */
 extern void savedataGetStatus(void);
@@ -2242,11 +2069,6 @@ extern u32 lbl_804788A8;
 extern u32 lbl_8047A3E4;
 extern u32 lbl_8047A3E0;
 extern u32 lbl_80478E4C;
-#if 0
-asm void fn_8002C408(void) {
-#include "src/game/gs_worldmap_fn_8002C408.inc"
-}
-#else
 /*
  * Money available to a shop of type `mode`: the PC-box shop (3) uses the
  * credits held in its work block, folding in pending deposits
@@ -2606,7 +2428,6 @@ void fn_8002C408(s32 mapIdx, u32 mode)
     menuCloseCustom(0x60, 0, 1);
 }
 #pragma pop
-#endif
 
 #endif /* guard split */
 #if !defined(MENUSHOP_ISLAND_ONLY) || defined(MENUSHOP_ISLAND_8002CE6C_ONLY)
@@ -2616,11 +2437,6 @@ extern void heroDecPokedoru(void);
 extern u32 lbl_804788A8;
 extern u32 lbl_80478E54;
 extern u32 lbl_80478E44;
-#if 0
-asm void fn_8002CE6C(void) {
-#include "src/game/gs_worldmap_fn_8002CE6C.inc"
-}
-#else
 /*
  * fn_8002CE6C - shop purchase loop for location `loc` (also the message
  * target passed to fn_8002A2CC). Shows the shop's item list, and for each
@@ -2712,7 +2528,6 @@ loop:
 }
 #if !defined(NO_LOCAL_PRAGMAS_MENUSHOP_ISLAND_8002CE6C)
 #endif
-#endif
 
 /* fn_8002D154 - 0x8002D154 | size: 0x480 */
 extern void heroItemCheckHaveItemDataId(void);
@@ -2720,11 +2535,6 @@ extern u32 lbl_804788A8;
 extern u32 lbl_80478E54;
 extern u32 lbl_80478E44;
 extern u32 lbl_8047A3E4;
-#if 0
-asm void fn_8002D154(void) {
-#include "src/game/gs_worldmap_fn_8002D154.inc"
-}
-#else
 /*
  * fn_8002D154 - shop buy loop for location `mapIndex`. Shows the item list,
  * validates the chosen item (key items need flag 0x21e), caps the
@@ -2888,7 +2698,6 @@ void fn_8002D154(s32 mapIndex, u8 colorIndex)
 }
 #if !defined(NO_LOCAL_PRAGMAS_MENUSHOP_ISLAND_8002CE6C)
 #endif
-#endif
 
 #endif /* guard split */
 #if !defined(MENUSHOP_ISLAND_ONLY)
@@ -2896,11 +2705,6 @@ void fn_8002D154(s32 mapIndex, u8 colorIndex)
 extern u32 lbl_8047A3FC;
 extern u32 lbl_80478E54;
 extern u32 lbl_8047A3DC;
-#if 0
-asm void fn_8002D5D4(void) {
-#include "src/game/gs_worldmap_fn_8002D5D4.inc"
-}
-#else
 typedef struct ShopLocationEntry {
     u8 field_0;
     u8 type;
@@ -3063,16 +2867,10 @@ void std026_unkMenuSequence26(void)
         floorSetFadeScript(0, 0);
     }
 }
-#endif
 
 /* fn_8002D91C - 0x8002D91C | size: 0x350 */
 extern u32 lbl_80478E54;
 extern u32 lbl_8047A3DC;
-#if 0
-asm void fn_8002D91C(void) {
-#include "src/game/gs_worldmap_fn_8002D91C.inc"
-}
-#else
 /*
  * fn_8002D91C  GSmap_ArrivalDialog  0x8002D91C | size: 0x350
  *
@@ -3171,7 +2969,6 @@ void fn_8002D91C(u32 arg0)
         floorSetFadeScript(0, 0);
     }
 }
-#endif
 
 /* Travel-dialog state at lbl_8047A3FC: the location the dialog was opened
  * for and whether a travel request is pending. */
@@ -3188,11 +2985,6 @@ extern void _flagSet(s32, s32);
 extern void menuReleaseOffScreen(f32);
 extern f64 lbl_8047B998;
 extern f32 lbl_8047B9CC;
-#if 0
-asm void menuShopOpen(void) {
-#include "src/game/gs_worldmap_menuShopOpen.inc"
-}
-#else
 /*
  * menuShopOpen  GSmap_SetStoryFlag  0x8002DC6C  size: 0xB8
  *
@@ -3252,5 +3044,4 @@ void menuShopOpen(u32 flag)
     }
     menuReleaseOffScreen(t);
 }
-#endif
 #endif /* !MENUSHOP_ISLAND_ONLY */

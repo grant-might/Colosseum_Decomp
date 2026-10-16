@@ -319,11 +319,6 @@ u32 loadSequence(int *r3,u32 r4,u16 *r5,int r6)
   return uVar1;
 }
 
-#if 0
-asm void fn_8025E1BC(void) {
-#include "src/game/colosseum_battle_fn_8025E1BC.inc"
-}
-#endif
 static inline u32 *validptr_8025E1BC(u32 *p) {
 
   u32 *q = p;
@@ -707,17 +702,11 @@ void preReliveMain(void)
 }
 #pragma pop
 
-#if 0
-asm void preReliveInit(void) {
-#include "src/game/colosseum_battle_fn_8025F2AC.inc"
-}
-#else
 void preReliveInit(void) {
   u32 *p = &lbl_8047B668;
   p[0] = 0xFFFFFFFF;
   p[1] = 0xFFFFFFFF;
 }
-#endif
 
 /* Address: 0x8025F2C0 | Size: 0x3C | Ghidra import */
 void preReliveSetParameter(int r3,u32 r4)

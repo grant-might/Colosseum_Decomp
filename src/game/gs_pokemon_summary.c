@@ -124,16 +124,10 @@ extern f32   gStickDeflection;    /* lbl_8047A2D0 */
 /* fn_8001501C - 0x8001501C | size: 0x34 */
 extern u32 lbl_8047A2DC;
 #if !defined(GS_POKEMON_SUMMARY_ISLAND)
-#if 0
-asm void fn_8001501C(void) {
-#include "src/game/gs_pokemon_summary_fn_8001501C.inc"
-}
-#else
 s32 fn_8001501C(void) {
     fn_800FB680(0, 0, -1, lbl_8047A2DC);
     return 0;
 }
-#endif
 #endif /* !GS_POKEMON_SUMMARY_ISLAND */
 
 /* fn_80015050 - 0x80015050 | size: 0x94 */
@@ -394,11 +388,6 @@ static inline s32 SummaryPagePocketTotal(s32 pageIndex) {
 }
 
 #if !defined(GS_POKEMON_SUMMARY_ISLAND)
-#if 0
-asm void fn_80015050(void) {
-#include "src/game/gs_pokemon_summary_fn_80015050.inc"
-}
-#else
 s32 fn_80015050(u8* src, u8* param) {
     DrawHandlerFn fp;
     u16 tmp;
@@ -411,18 +400,12 @@ s32 fn_80015050(u8* src, u8* param) {
     }
     return 0;
 }
-#endif
 
 /* fn_800150E4 - 0x800150E4 | size: 0x290 */
 extern void* lbl_8047A2F8;
 extern const f32 lbl_8047B748;
 extern u32 lbl_8047A2D0;
 extern u32 lbl_8047A2C8;
-#if 0
-asm void fn_800150E4(void) {
-#include "src/game/gs_pokemon_summary_fn_800150E4.inc"
-}
-#else
 #pragma push
 #pragma peephole off
 s32 fn_800150E4(s32 x, s32 pageIndex, u16* packedRange) {
@@ -473,18 +456,12 @@ s32 fn_800150E4(s32 x, s32 pageIndex, u16* packedRange) {
     return 0;
 }
 #pragma pop
-#endif
 
 /* fn_80015374 - 0x80015374 | size: 0x23c */
 extern void* lbl_8047A2F8;
 extern const f32 lbl_8047B748;
 extern u32 lbl_8047A2D0;
 extern u32 lbl_8047A2C8;
-#if 0
-asm void fn_80015374(void) {
-#include "src/game/gs_pokemon_summary_fn_80015374.inc"
-}
-#else
 #pragma push
 #pragma peephole off
 s32 fn_80015374(s32 x, s32 pageIndex, u16* packedRange) {
@@ -530,18 +507,12 @@ s32 fn_80015374(s32 x, s32 pageIndex, u16* packedRange) {
     return 0;
 }
 #pragma pop
-#endif
 
 /* fn_800155B0 - 0x800155B0 | size: 0x40c */
 extern void* lbl_8047A2F8;
 extern const f32 lbl_8047B748;
 extern u32 lbl_8047A2D0;
 extern u32 lbl_8047A2C8;
-#if 0
-asm void fn_800155B0(void) {
-#include "src/game/gs_pokemon_summary_fn_800155B0.inc"
-}
-#else
 #pragma push
 #pragma peephole off
 s32 fn_800155B0(s32 x, s32 pageIndex, u16* packedRange) {
@@ -608,18 +579,12 @@ s32 fn_800155B0(s32 x, s32 pageIndex, u16* packedRange) {
     return 0;
 }
 #pragma pop
-#endif
 
 /* fn_800159BC - 0x800159BC | size: 0x480 */
 extern void* lbl_8047A2F8;
 extern const f32 lbl_8047B748;
 extern u32 lbl_8047A2D0;
 extern u32 lbl_8047A2C8;
-#if 0
-asm void fn_800159BC(void) {
-#include "src/game/gs_pokemon_summary_fn_800159BC.inc"
-}
-#else
 #pragma push
 #pragma peephole off
 s32 fn_800159BC(s32 x, s32 pageIndex, u16* packedRange) {
@@ -703,18 +668,12 @@ s32 fn_800159BC(s32 x, s32 pageIndex, u16* packedRange) {
     return 0;
 }
 #pragma pop
-#endif
 
 /* fn_80015E3C - 0x80015E3C | size: 0x374 */
 extern void* lbl_8047A2F8;
 extern const f32 lbl_8047B748;
 extern u32 lbl_8047A2D0;
 extern u32 lbl_8047A2C8;
-#if 0
-asm void fn_80015E3C(void) {
-#include "src/game/gs_pokemon_summary_fn_80015E3C.inc"
-}
-#else
 #pragma push
 #pragma peephole off
 s32 fn_80015E3C(s32 x, s32 pageIndex, u16* packedRange) {
@@ -769,7 +728,6 @@ s32 fn_80015E3C(s32 x, s32 pageIndex, u16* packedRange) {
     return 0;
 }
 #pragma pop
-#endif
 
 #endif /* !GS_POKEMON_SUMMARY_ISLAND */
 
@@ -796,11 +754,6 @@ typedef struct SummaryLayout {
 extern u32 lbl_8047A2D4;
 extern const f32 lbl_8047B748;
 extern const f32 lbl_8047B750;
-#if 0
-asm void fn_800161B0(void) {
-#include "src/game/gs_pokemon_summary_fn_800161B0.inc"
-}
-#else
 /* RULE-EXCEPTION(user-approved): local compiler-control pragma (push; peephole off) needed for the byte match of the code it covers - see docs/RULE_EXCEPTIONS.md */
 #pragma push
 #pragma peephole off
@@ -849,17 +802,11 @@ s32 fn_800161B0(SummaryPageContext* ctx, u8* item) {
     return 0;
 }
 #pragma pop
-#endif
 
 /* fn_80016348 - 0x80016348 | size: 0x188 */
 extern u32 lbl_8047A2D4;
 extern const f32 lbl_8047B748;
 extern const f32 lbl_8047B750;
-#if 0
-asm void fn_80016348(void) {
-#include "src/game/gs_pokemon_summary_fn_80016348.inc"
-}
-#else
 /* RULE-EXCEPTION(user-approved): local compiler-control pragma (push; peephole off) needed for the byte match of the code it covers - see docs/RULE_EXCEPTIONS.md */
 #pragma push
 #pragma peephole off
@@ -901,7 +848,6 @@ s32 fn_80016348(SummaryPageContext* ctx, u8* item) {
     return 0;
 }
 #pragma pop
-#endif
 
 /* fn_800164D0 - 0x800164D0 | size: 0x148 */
 extern void* lbl_8047A2F8;
@@ -909,11 +855,6 @@ extern u32 lbl_8047A2D8;
 extern const f32 lbl_8047B744;
 extern u32 lbl_8047A2C4;
 extern const f32 lbl_8047B740;
-#if 0
-asm void fn_800164D0(void) {
-#include "src/game/gs_pokemon_summary_fn_800164D0.inc"
-}
-#else
 /* RULE-EXCEPTION(user-approved): local compiler-control pragma (push; peephole off) needed for the byte match of the code it covers - see docs/RULE_EXCEPTIONS.md */
 #pragma push
 #pragma peephole off
@@ -932,18 +873,12 @@ s32 fn_800164D0(SummaryPageContext* ctx, u8* item) {
     return 0;
 }
 #pragma pop
-#endif
 
 /* fn_80016618 - 0x80016618 | size: 0xa4 */
 extern u32 lbl_8047A2D8;
 extern const f32 lbl_8047B744;
 extern u32 lbl_8047A2C4;
 extern const f32 lbl_8047B740;
-#if 0
-asm void fn_80016618(void) {
-#include "src/game/gs_pokemon_summary_fn_80016618.inc"
-}
-#else
 /* RULE-EXCEPTION(user-approved): local compiler-control pragma (push; peephole off) needed for the byte match of the code it covers - see docs/RULE_EXCEPTIONS.md */
 #pragma push
 #pragma peephole off
@@ -961,7 +896,6 @@ s32 fn_80016618(u8* src, u8* dst) {
     return 0;
 }
 #pragma pop
-#endif
 
 #endif /* 0x800161B0 - 0x800166BC */
 
@@ -974,11 +908,6 @@ extern const f32 lbl_8047B754;
 extern const f32 lbl_8047B758;
 extern const f32 lbl_8047B75C;
 extern const f32 lbl_8047B760;
-#if 0
-asm void fn_800166BC(void) {
-#include "src/game/gs_pokemon_summary_fn_800166BC.inc"
-}
-#else
 /* RULE-EXCEPTION(user-approved): local compiler-control pragma (push; peephole off) needed for the byte match of the code it covers - see docs/RULE_EXCEPTIONS.md */
 #pragma push
 #pragma peephole off
@@ -1005,7 +934,6 @@ s32 fn_800166BC(SummaryPageContext* ctx, u8* item) {
     return 0;
 }
 #pragma pop
-#endif
 
 #endif /* 0x800166BC - 0x800167D0 */
 
@@ -1020,11 +948,6 @@ extern const f32 lbl_8047B75C;
 extern const f32 lbl_8047B770;
 extern const f32 lbl_8047B774;
 extern const f32 lbl_8047B778;
-#if 0
-asm void fn_800167D0(void) {
-#include "src/game/gs_pokemon_summary_fn_800167D0.inc"
-}
-#else
 #pragma push
 #pragma peephole off
 void fn_800167D0(u8* owner, u8* item, f32 phase, u16 iconId, u8 alpha) {
@@ -1078,7 +1001,6 @@ void fn_800167D0(u8* owner, u8* item, f32 phase, u16 iconId, u8 alpha) {
     windowDrawSprite2(x, y, 2, 2, alpha | 0xFFFFFF00, (s32)owner, iconId, 0);
 }
 #pragma pop
-#endif
 
 #endif /* !GS_POKEMON_SUMMARY_ISLAND */
 
@@ -1186,16 +1108,10 @@ extern u32 lbl_8047A2E8;
 extern u32 lbl_8047A2C8;
 extern u32 lbl_8047A2D0;
 extern u32 lbl_8047A2D8;
-#if 0
-asm void fn_80016F14(void) {
-#include "src/game/gs_pokemon_summary_fn_80016F14.inc"
-}
-#else
 s32 fn_80016F14(SummaryPageContext* ctx, u8* item) {
     SummaryPlaceCursor(ctx, item);
     return 0;
 }
-#endif
 
 /* fn_80017028 - 0x80017028 | size: 0x73c */
 extern u8 lbl_80266B88[];
@@ -1211,11 +1127,6 @@ extern const f32 lbl_8047B78C;
 extern const f32 lbl_8047B750;
 extern const f32 lbl_8047B790;
 extern u32 lbl_8047A2DC;
-#if 0
-asm void fn_80017028(void) {
-#include "src/game/gs_pokemon_summary_fn_80017028.inc"
-}
-#else
 /* RULE-EXCEPTION(user-approved): retained mutation masks and reused constant
  * temporaries shape MWCC code generation; see docs/RULE_EXCEPTIONS.md. */
 s32 fn_80017028(SummaryPageContext* ctx) {
@@ -1384,7 +1295,6 @@ s32 fn_80017028(SummaryPageContext* ctx) {
   lbl_8047A2DC = label;
   return 0;
 }
-#endif
 
 /* fn_80017764 - 0x80017764 | size: 0x2c */
 extern void menuButtonNormal(void);
@@ -1398,11 +1308,6 @@ void fn_80017764(void) {
 }
 
 /* fn_80017790 - 0x80017790 | size: 0xd8 */
-#if 0
-asm void fn_80017790(void) {
-#include "src/game/gs_pokemon_summary_fn_80017790.inc"
-}
-#else
 s32 fn_80017790(u8* unused, SummaryDrawItem* item) {
     SummaryPageEntry* entry;
     s32 i;
@@ -1427,17 +1332,11 @@ s32 fn_80017790(u8* unused, SummaryDrawItem* item) {
 
     return 0;
 }
-#endif
 
 /* fn_80017868 - 0x80017868 | size: 0x84 */
 extern u32 heroGetStatus(u32 a, s32 b, s32 c);
 extern void* lbl_8047A2F8;
 extern u32 lbl_8047A2E0;
-#if 0
-asm void fn_80017868(void) {
-#include "src/game/gs_pokemon_summary_fn_80017868.inc"
-}
-#else
 s32 fn_80017868(u32 unused, u8* ctx) {
     u32 r;
     r = heroGetStatus((u32)lbl_8047A2F8, 0xC, 0);
@@ -1446,7 +1345,6 @@ s32 fn_80017868(u32 unused, u8* ctx) {
     fn_800FB680((s32)*(s16*)(ctx + 0x54) - (s32)(s16)(GSmsgGetRect(0x151) >> 16), 0, -1, 0x151);
     return 0;
 }
-#endif
 
 #endif /* 0x80016ABC - 0x800178EC */
 
@@ -1476,25 +1374,14 @@ s32 fn_80017914(u32 unused, u8* ptr) {
 
 #if !defined(GS_POKEMON_SUMMARY_ISLAND) || defined(GS_POKEMON_SUMMARY_8001793C_ONLY)
 /* fn_8001793C - 0x8001793C | size: 0x54 */
-#if 0
-asm void fn_8001793C(void) {
-#include "src/game/gs_pokemon_summary_fn_8001793C.inc"
-}
-#else
 s32 fn_8001793C(SummaryPageContext* ctx, SummaryDrawItem* item) {
     item->color[0] = SUMMARY_PAGE_DISPLAY_COLOR(SUMMARY_PAGE_INDEX_VOLATILE(ctx), 0);
     item->color[1] = SUMMARY_PAGE_DISPLAY_COLOR(SUMMARY_PAGE_INDEX_VOLATILE(ctx), 1);
     item->color[2] = SUMMARY_PAGE_DISPLAY_COLOR(SUMMARY_PAGE_INDEX_VOLATILE(ctx), 2);
     return 0;
 }
-#endif
 
 /* fn_80017990 - 0x80017990 | size: 0x7c */
-#if 0
-asm void fn_80017990(void) {
-#include "src/game/gs_pokemon_summary_fn_80017990.inc"
-}
-#else
 s32 fn_80017990(SummaryPageContext* ctx, SummaryDrawItem* item) {
     s32 idx = SUMMARY_PAGE_INDEX(ctx);
     if ((s32)item->speciesId == SUMMARY_PAGE_ENTRY_AT(idx).gaugeMatchId) {
@@ -1507,7 +1394,6 @@ s32 fn_80017990(SummaryPageContext* ctx, SummaryDrawItem* item) {
     }
     return 0;
 }
-#endif
 
 /* fn_80017A0C - 0x80017A0C | size: 0x2ac */
 extern u32 lbl_8047A2D8;
@@ -1524,11 +1410,6 @@ extern const f32 lbl_8047B798;
 extern const f32 lbl_8047B74C;
 extern const f32 lbl_8047B744;
 extern const f32 lbl_8047B79C;
-#if 0
-asm void fn_80017A0C(void) {
-#include "src/game/gs_pokemon_summary_fn_80017A0C.inc"
-}
-#else
 /* RULE-EXCEPTION(user-approved): local compiler-control pragma (push; peephole off) needed for the byte match of the code it covers - see docs/RULE_EXCEPTIONS.md */
 #pragma push
 #pragma peephole off
@@ -1599,7 +1480,6 @@ s32 fn_80017A0C(u8* ctx) {
     return 0;
 }
 #pragma pop
-#endif
 
 #endif /* 0x8001793C - 0x80017CB8 */
 
@@ -1607,11 +1487,6 @@ s32 fn_80017A0C(u8* ctx) {
 /* fn_80017CB8 - 0x80017CB8 | size: 0x1d4 */
 extern void* lbl_8047A2F8;
 extern u32 lbl_8047A2E0;
-#if 0
-asm void fn_80017CB8(void) {
-#include "src/game/gs_pokemon_summary_fn_80017CB8.inc"
-}
-#else
 /* The GS_POKEMON_SUMMARY_80017CB8_ONLY unit builds with -opt nopeephole and
    scheduling on (configure.py), the state these pragmas give the function. */
 #if !defined(GS_POKEMON_SUMMARY_80017CB8_ONLY)
@@ -1669,7 +1544,6 @@ s32 fn_80017CB8(SummaryMenuItem* out, s32 maxEntries, s32 pageIndex, s32 selecte
 #if !defined(GS_POKEMON_SUMMARY_80017CB8_ONLY)
 #pragma pop
 #endif
-#endif
 
 #endif /* 0x80017CB8 - 0x80017E8C */
 
@@ -1687,11 +1561,6 @@ typedef struct SummaryQuantityMenuArg {
 extern void* lbl_8047A2F8;
 extern u32 lbl_8047A2DC;
 extern u32 lbl_8047A2FC;
-#if 0
-asm void fn_80017E8C(void) {
-#include "src/game/gs_pokemon_summary_fn_80017E8C.inc"
-}
-#else
 /* RULE-EXCEPTION(user-approved): local peephole-off pragma — see docs/RULE_EXCEPTIONS.md */
 #pragma push
 #pragma peephole off
@@ -1799,5 +1668,4 @@ s32 fn_80017E8C(s32 pageIndex, u16 species, s32 slotIndex) {
     return 1;
 }
 #pragma pop
-#endif
 #endif /* !GS_POKEMON_SUMMARY_ISLAND || GS_POKEMON_SUMMARY_80017E8C_ONLY */
