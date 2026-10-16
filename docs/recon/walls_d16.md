@@ -1,4 +1,4 @@
-# Register walls: lane D16 notes (2026-09-30)
+# Register walls: notes (2026-09-30)
 
 ## Method
 

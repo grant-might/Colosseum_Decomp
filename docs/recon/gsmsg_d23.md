@@ -1,4 +1,4 @@
-# GSmsg pool object: lane D23 (2026-09-30)
+# GSmsg pool object (2026-09-30)
 
 This continues docs/recon/gsmsg_d21.md, gsmsg_d14.md and gsmsg_d13.md.
 

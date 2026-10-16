@@ -1,12 +1,12 @@
 # `fn_800D892C` GSgfx pipeline restore wall
 
 This is the source-backed `GSgfx_ConfigurePipeline` candidate in
-`src/game/gs_gfx_layer_candidate_800D892C.c`. **Resolved by lane D6
+`src/game/gs_gfx_layer_candidate_800D892C.c`. **Resolved
 (2026-09-29): byte-exact and linked as Matching under the byte-match-first
 policy**, with tagged rule exceptions (see the D6 section below and
 docs/RULE_EXCEPTIONS.md). The history below is kept for the record.
 
-## Lane D6 (2026-09-29): 98.52% -> 100%, linked
+## 2026-09-29: 98.52% -> 100%, linked
 
 1. **XD counterpart: none.** XD's GSgfx is the C++ `GSgfxLayer` rewrite
    (NXXJ01.map objects `GSgfx\layerState.o`, `layer.o`, `layerFunc.o`;
@@ -87,7 +87,7 @@ byte score improves. Next work should recover the original setter/helper
 source shape or the indirect-stage construct from callsite/data evidence,
 then measure the entire object and its link status.
 
-## Lane D5 (2026-09-29): 93.97% -> 98.52% raw, 17 differing rows
+## 2026-09-29: 93.97% -> 98.52% raw, 17 differing rows
 
 All work used the mwcc-debugger replay (GC/2.6 gives the same code as the
 unit's GC/1.3) plus a small simulator of MWCC's GPR colouring that
@@ -144,7 +144,7 @@ Still open:
   but the select's backend temp then takes r31 instead of r21.
 - **Indirect-stage count.** The `++/--` placeholder is unchanged.
 
-### Lane D5 follow-up: the two coordinator angles (both still walled)
+### Follow-up: the two coordinator angles (both still walled)
 
 **1. Stage-source pointer through a cast index.** Every form scored worse
 than the committed 98.52% raw (17 rows):
@@ -190,7 +190,7 @@ Best forms, for the record:
 - 98.78%, 25 rows: the `?:` default loop; only the stage-source pointer
   and `last` in r31 differ.
 
-## Lane D2 register replay (2026-09-29)
+## Register replay (2026-09-29)
 
 ### Compiler
 

@@ -1,4 +1,4 @@
-# Near-link sweep, non-fight half (lane D18, 2026-09-30)
+# Near-link sweep, non-fight half (2026-09-30)
 
 Worktree `/private/tmp/pkmn-decomp-d12`, branch `decomp-d18-nearlink`.
 The list was built from `build/GC6E01/report.json`: incomplete units whose

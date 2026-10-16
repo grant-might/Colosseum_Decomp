@@ -1,8 +1,8 @@
-# msgctrl callbacks for the recomp (lane D29, 2026-09-30)
+# msgctrl callbacks for the recomp (2026-09-30)
 
 Worktree `/private/tmp/pkmn-decomp-d12`, branch `decomp-d29-msgctrl`.
-This lane follows `carves2_d22.md`. GSmsgDispatchControl's native registry
-refuses any msgctrlcode callback the decomp has not linked. This lane links
+This follows `carves2_d22.md`. GSmsgDispatchControl's native registry
+refuses any msgctrlcode callback the decomp has not linked. This work links
 the ones fn_80005E00's message daemons need.
 
 ## Linked

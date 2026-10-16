@@ -1,4 +1,4 @@
-# GScolsys2 debug draw (0x8010D20C - 0x8010DE00): status notes (lane D10)
+# GScolsys2 debug draw (0x8010D20C - 0x8010DE00): status notes
 
 Unit: `src/game/gs_colsys_candidate_8010D20C.c` (CodeCandidate, GC/1.3, -O3).
 It blocks recomp boot row 40.

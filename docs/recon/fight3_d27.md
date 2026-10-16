@@ -1,4 +1,4 @@
-# Fight near-links, lane D27 (2026-09-30)
+# Fight near-links (2026-09-30)
 
 Scope: the fight units D24 did not try (fight_range_8023B498, fn_80213E94,
 fn_8023A308, fn_80220868, fn_802232F4), then other fight_* near-link units

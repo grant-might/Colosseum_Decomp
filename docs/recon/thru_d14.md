@@ -1,4 +1,4 @@
-# GScolsys2Thru (0x801101B4-0x80111864): lane D14 notes (2026-09-30)
+# GScolsys2Thru (0x801101B4-0x80111864): notes (2026-09-30)
 
 ## TU and pool
 

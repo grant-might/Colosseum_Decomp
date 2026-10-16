@@ -24,7 +24,7 @@ whole-object source, linkage, quality scan, and retail DOL/REL hashes remain
 required. Shared-lock `all_source`/report and `ninja -j2` were up to date,
 and the retail SHA-1 check passed for both `main.dol` and `common_rel.rel`.
 
-## Resolution (2026-09-29, lane D2): exact, particle.c linked
+## Resolution (2026-09-29): exact, particle.c linked
 
 The MWCC register replay (cadmic/mwcc-debugger with GC/2.6, which emits
 the same psRemoveParticle as GC/1.3.2, including the same 14-instruction

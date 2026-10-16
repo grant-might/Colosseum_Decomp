@@ -1,4 +1,4 @@
-# Boot-path walls (lane D28, 2026-09-30)
+# Boot-path walls (2026-09-30)
 
 Two row-7/36 walls run before the title screen with no input:
 

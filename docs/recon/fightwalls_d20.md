@@ -1,4 +1,4 @@
-# Fight register walls, lane D20 (2026-09-30)
+# Fight register walls (2026-09-30)
 
 Scope: the fight walls D17 documented in `docs/recon/nearlink_d17.md`.
 Tools: D16's simplify simulator (`simp.py`, `trace.py`, `wi.py`) on

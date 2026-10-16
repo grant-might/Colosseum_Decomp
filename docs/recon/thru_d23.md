@@ -1,4 +1,4 @@
-# GScolsys2Thru linked whole (lane D23, 2026-09-30)
+# GScolsys2Thru linked whole (2026-09-30)
 
 This follows docs/recon/thru_d14.md. The GScolsys2Thru TU is now one
 Matching unit, `src/game/GScolsys2Thru.c`:

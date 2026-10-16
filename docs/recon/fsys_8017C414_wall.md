@@ -95,7 +95,7 @@ reads of request/userData/result/lbl_80453FEC between the call and the load;
 integer round-trip casts, byte-offset and array forms of the slot load;
 volatile manager access; comma forms (these add a saved register).
 
-## 2026-09-29 (lane D8): solved -- a 64-bit OSDisableInterrupts result
+## 2026-09-29: solved -- a 64-bit OSDisableInterrupts result
 
 The hidden r4 value is the low word of a 64-bit call result. Declaring
 `extern s64 OSDisableInterrupts(void);` makes MWCC treat r3:r4 as the call's

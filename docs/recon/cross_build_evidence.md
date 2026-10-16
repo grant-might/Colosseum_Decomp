@@ -1,4 +1,4 @@
-# Cross-build evidence recon (2026-09-28, lane B43)
+# Cross-build evidence recon (2026-09-28)
 
 Which other Genius Sonority builds (Colosseum regions and demos, XD regions and
 demos, Pokémon Box, Battle Revolution) have public text that helps the
@@ -67,7 +67,7 @@ only.map` is a byte-signature port, and it is noisy**: for example, it gives
 
    The code is stripped in the XD demo, XD retail and Colosseum, so **no source
    gives its body**.
-2. **The strings survive naturally. Controlled test**, run in `.lane/striptest`
+2. **The strings survive naturally. Controlled test**, run in `.xd-ref/striptest`
    and not committed, with GC/1.3.2 at the camera unit's flags and `mwldeppc`
    GC/1.2.5n:
    - MWCC emits the strings and initializer images of an uncalled global
@@ -135,7 +135,7 @@ Every camera function is now exact in the candidate, one of them by judgement
 call. The one remaining gap is `cameraDispInfo`'s `.rodata`. The name and the
 data are evidenced, but no build shows the body.
 
-### People lane: people.c sixth 12-byte zero image (0x80273FCC)
+### People: people.c sixth 12-byte zero image (0x80273FCC)
 
 This is the same mechanism as camera.
 - people.c addresses its strings from a block base; its header notes that "the
@@ -163,7 +163,7 @@ XD people.o `.rodata` also has three `UNUSED` 0x12-byte objects,
 isn't evidenced, so it can't be linked. This only says where to look and
 why an image with no reader is natural.
 
-### dbgMenu lane: dbgMenu.c `fn_80132C6C` / pool helpers
+### dbgMenu: dbgMenu.c `fn_80132C6C` / pool helpers
 
 Colosseum 0x80132C6C-0x80133664 lines up with XD's `dbgMenuSub.o` (no path
 prefix in the map), and 0x80133664+ lines up with `dbgMenu.a …\dbgMenu\dbgMenu.o`.
@@ -188,7 +188,7 @@ The `DbgMenuItem` reset in `fn_80132C6C` (0x310) may belong to a
 (all stripped), so this names candidates only. The recon above found "no XD
 counterpart"; the map now supplies names.
 
-### Spline lane: gs_spline.c
+### Spline: gs_spline.c
 
 XD `GSspline.o` has the same three live functions as Colosseum:
 `GSsplineFree`, `GSsplineAddControlVectorValue` and `GSsplineCreate`. The map
@@ -208,7 +208,7 @@ The two versions differ in one place: XD's first string is
 "GetFloatValue: spline parameters not initialised!" (0x32). The keep-mechanism
 is natural, but the stripped bodies still aren't evidenced.
 
-### Script-VM lane: gs_vm.c operand helper
+### Script-VM: gs_vm.c operand helper
 
 There's no usable name. XD's VM is the C++ rewrite `GSScript.a …\GSscript\tiga.o`
 / `tvariant.o` / `chank.o` / `defobj.o` (`GSscript::Tiga::calcExpr1/2`,

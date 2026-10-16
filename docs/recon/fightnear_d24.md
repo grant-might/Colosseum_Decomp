@@ -1,4 +1,4 @@
-# Fight near-links, lane D24 (2026-09-30)
+# Fight near-links (2026-09-30)
 
 Scope: the fight_* units in build/GC6E01/report.json whose only inexact
 functions are at 98%+ (the list in the D24 brief, biggest first). Skipped as

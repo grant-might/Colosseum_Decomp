@@ -36,7 +36,7 @@ target `srwi` into `srawi` through integer promotion, so it regressed and was
 reverted. The rebuilt owner object reproduces the original 47-instruction
 diff. No source improvement or linkage is claimed.
 
-## Resolution (2026-09-29, lane D2): exact and linked
+## Resolution (2026-09-29): exact and linked
 
 fn_801906A0 is Pokemon XD's GSflagGet with its local helper _flagGet
 inlined. XD keeps both out of line (TeamOrre/xd-decomp symbols.txt @

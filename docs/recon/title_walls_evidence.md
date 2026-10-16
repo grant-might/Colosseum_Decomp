@@ -1,4 +1,4 @@
-# Title-path walls: inline-helper evidence recon (2026-09-28, lane RC)
+# Title-path walls: inline-helper evidence recon (2026-09-28)
 
 Six title-path functions are exact only when part of their body is written as
 a `static inline` helper. The "Reconstructed inline helpers" policy
@@ -27,7 +27,7 @@ time of the recon.
 | THPPlayer.c `fn_801E2CA8` | 98.67% | n/a (the existing FillStreamBuffer helper is already admitted, 12 expansions) | none | none (XD replaced the player with `GSmovieStreaming`) | no |
 
 Nothing became admissible under the written policy, so no source change was
-committed on the lane branch. The XD evidence for floor and people is exact at
+committed on the working branch. The XD evidence for floor and people is exact at
 the call level and is recorded below. Admitting it would need a policy decision
 (sister-build evidence is not one of the written categories). The tested
 helper versions are kept on the side branch `rc-xd-helper-proposal` (see "Tested
@@ -232,9 +232,9 @@ Verdict: none found.
 
 Verdict: none found.
 
-## Tested helper versions (not committed on the lane branch)
+## Tested helper versions (not committed on the working branch)
 
-On branch `rc-xd-helper-proposal` (one commit on top of the lane branch), the
+On branch `rc-xd-helper-proposal` (one commit on top of the working branch), the
 XD-shaped helpers were built and compared against the base report:
 
 - floor.c: `static inline void floorInitScene(FloorData* floor)` spanning

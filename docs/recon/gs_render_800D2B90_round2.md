@@ -23,7 +23,7 @@ Shared-lock `all_source`/report and full `ninja -j2` builds passed. The
 retail SHA-1 checks passed for `main.dol` and `common_rel.rel`, which remain
 based on the linked objects rather than this candidate.
 
-## Third pass (2026-09-29, lane D2): exact, not yet linked
+## Third pass (2026-09-29): exact, not yet linked
 
 fn_800D2B90 is now 100% in the report, with no pragma (the old local
 `optimization_level 2` is gone). Three source facts closed it:
@@ -35,7 +35,7 @@ fn_800D2B90 is now 100% in the report, with no pragma (the old local
 2. The scale is the TU's pooled **literal** 255.0f (0x8047C9F0, used only
    by fn_800D2B90 and fn_800D36B4). As an `extern f32` it is reloaded after
    every byte store, and even `extern const` changes the schedule. As a
-   literal it is loaded once, as in retail (lane D4 found the same pattern
+   literal it is loaded once, as in retail (found the same pattern
    in the 0x800D-0x8010 gfx area).
 3. The bytes are stored straight from float (`state->fogColorR = 255.0f *
    color.r`). Going through `s32` values lets the forward peephole drop the
@@ -53,6 +53,6 @@ retail object references `lbl_8047C9F0` by name, and a defined
 object covering 0x800D2B90-0x800D377C (with the already-exact
 fn_800D2DE8-fn_800D3690 carves) once fn_800D36B4 is exact.
 
-Linked 2026-09-29 (lane D2) together with fn_800D36B4 in
+Linked 2026-09-29 together with fn_800D36B4 in
 game/gs_gfx_range_800D2B90.c (GC/2.5, .sdata2 0x8047C9F0-0x8047CA10), as
 proposed above. See gs_gfx_800D36B4_wall.md.

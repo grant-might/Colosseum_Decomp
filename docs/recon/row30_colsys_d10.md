@@ -1,6 +1,6 @@
-# Recomp boot row 30 (People/world per-frame update): colsys status (lane D10, 2026-09-30)
+# Recomp boot row 30 (People/world per-frame update): colsys status (2026-09-30)
 
-## Linked this lane
+## Linked here
 
 - `heroMoveSetEventList` and `heroMoveAddAutoEvent`: text-only carve
   `hero_move_exact_8012BAD0.c` (36c9cf09).

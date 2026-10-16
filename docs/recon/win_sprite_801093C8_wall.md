@@ -1,6 +1,6 @@
 # `fn_801093C8` (XD menuOffScreenDraw): resolved
 
-Linked (lane D11). The remaining `f2`/`f3`/`f4` allocation cycle at
+Linked. The remaining `f2`/`f3`/`f4` allocation cycle at
 instructions 44-55 came from reading the fade constants through extern
 stand-ins (`lbl_8047CE48` etc.). Written as literals (`255.0f`, `100.0f`,
 `0.0f`, `640.0f`, `480.0f`, `1.0f`), the allocation matches retail exactly.

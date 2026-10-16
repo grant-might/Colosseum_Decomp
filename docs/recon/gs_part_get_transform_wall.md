@@ -14,7 +14,7 @@ XD's `GSpartGetTransform` (GXXE01 0x801002C8, trevor403/xd-asm
 offset register (r26), not the walker's (r30). It confirms retail's
 allocation, but not the source construct that produces it.
 
-## Dead ends (2026-09-29, lane D4); all left the r24/r27 choice unchanged or were worse
+## Dead ends (2026-09-29); all left the r24/r27 choice unchanged or were worse
 
 - The counters as one function-scope `i`, or as two separate function-scope
   counters declared at each of the 64 position pairs in the declaration
@@ -36,7 +36,7 @@ not declaration order. The next step is a real register replay
 (`the register-colouring replay tool`; GC/2.6 replays this function
 faithfully, since it emits the same code) once mwcc-debugger is installed.
 
-## 2026-09-29 resolution (lane D4): linked
+## 2026-09-29 resolution: linked
 
 A register replay with cadmic/mwcc-debugger under GC/2.6 (which emits the
 same code as GC/1.3 for this unit) showed the cause.

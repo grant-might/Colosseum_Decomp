@@ -203,7 +203,7 @@ The canonical report remains 95.40308% over 1,816 retail bytes, with
 remains `f83f9c394ffe9fb83c4b06be27cff99080332b7466b112e0b66529bc8d84e463`.
 No source change or exact/linked promotion is claimed.
 
-## 2026-09-29 lane D3: 95.40 → 97.68
+## 2026-09-29: 95.40 → 97.68
 
 The canonical report now gives 97.67621% over 1,816 bytes. The object is
 still an unlinked CodeCandidate. Changes and what each fixed:
@@ -257,7 +257,7 @@ Tried without gain:
 research forms. A 100% result through them would need RULE-EXCEPTION rows
 (goto/label shaping; int local read through casts).
 
-## 2026-09-29 lane D3: exact and linked (tagged exceptions)
+## 2026-09-29: exact and linked (tagged exceptions)
 
 `GStextureCreate` is now 100% and its one-function object is `Matching`.
 The full build passes both retail SHA-1 checks. The two lines that closed

@@ -1,6 +1,6 @@
-# Row 25 (menu system): what's left after lane D11
+# Row 25 (menu system): what remains
 
-Linked in this lane:
+Linked here:
 
 - windowDrawSprite2 and windowGetPortKeyInfo, as window carves.
 - fn_801093C8 (XD menuOffScreenDraw), inside the menuOffScreen TU with its pool.
@@ -20,7 +20,7 @@ GC/2.6 produces byte-identical code for this function, so the mwcc-debugger can 
 
 - K=29 non-restarting sweep.
 - Spill choice by lowest cost/degree, with ties going to the higher vreg.
-- The simulator is `scratchpad/d11/simcopy/model.py` (lane scratch).
+- The simulator is `scratchpad/d11/simcopy/model.py`.
 
 Searching all orderings of the 15 named webs reaches at most 9/15 retail colours. Merging the phase-1 and phase-2 webs doesn't get there either. So retail's interference graph differs, not just its numbering. In retail, `up` is spilled before down/left/right and index/xRange/yRange are simplified after it, which means those webs have higher degree in retail.
 

@@ -26,7 +26,7 @@ Validation: guarded `ninja -j2 all_source build/GC6E01/report.json`, guarded
 full `ninja -j2`, and 27 quality-scan tests pass. The full build's SHA-1 check
 reports both `main.dol` and `common_rel.rel` identical to retail.
 
-## Resolved (lane D12, 2026-09-29)
+## Resolved (2026-09-29)
 
 fn_801909A8 is XD's GSflagInit (trevor403/xd-asm @ b1087f18 FUN_801a06c4),
 which calls GSflagClear(1..3). Colosseum inlines those three calls: the zero

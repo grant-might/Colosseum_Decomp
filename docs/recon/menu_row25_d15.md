@@ -1,6 +1,6 @@
-# Row 25 (menu system): lane D15 notes
+# Row 25 (menu system): notes
 
-This follows docs/recon/menu_row25_d11.md. The GSmsg blockers (fn_800FBB34, fn_800FD348 and the rest of gs_msg*) belong to lane D14 and are not covered here.
+This follows docs/recon/menu_row25_d11.md. The GSmsg blockers (fn_800FBB34, fn_800FD348 and the rest of gs_msg*) belong to a separate pass and are not covered here.
 
 ## Linked
 
@@ -75,7 +75,7 @@ I combined these with random declaration orders (1200 samples). The best is 98.6
 
 scratchpad/d13's vmap/whatif simulator doesn't reproduce our own allocation for this function. For example, it colours window r25 where the compiler gives r26. So I couldn't use it to steer, and the wall stands.
 
-## People-frame colsys (lane D15)
+## People-frame colsys
 
 ### Linked in 4fd057e4
 

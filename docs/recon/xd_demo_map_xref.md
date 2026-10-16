@@ -1,8 +1,8 @@
-# XD demo linker map cross-reference (2026-09-28, lane BX)
+# XD demo linker map cross-reference (2026-09-28)
 
-This recon follows up [cross_build_evidence.md](cross_build_evidence.md) (lane
-B43). That lane found that the Pokémon XD JP demo's own linker map is public
-(`NXXJ01.map`, the disc's `Master.MAP`). This lane built a tool that lines the
+This recon follows up [cross_build_evidence.md](cross_build_evidence.md).
+That work found that the Pokémon XD JP demo's own linker map is public
+(`NXXJ01.map`, the disc's `Master.MAP`). This work built a tool that lines the
 map up with Colosseum and asked one question of it: do the stripped functions
 that left orphan data in Colosseum have a live body in any XD build?
 
@@ -31,7 +31,7 @@ were not used as evidence.
 
 ## The tool: `tools/xd_map_xref.py`
 
-The three external repositories are cloned into a lane-private `.lane/`
+The three external repositories are cloned into an untracked `.xd-ref/`
 (`maps`, `xd-decomp`, `xd-asm`). Their paths can be overridden with `--map`,
 `--retail-symbols` and `--xd-asm`. Colosseum bodies come from
 `build/GC6E01/asm`, so run `ninja` once first.
@@ -93,7 +93,7 @@ XD body exists to test, and the scratch build that would add a real XD
 function to a Colosseum TU could not be run. The mechanism itself (uncalled
 functions stripped object by object, `.rodata` kept whole when a live function
 addresses it from the section base) was already shown by B43 in
-`.lane/striptest`.
+`.xd-ref/striptest`.
 
 Over the whole map, retail keeps functions that the demo strips in only a
 handful of objects, none of them near a wall:
@@ -125,7 +125,7 @@ function and no uncovered bytes, so the function is stripped in every XD build.
 No body exists. B43's finding stands: the 15 strings survive in Colosseum only
 because `cameraInit` addresses `.rodata` from its base.
 
-Two leads for the camera lane, from functions XD strips but Colosseum keeps:
+Two camera leads, from functions XD strips but Colosseum keeps:
 
 - XD `cameraGetAnimeFrame` (0x74, `UNUSED`) is the same size as Colosseum's
   live `fn_80176C04` (0x74), and sits at the same place in the order;
@@ -179,7 +179,7 @@ function sits in its emitted position.
   lines 677-678 and 1544-1545).
 
 No body exists for `HSD_JObjDmpNode` or `HSD_JObjLookup`, so the wall stays.
-The map does give the jobj lane the names and sizes of the two owners.
+The map does give the jobj work the names and sizes of the two owners.
 
 ### gs_spline.c: the stripped functions' error strings
 
@@ -238,7 +238,7 @@ shown). They were left out for one of these reasons:
 - the object is head- or tail-aligned, so only one side is anchored;
 - the Colosseum names in that object came from the noisy port (`dbgMenuFight*`).
 
-The table is for the owning lanes to confirm and apply with their sources.
+The table is for the owners to confirm and apply with their sources.
 
 | XD object | Colosseum → XD name |
 |---|---|
@@ -399,9 +399,9 @@ Colosseum still had **one** object:
 
 So the XD split is a hint, not proof, for Colosseum.
 
-## Leads per lane
+## Leads per area
 
-| Lane | Lead |
+| Area | Lead |
 |---|---|
 | **B7 hero_move** | `tools/xd_map_xref.py object heroMove.o` aligns 25 anchors. XD strips three functions that Colosseum keeps live: `heroMoveChkHinderClearPos` (0x344) at `fn_8012B19C` (0x448, 65%), `getCpLineCircle` (0x384) at `fn_8012D39C` (0x454) and `dispLeaderLog` (0xAC) at `fn_8012F1FC` (0x210). These are names only, with no XD body. XD retail bodies exist for the counterparts of the low-scoring Colosseum functions: `heroMoveChkHinderClear` 8014F070, `heroMoveInitEvent` 8014F5C0, `moveParty` 801502D0 (at `fn_8012DE94`), `updateLeaderMovement` 8015083C (at `fn_8012E388`, 0.62), `heroMoveTermEvent` 8014F518. XD's heroMove is C++ (`HEROMOVE_MEMBER`, `AnalogStickEmu`), so use these as structure references only. XD retail has one heroMove function the demo does not name, `fn_80151F6C` (0x20, not inspected). |
 | **B15 dbgMenu** | The TU question above (one object vs `dbgMenuSub` + `dbgMenu`). `fn_80132C6C` is a table allocator (two `_toolentryAlloc` / `fn_800E27B0` pairs, then 8 unrolled item resets). No XD retail window scores 0.5 against its first 61 instructions. The XD names that could fit are stripped in XD (`dbgMenuInit` 0xD4 in `dbgMenu.o`; `dbgMenuDispAMemInfo` / `dbgMenuDispMemInfo` in `dbgMenuSub.o`). `fn_80132F7C` toggles menu 0xAB (`menuIsCheck` / `menuClose` / `menuOpenCustom`). It is the Colosseum form of XD `debugMenuChangeMemInfo` / `debugMenuNodrawArea`: 0.72, with the same call list. |
@@ -414,10 +414,10 @@ So the XD split is a hint, not proof, for Colosseum.
 ## Reproduction
 
 ```sh
-# clones (lane-private)
-git clone https://github.com/StarsMmd/Colo-XD-PBR-symbol-maps .lane/maps     # 6b51d3af
-git clone https://github.com/TeamOrre/xd-decomp .lane/xd-decomp               # 4989794e
-git clone https://github.com/trevor403/xd-asm .lane/xd-asm                     # b1087f18
+# clones (untracked)
+git clone https://github.com/StarsMmd/Colo-XD-PBR-symbol-maps .xd-ref/maps     # 6b51d3af
+git clone https://github.com/TeamOrre/xd-decomp .xd-ref/xd-decomp               # 4989794e
+git clone https://github.com/trevor403/xd-asm .xd-ref/xd-asm                     # b1087f18
 python3 configure.py --no-progress && ninja all_source build/GC6E01/report.json
 python3 tools/xd_map_xref.py retail-live
 python3 tools/xd_map_xref.py --all-data object jobj.o

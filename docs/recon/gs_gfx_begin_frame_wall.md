@@ -53,7 +53,7 @@ flags; the remaining unreachable branch and extra candidate register lifetimes
 are a compiler/source-structure matching problem, not grounds for inventing
 effects to keep dead code. No `CodeCandidate` acceptance or link status changed.
 
-## 2026-09-29 (lane recomp-blockers-gfx): optimiser-flag probe
+## 2026-09-29: optimiser-flag probe
 
 With the unit-wide option `-opt nopropagation` (GC/1.3), the unchanged
 candidate source compiles to retail's exact size (0x654), saves r24-r31 at
@@ -91,7 +91,7 @@ functions of this range thus point to a propagation-off build, but the
 unit-wide flag is still unproven (see above). Linking this unit would also
 need its jump table (`.data` 0x80314188, 0x170 bytes) added to the split.
 
-## 2026-09-29 (lane D4): `fn_800D461C` linked
+## 2026-09-29: `fn_800D461C` linked
 
 Default flags, no `-opt nopropagation`. Case 80 matches with the plain
 `argument = *p++; memcpy(&copied, p, 4); p++;` (the earlier source read
@@ -106,7 +106,7 @@ were not used. The unit now owns its switch table (`.data` 0x80314188–0x803142
 `game/data/data_80314188.c` was removed. The object links as Matching and the
 retail DOL/REL SHA-1 pass.
 
-## 2026-09-29 (lane D4): `fn_800D3FA4` linked
+## 2026-09-29: `fn_800D3FA4` linked
 
 The pass body is now the helper `gfxRenderPass(flags, setupCamera, pass)`.
 In retail it expands twice, with the same calls and constants apart from the

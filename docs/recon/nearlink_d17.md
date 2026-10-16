@@ -1,4 +1,4 @@
-# Near-link sweep, lane D17 (2026-09-30)
+# Near-link sweep (2026-09-30)
 
 Scope: incomplete units whose inexact functions are all 98%+ (recomputed
 from build/GC6E01/report.json), then, after the D17/D18 split, only the

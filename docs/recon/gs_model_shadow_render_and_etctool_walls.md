@@ -1,4 +1,4 @@
-# modelShadowRender (now linked) and fn_801E09E0 walls (lanes D4/D7, 2026-09-29)
+# modelShadowRender (now linked) and fn_801E09E0 walls (2026-09-29)
 
 ## `modelShadowRender__FP10GSgfxLayer` (96.13%)
 
@@ -26,7 +26,7 @@
   loop-invariant motion of the bound address, which is needed before the
   pool can be owned.
 
-### 2026-09-29 second pass (lane D4): 96.13% to 99.79%, not exact
+### 2026-09-29 second pass: 96.13% to 99.79%, not exact
 
 I replayed each step with mwcc-debugger (GC/2.6, same code as GC/1.3) and
 checked colouring orders with a copy of D5's GPR simulator
@@ -78,7 +78,7 @@ this unit, probably as a `lbl_8047CBC0` global so the linked 800E9358
 carve still resolves. It also needs the unit split out of its
 list-comprehension flag group.
 
-### 2026-09-29 third pass (lane D7): exact and linked
+### 2026-09-29 third pass: exact and linked
 
 **The web structure.** A pairwise-merge search of the interference graph
 with the GPR simulator (every pair of live nodes merged, K 27 and 29), and a
@@ -155,7 +155,7 @@ constants' scheduling differences (`lfd` biases before the `lfs` limit)
 are consistent with a literal pool, and would be the first thing to
 revisit in that whole-TU build.
 
-## Lane D2 follow-up (2026-09-29)
+## Follow-up (2026-09-29)
 
 - **Compiler:** GC/1.3 through 2.7 give the same 176-row aligned diff, so
   this is not a compiler-version wall.
@@ -183,7 +183,7 @@ revisit in that whole-TU build.
   offsets/counters being distinct virtual registers created in a different
   order, the same kind of priority effect as the GSpartGetTransform fix.
 
-## Etctool unit 0x801DF474-0x801E0FB4 (lane D2, 2026-09-29)
+## Etctool unit 0x801DF474-0x801E0FB4 (2026-09-29)
 
 ### Unit boundary and settings
 

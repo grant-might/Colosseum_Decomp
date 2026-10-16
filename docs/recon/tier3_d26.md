@@ -1,7 +1,7 @@
-# Near-link tier 3 (lane D26, 2026-09-30)
+# Near-link tier 3 (2026-09-30)
 
 Worktree `/private/tmp/pkmn-decomp-d12`, branch `decomp-d26-tier3`.
-Stopped early: the coordinator moved all lanes to the title-screen boot path.
+Stopped early: work moved to the title-screen boot path.
 
 ## How the list was built
 

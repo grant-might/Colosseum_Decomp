@@ -1,8 +1,8 @@
-# Row 7 (main-thread init): remaining register-colouring walls (lane D12, 2026-09-30)
+# Row 7 (main-thread init): remaining register-colouring walls (2026-09-30)
 
 Every function below matches retail instruction-for-instruction except for
 one swapped register pair or a scheduling slot. What was tried is listed so
-the next lane does not repeat it.
+the next pass does not repeat it.
 
 ## fightOutPokemonSetMeetEnemyFightPokemonEnemySideAll — 99.74% (fight_out_pokemon.c)
 

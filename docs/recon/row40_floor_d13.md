@@ -1,6 +1,6 @@
-# Recomp boot row 40 (floor manager) and the people-frame colsys blockers (lane D13, 2026-09-30)
+# Recomp boot row 40 (floor manager) and the people-frame colsys blockers (2026-09-30)
 
-## Linked this lane
+## Linked here
 
 | Commit | Unit | Functions |
 |---|---|---|

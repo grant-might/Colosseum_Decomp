@@ -38,7 +38,7 @@ function would need an isolated, whole-object linked split and the normal
 quality/hash gates before Recomp can bind it. The current improvement is
 source reconstruction only, not accepted port code.
 
-## Resolved (lane D11)
+## Resolved
 
 Linked as `src/game/menu/menu_middle_exact_8006B6B4.c`, 100% under the menu
 units' flags (GC/1.3, -O4,p, -opt nopeephole). Two fixes did it:

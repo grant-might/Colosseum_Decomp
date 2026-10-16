@@ -1222,7 +1222,7 @@ control-dispatch register lifetime, and constant ownership remain open.
 Configure, all-source/report, full link, retail DOL and REL hashes, progress,
 quality-scan tests and source wrapper scan pass.
 
-## GSmsgGetRect report-exact (lane D3, 2026-09-29)
+## GSmsgGetRect report-exact (2026-09-29)
 
 `GSmsgGetRect` now scores 100% in the canonical report (93.34321% before),
 and `GSmsgSetFontInfo` 100% (97.755104%). No object is newly linked. The
@@ -1283,7 +1283,7 @@ with its `.sdata2` pool at 0x8047CD00) links as one object. The same applies
 to fn_800FB680/fn_800FB8C8/fn_800FBB34/GSmsgExec and every other function
 that converts integers to floats.
 
-## GSmsg TU link: whole-TU only (lane D3 handoff, parked 2026-09-29)
+## GSmsg TU link: whole-TU only (parked 2026-09-29)
 
 Report-exact on branch `decomp-d3-title-msg`: GSmsgGetRect,
 GSmsgSetFontInfo, GSmsgExec, fn_800FBB34 and GSmsgSetColor (the last
@@ -1349,7 +1349,7 @@ addresses from TeamOrre/xd-decomp symbols.txt at 4989794e. XD
 GSmsgGetRect is `code/func_FUN_80107554.s` and XD GSmsgSetFontInfo is
 `code/func_FUN_80107200.s`.
 
-## Lane D9 round (2026-09-29)
+## Round (2026-09-29)
 
 Newly exact (whole-TU compile, msgdiff and canonical report): fn_800FD348,
 fn_800FB43C, fn_800FB680, fn_800FB8C8, GSmsgInitRuby.
@@ -1374,7 +1374,7 @@ Raised, not exact (rows are whole-TU msgdiff lines):
 
 | Function | Before | Now | What moved it | What is left |
 |---|---:|---:|---|---|
-| fn_800FAEF8 (XD GSprint, `func_GSvtr_DrawText.s`) | 177 | 71 | XD `_msgSetChar` (`func_FUN_8010a144.s`, NXXJ01 0x2B4) as the inline `msgSetChar`, shared with fn_800FC7E0; set-up addressed through the buffer (`base + 0x5D0`), `work` only for the loop, which gives retail's base r31 / work r30 / colour r29; struct-typed glyph address `font + dataOffset + (offset & 0xFFFFFF)` | retail stores the task set-up through `mr r7,r30` (a surviving copy of work) except the first flag store, which goes through base+0x5D0; the string terminator is `stb 255(r4)` off the argument register rather than folded to 0x5CF. XD has the same shape. Not reproduced with inline params, return values, explicit copies or double definitions (sweeps in lane notes) |
+| fn_800FAEF8 (XD GSprint, `func_GSvtr_DrawText.s`) | 177 | 71 | XD `_msgSetChar` (`func_FUN_8010a144.s`, NXXJ01 0x2B4) as the inline `msgSetChar`, shared with fn_800FC7E0; set-up addressed through the buffer (`base + 0x5D0`), `work` only for the loop, which gives retail's base r31 / work r30 / colour r29; struct-typed glyph address `font + dataOffset + (offset & 0xFFFFFF)` | retail stores the task set-up through `mr r7,r30` (a surviving copy of work) except the first flag store, which goes through base+0x5D0; the string terminator is `stb 255(r4)` off the argument register rather than folded to 0x5CF. XD has the same shape. Not reproduced with inline params, return values, explicit copies or double definitions (sweeps in notes) |
 | fn_800FC7E0 (XD `_msgMainSub`) | 180 | 122 | arg1/arg3 word-sized, cast at use (retail's clrlwi stays in the loop; the K&R `u8` form narrows once and hoists it); `normalFlag = 0` at entry; `msgSetChar` (gives retail's stack layout: fontNode 8, colour copy 12, colour 16) | one more saved GPR in retail (r19); saved-register cascade |
 | fn_800FD69C (XD `_msgMakeTexture`, `func_FUN_8010a3f8.s`, near-identical registers) | 649 | 256 | `x + arg2 + 2 >= 0x200` and `atlasY += h + 2`; declaration-order hill-climb | the swizzle store: retail builds `stbx v, hi*32, (lo + image)`, MWCC canonicalizes every C form tried (array, pointer, 2-D array, integer, cast, pointer-variable, operand orders) to `stbx v, image, (lo + hi*32)` |
 | fn_800F9AEC, fn_800F9C04 (XD GBAMakeFromGSchar / GScharMakeFromGBA) | 1 | 1 | — | retail's leaf `cmpwi 9; b default` has no `beq`. The front end already gives case 9 and default one label (`CASE 0x9: L@8`, `DEFAULT: L@8`), yet every GC compiler from 1.0 to 3.0a5.2, C or C++, any -O level, keeps the beq. XD's own tree (`func_FUN_8010643c.s`) drops the leaf beq the same way, while the pivots keep theirs |

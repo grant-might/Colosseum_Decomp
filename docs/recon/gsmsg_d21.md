@@ -1,4 +1,4 @@
-# GSmsg pool object: lane D21 (2026-09-30)
+# GSmsg pool object (2026-09-30)
 
 This continues docs/recon/gsmsg_d14.md and docs/recon/gsmsg_d13.md.
 Branch `decomp-d21-gsmsg`.
