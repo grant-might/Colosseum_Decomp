@@ -385,7 +385,7 @@ void fn_80214B68(void) {
     lbl_8047B610++;
 }
 
-/* fn_80214CB0 now defined in the wave2-w0 section below (100%). */
+/* fn_80214CB0 now defined below (100%). */
 
 /* If effect 0x11's state resolves to 2, set lbl_80478D78[3] = 0x75. */
 void fn_8021B70C(void) {
@@ -524,7 +524,7 @@ u8 fn_8023943C(int arg1, int arg2, int arg3) {
 #undef fn_8011BAC0
 #pragma optimize_for_size reset
 
-/* ===== 0x8021DDxx bytecode ops (integrated from batch-2 worker) ===== */
+/* ===== 0x8021DDxx bytecode ops ===== */
 extern void* lbl_8047B64C;
 extern u8    lbl_80478278[0x10];
 extern void  fn_801DA36C(void* obj, u32 val);
@@ -611,7 +611,7 @@ void fn_8021DE4C(void) {
 
 #pragma optimize_for_size reset
 
-/* ===== AI-handler resolver + battle-message triggers (integrated from batch-7 worker) ===== */
+/* ===== AI-handler resolver + battle-message triggers ===== */
 
 /* Resolve an AI-handler function pointer for param2 and invoke it; falls back
  * to the stub fn_8024E52C when no handler is registered. */
@@ -728,7 +728,7 @@ void fn_802171BC(void) {
     lbl_8047B610++;
 }
 
-/* ===== 0x80222xxx bytecode-op cluster (integrated from batch-2 worker) ===== */
+/* ===== 0x80222xxx bytecode-op cluster ===== */
 extern void* lbl_8047B62C;
 extern void  fn_80211B94(void* a, void* b, u8 c);
 extern u8    fn_80207AE0(void* obj, u8 v);
@@ -799,7 +799,7 @@ void fn_8021DEFC(void) {
 }
 void fn_8021DF70(void) { lbl_8047B610++; }
 
-/* ===== battle-message-trigger family (integrated from batch-7 worker) =====
+/* ===== battle-message-trigger family =====
  * Each fires one or more sequence messages (fn_80239984 handle + fn_80239EE8
  * emit) gated on trainer/move state. handle accumulates across blocks. */
 extern u32  fn_80239984();
@@ -1013,7 +1013,7 @@ u32 fn_8023FA1C(void* ctx, u32 param1, u32 param2) {
 }
 #pragma optimize_for_size reset
 
-/* ===== 0x80223-0x80229 conditional jumps / dispatchers (batch-3 worker) ===== */
+/* ===== 0x80223-0x80229 conditional jumps / dispatchers ===== */
 extern u8   fn_801F4C14(u32, u16, u32, u16, u32);
 extern u32  fn_802096E8(void*);
 extern u32  fn_80077AF4(void);
@@ -1089,7 +1089,7 @@ void fn_80226730(void);
 u8 fn_8022967C(u32 param2);
 /* body moved to fight_range_exact_80228DAC.c: fn_8022967C */
 
-/* ===== 0x80217-0x8021D bytecode ops (integrated from batch-1 worker) ===== */
+/* ===== 0x80217-0x8021D bytecode ops ===== */
 extern u8    fn_8021B910();
 extern u8    lbl_80279F7C[12];
 extern void  fn_802653FC(void* ptr, u16 a, s32 b);
@@ -1489,7 +1489,7 @@ s32 fn_80240144(void* ctx, u32 param1, u32 param2) {
 }
 #pragma optimize_for_size reset
 
-/* ===== 0x8022FE20-0x80235AA0 handlers (integrated from wave2-w5 worker) ===== */
+/* ===== 0x8022FE20-0x80235AA0 handlers ===== */
 extern u16  fn_80205224();
 extern void fn_80202810();
 extern u8   fn_802062FC();
@@ -1573,7 +1573,7 @@ u8 fn_8023011C(void* ctx);
 u8 fn_802316FC(void* ctx);
 /* body moved to fight_range_exact_802316FC.c: fn_802316FC */
 
-/* ===== 0x80235BE4-0x8023C370 trainer-AI accessor layer (wave2-w6 worker) =====
+/* ===== 0x80235BE4-0x8023C370 trainer-AI accessor layer =====
  * Selector idiom: fn_801FB1C0(0, fn_801FB1C0(ctx,0,0x43,0)&0xFFFF, 2, 0)
  * switches to the species context, then chained lookups read the stat. ===== */
 
@@ -2176,7 +2176,7 @@ void fn_80216804(void) {
     lbl_8047B610 = lbl_8047B610 + 1;
 }
 
-/* ===== 0x80213-0x80217 FightSeq opcode handlers (wave2-w0 worker, part 2) ===== */
+/* ===== 0x80213-0x80217 FightSeq opcode handlers (part 2) ===== */
 extern u8   fn_80203CCC();
 extern u8   fn_801F221C();
 extern void fn_80120B00();
@@ -2394,7 +2394,7 @@ void fn_80216960(void) {
     lbl_8047B610 = lbl_8047B610 + 1;
 }
 
-/* ===== 0x80213-0x80217 FightSeq status ops + dispatchers (wave2-w0 worker, part 1) ===== */
+/* ===== 0x80213-0x80217 FightSeq status ops + dispatchers (part 1) ===== */
 extern void statusSetStatus();
 extern u32  statusGetStatus();
 extern void fn_801252E0();
@@ -2743,7 +2743,7 @@ void fn_80213158(u32 param1) {
 #endif
 
 #if !defined(FIGHT_RANGE_EXACT_80213158_ONLY)
-/* ===== 0x8021D688-0x80223A24 sound/anim/thread ops (wave2-w2 worker) ===== */
+/* ===== 0x8021D688-0x80223A24 sound/anim/thread ops ===== */
 extern void std130_soundUnk_801653cc(s32, s32, s32);
 extern void soundStart(s32, s32, s32, s32);
 extern void fn_801F22D8(u32 obj);
@@ -3049,7 +3049,7 @@ void fn_8021F998(void) {
 #undef fn_80208ED0
 #pragma optimize_for_size reset
 
-/* ===== 0x80223A24-0x8022FE20 handlers (wave2-w34 worker) ===== */
+/* ===== 0x80223A24-0x8022FE20 handlers ===== */
 extern u8   lbl_80379A22[0x14];
 extern u32  fn_8020912C();
 extern int  fn_802656AC();
@@ -3441,7 +3441,7 @@ u8 fn_8022D084(void* ctx) {
 #undef fn_8012640C
 #undef fn_801254B4
 
-/* ===== 0x802175A8-0x8021D688 handlers (wave2-w1 worker) ===== */
+/* ===== 0x802175A8-0x8021D688 handlers ===== */
 extern void fn_8020A2B8();
 extern u8   fn_80119DD0();
 extern u16  fightFloorGetValidFightOutPokemonCount(u32, u8, u32, u8);
@@ -3981,7 +3981,7 @@ void fn_80222ADC(void);
 /* body moved to fight_range_exact_80222110.c: fn_80222ADC */
 #pragma optimize_for_size reset
 
-/* ===== wave3-d: cracked near-misses ===== */
+/* ===== near-misses ===== */
 
 /*
  * fn_80224820 (0x80224820)
@@ -4079,8 +4079,6 @@ u8 fn_8022EC40(void* ctx);
 #undef fn_80207B5C
 #pragma optimize_for_size reset
 
-/* ===== wave3-e ===== */
-
 /*
  * fn_802357CC (0x802357CC)
  * val = ctx's field 0xec read via param1; if ctx's field 0x24 (through the
@@ -4169,8 +4167,6 @@ u8 fn_80235B04(void* ctx, u32 arg2, u32 arg3) {
 #undef fn_801F453C
 #pragma optimize_for_size reset
 
-/* ===== wave3-g ===== */
-
 /* fn_8023D158 (0x8023D158): seqs 0x217 / 0x218 / 0x219.
  * Verified 100.0% match. */
 #pragma optimize_for_size on
@@ -4211,8 +4207,6 @@ u32 fn_8023D158(void* ctx, u32 param1, u32 param2, u32 param3) {
     return handle;
 }
 #pragma optimize_for_size reset
-
-/* ===== wave3-b ===== */
 
 /*
  * fn_8021DF80 (0x8021DF80)
@@ -4263,8 +4257,6 @@ skip:
 #undef fn_801F54A4
 #undef fn_801F025C
 #pragma optimize_for_size reset
-
-/* ===== wave3-a ===== */
 
 /* fn_80215C70: bytecode op -- reads slot-0x11/0x12 contexts; if the
  * slot-0x12 fn_80207BF4() value is 0 or 0x19, takes the script-embedded
@@ -4453,8 +4445,6 @@ void fn_80214864(void);
 #undef fn_8011BBD8
 #pragma optimize_for_size reset
 
-/* ===== wave4-G ===== */
-
 /* fn_8023FB5C (0x8023FB5C): rank-threshold pair, seqs 0x1d0 / 0x1d1. */
 #pragma optimize_for_size on
 u32 fn_8023FB5C(void* ctx, u32 param1, u32 param2) {
@@ -4514,8 +4504,6 @@ done:
     return handle;
 }
 #pragma optimize_for_size reset
-
-/* ===== wave4-A ===== */
 
 /* fn_80214F10: bytecode op -- resolves id=(u16)fn_801F54A4(...,0x14,...),
  * ctx11 from slot 0x11, a trainer context via fn_801F4354(0,ctx11), and a
@@ -4664,7 +4652,7 @@ void fn_8021F458(void) {
 #undef fn_8020F108
 #undef fn_8026246C
 
-/* ===== wave4-F: fight-target checks + the battle-message emitters ===== */
+/* ===== fight-target checks + the battle-message emitters ===== */
 
 /* fn_80237DBC (0x80237DBC): checks whether `target` matches the ally/foe
  * fight-target id computed twice (mode 0 then mode 1 via fn_80207B8C).
@@ -4970,7 +4958,7 @@ do_check:
 #undef fn_8026246C
 #undef fn_802624CC
 
-/* ===== wave4-B (+stray wave4-C fn_8021E288) ===== */
+/* ===== (+stray fn_8021E288) ===== */
 
 /*
  * fn_8021C190 (0x8021C190)
@@ -5204,8 +5192,6 @@ void fn_8021E288(void) {
 #undef fn_801F025C
 #undef fn_801F54A4
 
-/* ===== wave4-C (harvested after worker hit session limit) ===== */
-
 #define fn_8011BEB4 wazaGetStatus
 #define fn_801C2D5C battleCameraDoFull
 #define fn_801C2D68 battleCameraDoSimple
@@ -5363,7 +5349,7 @@ void fn_8021E754(void) {
 #undef fn_80203E7C
 #undef fn_80206A04
 
-/* ===== fable deep-dive: the story-script interpreter (documented partial) ===== */
+/* ===== the story-script interpreter (documented partial) ===== */
 
 /*
  * fn_802249B8 (0x802249B8, 6012 bytes) - story-script interpreter,
@@ -6199,11 +6185,11 @@ chk31:
 #if defined(FIGHT_RANGE_ALL) || defined(FIGHT_RANGE_EXACT_80213158_ONLY)
 #if !defined(FIGHT_RANGE_EXACT_80213158_ONLY)
 
-/* ===== fable deep-dive #2 (documented partial) ===== */
+/* ===== documented partial ===== */
 
 /*
  * fn_8022BE2C (0x8022BE2C, 4696 bytes) -- fight_range_80211A00 unit.
- * VERIFIED 98.85264% (objdiff) in worktree pkmn-fight-c3 as of delivery.
+ * VERIFIED 98.85264% (objdiff) as of delivery.
  *
  * RESIDUAL DIFFS (all classified, no logic diffs):
  *  - register-only (~149 instrs): callee-saved coloring. Correct webs: ctx=r31,
