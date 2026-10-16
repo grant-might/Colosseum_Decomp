@@ -129,8 +129,8 @@ Some measurement traps are worth knowing before trusting a number:
   image, and a differing relocation set that still linked identically.
 * Declaration order, per-unit compiler flags, pooled-symbol stand-ins and
   named-intermediate reshapes have all been measured inert on the residual set.
-  `tooling/RESIDUE_RANKING.md` carries the per-function record of which lever is
-  already dead.
+  The per-function record of which lever is already dead was kept with the working
+  notes rather than published here, so treat those four classes as settled.
 * `tools/update_readme_progress.py` rewrites the status table by matching the first
   table whose header is `Metric / Value`, then every following line that starts and
   ends with a pipe. Under `(?s)` that pattern spans newlines, so any second table
