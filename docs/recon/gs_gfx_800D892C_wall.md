@@ -144,7 +144,7 @@ Still open:
   but the select's backend temp then takes r31 instead of r21.
 - **Indirect-stage count.** The `++/--` placeholder is unchanged.
 
-### Follow-up: the two coordinator angles (both still walled)
+### Follow-up: the two remaining angles (both still walled)
 
 **1. Stage-source pointer through a cast index.** Every form scored worse
 than the committed 98.52% raw (17 rows):

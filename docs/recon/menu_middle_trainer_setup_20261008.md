@@ -29,8 +29,7 @@ rather than including the broad shared menu source.
 
 ## Measurements
 
-All build and comparison commands ran through the campaign build lock as
-`the menu-middle worker`:
+All build and comparison commands ran through the campaign build lock:
 
 - `ninja all_source build/GC6E01/report.json` passed.
 - `tools/decomp_work/fdiff.py` reports all 57 instructions equal.
@@ -46,8 +45,8 @@ All build and comparison commands ran through the campaign build lock as
 
 Change the existing `configure.py` entry for
 `game/menu/menu_middle_r48_8006B5D0_prefix.c` from `CodeCandidate` to `Matching`.
-No additional configuration change is needed. This worker did not modify
-configuration, commit, push, or claim completed linkage. The integrating parent
+No additional configuration change is needed. This pass did not modify
+configuration, commit, push, or claim completed linkage. The integration step
 must regenerate configuration, run the full canonical link/hash checks and
 policy checks, then refresh the report/dashboard before reporting linked
 progress. Expected gain: one exact function (228 bytes), and independently one

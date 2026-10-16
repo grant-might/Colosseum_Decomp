@@ -2,18 +2,18 @@
 
 ## Scope and status
 
-the verification worker matched `menuPokemonSub` at `0x8001B1EC` in
+`menuPokemonSub` was matched at `0x8001B1EC` in
 `main/game/menuPokemon_candidate_8001B1EC`. The retained source is 100%:
 all 2,264 bytes and all 88 relocation records match retail. This is
 working-tree evidence based on `7fe1001712fa82b3d9be5db53d9a6fe95970e97f`,
 not a committed acceptance pin or a native-port execution claim.
 
-The parent owns the `CodeCandidate` to `Matching` promotion, the shared
-exception-row integration, and the final full link/seven canonical hashes.
-The worker's pre-promotion report had 100% code/functions and
+The integration step owns the `CodeCandidate` to `Matching` promotion, the
+shared exception-row integration, and the final full link/seven canonical
+hashes. The pre-promotion report had 100% code/functions and
 `metadata.complete: false`. That distinction must not be mistaken for a
 remaining byte mismatch. No configure.py or RULE_EXCEPTIONS.md edit,
-commit, push, or native-source change was made by this worker.
+commit, push, or native-source change was made here.
 
 ## Retained source and flags
 
@@ -90,8 +90,8 @@ The retained source hashes recorded there are:
 The final audit discovers configured owners through recursive quoted C
 source includes, including the indirect 8001C7B8 and 8001D378 wrappers.
 It rebuilds all 19 configured owners that include menuPokemon.c, plus the
-separate dbgMenuClose owner. All checks run under the shared the verification worker
-build lock. No further permutation or source trial is part of this audit.
+separate dbgMenuClose owner. All checks run under the shared build lock. No
+further permutation or source trial is part of this audit.
 
 Fourteen owners have exact retail function bytes and relocations, identical
 complete allocated sections, and the same emitted function set:
@@ -177,13 +177,13 @@ The parent subsequently confirmed that
 `game/menuPokemon_candidate_8001B1EC.c` was promoted to `Matching` and the
 post-promotion full link passed all seven canonical hashes. MenuSub is
 therefore exact and linked; this supersedes the pre-promotion status and
-pending-link statements above. The final link result is parent-reported,
-separate from this worker's recorded byte/relocation and sibling audits.
-The committed acceptance revision remains for the parent handoff to record.
+pending-link statements above. The final link result was reported at
+integration, separate from the byte/relocation and sibling audits recorded
+here. The committed acceptance revision remains to be recorded.
 
 The final locked audit covered all 20 relevant owners: fourteen exact
 owners, six incomplete siblings unchanged from freshly compiled HEAD
-baselines, and all three verification gates still exact. Both the verification worker
+baselines, and all three verification gates still exact. Both ownership
 claims (menuPokemon.c and menuPokemon_candidate_8001B1EC.c) were released
 after that audit. No owned build remained running, and no further source
 edit or permutation was performed.

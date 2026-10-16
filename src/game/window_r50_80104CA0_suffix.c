@@ -3,7 +3,7 @@
  * @brief windowCreateCursorSprite, windowOpen and _winCalcWindowSize
  *        (0x80104CA0 - 0x80105410), exact standalone owner.
  *
- * Not linked (coordinator, 2026-09-28): lbl_8047CDEC is not a shared global
+ * Not linked (2026-09-28): lbl_8047CDEC is not a shared global
  * but the window TU's own compiler-pool 1.0f. Only windowOpen and
  * windowDrawSprite2 (another chunk) read it, and it is misfiled in
  * gs_model_sdata2_8047CD98.c. Reading it through an extern stand-in is the

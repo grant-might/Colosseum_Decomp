@@ -1,6 +1,6 @@
 # Carve sweep, second pass (2026-09-30)
 
-Worktree `/private/tmp/pkmn-decomp-d12`, branch `decomp-d22-carves2`.
+Worked in a separate git worktree.
 This follows `nearlink_d18.md` and `rangecarve_d19.md`. Each link passed
 all of these:
 
@@ -105,7 +105,7 @@ There is no rule exception.
   (2287 expected units against 2082). It is not part of link acceptance, and
   it was not updated.
 
-## Second pass (coordinator follow-up)
+## Second pass
 
 Each link passed the same acceptance as above. When several units were
 validated in one run, they were then committed one per unit from the

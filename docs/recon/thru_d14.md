@@ -30,7 +30,7 @@ each). Pass 2 and pass 3 already match. Retail's preheader is
   schedules the addi first. In pass 1 the address dies at the copy, so
   coalescing hides it.
 - I reproduced this with an inline helper that returns its `out` parameter
-  when the caller uses the result (I1/J2/J4 in scratchpad d14). The addi
+  when the caller uses the result (I1/J2/J4). The addi
   then comes first, but the returned pointer is reused after the loop,
   where retail rematerialises the address, and src/v swap registers.
 - These did not keep the copy: parameter temporaries that are discarded,

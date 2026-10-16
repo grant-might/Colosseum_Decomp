@@ -3,7 +3,7 @@
 ## Method
 
 MWCC's GPR allocation can be reproduced from an mwcc-debugger replay. The
-simulator is in the session scratchpad, `d16/simp.py`, with `trace.py` and
+simulator is in the scratch dir, `simp.py`, with `trace.py` and
 `wi*.py` beside it.
 
 Simplify:
@@ -96,7 +96,7 @@ This has two independent problems.
   creates key's web after @151, for example key with two defs whose first web
   is dead code the backend removes.
 
-## Second wall set (coordinator round 2)
+## Second wall set
 
 ### menuCursorNormal: linked (2fd22cae)
 

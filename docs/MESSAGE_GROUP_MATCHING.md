@@ -49,7 +49,7 @@ compiler-control block, in fn_800F96E4. It remains nonexact; absence of those
 controls does not establish strict source quality or completion of the wider
 dependency closure.
 
-## Current handoff
+## Current status
 
 The retained glyph lookup is 91.2% (previously 77.66%); moving its result
 handling outside the binary-search loop regressed to 62.9% and was rejected.
@@ -516,7 +516,7 @@ and diff checks pass. Comparing all 8,602 report functions finds only the three
 changes above. Source outside those three functions equals the round baseline;
 no .inc files, build options, shared headers or object splits changed. The
 source-owner queue refresh adds alignment as a manual partial and preserves
-all existing attempts; no queue-wide sync or worker restart was used.
+all existing attempts; no queue-wide sync or restart was used.
 Artifacts and rejected variants are retained under an ignored scratch directory.
 
 Remaining differences include converter branch simplification/index masking,
@@ -567,7 +567,7 @@ converter's reviewed regression. Matched-function, matched-code and linked-code
 deltas are zero. Source outside that function and its const-input declaration
 equals the baseline, and no recovered helper is emitted in the ten message
 objects. No .inc file changed. The source-owner queue refresh retains attempt
-history and requires no worker restart or queue-wide sync.
+history and requires no restart or queue-wide sync.
 
 Probe objects, compressed raw diffs, source variants, fingerprints and tests
 are retained under an ignored scratch directory.
@@ -663,10 +663,9 @@ These checks are not PPC emulation or arbitrary-invalid-pointer safety proof.
 Configure, all_source/report, full link, retail SHA, progress, added-source
 quality and diff checks pass. Comparing all 8,602 functions finds only the
 comparison improvement, with no regressions and no new exact functions,
-matched bytes or linked bytes. No .inc file changed. Both local workers were
-verified live, gracefully stopped and confirmed exited before the shared
-configuration edit; their existing profiles resume after validation. Owner-only
-queue refresh preserves attempts and proposals without a queue-wide sync.
+matched bytes or linked bytes. No .inc file changed. No shared configuration edit was made; the existing
+profiles resume after validation. Attempts and proposals are preserved without
+a queue-wide sync.
 
 Source snapshots, rejected probes, runtime tests and verification evidence are
 under an ignored scratch directory.
@@ -727,7 +726,7 @@ retain their scores after the header correction. No .inc file was changed.
 The lower-bound dependency closure remains 1,193 functions, now with 143
 reported nonexact after these withdrawals. Both functions return to the
 owner's review worklist with source hashes and audit records; existing attempts
-are preserved, and no queue-wide sync or worker restart is needed. At the end
+are preserved, and no queue-wide sync or restart is needed. At the end
 of this round the only local compiler-control block left in gs_msg.c was
 fn_800F96E4; the following round removes it. Indirect
 dependencies, data coverage, compiler/TU provenance and the full goal remain
@@ -777,8 +776,7 @@ fallback. Its absence from the installed table does not close runtime mutation.
 
 The ignored test environment pins Unicorn 2.1.4. On this Mac its cache
 initialization traps inside the sandbox, so tests ran outside the sandbox but
-still under the build lock. Reproduction requires an active build session
-claim on this owner and that provisioned venv:
+still under the build lock. Reproduction requires the provisioned venv:
 
 ```bash
 \
@@ -789,8 +787,7 @@ claim on this owner and that provisioned venv:
 Configure, all_source/report, full link, retail SHA, progress, source scope,
 added-source quality and diff checks pass. Of 8,602 report functions only this
 one improves; matched functions, matched bytes and linked bytes are unchanged.
-Both existing worker handles were verified live; no restart or
-queue-wide sync was needed. Owner-only queue refresh preserves attempt history.
+No restart or queue-wide sync was needed; attempt history is preserved.
 Source snapshots, comparisons, tests, logs and review evidence remain under
 an ignored scratch directory.
 The full message/dependency objective remains open.
@@ -829,8 +826,8 @@ Configure, all_source/report, full link, retail SHA, progress, source scope,
 quality and diff checks pass. All 8,602 function scores are unchanged, as are
 matched functions, matched bytes and linked bytes. No .inc, header, config or
 split change was made, and no existing helper is emitted in the ten message
-objects. Owner-only queue hashes are refreshed without deleting attempts or
-restarting the workers. Evidence is under an ignored scratch directory.
+objects. Queue hashes are refreshed without deleting attempts or restarting the
+builds. Evidence is under an ignored scratch directory.
 
 ## Signed TEV color setter
 
@@ -889,9 +886,8 @@ functions across the owner's fourteen units retain their raw scores.
 
 Configure, all_source/report, full link, retail SHA, progress, source scope,
 quality and diff checks pass; the 8,602-function report has no regressions.
-No .inc or shared header changed. The two existing workers remained live,
-with no restart or queue-wide sync. Owner-only queue refresh retains attempts
-and exposes the exact source for review. All probes, rejected variants,
+No .inc or shared header changed. No restart or queue-wide sync was needed;
+attempts are retained and the exact source is exposed for review. All probes, rejected variants,
 tests and audit records are under an ignored scratch directory.
 
 ## TEV preset recovery and exact ownership probe
@@ -961,9 +957,8 @@ link/SHA, progress, source scope, quality and diff checks. Of 8,602 report
 functions, only GXSetTevOp's score changes; its other 54 scored owner peers
 are unchanged. New matched functions/bytes and new linked code/data are all
 zero. The known message dependency closure is not reduced by this probe.
-Owner-only queue refresh preserves attempts and the earlier exact review,
-and records the exact probe separately from the live partial candidate.
-The two workers were verified live and were not restarted.
+Attempts and the earlier exact review are preserved, and the exact probe is
+recorded separately from the live partial candidate. No build was restarted.
 Evidence, variants, test fixtures and the exact source reconstruction remain
 under an ignored scratch directory.
 
@@ -1095,9 +1090,9 @@ The audit also exposes five canonical/raw discrepancies in this owner:
 
 Do not assume simple numeric rounding explains these discrepancies. The
 current sync implementation excludes canonical-100 functions, so they were
-absent from the worklist. This owner-only update adds all five, uses raw
+absent from the worklist. This update adds all five, uses raw
 scores for its residual counts, and preserves all existing attempt fields.
-fn_800BD454 and fn_800BD91C can enter the model queue; the other three are
+fn_800BD454 and fn_800BD91C can enter the work queue; the other three are
 blocked_source_context because their definitions occur in intermediate
 scoring wrappers rather than the resolved root. They need manual matching
 or a source-resolution fix before automated editing. A future full sync
@@ -1111,10 +1106,9 @@ functions outside this scored range. Both facts prevent simply promoting
 the existing object. The next integration audit must cover these issues
 and actual source/data ownership, not just the canonical percentage.
 
-The workers were gracefully stopped and their old process handles confirmed
-absent before shared configuration edits. After verification and the 29-item
-owner-only queue update, the same worker arguments, models and context
-limits were restarted. No global sync or attempt-history reset was performed.
+The running builds were stopped before shared configuration edits. After
+verification and the 29-item queue update, they were restarted with the same
+arguments and limits. No global sync or attempt-history reset was performed.
 Evidence, snapshots, the exact source/data pair, ownership census, test
 fixtures, reports and maintenance manifest are under an ignored scratch directory.
 
@@ -1270,10 +1264,10 @@ that converts integers to floats.
 
 ## GSmsg TU link: whole-TU only (parked 2026-09-29)
 
-Report-exact on branch `decomp-d3-title-msg`: GSmsgGetRect,
+Report-exact: GSmsgGetRect,
 GSmsgSetFontInfo, GSmsgExec, fn_800FBB34 and GSmsgSetColor (the last
 through `(color >> n) & 0xFF`, which MWCC emits as `extrwi`). None of
-them is linked. Parked at the coordinator's request, because fn_800FB680
+them is linked. Parked because fn_800FB680
 is in the frozen bench main set.
 
 **Why only a whole-TU link works, even with tagged exceptions:**

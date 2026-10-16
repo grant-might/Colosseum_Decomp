@@ -1,7 +1,7 @@
 # GSmsg pool object (2026-09-30)
 
 This continues docs/recon/gsmsg_d14.md, which covers the object plan and
-everything tried before. Branch `decomp-d13-gsmsg`.
+everything tried before.
 
 ## Result
 

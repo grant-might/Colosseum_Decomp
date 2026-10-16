@@ -104,11 +104,11 @@ is still the authority to poll, and no build restart has been attempted.
 Recovery later on 2026-09-29: ad-hoc signing a copy of the same wibo 1.0.3
 binary made `--help` and `--version` return normally and launched sjiswrap.
 After verifying the owner source was restored and the stalled child had no
-source/output file open, the old parent build was terminated. The ignored
+source/output file open, the previous build was terminated. The ignored
 `build/tools/wibo` was atomically replaced with the signed copy, preserving
 its original timestamp; `build/tools/wibo.unsigned-backup` retains the old
 binary. The orphaned old wibo PID 8151 remains in `U` with a pending kill,
-but no longer owns the campaign build lock. A new guarded `all_source`/report
+but no longer holds the campaign build lock. A new guarded `all_source`/report
 build completed, restoring the canonical 99.67647% candidate score; guarded
 full Ninja had no work, and both built DOL/REL SHA-1 hashes match retail. The
 dashboard report is current again. This environment repair did not change

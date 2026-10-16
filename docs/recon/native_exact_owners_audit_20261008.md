@@ -2,9 +2,9 @@
 
 Status: PASS for the two accepted owners and four shared-source sibling functions.
 
-Auditor: the menu-middle worker. Checked 2026-10-08 at approximately 21:28 UTC.
+Audit scope: menu-middle. Checked 2026-10-08 at approximately 21:28 UTC.
 Base HEAD: `7fe1001712fa82b3d9be5db53d9a6fe95970e97f`.
-This audits the current **dirty working tree**, including the parent's Matching
+This audits the current **dirty working tree**, including the pending Matching
 changes, not an assertion that these changes are already in that commit.
 No source, configuration, split, registry, or shared documentation was edited
 by this audit. Main and the other owners were left alone.

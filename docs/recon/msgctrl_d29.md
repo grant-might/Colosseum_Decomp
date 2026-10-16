@@ -1,6 +1,6 @@
 # msgctrl callbacks for the recomp (2026-09-30)
 
-Worktree `/private/tmp/pkmn-decomp-d12`, branch `decomp-d29-msgctrl`.
+Worked in a separate git worktree.
 This follows `carves2_d22.md`. GSmsgDispatchControl's native registry
 refuses any msgctrlcode callback the decomp has not linked. This work links
 the ones fn_80005E00's message daemons need.

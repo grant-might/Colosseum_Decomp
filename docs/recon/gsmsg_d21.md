@@ -1,7 +1,6 @@
 # GSmsg pool object (2026-09-30)
 
 This continues docs/recon/gsmsg_d14.md and docs/recon/gsmsg_d13.md.
-Branch `decomp-d21-gsmsg`.
 
 ## Result
 
@@ -101,7 +100,7 @@ Not attempted, because fn_800FAEF8 is not exact. The plan in
 gsmsg_d14.md still stands: `.text` 0x800F9D04-0x800FE35C plus `.sdata2`
 0x8047CD00-0x8047CD50, which starts on an 8-byte boundary.
 
-## Follow-up: function-scoped pragmas (coordinator request)
+## Follow-up: function-scoped pragmas
 
 These were tried around fn_800FAEF8 only (on/reset, or push/pop). They were
 applied to six structures:

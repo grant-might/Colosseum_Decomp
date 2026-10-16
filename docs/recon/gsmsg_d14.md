@@ -1,6 +1,6 @@
 # GSmsg link campaign (2026-09-30)
 
-Branch `decomp-d14-gsmsg`, starting from integration head b21e57c9.
+Starting from integration head b21e57c9.
 
 ## Result
 

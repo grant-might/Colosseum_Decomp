@@ -1,6 +1,6 @@
 # Near-link sweep, non-fight half (2026-09-30)
 
-Worktree `/private/tmp/pkmn-decomp-d12`, branch `decomp-d18-nearlink`.
+Worked in a separate git worktree.
 The list was built from `build/GC6E01/report.json`: incomplete units whose
 inexact functions all score 98% or higher. fight_* units are covered separately, and
 the units on the previously documented walls were skipped.
@@ -50,7 +50,7 @@ common_rel.rel SHA-1 OK), `quality_scan` and `check_regression`.
   the effect_visual TU.
 - **fn_8017B4BC** (fsys_file_r48 prefix, 98.79). The body is an -O0/-O1
   shaped form (volatiles, self-assignments). Low value, not attempted.
-- **fn_80025F84** (gs_title). The owner was claimed by the title-reloc worker.
+- **fn_80025F84** (gs_title). Owned by the title-reloc work.
 
 ## Techniques that worked
 

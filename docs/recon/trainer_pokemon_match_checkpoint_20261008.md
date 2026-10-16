@@ -1,7 +1,7 @@
 # Trainer Pokemon Matching Checkpoint
 
-Worker: `the toolentry worker`. Status: **byte-exact and linked (Matching), 2026-10-10** — see the last section.
-Claim released after final validation. Former token:
+Owner: the toolentry unit. Status: **byte-exact and linked (Matching), 2026-10-10** — see the last section.
+Ownership released after final validation. Former ownership token:
 `afa28eaf165a4bfa8b76463512c5809f`.
 
 ## Measurement
@@ -119,7 +119,7 @@ copy coalesces, is more promising than repeating the rejected carrier forms.
 No Matching change is warranted. Sibling units, aggregate link, seven hashes,
 and shared policy validation remain for the parent; this checkpoint does not
 claim those checks passed. The wrapper was not modified. No commit/push or
-shared configuration/documentation edits were made by this worker.
+shared configuration/documentation edits were made in this pass.
 
 ## Follow-up, 2026-10-10 : 99.23881%
 

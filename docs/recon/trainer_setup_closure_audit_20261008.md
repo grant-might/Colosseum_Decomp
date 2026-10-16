@@ -33,7 +33,7 @@ matching/linkage gap.
 
 Root acceptance itself is excluded: `fn_8006B5D0` is exact but awaits its
 parent's `Matching` configuration change; toolentry is being edited by its
-assigned worker, so its transient report score is not an acceptance result.
+assigned step, so its transient report score is not an acceptance result.
 `memcpy` is a host-boundary CRT dependency, not a new game decomp target.
 
 This audits report exactness and unit linkage, not source-policy provenance

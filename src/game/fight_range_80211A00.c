@@ -3876,7 +3876,7 @@ skipB0B0:
 #undef fn_8012A5B0
 #pragma optimize_for_size reset
 
-/* ===== reconciliation: fns from w0 worktree + new origin/master ===== */
+/* ===== reconciliation: fns from a parallel worktree + new origin/master ===== */
 
 /*
  * fn_802182D4 (0x802182D4)
@@ -8658,7 +8658,7 @@ u16 fn_80217BEC(u16 x) { return (u16)((x * 10) / 25); }
 u16 fn_80217BD0(u16 x) { return (u16)(((0xFF - x) * 10) / 25); }
 #pragma optimize_for_size reset
 
-/* ===== Wave 6 integrated matches ===== */
+/* ===== Integrated matches ===== */
 
 /* fn_80214794 (0x80214794) 100% */
 #pragma optimize_for_size on

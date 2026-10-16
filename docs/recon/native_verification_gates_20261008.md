@@ -1,19 +1,19 @@
 # Native verification gates: acceptance audit, 2026-10-08
 
-Read-only audit by the acceptance worker at decomp HEAD
+Read-only acceptance audit at decomp HEAD
 `7263c5817e4ea83856c77e77573abdedbf979166`. Only this standalone note was added;
 no source, config, shared documentation, native, or tooling edits, commit, or
 push. Existing in-progress source edits were left alone. Every build, objdiff, and
 verification command ran through
 `ninja`.
 
-## Decision for the parent/native handoff
+## Decision for the native integration
 
-Parent follow-up: the missing init exception marker was added beside its
+Follow-up: the missing init exception marker was added beside its
 conditional compilation block. Full linkage after the fight-side promotion
 passes all seven canonical hashes, and the strict object-map check and all
 56 policy tests pass. The final committed revision and fresh-report hash are
-recorded in the communication handoff after integration. These checks do not
+recorded in the integration notes after the merge. These checks do not
 remove the conditional dependency caveats below.
 
 The three function bodies pass raw unlinked-byte and normalized-relocation

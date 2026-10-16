@@ -129,7 +129,7 @@ assignment. Dummy aliases, register-only shaping and new pragmas were not adopte
 ## Reproduction and Integration Gate
 
 All builds, diffs and compiler/debugger probes in this investigation ran through
-the campaign build lock as worker `the toolentry worker`.
+the campaign build lock.
 
 ```sh
 \

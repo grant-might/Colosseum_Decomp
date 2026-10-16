@@ -1,4 +1,4 @@
-# Archive Queue Worker Acceptance
+# Archive Queue Acceptance
 
 `fn_80057E70` (`0x80057E70-0x80057F94`) is 100% matched and linked in
 `main/game/menu/menuColosseumBattle_r56_80057E70_prefix`.

@@ -196,7 +196,7 @@ object and quality checks, and rechecked all 26 canonical hashes successfully.
 `ninja -j2` had no remaining work. The report still records this unit as
 incomplete at the percentages above. Cleanup removed 1,105 generated trial
 files (348.5 MiB); result JSON and research scripts were retained. The source
-owner claim was released. No additional source change was retained in this
+is released after validation. No additional source change was retained in this
 follow-up, and no matching or linking progress is claimed for it.
 
 ## Validation of the initialized-copy candidate
@@ -218,7 +218,7 @@ No exact-source or newly linked progress is claimed. The incomplete unit still
 uses retail code during the canonical link. Changes remain local and uncommitted.
 Generated trial sources and objects were cleaned from `/tmp/f232-stages`,
 reducing it from 464 MiB to 928 KiB; the best OR candidate, scores, generators,
-and compiler traces were retained. The source claim is released after validation.
+and compiler traces were retained. The source is released after validation.
 
 ## Validation of the alternate-menu candidate
 
@@ -232,7 +232,7 @@ pass. Both the normal full build and an explicit canonical SHA-1 check report
 `26 files OK`. Existing encoding and linker warnings are unchanged.
 
 This is fuzzy-match progress only; no new exact function or linked unit is
-claimed. The source remains local and uncommitted. The owner claim is released
+claimed. The source remains local and uncommitted and is released
 after validation. Disposable generated trials are removed, retaining the best
 candidate, the pre-reorder candidate needed to reproduce the model, results,
 generators, and compiler traces.
