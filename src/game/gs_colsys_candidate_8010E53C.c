@@ -17,7 +17,7 @@
  * lbl_8047CF08 below). GC/1.3 -O3 (the carve was built at -O4,p; all five
  * functions are identical at either level).
  *
- * fn_8010E53C (lane D14): building each pass's cell/index/triangle pointer
+ * fn_8010E53C: building each pass's cell/index/triangle pointer
  * from its base (`p = base; p += offset;`) and declaring k, x, z in that
  * order gives retail's registers.
  */

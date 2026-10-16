@@ -14,7 +14,7 @@
  * (dbgMenuMovieTest is unmangled in the XD map).
  *
  * All three functions are exact with GC/1.3 and the unit's normal flags,
- * with and without -schedule on (lane D15, 2026-09-28).
+ * with and without -schedule on (2026-09-28).
  *
  * fn_80132C6C -- admissibility note.
  * Retail colours the first unrolled copy's item pointer before the
@@ -28,7 +28,7 @@
  *
  *     DbgMenuItem* const& item = &items[i];
  *
- * GC/2.6 IRO trace (lane B7b's irolog): the front end emits
+ * GC/2.6 IRO trace: the front end emits
  * `@22 = &items[i]; item = &@22`, copy propagation folds `*item` to @22,
  * and @22 is coloured first, exactly like the helper's argument temp @25.
  * The plain `DbgMenuItem* item`, `DbgMenuItem* const item` and

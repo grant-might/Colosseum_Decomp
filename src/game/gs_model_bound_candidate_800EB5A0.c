@@ -10,7 +10,7 @@
  * the types only. Both build with GC/1.3.2: its -inline auto expands the
  * recursive _modelIntpJObjAll into itself four levels, as retail does, while
  * GC/1.3 does not inline the recursion at all; every other exact GSmodel
- * function in this lane also compiles identically under GC/1.3.2.
+ * function here also compiles identically under GC/1.3.2.
  *
  * fn_800EB904 is Colosseum's _modelIntpJObj: XD's modelIntpJObjTrans/Scale/
  * Rotate bodies, written here through the jobj.h getters and setters, plus

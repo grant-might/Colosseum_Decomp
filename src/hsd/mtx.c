@@ -60,7 +60,7 @@
  * helpers with and without return values, inline parameters); the dead
  * copy spans column 1's PSVECScale.
  *
- * Further evidence (2026-09-27 lane): the phantom is a second variable
+ * Further evidence (2026-09-27): the phantom is a second variable
  * holding the inverse length across a column's PSVECScale(v, v, inv).
  * A dead copy spanning column 1's or column 2's PSVECScale is byte-exact;
  * one spanning PSVECDotProduct, PSVECCrossProduct or PSVECMag instead

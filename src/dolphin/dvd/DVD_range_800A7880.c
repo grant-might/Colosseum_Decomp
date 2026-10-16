@@ -5,7 +5,7 @@
  *        fn_800A7BCC and DVDCheckDisk, with their switch tables
  *        (.data 0x80311B98 - 0x80311C00).
  *
- * Merged (lane D18) from sdk_candidate_800A7880.c, sdk_exact_800A7AFC.c and
+ * Merged from sdk_candidate_800A7880.c, sdk_exact_800A7AFC.c and
  * sdk_range_800A7BD4.c. DVDCheckDisk's table sits at a four-byte-aligned
  * address (0x80311BCC) only because DVDCancelAsync's table precedes it in the
  * same object; linked alone its 8-aligned .data section shifted the DOL.

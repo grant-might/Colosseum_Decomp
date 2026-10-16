@@ -1070,7 +1070,7 @@ u32 fn_8017B5A4(u32 val) {
 
 /* 0x8017B5C0 | 0xF8
  *
- * R38 lane (2026-09-28): the body below is 100% only under the local level-0
+ * Row 38 (2026-09-28): the body below is 100% only under the local level-0
  * pragma and the dummy `cached = cached;`. On the fsys unit-wide
  * `-opt level=0` flags (GC/1.3) with no pragmas, an exact form (62/62) is:
  *
@@ -1465,7 +1465,7 @@ u32 fn_8017C39C(FSYSSlot *slot)
 
 /* 0x8017C414 | 0x154
  *
- * R38 lane (2026-09-28): the interrupt-guarded status step after
+ * Row 38 (2026-09-28): the interrupt-guarded status step after
  * fn_8017A624 (OSDisableInterrupts, advance lbl_80453FEC.activeSlot's
  * status, close its tocBuffer, OSRestoreInterrupts) is the same code as the
  * whole of fn_8017A814 and fn_8017A95C (gs_range_8017A5FC.c): three

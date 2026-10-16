@@ -7,12 +7,12 @@
  *
  * The earlier pkjbWait60 inline form was 99.7%: the key channel and the
  * result swapped callee-saved registers, because the inline's GBAWrite
- * result became a frontend split temp numbered above key (lane D9/D16
- * replays). Retail keeps the result in the caller: the first reset call
+ * result became a frontend split temp numbered above key (the replay
+ * sweeps). Retail keeps the result in the caller: the first reset call
  * has its own temporary, and the 3 s ping loop writes the timeout code
  * through a pointer to the caller's result. With result a caller local
  * declared after key, key is coloured first (r29, result r28), and the
- * loop's locals keep their inline numbering (lane D28).
+ * loop's locals keep their inline numbering.
  * Unit flags and shared helpers: see game/menu/pkjb_uploader_shared.h.
  */
 #include "game/menu/pkjb_uploader_shared.h"

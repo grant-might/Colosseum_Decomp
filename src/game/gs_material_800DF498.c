@@ -11,7 +11,7 @@
  *   gs_material_candidate_800DFABC.c  0x800DFABC - 0x800DFE98 (Matching;
  *                                      defines GS_MATERIAL_ENVMAP_TAIL_ONLY)
  * _matGSmatObjLoad (0x800DFE98 - 0x800DFEEC) is gs_material_exact_800DFE98.c.
- * _matGSmatEnableEnvMapExt is exact (lane D18): the extension-disable
+ * _matGSmatEnableEnvMapExt is exact: the extension-disable
  * inline's bit mask is a u16 like GSmaterial.extensions (a u32 mask gives
  * it two more interference neighbours, so it is coloured before the TObj
  * and takes r31 instead of r29), and the texture local is declared before

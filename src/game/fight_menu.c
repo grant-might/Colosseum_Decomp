@@ -612,7 +612,7 @@ void fightMenuAllFightTrainerCloseStatusMenu(u32 wait)
  * (FIGHT_MENU_EXACT_8026503C section below). Admitted as a repeated
  * expansion (docs/CAMPAIGN_OPERATIONS.md, "Reconstructed inline helpers").
  *
- * Still a candidate (lane U5, 2026-09-28): with the helpers the six subs
+ * Still a candidate (2026-09-28): with the helpers the six subs
  * below are exact only when the callback's void* argument is first taken
  * into a typed local (FIGHT_TRAINER* trainer = work;). That local changes
  * no instruction, only the colouring: retail colours the object pointer

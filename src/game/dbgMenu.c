@@ -88,7 +88,7 @@ static inline void dbgMenuInitItems(u32* itemTable, u32 total)
  * under the helper policy.  dbgMenuInitItems above is the same kind of
  * helper and keeps this unit a CodeCandidate.
  *
- * Lane B15 (2026-09-28), register replay with mwcc-debugger (GC/2.6, same
+ * (2026-09-28), register replay with mwcc-debugger (GC/2.6, same
  * code as GC/1.3 here).  The GPR colouring runs from the highest virtual
  * register down.  A declared local gets a low number: with the in-place
  * form, `item` is r36, below every unroller temp (r40-r55), so it is
@@ -115,7 +115,7 @@ static inline void dbgMenuInitItems(u32* itemTable, u32 total)
  * dbgMenuMovieTest compile exactly under the unit's plain flags (with and
  * without -schedule on).  Once fn_80132C6C is exact, this prefix unit needs
  * no compiler-control pragma.
- * Lane D15 (2026-09-28), IRO trace (GC/2.6, lane B7b's irolog): with the
+ * (2026-09-28), IRO trace (GC/2.6): with the
  * per-item helper the argument is the front end's temp @25 before any IRO
  * phase runs; the unroller then copies the body with `item`/@25 in every
  * copy, and just before RebuildCondExpressions copies 2-9 get fresh temps

@@ -111,7 +111,7 @@ extern void fn_80167E64(void* file);
  * The long-standing r4/r5 wall (docs/recon/fsys_8017C414_wall.md): retail
  * builds the lbl_80453FEC address in r5 because r4 is still live after
  * OSDisableInterrupts -- the call's result is a 64-bit value whose dead low
- * word occupies r4 while `enabled` takes the high word from r3 (lane D8).
+ * word occupies r4 while `enabled` takes the high word from r3.
  * Retail also copies userData into r30 and never reads it; the dead
  * `request` reference reproduces that.
  */

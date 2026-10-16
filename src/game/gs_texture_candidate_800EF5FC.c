@@ -7,7 +7,7 @@
  * fn_800EFD14/GStextureLoad (gs_texture_exact_800EFD14.c) and GStextureInit
  * (gs_texture_exact_800EFFC0.c) live in their own dtk partitions.
  *
- * Exact and linked (lane D3, 2026-09-29) through three tagged title-path
+ * Exact and linked (2026-09-29) through three tagged title-path
  * rule exceptions (docs/RULE_EXCEPTIONS.md):
  *  - the size-adjust log passes `width & 0xFFFF` / `height & 0xFFFF`. MWCC
  *    then builds the format string in r3 while width and height are still

@@ -14,8 +14,8 @@
  * fn_80110084 belongs to GScolsys2Human and fn_80111864 to the next TU,
  * which has its own 0.0f/1.0f pool at 0x8047CF60.
  *
- * History: lanes D10/D13/D14 brought the functions to 99%+ (see
- * docs/recon/thru_d14.md). Lane D23 fixed the last wall, the preheader of
+ * History: earlier passes brought the functions to 99%+ (see
+ * docs/recon/thru_d14.md). A later pass fixed the last wall, the preheader of
  * the vertex-transform loop in fn_801101B4 and GetMdlEventList (see
  * docs/recon/thru_d23.md):
  *  - Order. MWCC's pre-RA list scheduler breaks ties with a per-opcode byte

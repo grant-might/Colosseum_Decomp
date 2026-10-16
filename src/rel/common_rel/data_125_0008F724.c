@@ -14,8 +14,6 @@
  * Relocation-free. lbl_125_data_91246 and lbl_125_data_91346 start at 2-mod-4
  * offsets, so their bytes live in a struct of u8 (alignment 1); the SN
  * compiler would otherwise 4-byte-align them and shift the rest of the unit. *
- * Generated from the dtk-extracted target object
- * build/GC6E01/common_rel/obj/auto_02_00000000_data.o by tooling/laneE_gen.py:
  * one named global per dtk object, byte-exact literals, and a
  * typed element for every R_PPC_ADDR32 relocation target.
  * 14 objects, 0 relocations.

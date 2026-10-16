@@ -5,7 +5,7 @@
  * Function-boundary carve of the menu TU (see src/game/menu.c), built with
  * the TU's flags (configure.py). Text only: no pooled literal or TU data.
  *
- * The register assignment depends on two things (lane D16, GPR simulator
+ * The register assignment depends on two things (GPR simulator
  * replay):
  * - the item walk goes through a one-line accessor, menuItemNext. Its
  *   result copies are extra precoloured nodes in every search loop, which

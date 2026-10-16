@@ -30,7 +30,7 @@
  * "error_code = error_code" in the end-access handler, which MWCC removes for
  * a non-volatile field.
  *
- * Status: all 23 functions are exact and the whole TU links (lane D9). The
+ * Status: all 23 functions are exact and the whole TU links. The
  * last two:
  * - fn_801CDB04: the last-write check polls through memcardPollResultInto,
  *   which keeps the polled result in the caller's register (r30) for the

@@ -551,7 +551,7 @@ void fn_80071344(void) {
 #if !defined(MENU_RANGE_CARVE)
 
 /* _menuPop (0x800714C8): close the top menu and pop the call stack. */
-/* Linked from game/menu/menu_r56b_800714C8_suffix.c (lane D18) with
+/* Linked from game/menu/menu_r56b_800714C8_suffix.c with
  * _menuPush, fn_8007162C, menuCB_InitMenu and fn_8007169C; keep in step. */
 s32 _menuPop(void) {
     extern s32 windowGetActiveID(void);

@@ -33,7 +33,7 @@
  * pre-allocation scheduler works on. It lets the tension load issue at
  * cycle 0 and changes the virtual-register numbering. It is the only
  * difference from Melee's helper, and nothing else reproduces retail.
- * Evidence (lane SP1, from MWCC backend dumps via cadmic/mwcc-debugger and
+ * Evidence (from MWCC backend dumps via cadmic/mwcc-debugger and
  * exact replays of the scheduler and FPR colouring):
  *   - Without the copy, no expression form, statement order or declaration
  *     order comes within 29 of the 58 cardinal-case positions. That

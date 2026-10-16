@@ -11,7 +11,7 @@
  * the two in step. The data it reads (the 0.0f/1.0f at lbl_8047C230 and
  * lbl_8047C208, the ball-sprite table and the render state) stays extern.
  *
- * Matching notes (lane D18):
+ * Matching notes:
  * - windowDrawSprite takes the sprite id as u32, as its linked definition
  *   does (window_exact_801040F0.c); a u16 prototype adds clrlwi at both
  *   computed call sites.

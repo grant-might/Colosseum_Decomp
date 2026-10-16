@@ -14,7 +14,7 @@
  * Source attribution: the XD path GSAPI/GSlogM/GSlog.cpp and the XD helper
  * names (logFloat2Str, logHex2Str, logInt2Str, logStr2Int, logStrRev) are
  * inherited from commit e0e2b44b, which read TeamOrre/xd-decomp's
- * splits.txt. Verified by lane B23 against TeamOrre/xd-decomp
+ * splits.txt. Verified against TeamOrre/xd-decomp
  * config/GXXE01/symbols.txt (commit 4989794e): logVsnprintf_float
  * 0x802A66F0, logFloat2Str__FfPcPc 0x802A6A78, logHex2Str__FUlPcb
  * 0x802A6CC4, logInt2Str__FiPc 0x802A6D34, logStr2Int__FPc 0x802A6DD0,
@@ -477,7 +477,7 @@ void fn_800DE128(char* output, u32 capacity, const char* format, va_list args)
  * The fraction half reuses the integer half's variables: buf becomes the
  * cursor into fraction, and whole takes the scaled fraction digits, so both
  * halves read `whole = value; logInt2Str(whole, buf);`. That is what gives
- * retail's allocation (lane B23b, from MWCC's own allocator dumps via
+ * retail's allocation (from MWCC's own allocator dumps via
  * the register-colouring replay tool): the reused buf is split into a new
  * web, numbered below the second logInt2Str's locals, so it absorbs
  * logStrRev's start and is simplified before `whole`, taking r18; and the

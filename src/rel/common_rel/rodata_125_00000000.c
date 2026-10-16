@@ -7,11 +7,10 @@
  * words (e.g. 0x41CC28F6 = 25.52f). The module's strings do not start
  * until 0x56C, inside snd_song_table.c.
  *
- * Relocation-free. *
- * Generated from the dtk-extracted target object
- * build/GC6E01/common_rel/obj/auto_01_00000000_rodata.o by tooling/laneE_gen.py:
- * one named global per dtk object, byte-exact literals, and a
- * typed element for every R_PPC_ADDR32 relocation target.
+ * Relocation-free. Reconstructed byte-exact from the retail REL and checked by
+ * byte-comparing the rebuilt common_rel.rel against the original: one named global
+ * per region, literal values, and a typed declaration for every R_PPC_ADDR32
+ * relocation target.
  * 5 objects, 0 relocations.
  */
 #include "dolphin/types.h"

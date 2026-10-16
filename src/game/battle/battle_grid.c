@@ -349,7 +349,7 @@ static inline void battleGridPlaceModel(u8* obj, f32* pos, f32* rot,
  * position/rotation pass over the four slots and their Pokemon.
  * Address: 0x801C3430 | Size: 0x634
  *
- * Exact (lane D18). The early-out test and the first scan's own count
+ * Exact. The early-out test and the first scan's own count
  * test share one load and compare off one long-lived table register only
  * with the table declared once at file scope (see the declaration at the
  * top of this section); with a block-scope extern here and in the helper

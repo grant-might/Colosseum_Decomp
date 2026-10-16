@@ -7,7 +7,7 @@
  * campaign 2026-07-01). All functions asm-only until matched; the
  * range name stays honest until internal TU structure is proven.
  *
- * Linked (lane D18) with TRKDispatchMessage's switch table
+ * Linked with TRKDispatchMessage's switch table
  * (.data 0x80313770 - 0x803137DC).
  */
 #include "dolphin/types.h"

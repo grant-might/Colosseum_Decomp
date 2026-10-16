@@ -1,7 +1,7 @@
 /**
  * modelShadowRender__FP10GSgfxLayer (0x800E8684 - 0x800E8EFC), XD shadow.o.
  *
- * Exact and linked (lane D7, 2026-09-29, from lane D4's 99.79% candidate).
+ * Exact and linked (2026-09-29, from the 99.79% candidate).
  * The unit also owns the function's .sdata2 literal pool, 0x8047CBC0-0x8047CBE8
  * (3.0f, 0.01f, 0.0f, 30.0f, 0.1f, 3000.0f, "shadow", the u32 bias). It is
  * built with -str reuse,readonly so "shadow" lands in that pool. See

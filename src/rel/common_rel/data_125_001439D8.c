@@ -14,8 +14,6 @@
  *
  * The 0x14A5F4/0x14A602 pair is the menuSeBiosGetPtr table (14 sub-tables
  * plus the 82-byte menu sound-id list). *
- * Generated from the dtk-extracted target object
- * build/GC6E01/common_rel/obj/auto_02_001439D8_data.o by tooling/laneE_gen.py:
  * one named global per dtk object, byte-exact literals, and a
  * typed element for every R_PPC_ADDR32 relocation target.
  * 7 objects, 0 relocations.

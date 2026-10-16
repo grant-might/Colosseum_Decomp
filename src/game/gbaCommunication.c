@@ -1885,7 +1885,7 @@ void fn_80093F64(u8* pokemon, PokemonRibbonGrid* grid)
 }
 
 /* 0x800965C8 | size: 0x680. Linked from gbaCommunication_candidate_800965C8_gc20.c
- * (lane D18), which copies this body; keep the two in step. */
+ * which copies this body; keep the two in step. */
 void fn_800965C8(void* window, u8* sprite) {
     register s32 color;
     register void* pokemon;

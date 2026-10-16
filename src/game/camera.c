@@ -52,7 +52,7 @@
  *   from a function the linker stripped. Nothing here produces them, so the
  *   unit's .rodata is 0x160 bytes short in the middle of the range (0x77 of
  *   0x1D8 bytes); every other section is byte-identical up to end padding.
- *   The function is cameraDispInfo (lane B43, 2026-09-28): the Pokemon XD
+ *   The function is cameraDispInfo (2026-09-28): the Pokemon XD
  *   JP demo's linker map (NXXJ01 Master.MAP, published as NXXJ01.map in
  *   StarsMmd/Colo-XD-PBR-symbol-maps 6b51d3af) lists in camera.o
  *   "UNUSED 0x3EC cameraDispInfo", placed right after cameraSetMirrorFlag
@@ -91,7 +91,7 @@
  *   sister-title clause alone did not admit them).
  * Every other function is exact.
  *
- * LINK BLOCKER STATEMENT (lane C43, 2026-09-28). Under the written policy
+ * LINK BLOCKER STATEMENT (2026-09-28). Under the written policy
  * (docs/CAMPAIGN_OPERATIONS.md, "Strict acceptance policy" and
  * "Reconstructed inline helpers") this unit cannot be linked, and with it
  * cameraPlayAnime, cameraPlayOffsetAnime, cameraUpdate, cameraInit,
@@ -188,10 +188,10 @@
  *      three of the four helpers the "same calls in the same order" test
  *      fails, and none of the four has an XD function body to compare
  *      against. All four are needed (fact 3), so cameraUpdate cannot reach
- *      100% under the policy. Lane B43's research form is b734a41f.
+ *      100% under the policy. The research form is b734a41f.
  *
  * 4. Nothing else blocks the unit: with a real cameraDispInfo body and the
- *    four view helpers, every section is byte-identical (B43 and this lane's
+ *    four view helpers, every section is byte-identical (the earlier work's
  *    research builds). The decision the unit needs is outside the written
  *    policy. Either a user ruling admits the view helpers on the XD demo map
  *    plus the frame-depth proof and accepts some form for the stripped

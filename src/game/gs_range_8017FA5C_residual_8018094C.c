@@ -29,7 +29,7 @@
  * copy (r20); this body allocates length r23, copy r22, aligned r21 and
  * saves r21-r31.
  *
- * What is known (G2 lane): at -opt level=0 every named value gets its own
+ * What is known: at -opt level=0 every named value gets its own
  * non-volatile register, ranked by reference weight and then by list order
  * (the function's own locals in declaration order, then each inline
  * expansion: return temporary, locals in reverse declaration order,

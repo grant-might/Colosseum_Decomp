@@ -49,8 +49,8 @@
  * then psKillParticle's p/prev), and within one colouring level a variable
  * created earlier is coloured earlier. Retail needs next coloured after
  * p/prev and psClearPointJObj's counter before them, which no declaration,
- * loop or scope form of a psKillAllParticle-local next can give (lane U3
- * and the particle lane swept those). Reading the successor inside
+ * loop or scope form of a psKillAllParticle-local next can give (an earlier pass
+ * swept those). Reading the successor inside
  * psKillParticle and returning it makes next psKillParticle's own local,
  * created after p/prev; psRemoveParticle and the standalone
  * psKillAllParticle then both match. HAL's psKillParticle returns void

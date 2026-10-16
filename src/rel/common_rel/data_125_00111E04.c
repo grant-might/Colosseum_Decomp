@@ -13,11 +13,10 @@
  * Dense u32/u16 records (type/id -> count, 0xECxx ids), 25.8% zero words, no
  * strings and no pointers.
  *
- * Relocation-free. *
- * Generated from the dtk-extracted target object
- * build/GC6E01/common_rel/obj/auto_02_00111E04_data.o by tooling/laneE_gen.py:
- * one named global per dtk object, byte-exact literals, and a
- * typed element for every R_PPC_ADDR32 relocation target.
+ * Relocation-free. Reconstructed byte-exact from the retail REL and checked by
+ * byte-comparing the rebuilt common_rel.rel against the original: one named global
+ * per region, literal values, and a typed declaration for every R_PPC_ADDR32
+ * relocation target.
  * 12 objects, 0 relocations.
  */
 #include "dolphin/types.h"

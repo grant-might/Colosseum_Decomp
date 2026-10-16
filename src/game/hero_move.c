@@ -1672,7 +1672,7 @@ static inline f32 GSvecDistanceXZ(HeroMoveVec* a, HeroMoveVec* b)
 /*
  * 0x8012AD50 | 0x434: poison step callback.
  *
- * Lane H1 (2026-09-28): XD's structure (cbPoison__Fl15FootStepCounterl,
+ * (2026-09-28): XD's structure (cbPoison__Fl15FootStepCounterl,
  * 0x8014EBF8, trevor403/xd-asm func_FUN_8014ebf8.s): count, fade, then
  * heroMoveInitEvent(), the fainted-member messages, heroMoveTermEvent().
  * XD calls both event functions; Colosseum's retail has their bodies
@@ -1751,7 +1751,7 @@ static inline void heroMoveInitEventChat(void)
  * 0x8012B19C | 0x448: can the member walk from start (its own position when
  * NULL) to target without hitting anything? Colosseum's variant of
  * heroMoveChkHinderClear (not in XD) with a caller position and an extra
- * radius. Instruction-exact under the TU flags (lane H1; 65.3% before):
+ * radius. Instruction-exact under the TU flags (65.3% before):
  * the same helper expansions as heroMoveChkHinderClear, fn_8010F320 takes
  * the scaled radius in f1 (fmr f1,f30; its definition in
  * gs_colsys_exact_8010EFE4.c is (start, end, radius, result)), and the
@@ -1762,7 +1762,7 @@ static inline void heroMoveInitEventChat(void)
  */
 /*
  * 0x8012B5E4 | 0x4EC: is the path from the member to the leader clear?
- * Instruction-exact under the TU flags (lane H1; 57.9% before, scored at
+ * Instruction-exact under the TU flags (57.9% before, scored at
  * -O4,s). XD heroMoveChkHinderClear (0x8014F070, trevor403/xd-asm
  * func_FUN_8014f070.s) gives the structure call for call: heroMoveIsMember,
  * the leader, getPos of both plus 8.5, getObjID/peopleInfo radius of the
@@ -1776,7 +1776,7 @@ static inline void heroMoveInitEventChat(void)
 /* 0x8012BAF0 | 0xB8 */
 /*
  * 0x8012BBA8 | 0xFC: end the event pose of every party member.
- * Instruction-exact under the TU flags (lane H1; 87.6% before, scored at
+ * Instruction-exact under the TU flags (87.6% before, scored at
  * -O2). XD heroMoveTermEvent (0x8014F518, trevor403/xd-asm
  * func_FUN_8014f518.s): heroMoveIsMember, getResID, then the three model
  * flag calls; XD's AnalogStickEmu reset after the loop is not in
@@ -1785,7 +1785,7 @@ static inline void heroMoveInitEventChat(void)
  */
 /*
  * 0x8012BCA4 | 0x13C: put every party member into the event pose.
- * Instruction-exact under the TU flags (lane H1; 46.1% before, scored at
+ * Instruction-exact under the TU flags (46.1% before, scored at
  * -O2). XD heroMoveInitEvent (0x8014F5C0, trevor403/xd-asm
  * func_FUN_8014f5c0.s): heroMoveIsMember, getResID, getModel,
  * updateAnimation(0.0), then four model flag calls. Colosseum inlines
@@ -1800,7 +1800,7 @@ static inline void heroMoveInitEventChat(void)
 
 /*
  * 0x8012C540 | 0x120: GScolsys2CheckGetEventID for the point in front of the
- * leader. Exact (lane B7c; 96.5% before): the leader's
+ * leader. Exact (96.5% before): the leader's
  * resource ID comes from getResID, and like retail neither the ID (out of
  * range leader) nor the result (no person) is initialised: retail has no
  * initialising instruction on those paths and returns r30 as left.
@@ -1848,7 +1848,7 @@ static inline void procStep(s32 member)
 /*
  * 0x8012EBD4 | 0x3E4: per-frame party update.
  *
- * Exact (lane B7c, 2026-09-28; 95.6% before, written with gotos and raw
+ * Exact (2026-09-28; 95.6% before, written with gotos and raw
  * offsets). Follows XD's heroMoveMain (0x80150D80): early-outs, the queued
  * auto event, the three event-list loops, then moveLeader and procStep for
  * the leader. Colosseum's step accumulator calls every registered step
@@ -2035,7 +2035,7 @@ static inline void initFootWork(FOOTWORK* footwork)
 /*
  * 0x8012F610 | 0x4C8: place the followers behind the leader on the floor.
  *
- * 99.9% (lane B7c, 2026-09-28; 95.0% before). Structure follows XD's
+ * 99.9% (2026-09-28; 95.0% before). Structure follows XD's
  * initFloor__Fv (0x801517F8): getPos/getRot of the leader, sin and cos of
  * its heading computed before either is negated (XD and Colosseum both keep
  * sin in f31 across the cos call and negate afterwards), the follower loop
@@ -2081,7 +2081,7 @@ static inline void initFootWork(FOOTWORK* footwork)
  * It is linked as part of the whole TU (with its pooled 12.0f and
  * heroMoveAddStepCallback, inlined twice here).
  *
- * Round 2 (lane B7, 2026-09-28). The fingerprint is a constant the
+ * Round 2 (2026-09-28). The fingerprint is a constant the
  * optimizer learned only after branch and switch folding: a `li` into a
  * register that the compares then test. It occurs nowhere else in the
  * retail DOL (scan of every li rN / cmpwi rN pair with no label between:
@@ -2114,7 +2114,7 @@ static inline void initFootWork(FOOTWORK* footwork)
  * doesn't inline, its li r4,1 shows only that the value is constant, not
  * that the source used a literal.
  *
- * Round 3 (lane B7b, 2026-09-28): traced MWCC's passes. GC/2.6 replays this
+ * Round 3 (2026-09-28): traced MWCC's passes. GC/2.6 replays this
  * TU's fn_8012F1FC and fn_8013024C byte-for-byte, so its dumps are exact.
  * GC/2.6 is a release build whose frontend-optimizer (IRO) log is compiled
  * in but disabled: IRO_Optimizer clears IRO_Log (byte 0x5eb3b9) at 0x42ddb9

@@ -11,7 +11,7 @@
  * other code reads 0x8047C370 - 0x8047C388. The middle chunk was scored with
  * GC/1.3 (91-93%); under this range's GC/1.2.5n its two functions are exact.
  * Bodies copied, in address order, from sdk_range_800BB30C.c and the former
- * sdk_candidate_800BB81C.c (lane D18).
+ * sdk_candidate_800BB81C.c.
  */
 #include "dolphin/types.h"
 

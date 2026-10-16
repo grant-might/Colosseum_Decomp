@@ -3,7 +3,7 @@
  * @brief GSgfx: set up channels, texgens and TEV stages for a vertex
  * descriptor, then flush them (fn_800D923C). 0x800D892C - 0x800D923C.
  *
- * Byte-exact (lane D6, 2026-09-29) and linked as Matching under the
+ * Byte-exact (2026-09-29) and linked as Matching under the
  * byte-match-first policy, with the rule exceptions tagged below and listed
  * in docs/RULE_EXCEPTIONS.md. Function-boundary carve material: no jump
  * table, no pooled constant. The tables (lbl_80314404, lbl_803144F0,
@@ -23,7 +23,7 @@
  * ++/-- pair below reproduces those stores, but it is a placeholder, not
  * the recovered source construct.
  *
- * Register allocation (lanes D5 and D6; see
+ * Register allocation (see
  * docs/recon/gs_gfx_800D892C_wall.md):
  * - gfxSetChanCtrlIdx indexes chanCtrl with (u32)chan, so the backend,
  *   not the frontend, strength-reduces chan*6, as in retail. The cast is

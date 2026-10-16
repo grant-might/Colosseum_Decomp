@@ -23,8 +23,8 @@
  * its eight-byte getters (peopleGetMaxCount) instead of inlining them.
  *
  * Build (one flag set for the whole unit): GC/2.0 -O4,p with
- * -inline auto,deferred and -str reuse,readonly (since 2026-09-28, lane
- * P30d; before that -inline noauto,deferred, see below). The evidence:
+ * -inline auto,deferred and -str reuse,readonly (since 2026-09-28;
+ * before that -inline noauto,deferred, see below). The evidence:
  *   - GC/2.0 rather than GC/1.3 (checked 2026-09-28): every function that
  *     is exact under GC/1.3 stays exact, fn_8018D7D0 becomes exact (under
  *     GC/1.3 the masked index and the 0x7FFF0000 constant swap r0/r3; its
@@ -54,7 +54,7 @@
  * directive, 2026-09-28): the unused zero GSvec local in fn_801845E4 and
  * the block-scope extern of fn_8018F30C in fn_80181850.
  *
- * Linked (2026-09-28, lane P30r): every function is exact, and the whole TU
+ * Linked (2026-09-28): every function is exact, and the whole TU
  * is one Matching object with the .rodata/.data/.sbss/.sdata2 ranges above
  * (splits.txt `game/people/people.c`; main.dol SHA1 OK). It replaced the
  * score-instrumentation chunks and the carves that used to cover
@@ -64,8 +64,8 @@
  * parts of rodata_80273A00.c and sdata2_8047D890.c (now rodata_80273A00.c
  * up to 0x80273F90, rodata_802741F8.c, and sdata2_8047D8A8.c). Title-path
  * rule exceptions in this TU (tagged RULE-EXCEPTION(title-path)): the zero
- * GSvec local in fn_801845E4, the block-scope extern in fn_80181850 (lane
- * P30d) and the peopleMoveAlongAngle helper of fn_80188214 (lane P30r).
+ * GSvec local in fn_801845E4, the block-scope extern in fn_80181850
+ * and the peopleMoveAlongAngle helper of fn_80188214.
  * objdiff scores the unit's data low (9%) only because the compiler's
  * @-literals do not pair by name with retail's lbl_ labels; the bytes are
  * identical (SHA1), and .rodata/.sdata2 differ only in their tail padding.
@@ -94,7 +94,7 @@
  * TU (.text 0x801812C4-0x8018F470 plus the .rodata/.data/.sbss/.sdata2
  * above as one object), as it now does (above). (peopleOpen,
  * peopleOpenSub and fn_8018CD08, which differed only in the 12-byte
- * .rodata image above, are exact since the image is in place.) Lane B30x
+ * .rodata image above, are exact since the image is in place.) A later pass
  * fixed peopleOpenSub's r19/r20 swap and fn_8018CD08's FPR colouring
  * (see those functions); the peopleTurnTo form that fixed the latter also
  * made fn_8018524C (99.34%) exact.
@@ -107,11 +107,11 @@
  * peopleMoveAlongAngle makes different calls (sin/cos,
  * GScolsys2HumanGetWalkHeight instead of fn_800E0718/GSvecTransformQuat);
  * fn_80188214 is exact through that helper form anyway, as a
- * RULE-EXCEPTION(title-path) (see fn_80188214; lane P30r, 2026-09-28).
- * (fn_80186B5C and fn_80189990 became exact on 2026-09-28, lane B30r;
- * fn_8018ECEC on 2026-09-28, lane P30r, through MSL's atan2f.)
+ * RULE-EXCEPTION(title-path) (see fn_80188214, 2026-09-28).
+ * (fn_80186B5C and fn_80189990 became exact on 2026-09-28;
+ * fn_8018ECEC on 2026-09-28, through MSL's atan2f.)
  *
- * The two data items, re-examined 2026-09-28 (lane U1):
+ * The two data items, re-examined 2026-09-28:
  *   - The sixth .rodata image (0x80273FCC). The images belong to
  *     fn_8018E920 (0x80273F90, the three bios callbacks), fn_8018CD08
  *     (0x80273F9C, read as base+0xC), fn_80188214 (0x80273FA8),
@@ -130,7 +130,7 @@
  *     rewritten without Vec images (xd-asm b1087f18), and no XD disc is
  *     available for its .rodata. An invented unused local or stand-in
  *     function is rejected, so the image stays open.
- *     Re-examined 2026-09-28 (lane B30d):
+ *     Re-examined 2026-09-28:
  *     . An unused local keeps no stack slot and changes no instruction
  *       (controlled GC/1.3 and GC/2.0 tests, also inside an expanded static
  *       inline), so no retail frame or code can point at its function.
@@ -179,7 +179,7 @@
  *     __FUNCTION__$localstatic1$ object) unless its address is taken, and
  *     nothing in the TU takes it. No flag set or natural source found
  *     gives both.
- *     Re-examined 2026-09-28 (lane B30d): the GC/1.3 result above is
+ *     Re-examined 2026-09-28: the GC/1.3 result above is
  *     specific to GC/1.3's auto-inline size limit. GC/1.3.2, GC/2.0 and
  *     later use a different size measure: about 30 simple statements
  *     against about 15 for GC/1.3, and it is measured before the callee's
@@ -203,7 +203,7 @@
  *     stop fn_8018F30C (depth 2, as deep as peopleWaitSyncMotion's).
  *     -inline auto therefore stays off. Its evidence is recorded here: it
  *     is the only mechanism found for the shared __FUNCTION__ object.
- *     Applied 2026-09-28 (lane P30d, title-path rule exceptions): the unit
+ *     Applied 2026-09-28 (title-path rule exceptions): the unit
  *     now builds with -inline auto,deferred; fn_801821B8 calls the global
  *     peopleWaitSyncMotion (the static inline twin is gone). An unused
  *     `GSvec offset = {0}` in fn_801845E4 (the orphan image's likeliest
@@ -806,7 +806,7 @@ static inline u8 peopleIsHero(u32 groupId, u32 index)
  * loads it ahead of fn_800E0168.
  *
  * The heading (atan2's result) is stored in `angle` in its own statement
- * before the turn is taken from it (lane B30x, 2026-09-28). Every expansion
+ * before the turn is taken from it (2026-09-28). Every expansion
  * gives the same instructions either way, but the one-expression form left
  * two register walls: fn_8018CD08 (99.59%) and fn_8018524C (99.34%). The
  * GC/2.6 replay of fn_8018CD08 (the same code as GC/2.0) showed why: the
@@ -1268,7 +1268,7 @@ void fn_8018F08C(PeopleEntry* entry, s32 motionIndex)
  * moves toward the target angles at 0.04 rad per tick.
  *
  * The pitch goes through MSL's atan2f (crt/math_ppc.h, the float wrapper
- * fn_80187D48 also uses), not a cast of atan2 (lane P30r, 2026-09-28;
+ * fn_80187D48 also uses), not a cast of atan2 (2026-09-28;
  * 99.42% -> 100%). Retail adds 13 to lookDelta.y, stores it and keeps the
  * sum in f2 for atan2's second argument. With `(f32)atan2(...)` the read
  * of lookDelta.y sits in the call's own statement, after the two abs()
@@ -1512,7 +1512,7 @@ void fn_8018E920(u32 maxPeople)
  * XD keeps a global peopleOpenSub (0x8029F044, TeamOrre/xd-decomp
  * symbols.txt) next to peopleOpen.
  *
- * The shadow light (lane B30x, 2026-09-28): retail colours `other` before
+ * The shadow light (2026-09-28): retail colours `other` before
  * `light`, so `other` takes r19 and `light` r20. MWCC numbers a function's
  * locals in reverse declaration order and colours the higher number first,
  * so `other` is declared before `light`. The choice between the two lights
@@ -1789,7 +1789,7 @@ u8 fn_8018D680(GSvec* a, GSvec* b, GSvec* point, f32 width)
  * candidate filters, and peopleVecCalcRotY, peopleInsideCheck and
  * peopleGetNeckPos called out of line.
  *
- * Registers (lane B30x, 2026-09-28): retail colours the loop's long-lived
+ * Registers (2026-09-28): retail colours the loop's long-lived
  * floats angle f31, distance f30, bestAngle f29, sourceRadius f28,
  * bestScore f27, fov f26, range f25, and the short-lived ones (the two
  * facings, peopleIsBetween's width, score) share f24. MWCC numbers a
@@ -2711,7 +2711,7 @@ void peopleMoveByVector(u32 groupId, u32 index, GSvec* offset, u8 face)
  * which MWCC does only when `model` is an inline's local (coloured before
  * the lookup's return temporary). Written in place (the body below pasted
  * into fn_80188214, locals as function locals), `model` is coloured after
- * every inline temporary and takes r29 (99.72%, lanes B30r/P30r; no
+ * every inline temporary and takes r29 (99.72%; no
  * declaration order, early-return form or C++ reference binding changes
  * that). A clean fix needs evidence for this helper: a second expansion or
  * an inline fingerprint. XD's own argument order (speed, yaw) leaves an
@@ -3406,11 +3406,11 @@ void fn_801858C4(PeopleEntry* entry)
  * otherwise the person is placed on it and stops. The per-frame update
  * passes whether the walk loops, but the loop test reads the state itself.
  *
- * Exact since peopleTurnTo computes the heading in its own statement (lane
- * B30x, 2026-09-28; see peopleTurnTo): that changes the vreg numbering of
+ * Exact since peopleTurnTo computes the heading in its own statement (2026-09-28;
+ * see peopleTurnTo): that changes the vreg numbering of
  * the loop's expansion and gives retail's colouring. The analysis below
- * (lane B30r) is kept for the record.
- * Former wall (99.34%, lane B30r, 2026-09-28): FPR colouring in the walk
+ * is kept for the record.
+ * Former wall (99.34%, 2026-09-28): FPR colouring in the walk
  * loop. Retail puts remaining in f31, the hoisted pi, 0.0f and 2pi of the
  * loop's peopleTurnTo in f30/f29/f28 and distance in f27; ours colours
  * 0.0f, distance, remaining, pi, 2pi in that order (f31..f27). The

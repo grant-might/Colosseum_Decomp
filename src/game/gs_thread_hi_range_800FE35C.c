@@ -24,14 +24,14 @@
  * argument loads, unlike retail. All six functions are exact and the unit
  * links whole (it replaced the fn_800FE35C and accessor carves).
  *
- * fn_800FE38C (lane D9, 2026-09-29): the clipped edges reuse the result
+ * fn_800FE38C (2026-09-29): the clipped edges reuse the result
  * variables: `right = left + w`, then `right = (f32)right * scale`.
  * Retail keeps each edge in one register web (the GPR colouring simulator
  * finds exactly one single change that gives retail: merging x1's web with
  * `right`'s). MWCC only keeps the reused variable as one web with
  * `opt_lifetimes off`. With lifetime splitting on, this form is 14
  * instructions off, and separate x0/x1 locals leave x1 in x0's dead r3
- * (2 instructions, lane U3's wall; copy chains, param reuse and other
+ * (2 instructions; copy chains, param reuse and other
  * pragmas do not move it). The pragma is a RULE-EXCEPTION, listed in
  * docs/RULE_EXCEPTIONS.md.
  */

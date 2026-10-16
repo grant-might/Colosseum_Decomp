@@ -16,7 +16,7 @@
  * pool is .rodata). No pragmas. Every definition is in address order and
  * the string pool comes out in retail's first-use order.
  *
- * Linked (lane V23b, 2026-09-28) over the split 0x800F1A0C-0x800F75FC with
+ * Linked (2026-09-28) over the split 0x800F1A0C-0x800F75FC with
  * the pool (.rodata 0x80271068-0x80271300), the manager pointer (.sdata
  * 0x80478B00), "\n"/0.0f/int-to-float bias (.sdata2 0x8047CCB8-0x8047CCC8,
  * moved here from game/data/sdata2_8047CC98.c because they are this TU's
@@ -49,8 +49,8 @@
  * 例外エラー...", the same way "_codeStructAssign:" names fn_800F2264; it
  * has no symbol of its own, so it was inlined.
  *
- * Formerly not exact (they blocked linking the unit; both 100% since lane
- * V23b through the RULE-EXCEPTION dead store, analysis kept for a clean fix):
+ * Formerly not exact (they blocked linking the unit; both 100% now
+ * through the RULE-EXCEPTION dead store, analysis kept for a clean fix):
  *   fn_800F5A3C  91.8  MWCC hoists the operand descriptor's bit tests
  *                      (desc & 0x80/0x20/0x40/0x100) out of the loop into
  *                      four registers and then keeps `start` in its stack
@@ -59,7 +59,7 @@
  *                      int counters, u16/s32/u32/int count, u8/u16/u32/s32
  *                      descriptor, start as value or word) nor a shared
  *                      push-operand helper stops the hoisting.
- *                      Cause (lane U1, 2026-09-28): the inliner replaces
+ *                      Cause (2026-09-28): the inliner replaces
  *                      the helper's u16 `desc` with the caller's (u16)desc,
  *                      so the four tests are invariant expressions and
  *                      LICM hoists them. A u16 copy assigned inside the
@@ -71,7 +71,7 @@
  *                      retail's source either. The helper's parameter must
  *                      stay u16: u32/s32/int/s16 break 19 other handlers.
  *                      GC/1.3 to GC/2.7 all hoist the helper form.
- *                      Lane B23 (2026-09-28): 89.9 -> 91.8 by naming the
+ *                      (2026-09-28): 89.9 -> 91.8 by naming the
  *                      pushed variable index (see the function). The rest
  *                      is one property of GSvmGetOperand: in retail its
  *                      `desc` parameter behaves as a real local of the
@@ -91,7 +91,7 @@
  *                      a u16 copy of desc assigned inside the loop also gives
  *                      it (pure copy: rejected). Still wanted: a natural
  *                      helper body that assigns to its descriptor parameter.
- *                      Lane B23b (2026-09-28) tried consuming forms of the
+ *                      (2026-09-28) tried consuming forms of the
  *                      helper. Only an assignment that is dead leaves the
  *                      other 19 callers exact: e.g. `desc &= ~0x80;` after
  *                      the pop in the 0x80 branch (the stack flag consumed)
@@ -114,7 +114,7 @@
  *                      copy is then (u16)desc, not (u16)(desc | 0x100)).
  *                      So retail's helper most likely held a dead store to
  *                      its parameter; no admissible source is known.
- *                      Lane V23 (2026-09-28), GC/2.6 IRO trace (GC/2.6
+ *                      (2026-09-28), GC/2.6 IRO trace (GC/2.6
  *                      reproduces both probes byte for byte): retail needs
  *                      the bound copy to be a PURE `desc' = (u16)desc`.
  *                      LICM hoists (u16)desc to a preheader temp, copy
@@ -158,7 +158,7 @@
  *                        so the sister-title clause has nothing to offer.
  *                        find_inline_expansions finds no match for the
  *                        operand fetch in xd-asm.
- *                      Lane V23b (2026-09-28): evidenced release-build
+ *                      (2026-09-28): evidenced release-build
  *                      debug constructs do not bind the parameter. Tested
  *                      in GSvmGetOperand, all leaving 91.77/99.46 and the
  *                      other 19 unchanged: GS_ASSERT (the release assert
@@ -188,7 +188,7 @@
  *                      descriptor is coloured first here); every
  *                      declaration order, descriptor type, pop/push form
  *                      and an ip-fetch helper give the same colouring.
- *                      Lane B23: same cause as fn_800F5A3C (the helper's
+ *                      Same cause as fn_800F5A3C (the helper's
  *                      parameter must be a bound local; the dead-store
  *                      probe gives 100%). A named `u16 flags = desc |
  *                      0x100;` passed to the helper also gives 100%, but
@@ -196,10 +196,10 @@
  *                      expression argument (only registers differ), so the
  *                      "named computed values" clause does not cover it;
  *                      not applied.
- *   (fn_800F6D18 is exact since lane B23: the key search reads
+ *   (fn_800F6D18 is exact: the key search reads
  *   lbl_80478B00->lastKey directly, see the comment there.)
  *
- * Regalloc replay notes (lane TW, GC/2.6 replay; the allocator's order is
+ * Regalloc replay notes (GC/2.6 replay; the allocator's order is
  * reproduced exactly by: rescan the virtual registers in ascending number,
  * pushing each with fewer than 29 neighbours, spill-pick the lowest
  * cost/degree when stuck, colour in reverse push order):
@@ -214,7 +214,7 @@
  *   fn_800F6D18 (replay not faithful): the pool pointer is always a
  *     temporary (the global load, shared with GSvmFindByKey's copy), which
  *     is coloured before any declared local, so a declared `lastKey` loses
- *     r6 to it. Solved (lane B23): with no `lastKey` and no `pool` local in
+ *     r6 to it. Solved: with no `lastKey` and no `pool` local in
  *     the key search, `key = lbl_80478B00->lastKey` and the wrap test
  *     `key == lbl_80478B00->lastKey` give retail's lhz r6 / mr r29,r6
  *     (the hoisted re-read of lastKey is a temporary numbered after the

@@ -10,8 +10,8 @@
  * docs/RULE_EXCEPTIONS.md). Built with the sysdolphin library flags, the
  * same flags as the sibling dobj.c carves (GC/1.3.2 -O4,p -O1 -inline
  * auto,deferred -use_lmw_stmw on). The former local optimization-level
- * pragma (under GC/1.3) only reproduced those flags' -O1 and is gone (lane
- * D3, 2026-09-29). What remains is the parameter copies: with
+ * pragma (under GC/1.3) only reproduced those flags' -O1 and is gone (2026-09-29).
+ * What remains is the parameter copies: with
  * the natural Melee shape, or this body without the copies, MWCC gives
  * dobj r31 and desc r28, where retail uses desc r31 / dobj r30 / inner desc
  * r29 / inner dobj r28 (96.9% across GC/1.0-3.0a5.2 and -O1/-O2, with and

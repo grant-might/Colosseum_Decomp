@@ -7,7 +7,7 @@
  * campaign 2026-07-01). All functions asm-only until matched; the
  * range name stays honest until internal TU structure is proven.
  *
- * Linked (lane D18) with its data: the decimal string table (.rodata
+ * Linked with its data: the decimal string table (.rodata
  * 0x8026FF00 - 0x8026FFE0), __two_exp's switch table (.data 0x803139F0 -
  * 0x80313B14) and the 0.0 literal (.sdata2 0x8047C400).
  */

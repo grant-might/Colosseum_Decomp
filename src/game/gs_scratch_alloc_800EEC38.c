@@ -3,7 +3,7 @@
  * (0x800EE928-0x800EEF48, -O4,p). Kept as its own object so the exact
  * functions before it can link.
  *
- * Status: exact and linked (lane D18) with a RULE-EXCEPTION form. The
+ * Status: exact and linked with a RULE-EXCEPTION form. The
  * in-place search gives 99.06%: a register swap, retail keeping the
  * free-record pointer in r7 and the marking loop's shift counter in r6 and
  * the plain source the other way round. The one source that reproduces
