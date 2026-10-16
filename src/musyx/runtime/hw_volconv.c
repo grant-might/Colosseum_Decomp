@@ -191,3 +191,8 @@ void salCalcVolume(u8 voltab_index, SAL_VOLINFO* vi, f32 vol, u32 pan, u32 span,
         vi->volAuxBS = 0.0f;
     }
 }
+
+/* Trailing .sdata2 padding: the unit's retail range is 0x8047D430-0x8047D468 (56 B); the pool above ends at 0x8047D464,
+ * so retail's section carries 4 byte(s) that dtk folds into the last symbol.  Byte-exact, aligned(1)
+ * so MWCC cannot insert alignment padding in front of it. */
+const u8 pad_8047D464_sdata2[4] __attribute__((aligned(1))) = { 0x00, 0x00, 0x00, 0x00 };

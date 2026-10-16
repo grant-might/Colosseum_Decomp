@@ -92,3 +92,8 @@ void salInvertMatrix(SND_FMATRIX* out, const SND_FMATRIX* in)
     out->t[1] = (-in->t[0] * out->m[1][0] - in->t[1] * out->m[1][1]) - in->t[2] * out->m[1][2];
     out->t[2] = (-in->t[0] * out->m[2][0] - in->t[1] * out->m[2][1]) - in->t[2] * out->m[2][2];
 }
+
+/* Trailing .sdata2 padding: the unit's retail range is 0x8047D4B8-0x8047D4D8 (32 B); the pool above ends at 0x8047D4D4,
+ * so retail's section carries 4 byte(s) that dtk folds into the last symbol.  Byte-exact, aligned(1)
+ * so MWCC cannot insert alignment padding in front of it. */
+const u8 pad_8047D4D4_sdata2[4] __attribute__((aligned(1))) = { 0x00, 0x00, 0x00, 0x00 };

@@ -652,3 +652,8 @@ void ReverbHICallback(s32* left, s32* right, s32* surround, SND_AUX_REVERBHI* re
     }
   }
 }
+
+/* Trailing .sdata2 padding: the unit's retail range is 0x8047D4F0-0x8047D540 (80 B); the pool above ends at 0x8047D53C,
+ * so retail's section carries 4 byte(s) that dtk folds into the last symbol.  Byte-exact, aligned(1)
+ * so MWCC cannot insert alignment padding in front of it. */
+const u8 pad_8047D53C_sdata2[4] __attribute__((aligned(1))) = { 0x00, 0x00, 0x00, 0x00 };

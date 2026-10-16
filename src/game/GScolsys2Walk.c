@@ -206,3 +206,8 @@ s32 getCpPolyVec__FP5GSvecP5GSvecP5GSvecP5GSvec(GSvec* out, GSvec* point, GSvec*
     out->z = point->z;
     return 1;
 }
+
+/* Trailing .sdata2 padding: the unit's retail range is 0x8047CEE0-0x8047CEF0 (16 B); the pool above ends at 0x8047CEEC,
+ * so retail's section carries 4 byte(s) that dtk folds into the last symbol.  Byte-exact, aligned(1)
+ * so MWCC cannot insert alignment padding in front of it. */
+const u8 pad_8047CEEC_sdata2[4] __attribute__((aligned(1))) = { 0x00, 0x00, 0x00, 0x00 };

@@ -16,3 +16,7 @@
 #define GS_TITLE_RANGE_80025F74
 #define GS_TITLE_RANGE_80025F84
 #include "src/game/gs_title.c"
+
+/* Trailing .sdata2 padding: the unit's retail range is 0x8047B8A8-0x8047B920 (120 B); the pool above ends at 0x8047B91C,
+ * so retail's section carries 4 byte(s) of padding that dtk folds into the last symbol. */
+const u8 pad_8047B91C_sdata2[4] = { 0x00, 0x00, 0x00, 0x00 };

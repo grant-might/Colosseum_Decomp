@@ -3,3 +3,7 @@
  * (wazaSequenceCameraGetPattern, fn_801D2C6C, fn_801D2C74) stay separate. */
 #define WAZA_CAMERA_FILE_ONLY
 #include "src/game/wazaSequenceCamera.c"
+
+/* Trailing .sdata2 padding: the unit's retail range is 0x8047E1E0-0x8047E2E0 (256 B); the pool above ends at 0x8047E2DC,
+ * so retail's section carries 4 byte(s) of padding that dtk folds into the last symbol. */
+const u8 pad_8047E2DC_sdata2[4] = { 0x00, 0x00, 0x00, 0x00 };

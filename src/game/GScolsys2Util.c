@@ -213,3 +213,8 @@ void GScolsy2UtilGetCpPlanePoint(Vec3f* out, Vec3f* normal, Vec3f* verts, Vec3f*
     PSVECScale(normal, out, scale);
     PSVECAdd(out, point, out);
 }
+
+/* Trailing .sdata2 padding: the unit's retail range is 0x8047CF10-0x8047CF20 (16 B); the pool above ends at 0x8047CF1C,
+ * so retail's section carries 4 byte(s) that dtk folds into the last symbol.  Byte-exact, aligned(1)
+ * so MWCC cannot insert alignment padding in front of it. */
+const u8 pad_8047CF1C_sdata2[4] __attribute__((aligned(1))) = { 0x00, 0x00, 0x00, 0x00 };

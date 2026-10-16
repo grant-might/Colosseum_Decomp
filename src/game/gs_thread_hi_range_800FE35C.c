@@ -141,3 +141,8 @@ void fn_800FE6D0(s16 x, s16 y) {
     lbl_8047AC70 = x;
     lbl_8047AC72 = y;
 }
+
+/* Trailing .sdata2 padding: the unit's retail range is 0x8047CD50-0x8047CD80 (48 B); the pool above ends at 0x8047CD7C,
+ * so retail's section carries 4 byte(s) that dtk folds into the last symbol.  Byte-exact, aligned(1)
+ * so MWCC cannot insert alignment padding in front of it. */
+const u8 pad_8047CD7C_sdata2[4] __attribute__((aligned(1))) = { 0x00, 0x00, 0x00, 0x00 };
