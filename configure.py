@@ -12355,6 +12355,11 @@ config.libs = [
             Object(Matching, "rel/common_rel/common_rel.c"),
             Object(Matching, "rel/common_rel/snd_song_table.c"),
             Object(Matching, "rel/common_rel/snd_sample_table.c"),
+            Object(Matching, "rel/common_rel/rodata_125_00000000.c"),
+            Object(Matching, "rel/common_rel/data_125_001439D8.c"),
+            Object(Matching, "rel/common_rel/data_125_00111E04.c"),
+            Object(Matching, "rel/common_rel/data_125_00000000.c"),
+            Object(Matching, "rel/common_rel/data_125_0008F724.c"),
         ],
     ),
     # REL 1 (mail, common.fsys member 1)

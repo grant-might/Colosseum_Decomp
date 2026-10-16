@@ -6,24 +6,24 @@
     "total_code": 2504940,
     "total_data": 3566037,
     "total_functions": 8677,
-    "total_units": 2163
+    "total_units": 2165
   },
   "topology_status": {
-    "auto_units": 97,
-    "named_units": 2066,
-    "source_backed_units": 2065,
+    "auto_units": 94,
+    "named_units": 2071,
+    "source_backed_units": 2070,
     "auto_code": 0,
-    "auto_data": 1399655,
+    "auto_data": 60751,
     "auto_functions": 0
   },
   "baseline_progress": {
-    "matched_code": "2299812",
-    "matched_code_percent": 91.81106,
-    "matched_data": "2098410",
-    "matched_data_percent": 58.844315,
-    "matched_functions": 8535,
-    "matched_functions_percent": 98.36349,
-    "fuzzy_match_percent": 99.68803
+    "matched_code": "2301148",
+    "matched_code_percent": 91.864395,
+    "matched_data": "3437314",
+    "matched_data_percent": 96.390305,
+    "matched_functions": 8536,
+    "matched_functions_percent": 98.375015,
+    "fuzzy_match_percent": 99.68869
   },
   "unit_topology": [
     {
@@ -30494,20 +30494,46 @@
       "total_functions": 3
     },
     {
-      "name": "common_rel/auto_02_00000000_data",
+      "name": "common_rel/rel/common_rel/data_125_00000000",
       "sections": [
         {
           "name": ".data",
-          "size": 1121164,
+          "size": 572596,
           "virtual_address": 0
         }
       ],
       "total_code": 0,
-      "total_data": 1121164,
+      "total_data": 572596,
       "total_functions": 0
     },
     {
-      "name": "common_rel/auto_01_00000000_rodata",
+      "name": "common_rel/auto_02_0008BCB4_data",
+      "sections": [
+        {
+          "name": ".data",
+          "size": 14960,
+          "virtual_address": 572596
+        }
+      ],
+      "total_code": 0,
+      "total_data": 14960,
+      "total_functions": 0
+    },
+    {
+      "name": "common_rel/rel/common_rel/data_125_0008F724",
+      "sections": [
+        {
+          "name": ".data",
+          "size": 533608,
+          "virtual_address": 587556
+        }
+      ],
+      "total_code": 0,
+      "total_data": 533608,
+      "total_functions": 0
+    },
+    {
+      "name": "common_rel/rel/common_rel/rodata_125_00000000",
       "sections": [
         {
           "name": ".rodata",
@@ -30538,7 +30564,7 @@
       "total_functions": 0
     },
     {
-      "name": "common_rel/auto_02_00111E04_data",
+      "name": "common_rel/rel/common_rel/data_125_00111E04",
       "sections": [
         {
           "name": ".data",
@@ -30569,7 +30595,7 @@
       "total_functions": 0
     },
     {
-      "name": "common_rel/auto_02_001439D8_data",
+      "name": "common_rel/rel/common_rel/data_125_001439D8",
       "sections": [
         {
           "name": ".data",
