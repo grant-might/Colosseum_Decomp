@@ -1,8 +1,11 @@
 name: Regression Guard
 # Byte-identical fallback reconstruction is not a source-matching measurement.
 # Compare source reports by module/address, including renames and removals.
+# Manual only, for the same reason as build.yml: the job runs inside the upstream
+# project's private build container and needs the retail inputs, so an automatic run
+# on this repository would fail before comparing anything.
 on:
-  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read

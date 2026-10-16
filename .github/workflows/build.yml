@@ -1,8 +1,12 @@
 name: Build
 
+# Manual only. This job builds inside ghcr.io/dougchansan/pkmn-colosseum-build:main,
+# a private image owned by the upstream project, and it needs the retail game files.
+# Neither can be published from here, so an automatic run on this repository could
+# only fail at the container pull. Run it by hand from the Actions tab if you have
+# access to that image; otherwise see the README for the local verification gates.
 on:
-  push:
-  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: write
