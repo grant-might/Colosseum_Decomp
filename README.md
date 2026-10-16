@@ -1,88 +1,64 @@
 # Pokémon Colosseum Decompilation (GC6E01)
 
-[![Progress](https://decomp.dev/dougchansan/pkmn-colosseum.svg)](https://decomp.dev/dougchansan/pkmn-colosseum)
-
 A matching decompilation project for the GameCube game **Pokémon Colosseum**
-(`GC6E01`, NTSC-U). The active project has been reset to the standard
+(`GC6E01`, NTSC-U). This repository continues the work of
+[`dougchansan/pkmn-colosseum`](https://github.com/dougchansan/pkmn-colosseum)
+and keeps the standard
 [dtk-template](https://github.com/encounter/dtk-template) workflow.
 
 ## Status
 
-![Progress over time](https://raw.githubusercontent.com/dougchansan/pkmn-colosseum/progress-chart/progress.png)
-
-Every point on the chart is a real `objdiff` measurement. Points from
-2026-07-01 onward come from the report built in CI (or, for that first stretch,
-from this table's own git history); earlier points were recovered by checking
-out each historical commit and running the build against it. The campaign
-starts on 2026-06-27, when `config/GC6E01/splits.txt` grew past its stub and
-units first became matchable — before that date this metric did not exist, and
-the work of that period was measured a different way.
-
-The build workflow republishes the chart on every push to master, to the
-[`progress-chart`](https://github.com/dougchansan/pkmn-colosseum/tree/progress-chart)
-branch — master is protection-gated, so CI cannot commit there, and keeping the
-regenerated image off master stops its history growing a copy per push. Render
-one locally with:
-
-```bash
-uv run --with matplotlib tools/plot_progress.py -o /tmp/progress.png
-```
-
 | Metric | Value |
 |---|---|
 | Fuzzy match | 99.69% |
-| Function match | 98.36% (8,535 / 8,677 functions) |
-| Code match | 91.81% (2,299,812 / 2,504,940 matched code bytes) |
-| Data match | 58.84% (2,098,410 / 3,566,037 matched data bytes) |
-| Source-linked | 1,891 / 2,163 scoring units (90.48% of code) |
+| Function match | 98.38% (8,536 / 8,677 functions) |
+| Code match | 91.86% (2,301,148 / 2,504,940 matched code bytes) |
+| Data match | 97.59% (3,479,997 / 3,566,037 matched data bytes) |
+| Source-linked | 1,969 / 2,165 scoring units (90.48% of code) |
 
-These measurements cover the **DOL and all 25 configured REL modules**, from the
-full `build/GC6E01/report.json` built by CI for the PR #638 merge (2026-10-15).
-All 26 rebuilt binaries passed their unchanged canonical hashes and direct byte
-comparisons against the originals in the private build image. This is a
-matching reconstruction with original fallback objects where required, not a
-claim of 100% decompilation or gameplay testing. See
-[`docs/COUNT_SHEEP_INTEGRATION.md`](docs/COUNT_SHEEP_INTEGRATION.md) for validation
-scope and provenance.
+"Matched" counts bytes that score. "Complete" counts bytes inside units with no
+residue at all, and 1,969 of 2,165 units are complete, which is 90.95% of units and
+68.81% of data bytes. Those are different questions and this project reports both.
 
-The DOL alone is 91.78% code-matched and 94.95% data-matched. The combined data
-percentage also includes the large, mostly unreconstructed `common_rel` data
-region, so it is not comparable to an older DOL-only data percentage. On the
-chart, points from the PR #638 merge onward use this DOL + REL scope; the drop
-in the data line there is that scope change, not a regression.
+The measurements above cover the **DOL and all 25 configured REL modules**, from
+the full `build/GC6E01/report.json`. All 26 rebuilt binaries reproduce their
+unchanged canonical SHA-1 hashes, so every output in the build is byte-identical to
+the retail disc. This is a matching reconstruction with original fallback objects
+where required, not a claim of gameplay testing.
 
-**Scoring units are not translation units.** An original source region may be
-split into address-owned units with different compiler flags, compiled through
-one-line `#include` shims. The full report contains 8,677 distinct module/address
-function identities, with no duplicate claims. Its 2,504,940-byte code denominator
-contains 2,495,112 DOL bytes and 9,828 REL bytes; source-linked coverage is measured
-across those same outputs. The freeze tracks their exact section topology.
+### Change since upstream master `72c0603d6`
 
-After rebuilding the report, refresh the table with:
+* Inline helper recovery closed `fn_80008C40` byte-exact, 1,336 B.
+* Five `common_rel` units reconstructed, 1,338,904 B. Data went from 58.84% to 96.39%.
+* 32 DOL zero-fill `.bss`/`.sbss` units converted to named declarations, 28,464 B.
+* 27 pointer-free DOL `.data`/`.sdata` units converted, 1,443 B.
+* 15 pointer-bearing DOL `.data`/`.sdata` units converted, 5,888 B.
+* `data_80375938` and the `hsd/video` data reconstructed, 6,888 B.
+* `GStextureConvertToHW` recovered from 92.50% to 95.30%.
+* `tools/project.py` fixed so the dtk build runs natively on Windows.
 
-```bash
-python3 tools/update_readme_progress.py
-```
+Every verified win is recorded in
+[`docs/decomp_wins_ledger.csv`](docs/decomp_wins_ledger.csv) with the unit, symbol,
+before and after score, and byte count. 1,382,923 bytes closed to date.
 
-Use `python3 tools/update_readme_progress.py --check` to verify that the README
-matches the current report.
+### What is left, and why
 
-The published denominator is frozen in
-`config/GC6E01/object_map.freeze.json`. After changing `splits.txt`,
-`symbols.txt`, or object declarations, rebuild the report and run:
+* **141 residual functions, 203,792 code bytes.** 129 of them are dominated by
+  register-colouring differences: the emitted instruction stream matches retail
+  apart from which register holds which value. Measurement shows this project
+  already allocates the same register set retail used, and that the extra freedom
+  retail's compiler had was reusing a freed callee-saved slot, a decision inside
+  the allocator that no source shape controls. A 632-candidate search over the
+  transformation space, including exhaustive enumeration for the largest target,
+  produced no improvement.
+* **86,040 data bytes**, in three measured classes: dtk relocation-inference
+  artifacts on tables that are otherwise correct, objects whose declared size does
+  not match retail's slot, and 20 auto units where MWCC hard-codes a `.data`
+  section alignment of 8 against 4-aligned retail bases.
 
-```bash
-python3 tools/check_object_map_freeze.py
-```
-
-The check locks total code bytes, data bytes, function count, and unit section
-topology. Progress counters may rise without updating the freeze. Intentional
-split/topology changes must update the freeze in the same change with
-`python3 tools/check_object_map_freeze.py --update` and a clear reason. The
-current topology still includes auto-generated units; those are visible
-placeholders to retire deliberately, not hidden progress. Named extracted units
-without a source path are object-map progress only; they are not counted as
-decompiled source matches.
+Closing the remainder would need an allocator patch, asm bodies, or extracted
+assets. All three are forbidden by this project's own policy, so the metric stops
+here while the build stays byte-identical to retail.
 
 ## Requirements
 
@@ -105,6 +81,61 @@ The build splits `sys/main.dol` and the 25 configured original REL modules,
 substitutes only objects declared in `configure.py`, and verifies all 26 rebuilt
 outputs against `config/GC6E01/build.sha1`. Original RELs belong under
 `orig/GC6E01/files/`; complete loose modules or their FSYS archives are supported.
+All 24 FSYS archives named in `configure.py` are needed, not only the five listed
+in `docs/REL_MODULES.md`.
+
+### Windows
+
+The build runs natively on Windows: the MWCC `.exe` compilers execute directly and
+`sjiswrap.exe` wraps them, so no wibo or wine layer is required. Two upstream
+assumptions were Linux-only and are fixed in `tools/project.py`:
+
+1. The `*_constant_export` / `*_constant_import` rules chain a second command with
+   `&&` without prefixing `CHAIN` (`cmd /c `). Ninja on Windows runs commands
+   without a shell, so the `&&` reached `mwcceppc.exe` and 34 units aborted with
+   `Unknown option '-object'`.
+2. The MSYS-built `powerpc-eabi-ld.exe` strips backslashes when it expands an
+   `@file` response file, collapsing every path inside it, which failed all 25 REL
+   partial links. Windows now passes those inputs on the command line.
+
+`sjiswrap: File ... contains Shift JIS encoding errors` lines are warnings about
+UTF-8 bytes in the sources, not failures.
+
+## Verifying a change
+
+```bash
+ninja
+sha1sum -c config/GC6E01/build.sha1                          # 26/26 canonical
+ninja build/GC6E01/report.json
+python3 .github/scripts/check_metric_integrity.py build/GC6E01/report.json orig/GC6E01/sys/main.dol
+python3 tools/check_object_map_freeze.py --report build/GC6E01/report.json --strict-source-status
+python3 .github/scripts/check_regression.py <base>.json build/GC6E01/report.json
+python3 .github/scripts/quality_scan.py <base> <head>
+```
+
+`check_object_map_freeze.py` locks total code bytes, data bytes, function count and
+unit section topology. Progress counters may rise without updating the freeze;
+intentional split or topology changes must update it in the same change with
+`--update` and a stated reason. The freeze currently covers 2,165 units, and 21 of
+them are auto-generated placeholders with a measured reason to stay that way.
+
+Some measurement traps are worth knowing before trusting a number:
+
+* A loose-object `objdiff-cli diff` score is not the metric. It counts
+  relocation-name rows as residue that the report scores as matching, so it
+  over-reports by up to 0.03 percentage points once register rows are present.
+* An object-level check does not decide a unit, the link does. Units have been
+  measured byte-identical to their target object that still moved the linked
+  image, and a differing relocation set that still linked identically.
+* Declaration order, per-unit compiler flags, pooled-symbol stand-ins and
+  named-intermediate reshapes have all been measured inert on the residual set.
+  `tooling/RESIDUE_RANKING.md` carries the per-function record of which lever is
+  already dead.
+* `tools/update_readme_progress.py` rewrites the status table by matching the first
+  table whose header is `Metric / Value`, then every following line that starts and
+  ends with a pipe. Under `(?s)` that pattern spans newlines, so any second table
+  later in this file is swallowed when the tool runs. Keep extra content out of
+  tables, or fix the pattern, before running it.
 
 ## Worker Worktrees
 
@@ -134,7 +165,7 @@ config/GC6E01/          dtk config, symbols, splits, SHA-1
 include/                project headers
 src/                    active source/data candidates declared in configure.py
 tools/                  dtk-template helper scripts
-docs/                   dtk-template setup documentation
+docs/                   setup documentation, progress ledger
 archive/previous_campaign/
                         old campaign tools, notes, PC-port experiments, and
                         unconfigured source kept for research only
@@ -149,8 +180,18 @@ generated `objdiff.json` / `build/GC6E01/report.json`.
 Do not commit generated `.inc` files, extracted game assets, target objects,
 compiler binaries, or asm-wrapper bodies as decompilation progress.
 
+## Provenance
+
+The decompiled source here is the work of
+[`@dougchansan`](https://github.com/dougchansan) and the contributors of
+[`dougchansan/pkmn-colosseum`](https://github.com/dougchansan/pkmn-colosseum),
+carried forward in this repository by
+[`@grant-might`](https://github.com/grant-might). The upstream repository tracks
+the project's full history, its CI, and its progress chart; this one continues from
+master `72c0603d6` and reports its own measured numbers.
+
 ## License
 
-The decompiled source in this repository is released under the
-[MIT license](LICENSE). The Pokémon Colosseum game, assets, and toolchain are
-owned by their respective rights holders and are not distributed here.
+Released under the MIT license, see [LICENSE](LICENSE). The Pokémon Colosseum
+game, assets, and toolchain are owned by their respective rights holders and are
+not distributed here.

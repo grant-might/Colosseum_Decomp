@@ -1,6 +1,15 @@
 MIT License
 
-Copyright (c) 2026 pkmn-colosseum contributors
+Copyright (c) 2026 the pkmn-colosseum contributors
+Original decompilation work: @dougchansan and the contributors of
+https://github.com/dougchansan/pkmn-colosseum
+
+Copyright (c) 2026 @grant-might
+Continued work in this repository: additional code and data reconstruction, the
+progress ledger and verification gates, and native Windows build support.
+
+Both the original work and the continued work are released under the same terms
+below.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
