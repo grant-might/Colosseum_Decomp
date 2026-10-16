@@ -14,11 +14,11 @@ and keeps the standard
 | Function match | 98.38% (8,536 / 8,677 functions) |
 | Code match | 91.86% (2,301,148 / 2,504,940 matched code bytes) |
 | Data match | 97.59% (3,479,997 / 3,566,037 matched data bytes) |
-| Source-linked | 1,969 / 2,165 scoring units (90.48% of code) |
+| Source-linked | 1,969 / 2,165 units complete, 90.95% of units (code 90.48%, data 68.81%) |
 
-"Matched" counts bytes that score. "Complete" counts bytes inside units with no
-residue at all, and 1,969 of 2,165 units are complete, which is 90.95% of units and
-68.81% of data bytes. Those are different questions and this project reports both.
+"Matched" counts bytes that score. "Complete" counts bytes inside units that carry no
+residue at all, which is why that row reports the unit, code and data figures
+separately. They answer different questions and this project reports both.
 
 The measurements above cover the **DOL and all 25 configured REL modules**, from
 the full `build/GC6E01/report.json`. All 26 rebuilt binaries reproduce their

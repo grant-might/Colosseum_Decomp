@@ -49,6 +49,9 @@ def count(value: Any, key: str) -> str:
 
 def progress_table(report: dict[str, Any]) -> str:
     measures = report.get("measures", {})
+    complete_units = as_float(measures.get("complete_units"), "complete_units")
+    total_units = as_float(measures.get("total_units"), "total_units")
+    units_pct = 100.0 * complete_units / total_units if total_units else 0.0
     return "\n".join(
         [
             "| Metric | Value |",
@@ -75,8 +78,10 @@ def progress_table(report: dict[str, Any]) -> str:
             (
                 "| Source-linked | "
                 f"{count(measures.get('complete_units'), 'complete_units')} / "
-                f"{count(measures.get('total_units'), 'total_units')} scoring units "
-                f"({pct(measures.get('complete_code_percent'), 'complete_code_percent')} of code) |"
+                f"{count(measures.get('total_units'), 'total_units')} units complete, "
+                f"{units_pct:.2f}% of units "
+                f"(code {pct(measures.get('complete_code_percent'), 'complete_code_percent')}, "
+                f"data {pct(measures.get('complete_data_percent'), 'complete_data_percent')}) |"
             ),
         ]
     )
