@@ -1,0 +1,33 @@
+/*
+ * @file data_8035B060.c
+ * @brief DOL data unit .data 0x8035B060-0x8035B088
+ *        (auto unit main/auto_05_8035B060_data).
+ *
+ * Non-relocated data as byte-exact u8[]; pointer/jump tables as
+ * void*[] so every R_PPC_ADDR32 relocation is reproduced.
+ */
+#include "dolphin/types.h"
+
+#pragma section ".data"
+/* 0x000000 14 B */
+u8 lbl_8035B060[14] __attribute__((aligned(8))) = {
+    0x6D, 0x65, 0x6E, 0x75, 0x43, 0x6C, 0x6F, 0x73, 0x65, 0x53, 0x79, 0x6E,
+    0x63, 0x00,
+};
+
+/* 0x00000E 2 B */
+u8 gap_05_8035B06E_data[2] __attribute__((aligned(2))) = {
+    0x00, 0x00,
+};
+
+/* 0x000010 18 B */
+u8 lbl_8035B070[18] __attribute__((aligned(8))) = {
+    0x77, 0x69, 0x6E, 0x64, 0x6F, 0x77, 0x43, 0x68, 0x65, 0x63, 0x6B, 0x43,
+    0x75, 0x72, 0x73, 0x6F, 0x72, 0x00,
+};
+
+/* 0x000022 6 B */
+u8 gap_05_8035B082_data[6] __attribute__((aligned(2))) = {
+    0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+

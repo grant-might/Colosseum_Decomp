@@ -2,3 +2,4 @@ win,date_utc,unit,function,size,base_fuzzy,head_fuzzy,bytes_closed,note
 0001,2026-10-15 19:15,main/game/gs_task_residual_80008868,fn_80008C40,1336,98.83234,100.00000,1336,win 0001 - gsTaskFlagGetLinkedId named-helper recovery (lane 3)
 0002,2026-10-15 20:34,(data units re-split or renamed by this change),(data - attributable only in aggregate),1338904,0.00000,100.00000,1338904,"lane E - common_rel data reconstruction (5 units, 1,338,904 B)"
 0003,2026-10-15 22:58,(data units re-split or renamed by this change),(data - attributable only in aggregate),28464,0.00000,100.00000,28464,"lane G - 32 DOL zero-fill .bss/.sbss units (28,464 B)"
+0004,2026-10-15 23:38,(data units re-split or renamed by this change),(data - attributable only in aggregate),1443,0.00000,100.00000,1443,"lane I - 27 DOL .data/.sdata units (1,443 B)"

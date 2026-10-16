@@ -4,10 +4,11 @@ One row per function that reached 100% in the report metric, derived from report
 snapshots (never hand-written). Regenerate with `tooling/ledger.py`; snapshot reports
 live under `tooling/reports/` (not in git - they carry no game data, only metrics).
 
-**3 functions closed, 1,368,704 code bytes.** Current: 2,301,148 / 8,536 exact.
+**4 functions closed, 1,370,147 code bytes.** Current: 2,301,148 / 8,536 exact.
 
 | win | date (UTC) | unit | function | size | before | note |
 |---|---|---|---|---|---|---|
 | 0001 | 2026-10-15 19:15 | main/game/gs_task_residual_80008868 | fn_80008C40 | 1,336 | 98.83234% | win 0001 - gsTaskFlagGetLinkedId named-helper recovery (lane 3) |
 | 0002 | 2026-10-15 20:34 | (data units re-split or renamed by this change) | (data - attributable only in aggregate) | 1,338,904 | 0.00000% | lane E - common_rel data reconstruction (5 units, 1,338,904 B) |
 | 0003 | 2026-10-15 22:58 | (data units re-split or renamed by this change) | (data - attributable only in aggregate) | 28,464 | 0.00000% | lane G - 32 DOL zero-fill .bss/.sbss units (28,464 B) |
+| 0004 | 2026-10-15 23:38 | (data units re-split or renamed by this change) | (data - attributable only in aggregate) | 1,443 | 0.00000% | lane I - 27 DOL .data/.sdata units (1,443 B) |

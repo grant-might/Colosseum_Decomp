@@ -9,18 +9,18 @@
     "total_units": 2165
   },
   "topology_status": {
-    "auto_units": 63,
-    "named_units": 2102,
-    "source_backed_units": 2101,
+    "auto_units": 36,
+    "named_units": 2129,
+    "source_backed_units": 2128,
     "auto_code": 0,
-    "auto_data": 32287,
+    "auto_data": 30844,
     "auto_functions": 0
   },
   "baseline_progress": {
     "matched_code": "2301148",
     "matched_code_percent": 91.864395,
-    "matched_data": "3465778",
-    "matched_data_percent": 97.1885,
+    "matched_data": "3467221",
+    "matched_data_percent": 97.228966,
     "matched_functions": 8536,
     "matched_functions_percent": 98.375015,
     "fuzzy_match_percent": 99.68869
@@ -245,7 +245,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_802E4B78_data",
+      "name": "main/game/data/data_802E4B78",
       "sections": [
         {
           "name": ".data",
@@ -7430,7 +7430,7 @@
       "total_functions": 3
     },
     {
-      "name": "main/auto_07_80478998_sdata",
+      "name": "main/game/data/sdata_80478998",
       "sections": [
         {
           "name": ".sdata",
@@ -7684,7 +7684,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_803119B8_data",
+      "name": "main/game/data/data_803119B8",
       "sections": [
         {
           "name": ".data",
@@ -7925,7 +7925,7 @@
       "total_functions": 24
     },
     {
-      "name": "main/auto_07_804789AC_sdata",
+      "name": "main/game/data/sdata_804789AC",
       "sections": [
         {
           "name": ".sdata",
@@ -8719,7 +8719,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_80311CB8_data",
+      "name": "main/game/data/data_80311CB8",
       "sections": [
         {
           "name": ".data",
@@ -8745,7 +8745,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_80311DB8_data",
+      "name": "main/game/data/data_80311DB8",
       "sections": [
         {
           "name": ".data",
@@ -8946,7 +8946,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_803124B8_data",
+      "name": "main/game/data/data_803124B8",
       "sections": [
         {
           "name": ".data",
@@ -8985,7 +8985,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_8031259C_data",
+      "name": "main/game/data/data_8031259C",
       "sections": [
         {
           "name": ".data",
@@ -9164,7 +9164,7 @@
       "total_functions": 5
     },
     {
-      "name": "main/auto_05_803127A8_data",
+      "name": "main/game/data/data_803127A8",
       "sections": [
         {
           "name": ".data",
@@ -10587,7 +10587,7 @@
       "total_functions": 14
     },
     {
-      "name": "main/auto_05_80313818_data",
+      "name": "main/game/data/data_80313818",
       "sections": [
         {
           "name": ".data",
@@ -11663,7 +11663,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_07_80478ABC_sdata",
+      "name": "main/game/data/sdata_80478ABC",
       "sections": [
         {
           "name": ".sdata",
@@ -12277,7 +12277,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_07_80478ADC_sdata",
+      "name": "main/game/data/sdata_80478ADC",
       "sections": [
         {
           "name": ".sdata",
@@ -13770,7 +13770,7 @@
       "total_functions": 11
     },
     {
-      "name": "main/auto_07_80478AF8_sdata",
+      "name": "main/game/data/sdata_80478AF8",
       "sections": [
         {
           "name": ".sdata",
@@ -14692,7 +14692,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_80315678_data",
+      "name": "main/game/data/data_80315678",
       "sections": [
         {
           "name": ".data",
@@ -14718,7 +14718,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_8035B060_data",
+      "name": "main/game/data/data_8035B060",
       "sections": [
         {
           "name": ".data",
@@ -15955,7 +15955,7 @@
       "total_functions": 19
     },
     {
-      "name": "main/auto_05_8035B3F0_data",
+      "name": "main/game/data/data_8035B3F0",
       "sections": [
         {
           "name": ".data",
@@ -16061,7 +16061,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_8035B448_data",
+      "name": "main/game/data/data_8035B448",
       "sections": [
         {
           "name": ".data",
@@ -16100,7 +16100,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_8035B878_data",
+      "name": "main/game/data/data_8035B878",
       "sections": [
         {
           "name": ".data",
@@ -16152,7 +16152,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_8035B950_data",
+      "name": "main/game/data/data_8035B950",
       "sections": [
         {
           "name": ".data",
@@ -16178,7 +16178,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_8035B988_data",
+      "name": "main/game/data/data_8035B988",
       "sections": [
         {
           "name": ".data",
@@ -16204,7 +16204,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_8035BA10_data",
+      "name": "main/game/data/data_8035BA10",
       "sections": [
         {
           "name": ".data",
@@ -16230,7 +16230,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_8035BA60_data",
+      "name": "main/game/data/data_8035BA60",
       "sections": [
         {
           "name": ".data",
@@ -20870,7 +20870,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_8036BFA4_data",
+      "name": "main/game/data/data_8036BFA4",
       "sections": [
         {
           "name": ".data",
@@ -23347,7 +23347,7 @@
       "total_functions": 11
     },
     {
-      "name": "main/auto_07_80478CA8_sdata",
+      "name": "main/game/data/sdata_80478CA8",
       "sections": [
         {
           "name": ".sdata",
@@ -23539,7 +23539,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_8036DCA8_data",
+      "name": "main/game/data/data_8036DCA8",
       "sections": [
         {
           "name": ".data",
@@ -29162,7 +29162,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_8039A690_data",
+      "name": "main/game/data/data_8039A690",
       "sections": [
         {
           "name": ".data",
@@ -29827,7 +29827,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_8039A6C8_data",
+      "name": "main/game/data/data_8039A6C8",
       "sections": [
         {
           "name": ".data",
