@@ -5404,7 +5404,7 @@ void fn_8021E754(void) {
  * (lbl_80279EF4 values 3-8), the party-scan loops, divw codegen
  * (optimize_for_size), and the GCSE of &lbl_80478D78 into r31.
  *
- * Established discoveries needed for this codegen (see agent notes):
+ * Established discoveries needed for this codegen (see the notes above):
  * - #pragma optimize_for_size on (divw by 3, srawi/addze for /4)
  * - lbl_80478D78[3] accessed directly (no pointer local): mwcc GCSE's the
  *   base into r31 and rematerializes for the [5] stores.
@@ -8014,7 +8014,7 @@ void fn_80221104(u32 a, u32 code) {
 #if defined(FIGHT_RANGE_ALL) || defined(FIGHT_RANGE_EXACT_802128D0_ONLY) || \
     defined(FIGHT_RANGE_EXACT_80213A78_ONLY)
 #if defined(FIGHT_RANGE_ALL)
-/* ===== deep-dive #5 (sonnet, 89.7% WIP -- has residual instruction-shape
+/* ===== deep-dive #5 (89.7% WIP -- has residual instruction-shape
  * diffs beyond the coloring wall; correct high-level logic, several sibling
  * bug-fixes captured in header) ===== */
 

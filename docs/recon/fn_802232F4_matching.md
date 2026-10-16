@@ -37,7 +37,7 @@ scores, source-owner descriptions, and incomplete states are superseded above.
 Earlier passes covered declaration permutations, register qualifiers, scalar
 widths, pointer and return types, one-field aggregates, field layouts, variable
 reuse, inline identity helpers, function prototypes, loop shapes, compiler
-options, harness rewrites, and decomp-permuter. These did not reach exactness.
+options, automated rewrites, and decomp-permuter. These did not reach exactness.
 
 The follow-up pass tested larger inline EXP-stage helpers, nested guards versus
 continue statements, correctly incrementing do/while forms, union lifetime
@@ -384,7 +384,7 @@ The newer batch `8cda85ec8fb3a4f97d11` contains assembly-only draft
 `a951b4adefeeda61183c7688d1dd46f4fe7a1a5cbc14fdde052bcf70e2414ab5` for this
 target; typed context generation failed on a K&R declaration. Fresh isolated
 typed-context m2c variants compile but score about 81.58-87.63%, below the active
-candidate. No harness changes were made and no harness runs were interrupted.
+candidate. No tooling changes were made and no tool runs were interrupted.
 
 No new exact function or linked unit is claimed. Canonical hashes while the
 owner remains CodeCandidate verify the retail-fallback build, not acceptance

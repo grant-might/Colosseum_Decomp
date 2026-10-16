@@ -65,7 +65,7 @@ Pokemon copy sources use r30, while the candidate uses r31; the final four-playe
 copy loop uses the opposite register. This is not byte exact, despite the small
 weighted-score gap. No linkage was attempted with the candidate substituted.
 
-The generated draft in batch `71e57738f2f4f348400c` is available at the harness
+The generated draft in batch `71e57738f2f4f348400c` is available at the
 artifact directory ending in
 `94cba5e3194c3c36418b5536db45913c5e53056b9534d15d963e01f064144470`.
 Its direct-copy expressions confirm the existing call order and sizes, but its

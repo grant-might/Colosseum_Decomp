@@ -2,8 +2,8 @@
 
 Read-only audit by the acceptance worker at decomp HEAD
 `7263c5817e4ea83856c77e77573abdedbf979166`. Only this standalone note was added;
-no source, config, shared documentation, native, or harness edits, commit, or
-push. Existing source-agent edits were left alone. Every build, objdiff, and
+no source, config, shared documentation, native, or tooling edits, commit, or
+push. Existing in-progress source edits were left alone. Every build, objdiff, and
 verification command ran through
 `ninja`.
 
@@ -21,7 +21,7 @@ acceptance under the existing byte-match-first exception policy. They are
 exception-backed acceptance, not strict-policy wins or new linked progress.
 The pragma questions now have measured answers; a pragma alone is not a reason
 to leave these bodies at an unexplained needs-verification gate. The parent
-retains the fresh full-build/seven-hash check after source agents finish.
+retains the fresh full-build/seven-hash check after in-progress source edits finish.
 
 | Function | Current report | Raw function bytes | Normalized relocations |
 |---|---|---|---|

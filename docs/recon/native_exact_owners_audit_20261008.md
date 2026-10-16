@@ -7,7 +7,7 @@ Base HEAD: `7fe1001712fa82b3d9be5db53d9a6fe95970e97f`.
 This audits the current **dirty working tree**, including the parent's Matching
 changes, not an assertion that these changes are already in that commit.
 No source, configuration, split, registry, or shared documentation was edited
-by this audit. Main and the other agents' owners were left alone.
+by this audit. Main and the other owners were left alone.
 
 ## Complete Object Comparison
 

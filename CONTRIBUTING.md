@@ -78,3 +78,10 @@ required check to make a change look green.
 Rename conservatively and preserve address traceability. A nontrivial rename
 needs evidence from callsites, strings, known SDK patterns, data tables, or
 confirmed assembly or decompiler analysis.
+
+## Third-party code
+
+Do not vendor third-party trees or link their code into the game build or the MIT
+tooling. GPL-licensed components only run as isolated, separately licensed sidecars
+that produce ignored build output, never as part of the build. This is a technical
+boundary, not legal advice.

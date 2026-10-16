@@ -788,7 +788,7 @@ fallback. Its absence from the installed table does not close runtime mutation.
 
 The ignored test environment pins Unicorn 2.1.4. On this Mac its cache
 initialization traps inside the sandbox, so tests ran outside the sandbox but
-still under the campaign build lock. Reproduction requires an active build worker
+still under the build lock. Reproduction requires an active build session
 claim on this owner and that provisioned venv:
 
 ```bash
@@ -800,7 +800,7 @@ claim on this owner and that provisioned venv:
 Configure, all_source/report, full link, retail SHA, progress, source scope,
 added-source quality and diff checks pass. Of 8,602 report functions only this
 one improves; matched functions, matched bytes and linked bytes are unchanged.
-Both existing local-model worker handles were verified live; no restart or
+Both existing worker handles were verified live; no restart or
 queue-wide sync was needed. Owner-only queue refresh preserves attempt history.
 Source snapshots, comparisons, tests, logs and review evidence remain under
 ignored `build/local_llm_campaign/manual/message_group_bounded_message/`.
@@ -976,7 +976,7 @@ are unchanged. New matched functions/bytes and new linked code/data are all
 zero. The known message dependency closure is not reduced by this probe.
 Owner-only queue refresh preserves attempts and the earlier exact review,
 and records the exact probe separately from the live partial candidate.
-The two local-model workers were verified live and were not restarted.
+The two workers were verified live and were not restarted.
 Evidence, variants, test fixtures and the exact source reconstruction remain
 under ignored `build/local_llm_campaign/manual/message_group_tev_presets/`.
 
@@ -1042,7 +1042,7 @@ audits remain prerequisites to promotion; this round does not make the
 entire owner eligible for linking. The wider message objective remains open.
 
 The owner-only queue refresh records both exact candidates, preserves the
-earlier fn_800BC36C review and all local-model attempts, and updates the
+earlier fn_800BC36C review and all earlier attempts, and updates the
 remaining-function counts without a queue-wide sync or restart. Source
 snapshots, full-owner comparisons, semantic tests, actual-link evidence and
 review reports are retained under ignored

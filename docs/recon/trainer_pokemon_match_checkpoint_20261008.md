@@ -121,7 +121,7 @@ and shared policy validation remain for the parent; this checkpoint does not
 claim those checks passed. The wrapper was not modified. No commit/push or
 shared configuration/documentation edits were made by this worker.
 
-## Follow-up, 2026-10-10 (agent b6): 99.23881%
+## Follow-up, 2026-10-10 : 99.23881%
 
 Three source changes, all measured on GC/1.3 (GC/1.3.2, 2.0, 2.5, 2.6 and 2.7
 emit identical code for this unit, so the GC/2.6 mwcc-debugger replay is
@@ -161,7 +161,7 @@ also colours correctly, because the `extsh` def is not a copy, but it emits
 Next idea: find a construct that gives `item` a persistent physical-register
 move use, or a second reaching definition, which later passes delete.
 
-## Resolution, 2026-10-10 (agent b2): 100%, linked
+## Resolution, 2026-10-10 : 100%, linked
 
 The held-item copy is avoided rather than kept alive. MWCC lowers a call
 result into a named variable through a temporary (`mr r92,r3; mr r42,r92`)

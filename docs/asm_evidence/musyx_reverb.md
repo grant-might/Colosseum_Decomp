@@ -84,7 +84,7 @@ Contribution scope notes:
   research files contain legacy assembly wrappers and must not be swept into
   the PR by copying the directory wholesale.
 - Prepare and build an isolated branch from upstream before publishing any
-  subset. Keep unrelated game improvements, harness code, policy changes,
+  subset. Keep unrelated game improvements, tooling code, policy changes,
   generated products, and extracted data out of it.
 
 No upstream PR or policy proposal was published by this audit.
