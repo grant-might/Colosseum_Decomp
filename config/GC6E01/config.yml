@@ -56,6 +56,38 @@ block_relocations:
   # word 0x803FFFFF, which falls inside SIBios.c's static Packet array
   # (0x803FFFB0), now a file static of dolphin/si/SI_range_800CF764.c.
   - target: .bss:0x803FFFFF
+  # False pointers, game/menu/cardesavedata_decode_80080310.c .rodata: the unit
+  # holds the two u16[184] SJIS->glyph tables (sCardESjisToGs81 /
+  # sCardESjisToGs81E0) as raw table data. dtk's data analysis reads each
+  # 4-aligned word, so two adjacent glyph cells form a value that happens to
+  # land inside a mapped section and became an R_PPC_ADDR32 (which dtk then
+  # zeroes in the extracted object). They are glyph indices, not pointers:
+  # retail keeps 0x803381EA / 0x803D80C6 / 0x80128018 / 0x8019801C /
+  # 0x80218028 / 0x803F803B in place and the source emits them as u16 table
+  # entries. Measured: 6 target relocations, 0 source relocations, 24 zeroed
+  # bytes before the block.
+  - source: .rodata:0x8026AEE8  # cells (0x8033, 0x81EA)
+  - source: .rodata:0x8026B414  # cells (0x803D, 0x80C6)
+  - source: .rodata:0x8026CD64  # cells (0x8012, 0x8018)
+  - source: .rodata:0x8026CD68  # cells (0x8019, 0x801C)
+  - source: .rodata:0x8026CD6C  # cells (0x8021, 0x8028)
+  - source: .rodata:0x8026CD70  # cells (0x803F, 0x803B)
+  # False pointers, game/memcard.c .rodata: the unit holds the memory-card
+  # banner (sMemcardBanner, 0x1800 B) and icon (sMemcardIcon, 0x2200 B) image
+  # blobs as raw pixel data. Nine 4-aligned words in those blobs happen to
+  # read as addresses inside mapped sections and became R_PPC_ADDR32
+  # (dtk-inflicted; retail holds the pixel bytes and the source emits no
+  # relocation at all). Measured: 9 target relocations, 0 source relocations,
+  # 22 zeroed bytes before the block.
+  - source: .rodata:0x802766A4  # banner/pixel word
+  - source: .rodata:0x80276948  # banner/pixel word
+  - source: .rodata:0x80276958  # banner/pixel word
+  - source: .rodata:0x80276B74  # icon/pixel word
+  - source: .rodata:0x80276B78  # icon/pixel word
+  - source: .rodata:0x80276BB4  # icon/pixel word
+  - source: .rodata:0x80276C28  # icon/pixel word
+  - source: .rodata:0x80276E34  # icon/pixel word
+  - source: .rodata:0x802790E8  # icon/pixel word
 
 # REL modules. The game keeps them inside FSYS archives; extract them into
 # orig/GC6E01/files/ with tools/fsys_extract.py first (docs/REL_MODULES.md).

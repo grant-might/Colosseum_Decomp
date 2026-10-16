@@ -1468,7 +1468,7 @@ game/menu/cardesavedata.c:
 
 game/menu/cardesavedata_decode_80080310.c:
 	.text       start:0x80080310 end:0x80082650
-	.rodata     start:0x80268DC0 end:0x8026F1C8
+	.rodata     start:0x80268DC0 end:0x8026F1C1
 	.data       start:0x802EE890 end:0x802EEB78
 
 game/data/data_802EEB78.c:
@@ -5497,7 +5497,7 @@ game/field_r55_801CBAB8.c:
 
 game/memcard.c:
 	.text       start:0x801CBBAC end:0x801D0AA0
-	.rodata     start:0x802758E8 end:0x80279320
+	.rodata     start:0x802758E8 end:0x8027931A
 	.data       start:0x8036DE70 end:0x8036E030
 	.bss        start:0x804670E8 end:0x80467378
 	.sbss       start:0x8047B3D0 end:0x8047B3D8

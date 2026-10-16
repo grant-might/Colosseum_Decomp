@@ -4,7 +4,7 @@
   "purpose": "Freeze the dtk/objdiff denominator and object topology used for published GC6E01 progress. Progress counters may increase without updating this file.",
   "invariants": {
     "total_code": 2504940,
-    "total_data": 3566037,
+    "total_data": 3566024,
     "total_functions": 8677,
     "total_units": 2168
   },
@@ -19,8 +19,8 @@
   "baseline_progress": {
     "matched_code": "2304736",
     "matched_code_percent": 92.00763,
-    "matched_data": "3479997",
-    "matched_data_percent": 97.58724,
+    "matched_data": "3521464",
+    "matched_data_percent": 98.75043,
     "matched_functions": 8542,
     "matched_functions_percent": 98.44416,
     "fuzzy_match_percent": 99.691696
@@ -6397,7 +6397,7 @@
         },
         {
           "name": ".rodata",
-          "size": 25608,
+          "size": 25601,
           "virtual_address": 2150010304
         },
         {
@@ -6407,7 +6407,7 @@
         }
       ],
       "total_code": 9024,
-      "total_data": 26352,
+      "total_data": 26345,
       "total_functions": 3
     },
     {
@@ -24217,7 +24217,7 @@
         },
         {
           "name": ".rodata",
-          "size": 14904,
+          "size": 14898,
           "virtual_address": 2150062312
         },
         {
@@ -24237,7 +24237,7 @@
         }
       ],
       "total_code": 20212,
-      "total_data": 16048,
+      "total_data": 16042,
       "total_functions": 23
     },
     {
