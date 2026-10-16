@@ -102,6 +102,12 @@ typedef struct _HSD_VIInfo {
         s32 frame_period;
         s32 frame_renew;
     } perf;
+
+    /* The linker's .bss slot for the one HSD_VIData instance is 0x1F8 (the
+     * struct plus the alignment pad at the end of the unit's range); dtk
+     * folds the pad into the extracted symbol, so it is modelled here to
+     * keep the declared object the same size. Never read. */
+    u8 slotPad[4];
 } HSD_VIInfo;
 
 /* HAL: HSD_VIData */

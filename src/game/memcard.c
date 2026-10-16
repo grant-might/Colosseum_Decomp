@@ -1294,7 +1294,7 @@ static inline s32 memcardCheckIconFile(void)
 }
 
 /* RULE-EXCEPTION(title-path): single-use helper with an out-parameter,
- * only for register allocation — see docs/RULE_EXCEPTIONS.md. Retail stores
+ * only for register allocation -- see docs/RULE_EXCEPTIONS.md. Retail stores
  * the polled result from the caller's own register (r30) in the last-write
  * check, keeping the early-return branch shape of memcardPollResult. */
 static inline s32 memcardPollResultInto(s32* result)
