@@ -752,7 +752,15 @@ def generate_build_ninja(
 
     # GNU ld, for partial links of modules built with the SN toolchain
     gnu_ld = binutils / f"powerpc-eabi-ld{EXE}"
-    gnu_ld_cmd = f"{gnu_ld} -r -T $ldscript -o $out @$out.rsp"
+    if os.name == "nt":
+        # The Windows powerpc-eabi-ld strips backslashes when it expands an
+        # '@file' response file, collapsing every path in it
+        # (build/GC6E01/src/rel/mail/mail.o -> buildGC6E01srcrelmailmail.o).
+        # These partial links take only a handful of objects, so pass them on
+        # the command line instead. Linux/macOS keep the response file.
+        gnu_ld_cmd = f"{gnu_ld} -r -T $ldscript -o $out $in"
+    else:
+        gnu_ld_cmd = f"{gnu_ld} -r -T $ldscript -o $out @$out.rsp"
     gnu_ld_implicit: List[Optional[Path]] = [binutils_implicit or gnu_ld]
 
     if os.name != "nt":
@@ -829,15 +837,24 @@ def generate_build_ninja(
 
     constant_export = config.tools_dir / "export_constant_symbol.py"
     constant_import = config.tools_dir / "import_constant_symbol.py"
+
+    def _chained(cmd: str) -> str:
+        # Chains that append a second command with '&&' need an explicit shell on
+        # Windows: ninja runs commands without one there, so the '&&' would be
+        # handed to the compiler as an argument instead of splitting the command.
+        # Rules whose base command already carries CHAIN are returned unchanged.
+        return cmd if (not CHAIN or cmd.startswith(CHAIN)) else f"{CHAIN}{cmd}"
+
     for rule, command in [
         ("mwcc", mwcc_cmd),
         ("mwcc_sjis", mwcc_sjis_cmd),
         ("mwcc_extab", mwcc_extab_cmd),
         ("mwcc_sjis_extab", mwcc_sjis_extab_cmd),
     ]:
+        chain = _chained(command)
         n.rule(
             name=rule + "_constant_export",
-            command=command + f' && $python {constant_export} --objcopy "{gnu_objcopy}"'
+            command=chain + f' && $python {constant_export} --objcopy "{gnu_objcopy}"'
             ' --object "$out" --symbol "$constant_symbol" --offset "$constant_offset"'
             ' --expected "$constant_bytes"',
             description="MWCC $out (export shared constant)",
@@ -847,7 +864,7 @@ def generate_build_ninja(
         # TEMPORARY constant_import: see tools/import_constant_symbol.py.
         n.rule(
             name=rule + "_constant_import",
-            command=command + f" && $python {constant_import} --object \"$out\" $constant_imports",
+            command=chain + f" && $python {constant_import} --object \"$out\" $constant_imports",
             description="MWCC $out (import shared constant)",
             depfile="$basefile.d",
             deps="gcc",
@@ -862,13 +879,20 @@ def generate_build_ninja(
     n.newline()
 
     n.comment("Partial link with GNU ld")
-    n.rule(
-        name="gnu_ld_r",
-        command=gnu_ld_cmd,
-        description="LINK $out",
-        rspfile="$out.rsp",
-        rspfile_content="$in_newline",
-    )
+    if os.name == "nt":
+        n.rule(
+            name="gnu_ld_r",
+            command=gnu_ld_cmd,
+            description="LINK $out",
+        )
+    else:
+        n.rule(
+            name="gnu_ld_r",
+            command=gnu_ld_cmd,
+            description="LINK $out",
+            rspfile="$out.rsp",
+            rspfile_content="$in_newline",
+        )
     n.newline()
 
     n.comment("Assemble asm")
