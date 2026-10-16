@@ -8,6 +8,13 @@ and keeps the standard
 
 ## Status
 
+![Progress over time](docs/progress.png)
+
+Rendered locally from the README table's own git history: 457 measured `objdiff` reports
+spanning 2026-07-01 to 2026-10-16, including the upstream history this repository continues
+from. Re-render it with
+`uv run --with matplotlib tools/plot_progress.py -o docs/progress.png`.
+
 | Metric | Value |
 |---|---|
 | Fuzzy match | 99.69% |
