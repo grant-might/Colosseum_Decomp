@@ -1903,6 +1903,9 @@ dolphin/dvd/DVDLow.c:
 game/data/sdata_804789BC.c:
 	.sdata      start:0x804789BC end:0x804789E8
 
+dolphin/dvd/bss_803FC360.c:
+	.bss        start:0x803FC360 end:0x803FC3D0
+
 dolphin/dvd/DVDFs.c:
 	.text       start:0x800A4CF0 end:0x800A4D28
 	.sbss       start:0x8047A7C8 end:0x8047A7D8

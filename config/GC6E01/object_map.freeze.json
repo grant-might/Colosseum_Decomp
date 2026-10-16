@@ -6,21 +6,21 @@
     "total_code": 2504940,
     "total_data": 3565900,
     "total_functions": 8677,
-    "total_units": 2168
+    "total_units": 2169
   },
   "topology_status": {
     "auto_units": 21,
-    "named_units": 2147,
-    "source_backed_units": 2146,
+    "named_units": 2148,
+    "source_backed_units": 2147,
     "auto_code": 0,
-    "auto_data": 24956,
+    "auto_data": 24844,
     "auto_functions": 0
   },
   "baseline_progress": {
     "matched_code": "2304736",
     "matched_code_percent": 92.00763,
-    "matched_data": "3534716",
-    "matched_data_percent": 99.125496,
+    "matched_data": "3535076",
+    "matched_data_percent": 99.13559,
     "matched_functions": 8542,
     "matched_functions_percent": 98.44416,
     "fuzzy_match_percent": 99.691696
@@ -8340,16 +8340,29 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_06_803FC360_bss",
+      "name": "main/dolphin/dvd/bss_803FC360",
       "sections": [
         {
           "name": ".bss",
-          "size": 152,
+          "size": 112,
           "virtual_address": 2151662432
         }
       ],
       "total_code": 0,
-      "total_data": 152,
+      "total_data": 112,
+      "total_functions": 0
+    },
+    {
+      "name": "main/auto_06_803FC3D0_bss",
+      "sections": [
+        {
+          "name": ".bss",
+          "size": 40,
+          "virtual_address": 2151662544
+        }
+      ],
+      "total_code": 0,
+      "total_data": 40,
       "total_functions": 0
     },
     {

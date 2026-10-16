@@ -821,6 +821,11 @@ config.libs = [
             ),
             Object(
                 Matching,
+                "dolphin/dvd/bss_803FC360.c",
+                progress_category="sdk",
+            ),
+            Object(
+                Matching,
                 "dolphin/exi/EXI2Stubs.c",
                 progress_category="sdk",
             ),
