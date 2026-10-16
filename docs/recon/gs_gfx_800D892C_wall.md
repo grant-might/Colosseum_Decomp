@@ -67,14 +67,14 @@ material, light-mask, diffuse, and attenuation values. The discrepancy is
 therefore not evidence for changing a channel argument. Nor does the current
 diff justify an asm wrapper, compiler pragma, or register-forcing source
 rewrite. A compiler register replay was attempted with
-`local_campaign.py explain fn_800D892C`, but the optional debugger tools are
+`the register-replay probe fn_800D892C`, but the optional debugger tools are
 not installed, so it returned `register replay unavailable`.
 
 A 2026-09-29 local-helper trial copied the existing channel setter into this
 owner and moved its `ctrl`, `done`, and `both` declarations. All four calls used
 that copy. It compiled with the same 94.501724% report score, 93.97069% raw
 score, and 2,320-byte retail size; the trial was reverted. A separate
-35-second `local_campaign.py rewrite fn_800D892C` search scored 133
+35-second a rewrite search for fn_800D892C search scored 133
 semantics-preserving C rewrites and found no improvement over 93.97069%. It
 restored the owner source. Neither result supports a change to the setter's
 arguments or to its observed store sequence.

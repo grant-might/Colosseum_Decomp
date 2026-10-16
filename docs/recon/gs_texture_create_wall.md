@@ -120,13 +120,13 @@ format-validation, allocation, GX-init and error branches; a guessed pure-copy
 local would be compiler shaping, not evidence of original behavior. A GitHub
 code search for `GStextureCreate` found only this Colosseum repository, and
 the broader web search found no independently sourced definition. The local
-MWCC register replay (`local_campaign.py explain`) was unavailable because its
+MWCC register replay (the register-replay probe) was unavailable because its
 optional debugger tools are missing or the replay failed. No justified
 source-level correction emerged, so the exact and linked deltas are both zero.
 
 ## 2026-09-29 guarded recheck
 
-`Codex-texture-create` claimed the single-function candidate owner and read the
+the texture-create worker claimed the single-function candidate owner and read the
 current aligned objdiff. The first two target instructions remain the absent
 width/height copies; the adjusted-height, mip-count and free-slot register
 lifetimes continue to differ. No new source-backed format case, allocation
@@ -148,7 +148,7 @@ evidence needed is an independently sourced contemporary implementation or a
 working compiler register replay that explains the entry copies and the
 long-lived register order without a pure code-generation rewrite.
 
-The subsequent whole-owner `Codex-texture-audit` pass compared the current
+The subsequent whole-owner the texture-audit worker pass compared the current
 candidate with title and message callsites as well as the exact shared
 `textureInitGXObjects` helper. `GSmsgInit` requests two 0x200-by-0x200
 textures in format 0x40, while title callers request a display-sized
@@ -177,7 +177,7 @@ This remains an unlinked texture-creation blocker, not accepted progress.
 
 ## 2026-09-29 compiler replay compatibility check
 
-`Codex-texture-next` claimed the candidate owner, kept its source unchanged, and
+the texture-next worker claimed the candidate owner, kept its source unchanged, and
 compiled that exact source into temporary objects under the shared build lock
 using each locally available MWCC version with the active unit's command-line
 flags. Objdiff compared each temporary `GStextureCreate` with the canonical

@@ -12,7 +12,7 @@ candidate uses `r4`, `r5`, and `r6` respectively. The downstream mask and word
 loads inherit this three-register cycle. The branch-address differences shown
 by objdiff are relocations, not a changed control-flow graph.
 
-`local_campaign.py rewrite fn_801906A0 --seconds 100` tried 192 safe
+a rewrite search for fn_801906A0 (100-second budget) tried 192 safe
 source-equivalent rewrites without improving the score. Replacing the local
 `states` pointer with a direct access to `lbl_80478EEC` also compiled to the
 same 97.23404% function. A natural typed `FlagDefinition*` access instead of

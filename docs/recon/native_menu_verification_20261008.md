@@ -1,6 +1,6 @@
 # Native menu verification gates, 2026-10-08
 
-CodexVerify audited the working tree based on
+the verification worker audited the working tree based on
 `7fe1001712fa82b3d9be5db53d9a6fe95970e97f`. This is integration evidence,
 not a new committed acceptance pin. Other source workers were active; no
 native code, configure.py, shared exception registry, or other owners were
@@ -82,11 +82,11 @@ This audit does not claim native binding completion or headed execution.
 
 ## Validation and parent integration
 
-Claims were held under CodexVerify for menuPokemon.c, both island wrappers,
+Claims were held under the verification worker for menuPokemon.c, both island wrappers,
 and dbgMenu_exact_801337E4.c. Exact functions are absent from the unmatched
 queue, so CLI claims rejected them; the same Coordinator.claim API reserved
 their actual owners without altering the queue. All builds, diffs, and
-verification ran through `local_campaign.py build --worker CodexVerify`.
+verification ran through `ninja`.
 
 Passed: targeted object builds; `ninja all_source build/GC6E01/report.json`;
 full `ninja` with **7 files OK**; no-live-wrapper scan (2,315 files); all 41

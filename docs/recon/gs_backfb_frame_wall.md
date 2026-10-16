@@ -72,7 +72,7 @@ canonical report must continue to mark the whole object unlinked.
 
 ## 2026-09-29 resolution: `fn_800DC6D8` linked
 
-Both residuals are resolved (branch `claude/recomp-blockers-gfx`). The
+Both residuals are resolved (branch `recomp-blockers-gfx`). The
 case-0 compare is written `if (frame >= (end = limit - lbl_8047CA74))`:
 assigning the end value inside the condition gives retail's f0/f1 order,
 while a separate `end = ...;` statement swaps them. The `(f32)delta`

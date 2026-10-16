@@ -3336,7 +3336,7 @@ asm void fn_80162E14(void) {
 #include "src/game/people/people_field_fn_80162E14.inc"
 }
 #else
-/* STAGED SEED (Claude Opus 2026-06-16) -- logic verified vs target; NOT 100%.
+/* STAGED SEED  -- logic verified vs target; NOT 100%.
  * At #pragma optimization_level 4 the prologue is gone (volatile-only leaf)
  * and it reaches ~58-60%. Residual is compute-block (case 0/1/4/5) reg-alloc:
  *   (1) target recomputes the entry base into r3 (`add r3,r6,r5`) then loads

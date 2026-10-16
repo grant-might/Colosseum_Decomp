@@ -2,7 +2,7 @@
 
 ## Scope and status
 
-CodexVerify matched `menuPokemonSub` at `0x8001B1EC` in
+the verification worker matched `menuPokemonSub` at `0x8001B1EC` in
 `main/game/menuPokemon_candidate_8001B1EC`. The retained source is 100%:
 all 2,264 bytes and all 88 relocation records match retail. This is
 working-tree evidence based on `7fe1001712fa82b3d9be5db53d9a6fe95970e97f`,
@@ -90,7 +90,7 @@ The retained source hashes recorded there are:
 The final audit discovers configured owners through recursive quoted C
 source includes, including the indirect 8001C7B8 and 8001D378 wrappers.
 It rebuilds all 19 configured owners that include menuPokemon.c, plus the
-separate dbgMenuClose owner. All checks run under the shared CodexVerify
+separate dbgMenuClose owner. All checks run under the shared the verification worker
 build lock. No further permutation or source trial is part of this audit.
 
 Fourteen owners have exact retail function bytes and relocations, identical
@@ -183,7 +183,7 @@ The committed acceptance revision remains for the parent handoff to record.
 
 The final locked audit covered all 20 relevant owners: fourteen exact
 owners, six incomplete siblings unchanged from freshly compiled HEAD
-baselines, and all three verification gates still exact. Both CodexVerify
+baselines, and all three verification gates still exact. Both the verification worker
 claims (menuPokemon.c and menuPokemon_candidate_8001B1EC.c) were released
 after that audit. No owned build remained running, and no further source
 edit or permutation was performed.

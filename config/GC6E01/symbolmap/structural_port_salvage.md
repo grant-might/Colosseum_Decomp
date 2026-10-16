@@ -1,6 +1,6 @@
 # Structural-port salvage report
 
-Source: `/Users/douglaswhittingham/pkmn-colosseum/archive/previous_campaign/config/GC6E01/symbolmap/structural_ports.json` (1145 archived mnemonic-fingerprint XD ports), revalidated against the CURRENT `/Users/douglaswhittingham/pkmn-colosseum/config/GC6E01/symbols.txt`.
+Source: the previous campaign's symbolmap outputs (not distributed here) (1145 archived mnemonic-fingerprint XD ports), revalidated against the CURRENT `/Users/douglaswhittingham/pkmn-colosseum/config/GC6E01/symbols.txt`.
 
 No live XD asm is available in this tree, so this evidence was not re-mined - only re-checked address-by-address against current symbol names. See mine_xrefs.py/structural_port.py porting notes for how to wire up a live XD split.
 

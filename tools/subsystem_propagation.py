@@ -13,7 +13,7 @@ runs usable for assigning auto blocks in splits.txt.
 
 Labels are ATTRIBUTION hints (which library/subsystem owns the code),
 not semantic names. Current source, symbols, splits, and asm outrank
-this map (audit 2026-07-01, docs/fable5_audit_pass2_symbol_name_audit.md).
+this map (audit 2026-07-01, the symbol-name audit).
 """
 import json
 import re

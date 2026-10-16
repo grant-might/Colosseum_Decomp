@@ -1,11 +1,11 @@
 # Native verification gates: acceptance audit, 2026-10-08
 
-Read-only audit by CodexAcceptance at decomp HEAD
+Read-only audit by the acceptance worker at decomp HEAD
 `7263c5817e4ea83856c77e77573abdedbf979166`. Only this standalone note was added;
 no source, config, shared documentation, native, or harness edits, commit, or
 push. Existing source-agent edits were left alone. Every build, objdiff, and
 verification command ran through
-`python3 tools/local_campaign.py build --worker CodexAcceptance -- COMMAND`.
+`ninja`.
 
 ## Decision for the parent/native handoff
 

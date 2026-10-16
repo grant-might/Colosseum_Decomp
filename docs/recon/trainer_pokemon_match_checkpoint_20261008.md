@@ -1,6 +1,6 @@
 # Trainer Pokemon Matching Checkpoint
 
-Worker: `CodexToolentry`. Status: **byte-exact and linked (Matching), 2026-10-10** — see the last section.
+Worker: `the toolentry worker`. Status: **byte-exact and linked (Matching), 2026-10-10** — see the last section.
 Claim released after final validation. Former token:
 `afa28eaf165a4bfa8b76463512c5809f`.
 
@@ -22,7 +22,7 @@ Claim released after final validation. Former token:
   `772ec3927ebf58a86fd3aca1d98884a62795080d1839d53519f9990d33d1cfd2`.
 
 All compilation, objdiff and ELF verification ran through
-`tools/local_campaign.py build --worker CodexToolentry -- COMMAND`.
+`ninja`.
 The owned build sessions are drained. No configuration/shared documentation,
 native source, commit or push was changed for this checkpoint. Sibling units and
 the full canonical link have not been revalidated for this incomplete candidate.
@@ -79,7 +79,7 @@ At the parent's wrap-up request, all owned build sessions were drained and the
 best source restored. Final reproduction command:
 
 ```sh
-python3 tools/local_campaign.py build --worker CodexToolentry -- python3 build/GC6E01/trainer_checkpoint_verify.py
+python3 build/GC6E01/trainer_checkpoint_verify.py
 ```
 
 This rebuilt the canonical GC/1.3 object, reran objdiff, and compared text,

@@ -1,6 +1,6 @@
 # Near-link sweep, non-fight half (lane D18, 2026-09-30)
 
-Worktree `/private/tmp/pkmn-decomp-d12`, branch `claude/decomp-d18-nearlink`.
+Worktree `/private/tmp/pkmn-decomp-d12`, branch `decomp-d18-nearlink`.
 The list was built from `build/GC6E01/report.json`: incomplete units whose
 inexact functions all score 98% or higher. fight_* units belong to D17, and
 the units on D16's, D14's, D13's and D11's documented walls were skipped.
@@ -50,7 +50,7 @@ common_rel.rel SHA-1 OK), `quality_scan` and `check_regression`.
   the effect_visual TU.
 - **fn_8017B4BC** (fsys_file_r48 prefix, 98.79). The body is an -O0/-O1
   shaped form (volatiles, self-assignments). Low value, not attempted.
-- **fn_80025F84** (gs_title). The owner was claimed by Codex-title-reloc.
+- **fn_80025F84** (gs_title). The owner was claimed by the title-reloc worker.
 
 ## Techniques that worked
 

@@ -1,6 +1,6 @@
 # Near-link tier 2 (lane D25, 2026-09-30)
 
-Worktree `/private/tmp/pkmn-decomp-d12`, branch `claude/decomp-d25-tier2`.
+Worktree `/private/tmp/pkmn-decomp-d12`, branch `decomp-d25-tier2`.
 
 ## How the list was built
 

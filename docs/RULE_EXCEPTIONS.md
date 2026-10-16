@@ -15,12 +15,12 @@ User decision (2026-09-29): **byte matching is the goal for now, everywhere, not
 only on the title path.** A form that reaches 100% but breaks the strict policy
 is merged, tagged and listed the same way (`RULE-EXCEPTION(title-path)` on the
 title path, `RULE-EXCEPTION(user-approved)` elsewhere). The tagged entries are
-resolved in a clean-up pass at the end. AGENTS.md's hard rules still apply.
+resolved in a clean-up pass at the end. CONTRIBUTING.md's hard rules still apply.
 
 These are not strict wins. They stay on this list until a policy-clean form
 replaces them. A row marked user-approved may be off the title path: the user
 approved it explicitly for the function it names, and its source tag reads
-`RULE-EXCEPTION(user-approved)`. Nothing here overrides AGENTS.md's hard rules: no `.inc`
+`RULE-EXCEPTION(user-approved)`. Nothing here overrides CONTRIBUTING.md's hard rules: no `.inc`
 files, no asm except the evidenced registry, and no extracted assets.
 | Function(s) | File | Rule broken | Form used | Clean fix needs |
 |---|---|---|---|---|

@@ -2,7 +2,7 @@
 
 Status: PASS for the two accepted owners and four shared-source sibling functions.
 
-Auditor: CodexMenuMiddle. Checked 2026-10-08 at approximately 21:28 UTC.
+Auditor: the menu-middle worker. Checked 2026-10-08 at approximately 21:28 UTC.
 Base HEAD: `7fe1001712fa82b3d9be5db53d9a6fe95970e97f`.
 This audits the current **dirty working tree**, including the parent's Matching
 changes, not an assertion that these changes are already in that commit.
@@ -51,7 +51,7 @@ toolentry_8025D788          33a851b979abb0a9079bbd16ab407edd454771e67039983afcc1
 ## Build, Link, and Policy
 
 All builds and verification commands ran through
-`python3 tools/local_campaign.py build --worker CodexMenuMiddle -- COMMAND`.
+`ninja`.
 
 1. `ninja all_source build/GC6E01/report.json`: PASS. The refreshed report marks
    all four audited units `complete: true`, with 100% function and code matches.

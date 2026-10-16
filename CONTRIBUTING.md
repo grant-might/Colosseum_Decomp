@@ -30,4 +30,51 @@ Keep changes small and make the dtk build/report the source of truth.
   copyrighted extracted data into the repository.
 - Do not edit symbols/splits/linker config just to improve a metric; config
   changes need a build reason.
-- Keep old campaign research inside `archive/previous_campaign/`.
+- Keep source changes scoped to objects declared in `configure.py`.
+- Do not introduce uninitialized reads, unexplained side effects, or changed game
+  semantics merely to improve a score. Investigate such findings instead of
+  treating the source-style policy as a correctness waiver.
+- Registered assembly may contribute to matching and linked-code totals only
+  through the per-function evidence registry in `docs/asm_evidence/registry.json`
+  and the branch-target validation in
+  `.github/scripts/verify_asm_branch_targets.py`, and it is reported separately
+  from decompiled C/C++. Registry extensions need explicit evidence and matching
+  CI coverage.
+
+## Matching policy
+
+Clear, natural C/C++ is preferred, but documented compiler-control pragmas,
+source-shaping temporaries, aliases, masks and reconstructed inline helpers are
+acceptable when reproducible matching evidence supports them. A historical
+`RULE-EXCEPTION` tag records an engineering tradeoff, not an automatic rejection;
+see `docs/RULE_EXCEPTIONS.md`.
+
+Keep the build, relocation, section-layout, canonical-hash, metric-integrity and
+regression checks in place. Compare renamed or repartitioned functions by
+original module, section/address and size, and keep exact-source gains separate
+from linked-code gains. A failed compiler probe is evidence about the candidates
+that were tested, not proof that C is impossible. Do not count original-object
+fallback as compiled-source progress, hide a regression by changing the
+denominator, or claim runtime testing from hashes.
+
+## Validation
+
+Use the smallest check that proves the change:
+
+1. `python configure.py --no-progress`
+2. `ninja all_source build/GC6E01/report.json`
+3. `ninja`
+4. `python configure.py progress`
+
+Also run the applicable quality, metric-integrity, object-map and regression
+checks with their documented arguments. A final DOL hash alone does not validate
+an incomplete `CodeCandidate` object: check the actual source objects, data,
+relocations and sibling functions. If a command cannot run in your environment,
+report the exact command and why. Never change canonical hashes or bypass a
+required check to make a change look green.
+
+## Naming
+
+Rename conservatively and preserve address traceability. A nontrivial rename
+needs evidence from callsites, strings, known SDK patterns, data tables, or
+confirmed assembly or decompiler analysis.

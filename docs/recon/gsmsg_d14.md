@@ -1,6 +1,6 @@
 # GSmsg link campaign: lane D14 (2026-09-30)
 
-Branch `claude/decomp-d14-gsmsg`, starting from integration head b21e57c9.
+Branch `decomp-d14-gsmsg`, starting from integration head b21e57c9.
 
 ## Result
 

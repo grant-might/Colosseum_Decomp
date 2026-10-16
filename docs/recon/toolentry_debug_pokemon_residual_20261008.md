@@ -129,12 +129,12 @@ assignment. Dummy aliases, register-only shaping and new pragmas were not adopte
 ## Reproduction and Integration Gate
 
 All builds, diffs and compiler/debugger probes in this investigation ran through
-the campaign build lock as worker `CodexToolentry`.
+the campaign build lock as worker `the toolentry worker`.
 
 ```sh
-python3 tools/local_campaign.py build --worker CodexToolentry -- \
+\
   python3 tools/decomp_work/fdiff.py toolentryDebugPokemonCreate main/game/toolentry
-python3 tools/local_campaign.py build --worker CodexToolentry -- \
+\
   build/tools/objdiff-cli diff -p . -u main/game/toolentry \
   -o build/GC6E01/toolentry_current.json --format json
 ```

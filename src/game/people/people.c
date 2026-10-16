@@ -3421,7 +3421,7 @@ void fn_801858C4(PeopleEntry* entry)
  * hoisted constants are numbered 2pi <= 0.0f <= pi; no single renumbering
  * or interference edge does it. Declaration orders, a while loop, moving
  * `remaining -= distance`, passing peopleTurnTo straight to
- * peopleStartTurn, and the tools/local_campaign.py rewrite search (114
+ * peopleStartTurn, and the rewrite search (114
  * forms) all fail. Pokemon XD's _peopleMoveTypeList__FP13tagPeopleWorkb
  * (0x8029A0C8) was rewritten (distanceBetween, adjustPIPI,
  * peopleRotateToAngle, peopleMoveAlongAngle), so it gives no helper.

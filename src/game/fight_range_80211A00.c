@@ -3,7 +3,7 @@
  * @brief Shared candidates around exact 0x8022A504 - 0x8022B29C (430 fns).
  *
  * Split out of the previously-unassigned auto block (audit 2026-07-01,
- * docs/fable5_audit_pass3_fight_engine.md). Contains fightSeqGetItemType,
+ * the fight-engine audit). Contains fightSeqGetItemType,
  * fightTrainerAiGetValueAryMaxBanme, and the callee layer used by
  * colosseum_battle.c's WazaHit family. Range name kept honest until the
  * module's internal structure is proven.
@@ -4557,14 +4557,14 @@ void fn_80214450(void);
 #undef fn_801F6E98
 #undef fn_801F6EEC
 
-/* ===== codex-cracked: comma-expression load-order lever ===== */
+/* ===== resolved: comma-expression load-order lever ===== */
 extern void fn_801FBC20();
 extern void fn_80208C18();
 extern void fn_80205AD4();
 extern void fn_80205A7C();
 extern void fn_80206C94();
 /* NOTE: 0x8020F108 = fightWazaWzxTypeFuncMigawari on newer origin/master
- * (codex-confirmed vs the target relocation there); this branch's symbols.txt
+ * (confirmed against the target relocation there); this branch's symbols.txt
  * still uses fn_8020F108 -- reconcile at merge. */
 
 /* Slot switch-in refresh op. The comma-expression temporary in the
@@ -6907,7 +6907,7 @@ u32 fn_8022BE2C(u32 ctx, u8 mode) {
 #pragma optimize_for_size reset
 
 /* ===== documented partial: 98.98% (best known, integrated) =====
- * Codex deep-dive 2026-07-03: Category A (u16 zero-extensions on fn_80203B5C
+ * Deep-dive 2026-07-03: Category A (u16 zero-extensions on fn_80203B5C
  * damage results) fixed via (u16) casts; Category C (subfic/subic/subfe bool
  * idiom) fixed via #pragma optimize_for_size on. Residual is INDEPENDENT
  * register-coloring (did NOT cascade from A): prologue param-save order (0x578),

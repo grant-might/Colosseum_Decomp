@@ -77,7 +77,7 @@ the isolated object can be made exact and linked.
 
 ## 2026-09-29: exact and linked (title-path exception)
 
-Resolved on branch `claude/decomp-requests`. Two findings closed the wall:
+Resolved on branch `decomp-requests`. Two findings closed the wall:
 
 1. The four missing instructions (`li r4,0; li r0,0; stw r4,0x18; stw r0,0x1c`
    before the inlined absorber's null check) are memAbsorbNext's own

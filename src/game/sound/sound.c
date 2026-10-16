@@ -10,7 +10,7 @@
  *   - fn_801653C4: returns lbl_8047B0AC
  *
  * A prior campaign-generation transplant (from
- * archive/previous_campaign/src/game/sound/{sound_bgm,sound_se}.c) had
+ * the previous campaign's src/game/sound/{sound_bgm,sound_se}.c) had
  * attached a large orphan block to this file: a full invented JAudio2
  * sound-engine API (sndInit/sndShutdown/sndPlaySe/sndPlayBgm/sndStop/
  * sndCheckFileInfo/sndWaveOpen/... plus internal _snd* helpers), none of

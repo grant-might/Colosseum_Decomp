@@ -31,7 +31,7 @@ spent closing the remaining ~59.6KB data gap does not move fuzzy at all. Aim
 code-side only.
 
 Note the per-function percentages live at `unit['functions']`, *not*
-`unit['sections'][n]['functions']` (which is always empty). `fleet/verify_fn.sh`
+`unit['sections'][n]['functions']` (which is always empty). the campaign's `verify_fn.sh` script
 reads the correct location.
 
 ## Where the remaining headroom lives
@@ -75,12 +75,12 @@ TRK and CRT combined hold only ~10.7pp, and much of that is already high.
 Some of the hard tail is **permanently unmatchable by policy**: `OSDisableInterrupts`,
 `OSEnableInterrupts`, `OSRestoreInterrupts`, `OSSaveFPUContext`, `OSGetTick`,
 `OSGetStackPointer`, `__DBExceptionDestination` and similar are MSR/SPR
-manipulation that cannot be expressed in C, and `AGENTS.md` correctly forbids
+manipulation that cannot be expressed in C, and `CONTRIBUTING.md` correctly forbids
 counting asm wrappers as progress.
 
 ## Observed campaign rate
 
-From README history, with the full multi-agent fleet running and ~30 PRs merged
+From README history, with the full campaign running and ~30 PRs merged
 (each linking ~30 exact functions):
 
 | date | fuzzy |
@@ -91,7 +91,7 @@ From README history, with the full multi-agent fleet running and ~30 PRs merged
 | 2026-07-22 | 57.81% |
 
 That is **+0.42pp over 4 days**, best single day +0.40pp. At the sustained rate,
-+22.19pp is on the order of 200 days of continuous fleet operation; at the
++22.19pp is on the order of 200 days of continuous campaign operation; at the
 best-ever day rate, ~55 days. Neither is a single-session or single-week target.
 
 ## Recommended re-scoping
@@ -111,7 +111,7 @@ Ordered by pp-per-unit-effort, not by function count:
    50–100% frontier combined.
 4. **Realistic near-term goal: 62–65%.** That is the 50%+ frontier plus
    meaningful progress into the 10–50% band, and it is achievable with the
-   existing fleet workflow. 80% needs a different plan — most plausibly a
+   existing workflow. 80% needs a different plan — most plausibly a
    reference-guided port of the `game/menu` and `people` subsystems rather than
    per-function permuter grinding.
 

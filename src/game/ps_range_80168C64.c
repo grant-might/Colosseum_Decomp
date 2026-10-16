@@ -61,7 +61,7 @@
  *   - the camera-tracking tail (guarded by PS_FLAG_ATTACH_CAMERA
  *     =0x8000) extracts its 3-bit camera-slot field from flags bits
  *     12-14 (`(flags >> 12) & 0x7`), not bits 15/10 as an earlier
- *     draft (archive/previous_campaign/src/game/script/psinterpret.c)
+ *     draft (the previous campaign's src/game/script/psinterpret.c)
  *     guessed.
  */
 #include "dolphin/types.h"

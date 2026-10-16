@@ -12,7 +12,7 @@
  * at .data 0x802678D8 referenced by fn_8005CCD0 and fn_8005CF2C.
  *
  * menuColosseumBattleMain (below) is reintroduced from the previous
- * campaign's ui_core.c (archive/previous_campaign/src/game/ui/ui_core.c,
+ * campaign's ui_core.c (the previous campaign's src/game/ui/ui_core.c,
  * commits 745775c5 and 9f9727ef) through the current dtk-template pipeline:
  * ported into this unit's split and re-verified against this unit's own
  * compiler flags (GC/1.3, -use_lmw_stmw on, -sdata 8, -sdata2 8), not

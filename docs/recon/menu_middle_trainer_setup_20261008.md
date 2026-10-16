@@ -30,7 +30,7 @@ rather than including the broad shared menu source.
 ## Measurements
 
 All build and comparison commands ran through the campaign build lock as
-`CodexMenuMiddle`:
+`the menu-middle worker`:
 
 - `ninja all_source build/GC6E01/report.json` passed.
 - `tools/decomp_work/fdiff.py` reports all 57 instructions equal.

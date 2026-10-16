@@ -9,7 +9,7 @@
  * 0x803A9768 shared across this range).
  *
  * fn_80056A78 (0x80056A78): trivial sda_getter, ported from the previous
- * campaign's archive/previous_campaign/src/game/menu/menu_status.c.
+ * the previous campaign's src/game/menu/menu_status.c.
  * fn_80056A80 (0x80056A80): exact pure-C recovery. Other source-backed
  * functions remain candidates until their own exact islands are proven.
  */

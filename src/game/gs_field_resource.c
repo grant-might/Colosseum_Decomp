@@ -36,7 +36,7 @@
  *   (0x801144D0, the scene_data group-linking one) -- matching XD, where
  *   the two PreFunc bodies are also byte-identical to each other.
  *   The GFL PostFunc (table 0x11) is floorReadGFLPostFunc in gs_field_colquery.c
- *   territory -- rename parked until that fleet-owned file is free.
+ *   territory -- rename parked until that shared file is free.
  *   An earlier first-generation "orphan" recovery block (names that never
  *   paired, wrong attributions) was removed by the 2026-07-01 pass; its
  *   candidate bodies were empty TODO placeholders (nothing adoptable).

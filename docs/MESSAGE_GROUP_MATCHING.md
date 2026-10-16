@@ -523,7 +523,7 @@ and diff checks pass. Comparing all 8,602 report functions finds only the three
 changes above. Source outside those three functions equals the round baseline;
 no .inc files, build options, shared headers or object splits changed. The
 source-owner queue refresh adds alignment as a manual partial and preserves
-all existing attempts; no fleet-wide sync or worker restart was used.
+all existing attempts; no queue-wide sync or worker restart was used.
 Artifacts and rejected variants are retained under ignored
 `build/local_llm_campaign/manual/message_group_alignment/`.
 
@@ -575,7 +575,7 @@ converter's reviewed regression. Matched-function, matched-code and linked-code
 deltas are zero. Source outside that function and its const-input declaration
 equals the baseline, and no recovered helper is emitted in the ten message
 objects. No .inc file changed. The source-owner queue refresh retains attempt
-history and requires no worker restart or fleet-wide sync.
+history and requires no worker restart or queue-wide sync.
 
 Probe objects, compressed raw diffs, source variants, fingerprints and tests
 are retained under ignored
@@ -676,7 +676,7 @@ comparison improvement, with no regressions and no new exact functions,
 matched bytes or linked bytes. No .inc file changed. Both local workers were
 verified live, gracefully stopped and confirmed exited before the shared
 configuration edit; their existing profiles resume after validation. Owner-only
-queue refresh preserves attempts and proposals without a fleet-wide sync.
+queue refresh preserves attempts and proposals without a queue-wide sync.
 
 Source snapshots, rejected probes, runtime tests and verification evidence are
 under ignored `build/local_llm_campaign/manual/message_group_font_setter/`.
@@ -737,7 +737,7 @@ retain their scores after the header correction. No .inc file was changed.
 The lower-bound dependency closure remains 1,193 functions, now with 143
 reported nonexact after these withdrawals. Both functions return to the
 owner's review worklist with source hashes and audit records; existing attempts
-are preserved, and no fleet-wide sync or worker restart is needed. At the end
+are preserved, and no queue-wide sync or worker restart is needed. At the end
 of this round the only local compiler-control block left in gs_msg.c was
 fn_800F96E4; the following round removes it. Indirect
 dependencies, data coverage, compiler/TU provenance and the full goal remain
@@ -788,11 +788,11 @@ fallback. Its absence from the installed table does not close runtime mutation.
 
 The ignored test environment pins Unicorn 2.1.4. On this Mac its cache
 initialization traps inside the sandbox, so tests ran outside the sandbox but
-still under the campaign build lock. Reproduction requires an active Codex
+still under the campaign build lock. Reproduction requires an active build worker
 claim on this owner and that provisioned venv:
 
 ```bash
-python3 tools/local_campaign.py build --worker Codex -- \
+\
   build/local_llm_campaign/manual/message_group_bounded_message/venv/bin/python \
   build/local_llm_campaign/manual/message_group_bounded_message/ppc_check.py
 ```
@@ -801,7 +801,7 @@ Configure, all_source/report, full link, retail SHA, progress, source scope,
 added-source quality and diff checks pass. Of 8,602 report functions only this
 one improves; matched functions, matched bytes and linked bytes are unchanged.
 Both existing local-model worker handles were verified live; no restart or
-fleet-wide sync was needed. Owner-only queue refresh preserves attempt history.
+queue-wide sync was needed. Owner-only queue refresh preserves attempt history.
 Source snapshots, comparisons, tests, logs and review evidence remain under
 ignored `build/local_llm_campaign/manual/message_group_bounded_message/`.
 The full message/dependency objective remains open.
@@ -841,7 +841,7 @@ quality and diff checks pass. All 8,602 function scores are unchanged, as are
 matched functions, matched bytes and linked bytes. No .inc, header, config or
 split change was made, and no existing helper is emitted in the ten message
 objects. Owner-only queue hashes are refreshed without deleting attempts or
-restarting the fleet. Evidence is under ignored
+restarting the workers. Evidence is under ignored
 `build/local_llm_campaign/manual/message_group_length_arithmetic/`.
 
 ## Signed TEV color setter
@@ -902,7 +902,7 @@ functions across the owner's fourteen units retain their raw scores.
 Configure, all_source/report, full link, retail SHA, progress, source scope,
 quality and diff checks pass; the 8,602-function report has no regressions.
 No .inc or shared header changed. The two existing workers remained live,
-with no restart or fleet-wide sync. Owner-only queue refresh retains attempts
+with no restart or queue-wide sync. Owner-only queue refresh retains attempts
 and exposes the exact source for review. All probes, rejected variants,
 tests and audit records are under ignored
 `build/local_llm_campaign/manual/message_group_tev_ops/`.
@@ -967,7 +967,7 @@ fn_800BC228 and fn_800BC290, both raw 99.42308%; their canonical type/macro
 recovery and the owner-wide quality audit are the next integration work.
 Do not solve the ownership mismatch with aliases, invented aggregate types,
 overlapping splits or a text-only promotion. A shared-config change requires
-the coordinated fleet maintenance procedure.
+the coordinated maintenance procedure.
 
 The retained live changes pass configure, all_source/report, full retail
 link/SHA, progress, source scope, quality and diff checks. Of 8,602 report
@@ -1043,7 +1043,7 @@ entire owner eligible for linking. The wider message objective remains open.
 
 The owner-only queue refresh records both exact candidates, preserves the
 earlier fn_800BC36C review and all local-model attempts, and updates the
-remaining-function counts without a fleet-wide sync or restart. Source
+remaining-function counts without a queue-wide sync or restart. Source
 snapshots, full-owner comparisons, semantic tests, actual-link evidence and
 review reports are retained under ignored
 `build/local_llm_campaign/manual/message_group_tev_setters/`.
@@ -1285,7 +1285,7 @@ that converts integers to floats.
 
 ## GSmsg TU link: whole-TU only (lane D3 handoff, parked 2026-09-29)
 
-Report-exact on branch `claude/decomp-d3-title-msg`: GSmsgGetRect,
+Report-exact on branch `decomp-d3-title-msg`: GSmsgGetRect,
 GSmsgSetFontInfo, GSmsgExec, fn_800FBB34 and GSmsgSetColor (the last
 through `(color >> n) & 0xFF`, which MWCC emits as `extrwi`). None of
 them is linked. Parked at the coordinator's request, because fn_800FB680

@@ -365,7 +365,7 @@ u8 fn_80076398(void* pokemon, s32 check)
 
 /*
  * Small helpers ported from the previous campaign's archive
- * (archive/previous_campaign/src/game/menu/menu_common_ext.c). Each is
+ * (the previous campaign's src/game/menu/menu_common_ext.c). Each is
  * a trivial, self-contained accessor/no-op operating on the GBA-link
  * FightSeq-style call stack at lbl_803B6D88; re-verified against this
  * unit's own compiler flags rather than copied wholesale.
@@ -656,7 +656,7 @@ static inline s32 fn_80071AE4_poll_read(s32 chan, u32* response, u8* length,
 
 /*
  * Trivial single-call tail-wrappers ported from the previous campaign's
- * archive (archive/previous_campaign/src/game/menu/menu_tool2.c);
+ * archive (the previous campaign's src/game/menu/menu_tool2.c);
  * re-verified against this unit's own compiler flags.
  */
 extern s32 std078_flagSetFalse(s32);

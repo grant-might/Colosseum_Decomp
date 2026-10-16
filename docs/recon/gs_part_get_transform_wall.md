@@ -33,7 +33,7 @@ allocation, but not the source construct that produces it.
 
 The allocator's choice seems to depend on internal virtual-register order,
 not declaration order. The next step is a real register replay
-(`tools/local_campaign_colouring.py`; GC/2.6 replays this function
+(`the register-colouring replay tool`; GC/2.6 replays this function
 faithfully, since it emits the same code) once mwcc-debugger is installed.
 
 ## 2026-09-29 resolution (lane D4): linked

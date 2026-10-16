@@ -1,6 +1,6 @@
 # Carve sweep, second pass (lane D22, 2026-09-30)
 
-Worktree `/private/tmp/pkmn-decomp-d12`, branch `claude/decomp-d22-carves2`.
+Worktree `/private/tmp/pkmn-decomp-d12`, branch `decomp-d22-carves2`.
 This lane follows `nearlink_d18.md` and `rangecarve_d19.md`. Each link passed
 all of these:
 
@@ -11,7 +11,7 @@ all of these:
 - `check_regression` (no regressions);
 - the unit reported complete.
 
-None of these functions has a `local_campaign` queue entry, so the claims
+None of these functions has a work-queue entry, so the claims
 list was checked before each edit instead.
 
 ## menuOffScreen (for the recomp)

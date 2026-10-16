@@ -173,9 +173,6 @@ include/                project headers
 src/                    active source/data candidates declared in configure.py
 tools/                  dtk-template helper scripts
 docs/                   setup documentation, progress ledger
-archive/previous_campaign/
-                        old campaign tools, notes, PC-port experiments, and
-                        unconfigured source kept for research only
 ```
 
 ## Contributing

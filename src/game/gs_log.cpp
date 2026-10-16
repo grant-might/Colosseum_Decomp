@@ -478,7 +478,7 @@ void fn_800DE128(char* output, u32 capacity, const char* format, va_list args)
  * cursor into fraction, and whole takes the scaled fraction digits, so both
  * halves read `whole = value; logInt2Str(whole, buf);`. That is what gives
  * retail's allocation (lane B23b, from MWCC's own allocator dumps via
- * tools/local_campaign_colouring.py): the reused buf is split into a new
+ * the register-colouring replay tool): the reused buf is split into a new
  * web, numbered below the second logInt2Str's locals, so it absorbs
  * logStrRev's start and is simplified before `whole`, taking r18; and the
  * reused whole is one more coalesced copy, which keeps output, capacity and

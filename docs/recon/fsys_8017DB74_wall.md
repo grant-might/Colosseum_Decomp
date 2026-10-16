@@ -27,7 +27,7 @@ homes). No new behavioral mismatch was found, so the source was left
 unchanged rather than introducing a register-only artifact.
 
 The next source-allocation pass tried 218 semantics-preserving rewrites through
-`local_campaign.py rewrite` (45-second budget), with no score increase. Manual
+a rewrite search (45-second budget), with no score increase. Manual
 probes of the cache-table walk's declaration order, moving `tocSize` ahead of
 the other main locals, and passing the table pointer into the inlined finder
 all recompiled to the same 99.67647% score; each probe was reverted. The
@@ -190,7 +190,7 @@ build succeeded. Homebrew GDB 17.2 was installed and its `i386` remote target
 and Python API checked. These are local tools, not tracked project source or
 compiler inputs.
 
-The repository's `local_campaign.py explain` adapter still requires a missing
+The repository's the register-replay probe adapter still requires a missing
 custom `gdb.py` stand-in, but upstream `cadmic/mwcc-debugger` has its own
 GDB-batch launcher. Under the shared build lock, it was invoked directly
 against GC/2.6 with the unit's exact compiler flags plus `-sym on` and wrote

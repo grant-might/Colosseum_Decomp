@@ -1,6 +1,6 @@
 # Range carves (lane D19, 2026-09-30)
 
-Worktree `/private/tmp/pkmn-decomp-d12`, branch `claude/decomp-d19-rangecarve`.
+Worktree `/private/tmp/pkmn-decomp-d12`, branch `decomp-d19-rangecarve`.
 This lane follows up `nearlink_d18.md`. The targets were incomplete units whose
 functions were all 100% but which compiled a whole range file. Each link passed
 all of these:
@@ -12,7 +12,7 @@ all of these:
 - `check_regression` (no regressions);
 - the unit reported complete.
 
-None of these functions has a `local_campaign` queue entry, so `claim` refuses
+None of these functions has a work-queue entry, so the claim step refused
 them. The claims list was checked before each edit instead.
 
 ## Linked

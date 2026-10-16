@@ -51,18 +51,12 @@ def main() -> None:
                     default=REPO / "config/GC6E01/splits.txt",
                     help="dtk-template splits.txt (auto-converted for "
                          "attribute_tus.py)")
-    ap.add_argument("--archive-dir", type=Path,
-                    default=REPO / "archive/previous_campaign/config/GC6E01/symbolmap",
-                    help="archived campaign's symbolmap outputs, salvaged "
-                         "when no live XD data is available")
     ap.add_argument("--xd-symbols", type=Path, default=REPO /
                     "tools/symbolmap/xd_ref/GXXE01/symbols.txt",
                     help="XD's config/GXXE01/symbols.txt (enables live "
                          "VALIDATE); see README 'Enabling The XD Port'")
     ap.add_argument("--xd-asm", type=Path, default=None,
                     help="XD asm dir from `dtk split` (enables live PORT)")
-    ap.add_argument("--skip-salvage", action="store_true",
-                    help="don't merge archived XD/structural evidence")
     args = ap.parse_args()
 
     run("mine_xrefs.py", "--asm-dir", args.asm_dir, "--out-dir", args.out_dir)
@@ -80,10 +74,6 @@ def main() -> None:
     else:
         run("port_xd.py", "--sm-dir", args.out_dir,
             "--xd-symbols", args.xd_symbols)
-
-    if not args.skip_salvage:
-        run("salvage_xd_archive.py", "--archive-dir", args.archive_dir,
-            "--sm-dir", args.out_dir, "--symbols", args.symbols)
 
     run("build_symbol_map.py", "--sm-dir", args.out_dir,
         "--symbols", args.symbols)

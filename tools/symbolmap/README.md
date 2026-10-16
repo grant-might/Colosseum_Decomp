@@ -17,7 +17,7 @@ The important rule: this pipeline is advisory by default. It can generate
 `// Proposed:` comments and rename maps, but the normal `run.py` pipeline does
 not edit `symbols.txt`, source files, asm, or `.inc` truth files.
 
-> **Ported 2026-07** from `archive/previous_campaign/tools/symbolmap` for the
+> **Ported 2026-07** from the previous campaign's symbolmap tooling for the
 > current dtk-template-style tree. The evidence-mining *logic* below
 > (mine_xrefs / attribute_tus / propose_names / port_xd / structural_port /
 > build_symbol_map) is unchanged from the archived campaign - only the
@@ -73,7 +73,6 @@ of the `run.py` advisory pipeline).
 | `build/GC6E01/asm/**/*.s` | dtk symbol-resolved Colosseum asm, recursively. Build with `python configure.py && ninja` if absent. |
 | `config/GC6E01/symbols.txt` | Current project symbol names and existing `// Proposed:` comments. |
 | `config/GC6E01/splits.txt` | Current address-range to source-file map (dtk-template format; auto-converted by `convert_splits.py`). |
-| `archive/previous_campaign/config/GC6E01/symbolmap/{xd_port,structural_ports,xd_vocabulary}.json` | Salvaged real-XD evidence from when the previous campaign had a live XD split (no disc committed here - see below). |
 | XD asm, optional | Enables stronger *live* name ports from Pokemon XD, once wired up. |
 | XD `symbols.txt`, optional | Provides real XD names to port from, once wired up. |
 

@@ -2418,7 +2418,7 @@ asm void fightFloorGetStatus(void) {
  * 0x5D of fightFloorGetStatus.
  *
  * Every register here follows from MWCC's allocator, replayed with
- * tools/local_campaign.py explain (the GC/2.6 replay reproduces this unit):
+ * tools/the register-replay probe (the GC/2.6 replay reproduces this unit):
  *  - the counts and counters are the inline's own locals, u16 like the loop
  *    function's (a u32 counter's conversion hoists out of the loops into a
  *    saved register retail does not use), with n declared after the counts:

@@ -53,7 +53,7 @@ flags; the remaining unreachable branch and extra candidate register lifetimes
 are a compiler/source-structure matching problem, not grounds for inventing
 effects to keep dead code. No `CodeCandidate` acceptance or link status changed.
 
-## 2026-09-29 (lane claude/recomp-blockers-gfx): optimiser-flag probe
+## 2026-09-29 (lane recomp-blockers-gfx): optimiser-flag probe
 
 With the unit-wide option `-opt nopropagation` (GC/1.3), the unchanged
 candidate source compiles to retail's exact size (0x654), saves r24-r31 at

@@ -99,7 +99,7 @@ doldecomp/melee `src/sysdolphin/baselib/*` (cached under `melee_src/`).
 
 ## Files
 
-- Proposals: `/Users/douglaswhittingham/.claude/jobs/76409c12/tmp/naming/hsd_proposals.json`
+- Proposals: `config/GC6E01/symbolmap/hsd_proposals.json
 - Per-unit partials: `partial_*.json` (same dir)
 - Melee reference cache: `melee_src/` (same dir)
 - Merge/validation script: `merge.py` (same dir; re-runnable)

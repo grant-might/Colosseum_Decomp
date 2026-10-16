@@ -1,3 +1,0 @@
-# Large, deterministic intermediates — regenerate with tools/symbolmap/run.py
-fn_strings.json
-symbols.with_proposals.txt
