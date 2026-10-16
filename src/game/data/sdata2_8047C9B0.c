@@ -18,4 +18,14 @@ SDATA2 const u8 lbl_8047C9CC[5] = "cobj";
 SDATA2 const f32 lbl_8047C9D4 = 60.0f;
 SDATA2 const f32 lbl_8047C9D8 = 1.33333302f;
 SDATA2 const u8 lbl_8047C9DC[7] = "aobj.h";
-SDATA2 const u8 lbl_8047C9E4[12] = "aobj";
+SDATA2 const u8 lbl_8047C9E4[5] = "aobj";
+/*
+ * 0x8047C9EC..0x8047C9F0: the 4-byte zero pad retail's .sdata2 holds after the
+ * last string.  symbols.txt carries it as `gap_09_8047C9EC_sdata2` size 0x4 and
+ * the split range ends at 0x8047C9F0, so the object's symbol partition has to be
+ * the map's: a 5-byte string plus this pad, with 0xE9..0xEC left as the
+ * compiler's alignment hole (the target has no symbol there either).
+ * `aligned(4)` is load-bearing - without it the pad lands at 0xE9 and every
+ * offset after it is wrong.
+ */
+SDATA2 const u8 gap_09_8047C9EC_sdata2[4] __attribute__((aligned(4))) = {0, 0, 0, 0};
