@@ -35,10 +35,10 @@ order, the sizes are equal and the retail body matches (>= --min-sim); check
 each by hand before committing it.
 
 External inputs are not in the tree; clone them and pass the paths (defaults
-point at a lane-private `.lane/` directory):
-  .lane/maps      github.com/StarsMmd/Colo-XD-PBR-symbol-maps @ 6b51d3af
-  .lane/xd-decomp github.com/TeamOrre/xd-decomp @ 4989794e
-  .lane/xd-asm    github.com/trevor403/xd-asm @ b1087f18
+point at an untracked `.xd-ref/` directory):
+  .xd-ref/maps      github.com/StarsMmd/Colo-XD-PBR-symbol-maps @ 6b51d3af
+  .xd-ref/xd-decomp github.com/TeamOrre/xd-decomp @ 4989794e
+  .xd-ref/xd-asm    github.com/trevor403/xd-asm @ b1087f18
 
 Usage:
   tools/xd_map_xref.py objects                     # every object, one line
@@ -65,10 +65,10 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "tools"))
 import find_inline_expansions as fie  # noqa: E402
 
-LANE = ROOT / ".lane"
-DEF_MAP = LANE / "maps" / "NXXJ01.map"
-DEF_RETAIL_SYMS = LANE / "xd-decomp" / "config" / "GXXE01" / "symbols.txt"
-DEF_XDASM = LANE / "xd-asm" / "code"
+XD_REF = ROOT / ".xd-ref"
+DEF_MAP = XD_REF / "maps" / "NXXJ01.map"
+DEF_RETAIL_SYMS = XD_REF / "xd-decomp" / "config" / "GXXE01" / "symbols.txt"
+DEF_XDASM = XD_REF / "xd-asm" / "code"
 COLO_SYMS = ROOT / "config" / "GC6E01" / "symbols.txt"
 COLO_SPLITS = ROOT / "config" / "GC6E01" / "splits.txt"
 COLO_ASM = [ROOT / "build" / "GC6E01" / "asm"]
