@@ -20,7 +20,7 @@ from. Re-render it with
 | Fuzzy match | 99.69% |
 | Function match | 98.44% (8,542 / 8,677 functions) |
 | Code match | 92.01% (2,304,736 / 2,504,940 matched code bytes) |
-| Data match | 98.92% (3,527,272 / 3,565,912 matched data bytes) |
+| Data match | 98.97% (3,529,040 / 3,565,912 matched data bytes) |
 | Source-linked | 1,972 / 2,168 units complete, 90.96% of units (code 90.62%, data 68.80%) |
 
 "Matched" counts bytes that score. "Complete" counts bytes inside units that carry no
