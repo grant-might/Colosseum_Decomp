@@ -596,7 +596,7 @@ static inline u16 gsTaskFlagGetLinkedId(s32 index) {
         for (i = 0; i < index - 1; i++) {
             id = ((GsTaskFlagDef*)lbl_80478F9C)[id].next;
         }
-        id = *(s16*)(lbl_80478F9C + id * 8 + 6);
+        { GsTaskFlagDef* d = (GsTaskFlagDef*)lbl_80478F9C; id = d[id].next; }
     }
     return id;
 }
@@ -1128,7 +1128,6 @@ extern void fightMenuFightTrainerRenewStatusMenu(void* ptr, u16 a);
 #pragma push
 #pragma peephole off
 s32 menuFightPokemonSelectSub(u32 ctx) {
-    s32 result;
     u8 prevLevel;
     u16 savedId;
     void* encounter;
@@ -1141,6 +1140,7 @@ s32 menuFightPokemonSelectSub(u32 ctx) {
     u8 sp_9;
     u8 sp_8;
     u16 loopIdx;
+    s32 result;
 
     sp_b = 0;
     sp_a = 0;
