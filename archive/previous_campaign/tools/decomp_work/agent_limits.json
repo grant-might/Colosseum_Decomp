@@ -1,0 +1,76 @@
+{
+  "_comment": "Agent lockout / rate-limit schedule. The dashboard renders a 'next reset' countdown per window (GET /api/limits) and a tokens-used-vs-cap bar (GET /api/agent_usage). LIVE data, when available, comes from the proxy's usage_limits.json (tools/llm-proxy/usage_limits.json) which captures real provider rate-limit headers for every pane routed through the proxy (Claude/Sonnet/GLM). Codex is direct (not proxied) so its windows stay manual here. Times are ISO-8601 UTC (trailing Z).",
+  "_cap_tokens_note": "cap_tokens is the token budget for that rolling window (null = unknown; the dashboard then shows absolute tokens with a neutral bar instead of a % toward a cap). Fill in your real plan caps to get color-coded 'approaching limit' bars.",
+  "_live_source": "tools/llm-proxy/usage_limits.json",
+  "_policy": "Prefer Codex lanes when Claude headroom is low (weekly especially). Throttle GLM (lighter packets, low concurrency) so it does not hit its plan cap.",
+  "agents": [
+    {
+      "name": "claude-5h",
+      "label": "Claude (5h)",
+      "kind": "rolling",
+      "provider": "claude",
+      "window": "5h",
+      "cap_tokens": null,
+      "reset_interval_hours": 5,
+      "last_reset": null,
+      "next_reset": null,
+      "models": ["claude-opus", "claude-sonnet"],
+      "live": {"upstream": "Anthropic", "match": "5h"},
+      "note": "Live from proxy anthropic-ratelimit unified 5h header once Claude panes route through the proxy."
+    },
+    {
+      "name": "claude-weekly",
+      "label": "Claude (weekly)",
+      "kind": "rolling",
+      "provider": "claude",
+      "window": "weekly",
+      "cap_tokens": null,
+      "reset_interval_hours": 168,
+      "last_reset": null,
+      "next_reset": null,
+      "models": ["claude-opus", "claude-sonnet"],
+      "live": {"upstream": "Anthropic", "match": "7d"},
+      "assumed": true,
+      "note": "~60% of weekly used (observed 2026-06-18). Live from proxy 7d/weekly header when present."
+    },
+    {
+      "name": "codex-5h",
+      "label": "Codex (5h)",
+      "kind": "rolling",
+      "provider": "codex",
+      "window": "5h",
+      "cap_tokens": null,
+      "reset_interval_hours": 5,
+      "last_reset": "2026-06-18T15:00:00Z",
+      "next_reset": null,
+      "note": "ChatGPT/Codex 5h window. Direct (not proxied) — manual; ~8% weekly used, lots of headroom."
+    },
+    {
+      "name": "codex-weekly",
+      "label": "Codex (weekly)",
+      "kind": "rolling",
+      "provider": "codex",
+      "window": "weekly",
+      "cap_tokens": null,
+      "reset_interval_hours": 168,
+      "last_reset": "2026-06-15T00:00:00Z",
+      "next_reset": null,
+      "note": "Codex weekly window; ~8% used — primary headroom, lean on Codex lanes."
+    },
+    {
+      "name": "glm-plan",
+      "label": "GLM Coding Plan",
+      "kind": "rolling",
+      "provider": "glm",
+      "window": "5h",
+      "cap_tokens": null,
+      "reset_interval_hours": 5,
+      "last_reset": null,
+      "next_reset": null,
+      "models": ["glm-5.2"],
+      "live": {"upstream": "GLM", "match": "any"},
+      "assumed": true,
+      "note": "z.ai coding-plan prompt window. Live from proxy GLM headers. THROTTLE: keep GLM on light single-file work, low concurrency — must not rate-limit out and die."
+    }
+  ]
+}

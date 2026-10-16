@@ -1,0 +1,490 @@
+#include "dolphin/os/OSCache.h"
+#include "dolphin/os/OS.h"
+#include "dolphin/os/OSInterrupt.h"
+#include "dolphin/os/PPCArch.h"
+#include "dolphin/db/DB.h"
+
+#define ASSERTMSGLINE(line, cond, msg) (void)0
+
+#define HID2_DCHERR 0x00800000
+#define HID2_DNCERR 0x00400000
+#define HID2_DCMERR 0x00200000
+#define HID2_DQOERR 0x00100000
+#define SRR1_DMA_BIT 0x00200000
+
+/*
+ * OSCache.c - Data cache, instruction cache, and L2 cache management.
+ *
+ * Provides cache enable/disable/flush/invalidate operations, the L2 cache
+ * global invalidate procedure, the DMA error handler, and cache init.
+ *
+ * Matches: 0x8009B290 - 0x8009B914 (per splits.txt; confirmed correct
+ * for this unit).
+ *
+ * 2026-07-02 reconciliation: two orphan names (LCEnableNoInterrupts,
+ * LCLoadBlocks - neither present in symbols.txt, neither paired in
+ * objdiff) were renamed rather than deleted, on strong address/size
+ * evidence against this unit's own objdiff report plus a corroborating
+ * ground-truth "bl LCEnable" reference elsewhere in-tree:
+ *   - the big asm "LCEnable" became __LCEnable (0x8009B40C, 0xCC)
+ *   - the orphan "LCEnableNoInterrupts" became LCEnable (0x8009B4D8, 0x38)
+ *   - the orphan "LCLoadBlocks" became LCStoreData (0x8009B55C, 0xAC)
+ * See each function's own comment below for details.
+ */
+
+/* Hand-written Dolphin SDK asm; evidence: docs/asm_evidence/oscache.md */
+asm void DCEnable(void) {
+    nofralloc
+    sync
+    mfspr   r3, HID0
+    ori     r3, r3, 0x4000
+    mtspr   HID0, r3
+    blr
+}
+
+/* Hand-written Dolphin SDK asm; evidence: docs/asm_evidence/oscache.md */
+asm void DCInvalidateRange(register void* addr, register u32 nBytes) {
+    nofralloc
+    cmplwi  r4, 0
+    blelr
+    clrlwi  r5, r3, 27
+    add     r4, r4, r5
+    addi    r4, r4, 31
+    srwi    r4, r4, 5
+    mtctr   r4
+_loop_dci:
+    dcbi    r0, r3
+    addi    r3, r3, 32
+    bdnz    _loop_dci
+    blr
+}
+
+/* Hand-written Dolphin SDK asm; evidence: docs/asm_evidence/oscache.md */
+asm void DCFlushRange(register void* addr, register u32 nBytes) {
+    nofralloc
+    cmplwi  r4, 0
+    blelr
+    clrlwi  r5, r3, 27
+    add     r4, r4, r5
+    addi    r4, r4, 31
+    srwi    r4, r4, 5
+    mtctr   r4
+_loop_dcf:
+    dcbf    r0, r3
+    addi    r3, r3, 32
+    bdnz    _loop_dcf
+    sc
+    blr
+}
+
+/* Hand-written Dolphin SDK asm; evidence: docs/asm_evidence/oscache.md */
+asm void DCStoreRange(register void* addr, register u32 nBytes) {
+    nofralloc
+    cmplwi  r4, 0
+    blelr
+    clrlwi  r5, r3, 27
+    add     r4, r4, r5
+    addi    r4, r4, 31
+    srwi    r4, r4, 5
+    mtctr   r4
+_loop_dcs:
+    dcbst   r0, r3
+    addi    r3, r3, 32
+    bdnz    _loop_dcs
+    sc
+    blr
+}
+
+/* Hand-written Dolphin SDK asm; evidence: docs/asm_evidence/oscache.md */
+asm void DCFlushRangeNoSync(register void* addr, register u32 nBytes) {
+    nofralloc
+    cmplwi  r4, 0
+    blelr
+    clrlwi  r5, r3, 27
+    add     r4, r4, r5
+    addi    r4, r4, 31
+    srwi    r4, r4, 5
+    mtctr   r4
+_loop_dcfns:
+    dcbf    r0, r3
+    addi    r3, r3, 32
+    bdnz    _loop_dcfns
+    blr
+}
+
+/*
+ * DCStoreRangeNoSync - Store (write back) data cache lines without sync.
+ *
+ * Same as DCStoreRange but does not issue a sync instruction at the end.
+ *
+ * 0x8009B35C | size: 0x2C
+ */
+/* Hand-written Dolphin SDK asm; evidence: docs/asm_evidence/oscache.md */
+asm void DCStoreRangeNoSync(register void* addr, register u32 nBytes) {
+    nofralloc
+    cmplwi  r4, 0
+    blelr
+    clrlwi  r5, r3, 27
+    add     r4, r4, r5
+    addi    r4, r4, 31
+    srwi    r4, r4, 5
+    mtctr   r4
+_loop_dcsns:
+    dcbst   r0, r3
+    addi    r3, r3, 32
+    bdnz    _loop_dcsns
+    blr
+}
+
+/*
+ * DCZeroRange - Zero out a range of data cache lines.
+ *
+ * Zeroes each 32-byte cache line covering [addr, addr+nBytes).
+ *
+ * 0x8009B388 | size: 0x2C
+ */
+/* Hand-written Dolphin SDK asm; evidence: docs/asm_evidence/oscache.md */
+asm void DCZeroRange(register void* addr, register u32 nBytes) {
+    nofralloc
+    cmplwi  r4, 0
+    blelr
+    clrlwi  r5, r3, 27
+    add     r4, r4, r5
+    addi    r4, r4, 31
+    srwi    r4, r4, 5
+    mtctr   r4
+_loop_dcz:
+    dcbz    r0, r3
+    addi    r3, r3, 32
+    bdnz    _loop_dcz
+    blr
+}
+
+/* Hand-written Dolphin SDK asm; evidence: docs/asm_evidence/oscache.md */
+asm void ICInvalidateRange(register void* addr, register u32 nBytes) {
+    nofralloc
+    cmplwi  r4, 0
+    blelr
+    clrlwi  r5, r3, 27
+    add     r4, r4, r5
+    addi    r4, r4, 31
+    srwi    r4, r4, 5
+    mtctr   r4
+_loop_ici:
+    icbi    r0, r3
+    addi    r3, r3, 32
+    bdnz    _loop_ici
+    sync
+    isync
+    blr
+}
+
+/* Hand-written Dolphin SDK asm; evidence: docs/asm_evidence/oscache.md */
+asm void ICFlashInvalidate(void) {
+    nofralloc
+    mfspr   r3, HID0
+    ori     r3, r3, 0x0800
+    mtspr   HID0, r3
+    blr
+}
+
+/* Hand-written Dolphin SDK asm; evidence: docs/asm_evidence/oscache.md */
+asm void ICEnable(void) {
+    nofralloc
+    isync
+    mfspr   r3, HID0
+    ori     r3, r3, 0x8000
+    mtspr   HID0, r3
+    blr
+}
+
+/*
+ * __LCEnable - Enable the locked cache (L2 scratch area).
+ *
+ * 2026-07-02 reconciliation: this asm function was previously named
+ * "LCEnable" (an orphan - not present in symbols.txt, never paired in
+ * objdiff). Renamed to its real name, __LCEnable, on address/size
+ * evidence: symbols.txt has __LCEnable at this exact address (0x8009B40C)
+ * and size (0xCC), matching the unmatched "__LCEnable" slot in this
+ * unit's objdiff report; the *wrapper* below (formerly the orphan
+ * "LCEnableNoInterrupts") is symbols.txt's actual "LCEnable" and is
+ * renamed accordingly, matching a ground-truth "bl LCEnable" reference
+ * in src/game/gs_field_world_fn_800EEDF8.inc.
+ *
+ * Flushes the lower 32KB of cached memory, enables LC in HID2,
+ * sets up DBAT3 for the LC address range 0xE0000000, and zeroes
+ * all 512 locked cache lines.
+ *
+ * 0x8009B40C | size: 0xCC
+ */
+/* Hand-written Dolphin SDK asm; evidence: docs/asm_evidence/oscache.md */
+asm void __LCEnable(void) {
+    nofralloc
+    mfmsr   r5
+    ori     r5, r5, 0x1000
+    mtmsr   r5
+    lis     r3, 0x8000
+    li      r4, 0x400
+    mtctr   r4
+_loop_lce_flush:
+    dcbt    r0, r3
+    dcbst   r0, r3
+    addi    r3, r3, 32
+    bdnz    _loop_lce_flush
+    mfspr   r4, 920  /* HID2 */
+    oris    r4, r4, 0x100F
+    mtspr   920, r4  /* HID2 */
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    lis     r3, 0xE000
+    ori     r3, r3, 0x0002
+    mtdbatl 3, r3
+    ori     r3, r3, 0x01FE
+    mtdbatu 3, r3
+    isync
+    lis     r3, 0xE000
+    li      r6, 512
+    mtctr   r6
+    li      r6, 0
+_loop_lce_zero:
+    dcbz_l  r6, r3
+    addi    r3, r3, 32
+    bdnz    _loop_lce_zero
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    nop
+    blr
+}
+
+void LCEnable(void) {
+    BOOL enabled;
+
+    enabled = OSDisableInterrupts();
+    __LCEnable();
+    OSRestoreInterrupts(enabled);
+}
+
+/* Hand-written Dolphin SDK asm; evidence: docs/asm_evidence/oscache.md */
+asm void LCDisable(void) {
+    nofralloc
+    lis     r3, 0xE000
+    li      r4, 512
+    mtctr   r4
+_loop_lcd:
+    dcbi    r0, r3
+    addi    r3, r3, 32
+    bdnz    _loop_lcd
+    mfspr   r4, 920  /* HID2 */
+    rlwinm  r4, r4, 0, 4, 2   /* clear LC enable bit */
+    mtspr   920, r4  /* HID2 */
+    blr
+}
+
+/* Hand-written Dolphin SDK asm; evidence: docs/asm_evidence/oscache.md */
+asm void LCStoreBlocks(register void* destAddr, register void* srcAddr, register u32 nBlocks) {
+    nofralloc
+    extrwi  r6, nBlocks, 5, 25
+    clrlwi  destAddr, destAddr, 4
+    or      r6, r6, destAddr
+    mtspr   DMA_U, r6
+    clrlslwi r6, nBlocks, 30, 2
+    or      r6, r6, srcAddr
+    ori     r6, r6, 0x0002
+    mtspr   DMA_L, r6
+    blr
+}
+
+/*
+ * LCStoreData - DMA-transfer multiple blocks via the locked cache.
+ *
+ * Splits large transfers into 128-block (0x1000 byte) chunks,
+ * calling LCStoreBlocks for each chunk. Returns the number of
+ * full 128-block transfers performed.
+ *
+ * 0x8009B55C | size: 0xAC
+ */
+u32 LCStoreData(void* destAddr, void* srcAddr, u32 nBytes) {
+    u32 numBlocks = (nBytes + 0x1F) >> 5;
+    u32 numTransactions = (numBlocks + 0x7F) >> 7;
+
+    while (numBlocks != 0) {
+        if (numBlocks < 0x80) {
+            LCStoreBlocks(destAddr, srcAddr, numBlocks);
+            numBlocks = 0;
+        } else {
+            LCStoreBlocks(destAddr, srcAddr, 0);
+            numBlocks -= 0x80;
+            destAddr = (u8*)destAddr + 0x1000;
+            srcAddr = (u8*)srcAddr + 0x1000;
+        }
+    }
+
+    return numTransactions;
+}
+
+/*
+ * LCQueueLength - Get the current locked cache DMA queue length.
+ *
+ * 0x8009B608 | size: 0xC
+ */
+/* Hand-written Dolphin SDK asm; evidence: docs/asm_evidence/oscache.md */
+asm u32 LCQueueLength(void) {
+    nofralloc
+    mfspr   r4, 920  /* HID2 */
+    extrwi  r3, r4, 4, 4
+    blr
+}
+
+/*
+ * LCQueueWait - Wait for the locked cache DMA queue to drain.
+ *
+ * Polls the DMA queue length field in HID2 until it is less than
+ * or equal to the requested threshold.
+ *
+ * 0x8009B614 | size: 0x14
+ */
+/* Hand-written Dolphin SDK asm; evidence: docs/asm_evidence/oscache.md */
+asm void LCQueueWait(register u32 threshold) {
+    nofralloc
+_loop_lcqw:
+    mfspr   r4, 920  /* HID2 */
+    extrwi  r4, r4, 4, 4
+    cmpw    r4, r3
+    bgt     _loop_lcqw
+    blr
+}
+
+/*
+ * L2GlobalInvalidate, DMAErrorHandler and __OSCacheInit (0x8009B628 -
+ * 0x8009B914) own the unit's strings (.data 0x803105B0 - 0x803107E0).
+ * The syncs are MWCC's __sync() intrinsic (the same `sync` instruction as
+ * an inline asm block).
+ */
+#pragma push
+#pragma peephole off
+#pragma dont_inline on
+void L2GlobalInvalidate(void) {
+    __sync();
+    PPCMtl2cr(PPCMfl2cr() & 0x7FFFFFFF);
+    __sync();
+
+    PPCMtl2cr(PPCMfl2cr() | 0x00200000);
+
+    while (PPCMfl2cr() & 0x00000001u)
+        ;
+
+    PPCMtl2cr(PPCMfl2cr() & ~0x00200000);
+
+    while (PPCMfl2cr() & 0x00000001u) {
+        DBPrintf(">>> L2 INVALIDATE : SHOULD NEVER HAPPEN\n");
+    }
+}
+#pragma pop
+
+void DMAErrorHandler(u16 error, OSContext* context, ...) {
+    u32 hid2 = PPCMfhid2();
+
+    OSReport("Machine check received\n");
+    OSReport("HID2 = 0x%x   SRR1 = 0x%x\n", hid2, context->srr1);
+    if (!(hid2 & (HID2_DCHERR | HID2_DNCERR | HID2_DCMERR | HID2_DQOERR)) || !(context->srr1 & SRR1_DMA_BIT)) {
+        OSReport("Machine check was not DMA/locked cache related\n");
+        OSDumpContext(context);
+        PPCHalt();
+    }
+
+    OSReport("DMAErrorHandler(): An error occurred while processing DMA.\n");
+    OSReport("The following errors have been detected and cleared :\n");
+
+    if (hid2 & HID2_DCHERR) {
+        OSReport("\t- Requested a locked cache tag that was already in the cache\n");
+    }
+
+    if (hid2 & HID2_DNCERR) {
+        OSReport("\t- DMA attempted to access normal cache\n");
+    }
+
+    if (hid2 & HID2_DCMERR) {
+        OSReport("\t- DMA missed in data cache\n");
+    }
+
+    if (hid2 & HID2_DQOERR) {
+        OSReport("\t- DMA queue overflowed\n");
+    }
+
+    PPCMthid2(hid2);
+}
+
+void __OSCacheInit(void) {
+    u32 hid0;
+
+    /* Enable I-cache if not already enabled */
+    hid0 = PPCMfhid0();
+    if (!(hid0 & 0x8000)) {
+        ICEnable();
+        DBPrintf("L1 i-caches initialized\n");
+    }
+
+    /* Enable D-cache if not already enabled */
+    hid0 = PPCMfhid0();
+    if (!(hid0 & 0x4000)) {
+        DCEnable();
+        DBPrintf("L1 d-caches initialized\n");
+    }
+
+    /* Enable L2 cache if not already enabled */
+    {
+        u32 l2cr;
+        l2cr = PPCMfl2cr();
+        if (!(l2cr & 0x80000000)) {
+            u32 msr;
+
+            msr = PPCMfmsr();
+            __sync();
+            PPCMtmsr(0x30);
+            __sync();
+            __sync();
+
+            /* Disable L2 */
+            l2cr = PPCMfl2cr();
+            l2cr &= 0x7FFFFFFF;
+            PPCMtl2cr(l2cr);
+            __sync();
+
+            /* Do a global invalidate */
+            L2GlobalInvalidate();
+
+            /* Restore MSR */
+            PPCMtmsr(msr);
+
+            /* Enable L2 with data-only mode cleared */
+            l2cr = PPCMfl2cr();
+            l2cr = (l2cr | 0x80000000) & ~0x00200000;
+            PPCMtl2cr(l2cr);
+
+            DBPrintf("L2 cache initialized\n");
+        }
+    }
+
+    /* Install DMA error handler (error type 1 = machine check) */
+    OSSetErrorHandler(1, (OSErrorHandler)DMAErrorHandler);
+    DBPrintf("Locked cache machine check handler installed\n");
+}

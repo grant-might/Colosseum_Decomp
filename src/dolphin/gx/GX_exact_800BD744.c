@@ -1,0 +1,18 @@
+#include "dolphin/gx/GXInternal.h"
+
+void fn_800BD744(f32 left, f32 top, f32 width, f32 height, f32 nearz, f32 farz)
+{
+    fn_800BD640(left, top, width, height, nearz, farz, 1);
+}
+
+void fn_800BD768(f32* projection)
+{
+    GXData* data = gx;
+
+    projection[0] = data->projection[0];
+    projection[1] = data->projection[1];
+    projection[2] = data->projection[2];
+    projection[3] = data->projection[3];
+    projection[4] = data->projection[4];
+    projection[5] = data->projection[5];
+}

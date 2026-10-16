@@ -1,0 +1,6618 @@
+Sections:
+	.init       type:code align:4
+	.text       type:code align:32
+	.ctors      type:rodata align:8
+	.dtors      type:rodata align:32
+	.rodata     type:rodata align:32
+	.data       type:data align:32
+	.bss        type:bss align:64
+	.sdata      type:data align:4
+	.sbss       type:bss align:16
+	.sdata2     type:rodata align:32
+	.sbss2      type:bss align:4
+
+game/data/bss_8039A700.c:
+	.bss        start:0x8039A700 end:0x8039E700
+
+game/data/bss_8039E700.c:
+	.bss        start:0x8039E700 end:0x803A1D60
+
+game/data/data_8027A500.c:
+	.data       start:0x8027A500 end:0x802E28D0
+
+game/data/rodata_802663A0.c:
+	.rodata     start:0x802663A0 end:0x80266698
+
+__init_cpp_exceptions.cpp:
+	.dtors      start:0x80266380 end:0x80266384
+
+game/main.c:
+	.text       start:0x800055E0 end:0x80005FA8
+	.sdata2     start:0x8047B6A0 end:0x8047B6B8
+
+game/data/sdata2_8047B6B8.c:
+	.sdata2     start:0x8047B6B8 end:0x8047B6D8
+
+game/main_tail.c:
+	.text       start:0x80005FA8 end:0x80006630
+
+game/gs_task_exact_80006630.c:
+	.text       start:0x80006630 end:0x80006724
+
+game/gs_task_residual_80006724.c:
+	.text       start:0x80006724 end:0x80006884
+
+game/gs_task_exact_80006884.c:
+	.text       start:0x80006884 end:0x80006908
+
+game/gs_task_residual_80006908.c:
+	.text       start:0x80006908 end:0x80006FAC
+	.data       start:0x802E28D0 end:0x802E28EC
+
+game/data/data_802E28F0.c:
+	.data       start:0x802E28F0 end:0x802E4B78
+
+game/data/data_802E4B98.c:
+	.data       start:0x802E4B98 end:0x802E4C80
+
+game/gs_task_exact_80006FAC.c:
+	.text       start:0x80006FAC end:0x80007364
+
+game/gs_task_residual_80007364.c:
+	.text       start:0x80007364 end:0x8000765C
+
+game/gs_task_exact_8000765C.c:
+	.text       start:0x8000765C end:0x80008868
+
+game/gs_task_residual_80008868.c:
+	.text       start:0x80008868 end:0x80009178
+
+game/gs_range_80009178.c:
+	.text       start:0x80009178 end:0x800096B4
+
+game/gs_range_800096B4.c:
+	.text       start:0x800096B4 end:0x8000BE74
+	.rodata     start:0x80266698 end:0x802666B0
+	.sdata2     start:0x8047B6D8 end:0x8047B6E0
+
+game/data/sdata2_8047B6E0.c:
+	.sdata2     start:0x8047B6E0 end:0x8047B6F8
+
+game/data/rodata_802666B0.c:
+	.rodata     start:0x802666B0 end:0x80266BD8
+
+game/data/rodata_80266BD8.c:
+	.rodata     start:0x80266BD8 end:0x80266C20
+
+game/gs_range_8000BE74.c:
+	.text       start:0x8000BE74 end:0x8000CA34
+
+game/gs_party_access.c:
+	.text       start:0x8000CA34 end:0x8000D290
+
+game/gs_range_8000D290.c:
+	.text       start:0x8000D290 end:0x8000DAA8
+	.sdata2     start:0x8047B6F8 end:0x8047B700
+
+game/data/sdata2_8047B700.c:
+	.sdata2     start:0x8047B700 end:0x8047B718
+
+game/menuFight_exact_8000DAA8.c:
+	.text       start:0x8000DAA8 end:0x8000DAE8
+
+game/menuFight_r51_8000DAA8_prefix.c:
+	.text       start:0x8000DAE8 end:0x8000DC88
+
+game/menuFight_exact_8000DC88.c:
+	.text       start:0x8000DC88 end:0x8000DE24
+
+game/menuFight_exact_8000DE24.c:
+	.text       start:0x8000DE24 end:0x8000DEC4
+
+game/menuFight_r51_8000DE24.c:
+	.text       start:0x8000DEC4 end:0x8000E204
+
+game/menuFight_exact_8000E204.c:
+	.text       start:0x8000E204 end:0x8000E290
+
+game/menuFight_r51_8000E290.c:
+	.text       start:0x8000E290 end:0x8000F310
+
+game/menuFight_exact_8000F310.c:
+	.text       start:0x8000F310 end:0x8000F400
+	.data       start:0x802E4C80 end:0x802E4CA8
+
+game/data/data_802E4CA8.c:
+	.data       start:0x802E4CA8 end:0x802E4CD8
+
+game/menuFight_r51_8000F400.c:
+	.text       start:0x8000F400 end:0x8000F964
+
+game/menuFight_exact_8000F964.c:
+	.text       start:0x8000F964 end:0x8000FFA8
+
+game/menuFight_exact_8000FFA8.c:
+	.text       start:0x8000FFA8 end:0x800100C0
+	.data       start:0x802E4CD8 end:0x802E4D8C
+
+game/menuFight_exact_800100C0.c:
+	.text       start:0x800100C0 end:0x80010294
+
+game/menuFight_exact_80010294.c:
+	.text       start:0x80010294 end:0x80010588
+
+game/menuFight_exact_80010588.c:
+	.text       start:0x80010588 end:0x80010C98
+
+game/menuFight_exact_80010C98.c:
+	.text       start:0x80010C98 end:0x80011288
+
+game/menuFight_r51_80011288_o2.c:
+	.text       start:0x80011288 end:0x800114A4
+
+game/menuFight_r51_800114A4_suffix.c:
+	.text       start:0x800114A4 end:0x800117BC
+
+game/menuFight_r40_800117BC_gc125n.c:
+	.text       start:0x800117BC end:0x800119A8
+
+game/menuFight_exact_800119A8.c:
+	.text       start:0x800119A8 end:0x80011B4C
+
+game/menuFightStatus.c:
+	.text       start:0x80011B4C end:0x80011EA4
+
+game/gs_range_80011EA4.c:
+	.text       start:0x80011EA4 end:0x80012858
+	.sdata2     start:0x8047B718 end:0x8047B740
+
+game/data/sdata2_8047B740.c:
+	.sdata2     start:0x8047B740 end:0x8047B7A0
+
+game/data/sdata2_8047B7A0.c:
+	.sdata2     start:0x8047B7A0 end:0x8047B7C8
+
+game/gs_range_candidate_80012858.c:
+	.text       start:0x80012858 end:0x80012D20
+
+game/gs_event_exec_exact_80012D20.c:
+	.text       start:0x80012D20 end:0x80013744
+	.data       start:0x802E4D90 end:0x802E4DAC
+
+game/data/data_802E4DB0_prefix.c:
+	.data       start:0x802E4DB0 end:0x802E4FE0
+
+game/gs_event_exec_exact_80013744.c:
+	.text       start:0x80013744 end:0x8001374C
+
+game/gs_event_exec_candidate_8001374C.c:
+	.text       start:0x8001374C end:0x800140FC
+
+game/gs_event_exec_exact_800140FC.c:
+	.text       start:0x800140FC end:0x80014110
+
+game/gs_event_exec_exact_80014110.c:
+	.text       start:0x80014110 end:0x80014118
+
+game/gs_event_exec_candidate_80014118.c:
+	.text       start:0x80014118 end:0x80014198
+
+game/gs_event_exec_exact_80014198.c:
+	.text       start:0x80014198 end:0x800141BC
+
+game/gs_event_exec_r47_prefix.c:
+	.text       start:0x800141BC end:0x80014574
+
+game/gs_event_exec_r47_80014574_o3.c:
+	.text       start:0x80014574 end:0x80014A48
+
+game/gs_event_exec_r47_suffix.c:
+	.text       start:0x80014A48 end:0x8001501C
+
+game/gs_pokemon_summary_r57b_8001501C_prefix.c:
+	.text       start:0x8001501C end:0x800150E4
+
+game/gs_pokemon_summary_r57b_800150E4_o4s.c:
+	.text       start:0x800150E4 end:0x800159BC
+
+game/gs_pokemon_summary_r57b_800159BC_middle.c:
+	.text       start:0x800159BC end:0x80015E3C
+
+game/gs_pokemon_summary_r57b_80015E3C_o4s.c:
+	.text       start:0x80015E3C end:0x800161B0
+
+game/gs_pokemon_summary_r57b_800161B0_suffix.c:
+	.text       start:0x800161B0 end:0x800166BC
+
+game/gs_pokemon_summary_r55_800166BC_gc13_o3.c:
+	.text       start:0x800166BC end:0x800167D0
+
+game/gs_pokemon_summary_r41_800167D0_gc20.c:
+	.text       start:0x800167D0 end:0x80016ABC
+
+game/gs_pokemon_summary_r41_80016ABC.c:
+	.text       start:0x80016ABC end:0x800178EC
+
+game/gs_pokemon_summary_exact_800178EC.c:
+	.text       start:0x800178EC end:0x8001793C
+
+game/gs_pokemon_summary_r55_8001793C_prefix.c:
+	.text       start:0x8001793C end:0x80017CB8
+
+game/gs_pokemon_summary_r55_80017CB8_gc13_o4s.c:
+	.text       start:0x80017CB8 end:0x80017E8C
+
+game/gs_pokemon_summary_r55_80017E8C_suffix.c:
+	.text       start:0x80017E8C end:0x800181C4
+
+game/menuPokemon_r57_800181C4_prefix.c:
+	.text       start:0x800181C4 end:0x80018594
+
+game/menuPokemon_island_80018594.c:
+	.text       start:0x80018594 end:0x80018A68
+
+game/menuPokemon_candidate_80018A68.c:
+	.text       start:0x80018A68 end:0x80018F30
+
+game/menuPokemon_island_80018F30.c:
+	.text       start:0x80018F30 end:0x800192A8
+
+game/menuPokemon_candidate_800192A8.c:
+	.text       start:0x800192A8 end:0x800194D0
+
+game/menuPokemon_island_800194D0.c:
+	.text       start:0x800194D0 end:0x800194E4
+
+game/menuPokemon_candidate_800194E4.c:
+	.text       start:0x800194E4 end:0x800195E0
+
+game/menuPokemon_island_800195E0.c:
+	.text       start:0x800195E0 end:0x80019754
+
+game/menuPokemon_candidate_80019754.c:
+	.text       start:0x80019754 end:0x80019938
+
+game/menuPokemon_island_80019938.c:
+	.text       start:0x80019938 end:0x80019B48
+
+game/menuPokemon_r57_80019B48_gc20p1_o4s.c:
+	.text       start:0x80019B48 end:0x80019D5C
+
+game/menuPokemon_r57_80019D5C_o1.c:
+	.text       start:0x80019D5C end:0x80019F6C
+
+game/menuPokemon_r57_80019F6C_suffix.c:
+	.text       start:0x80019F6C end:0x8001AF44
+
+game/menuPokemonCtrl_exact.c:
+	.text       start:0x8001AF44 end:0x8001B184
+
+game/menuPokemonClose_exact.c:
+	.text       start:0x8001B184 end:0x8001B1EC
+
+game/menuPokemon_candidate_8001B1EC.c:
+	.text       start:0x8001B1EC end:0x8001BAC4
+
+game/menuPokemon_island_8001BAC4.c:
+	.text       start:0x8001BAC4 end:0x8001BCEC
+
+game/menuPokemonOpen_exact.c:
+	.text       start:0x8001BCEC end:0x8001BE38
+
+game/menuPokemonMain_exact.c:
+	.text       start:0x8001BE38 end:0x8001BEBC
+
+game/menuPokemon_candidate_8001BEBC.c:
+	.text       start:0x8001BEBC end:0x8001C064
+
+game/menuPokemon_candidate_8001C064.c:
+	.text       start:0x8001C064 end:0x8001C7B8
+
+game/menuPokemon_r50_8001C7B8_prefix.c:
+	.text       start:0x8001C7B8 end:0x8001D378
+
+game/menuPokemon_r50_8001D378_o3.c:
+	.text       start:0x8001D378 end:0x8001D624
+
+game/menuPokemon_r50_8001D624_suffix.c:
+	.text       start:0x8001D624 end:0x8001D718
+
+game/menuSub.c:
+	.text       start:0x8001D718 end:0x8001EF78
+	.rodata     start:0x80266C20 end:0x80266C30
+	.bss        start:0x803A1D60 end:0x803A1F88
+	.sdata2     start:0x8047B7C8 end:0x8047B808
+
+game/data/bss_803A1F88.c:
+	.bss        start:0x803A1F88 end:0x803A2040
+
+game/data/bss_803A2040.c:
+	.bss        start:0x803A2040 end:0x803A3E58
+
+game/data/rodata_80266C30.c:
+	.rodata     start:0x80266C30 end:0x80266C7C
+
+game/data/rodata_80266C7C.c:
+	.rodata     start:0x80266C7C end:0x80266D78
+
+game/data/rodata_80266D78.c:
+	.rodata     start:0x80266D78 end:0x80266FE8
+
+game/gs_title_8001EF78.c:
+	.text       start:0x8001EF78 end:0x8002058C
+	.sdata2     start:0x8047B808 end:0x8047B868
+
+game/gs_title_exact_8002058C.c:
+	.text       start:0x8002058C end:0x800205B8
+
+game/gs_title_exact_800205B8.c:
+	.text       start:0x800205B8 end:0x800205C8
+
+game/gs_title_candidate_800205C8.c:
+	.text       start:0x800205C8 end:0x8002060C
+
+game/gs_title_exact_8002060C.c:
+	.text       start:0x8002060C end:0x80020618
+
+game/gs_title_80020618.c:
+	.text       start:0x80020618 end:0x80020E9C
+	.sdata2     start:0x8047B868 end:0x8047B898
+
+game/gs_title_exact_80020E9C.c:
+	.text       start:0x80020E9C end:0x80020EA4
+
+game/gs_title_candidate_80020EA4.c:
+	.text       start:0x80020EA4 end:0x80020F54
+
+game/gs_title_80020F54.c:
+	.text       start:0x80020F54 end:0x800215C4
+	.sdata2     start:0x8047B898 end:0x8047B8A0
+
+game/gs_title_exact_800215C4.c:
+	.text       start:0x800215C4 end:0x80021624
+
+game/gs_title_exact_80021624.c:
+	.text       start:0x80021624 end:0x80021644
+
+game/gs_title_exact_80021644.c:
+	.text       start:0x80021644 end:0x800216E0
+
+game/gs_title_exact_800216E0.c:
+	.text       start:0x800216E0 end:0x800216E8
+
+game/gs_title_r51_800216E8_o4s.c:
+	.text       start:0x800216E8 end:0x800218BC
+
+game/gs_title_r51_800218BC_suffix.c:
+	.text       start:0x800218BC end:0x80021A9C
+
+game/gs_title_exact_80021A9C.c:
+	.text       start:0x80021A9C end:0x80021B14
+
+game/gs_title_candidate_80021B14.c:
+	.text       start:0x80021B14 end:0x80022050
+
+game/gs_title_exact_80022050.c:
+	.text       start:0x80022050 end:0x8002217C
+
+game/gs_title_candidate_8002217C.c:
+	.text       start:0x8002217C end:0x80022E54
+
+game/gs_title_80022E54.c:
+	.text       start:0x80022E54 end:0x80023DA8
+	.sdata2     start:0x8047B8A0 end:0x8047B8A8
+
+game/gs_title_80023DA8.c:
+	.text       start:0x80023DA8 end:0x80026370
+	.sdata2     start:0x8047B8A8 end:0x8047B920
+
+game/data/sdata2_8047B920.c:
+	.sdata2     start:0x8047B920 end:0x8047B948
+
+game/menuNameEntry_r56_80026370_prefix.c:
+	.text       start:0x80026370 end:0x80026478
+
+game/menuNameEntry_exact_80026478.c:
+	.text       start:0x80026478 end:0x800265C0
+
+game/menuNameEntry_exact_800265C0.c:
+	.text       start:0x800265C0 end:0x80026640
+
+game/menuNameEntry_exact_80026640.c:
+	.text       start:0x80026640 end:0x80026740
+
+game/menuNameEntry_exact_80026740.c:
+	.text       start:0x80026740 end:0x800268F0
+
+game/menuNameEntry_r56_800268F0_gc20p1_o4s.c:
+	.text       start:0x800268F0 end:0x80026B44
+
+game/menuNameEntry_candidate_80026B44_gc20.c:
+	.text       start:0x80026B44 end:0x80026FEC
+
+game/menuNameEntry_candidate_80026FEC.c:
+	.text       start:0x80026FEC end:0x8002749C
+
+game/menuNameEntry_exact_8002749C.c:
+	.text       start:0x8002749C end:0x800275F4
+
+game/menuNameEntry_candidate_800275F4_gc20.c:
+	.text       start:0x800275F4 end:0x80027740
+
+game/menuNameEntry_r51_80027740_prefix.c:
+	.text       start:0x80027740 end:0x80027AA4
+
+game/menuNameEntry_r51_80027AA4_o2.c:
+	.text       start:0x80027AA4 end:0x80027D58
+
+game/menuNameEntry_exact_80027D58.c:
+	.text       start:0x80027D58 end:0x800280FC
+
+game/menuNameEntry_exact_800280FC.c:
+	.text       start:0x800280FC end:0x800281F4
+
+game/menuNameEntry_exact_800281F4.c:
+	.text       start:0x800281F4 end:0x80028444
+
+game/menuNameEntry_exact_80028444.c:
+	.text       start:0x80028444 end:0x80028588
+
+game/menuNameEntry_exact_80028588.c:
+	.text       start:0x80028588 end:0x80028620
+
+game/menuNameEntry_exact_80028620.c:
+	.text       start:0x80028620 end:0x80028728
+
+game/menuNameEntry_exact_80028728.c:
+	.text       start:0x80028728 end:0x80028830
+
+game/menuNameEntry_exact_80028830.c:
+	.text       start:0x80028830 end:0x80028948
+	.sdata2     start:0x8047B948 end:0x8047B950
+
+game/data/sdata2_8047B950.c:
+	.sdata2     start:0x8047B950 end:0x8047B9A0
+
+game/data/sdata2_8047B9A0.c:
+	.sdata2     start:0x8047B9A0 end:0x8047BA30
+
+game/menuNameEntry_candidate_80028830.c:
+	.text       start:0x80028948 end:0x80028FBC
+
+game/menuNameEntry_exact_80028FBC.c:
+	.text       start:0x80028FBC end:0x80029558
+
+game/menuNameEntry_exact_80029558.c:
+	.text       start:0x80029558 end:0x80029850
+
+game/menuShop_island_80029850.c:
+	.text       start:0x80029850 end:0x80029AC8
+
+game/menuShop.c:
+	.text       start:0x80029AC8 end:0x80029EF4
+
+game/menuShop_island_80029EF4.c:
+	.text       start:0x80029EF4 end:0x80029FAC
+
+game/menuShop_exact_80029FAC.c:
+	.text       start:0x80029FAC end:0x8002A3D4
+
+game/menuShop_exact_8002A3D4.c:
+	.text       start:0x8002A3D4 end:0x8002A5B0
+
+game/menuShop_exact_8002A5B0.c:
+	.text       start:0x8002A5B0 end:0x8002A618
+
+game/menuShop_candidate_8002A5B0.c:
+	.text       start:0x8002A618 end:0x8002AA68
+
+game/menuShop_exact_8002AA68.c:
+	.text       start:0x8002AA68 end:0x8002AB00
+
+game/menuShop_candidate_8002AB00.c:
+	.text       start:0x8002AB00 end:0x8002AB40
+
+game/menuShop_exact_8002AB40.c:
+	.text       start:0x8002AB40 end:0x8002AE9C
+
+game/menuShop_candidate_8002AE9C.c:
+	.text       start:0x8002AE9C end:0x8002B03C
+
+game/menuShop_exact_8002B03C.c:
+	.text       start:0x8002B03C end:0x8002B1A0
+
+game/menuShop_candidate_8002B1A0.c:
+	.text       start:0x8002B1A0 end:0x8002B880
+
+game/menuShop_r40_8002B880_gc125n.c:
+	.text       start:0x8002B880 end:0x8002BCE8
+
+game/menuShop_island_8002BCE8.c:
+	.text       start:0x8002BCE8 end:0x8002C284
+
+game/menuShop_candidate_8002C284.c:
+	.text       start:0x8002C284 end:0x8002CE6C
+
+game/menuShop_island_8002CE6C.c:
+	.text       start:0x8002CE6C end:0x8002D5D4
+
+game/menuShop_exact_8002D5D4.c:
+	.text       start:0x8002D5D4 end:0x8002D91C
+
+game/menuShop_candidate_8002D91C.c:
+	.text       start:0x8002D91C end:0x8002DD24
+
+game/menuPokemonChange_r51_8002DD24_o4s.c:
+	.text       start:0x8002DD24 end:0x8002DF10
+
+game/menuPokemonChange_island_8002DF10.c:
+	.text       start:0x8002DF10 end:0x8002E26C
+
+game/menuPokemonChange_r51_8002DF10_suffix.c:
+	.text       start:0x8002E26C end:0x8002E460
+
+game/menuPokemonChange_r41_8002E460_gc125n.c:
+	.text       start:0x8002E460 end:0x8002EA5C
+
+game/menuPokemonChange_r41_8002EA5C.c:
+	.text       start:0x8002EA5C end:0x8002EE74
+
+game/menuPokemonChange_island_8002EE74.c:
+	.text       start:0x8002EE74 end:0x8002F284
+
+game/menuPokemonChange_exact_8002F284.c:
+	.text       start:0x8002F284 end:0x8002F79C
+
+game/menuPokemonChange_island_8002F79C.c:
+	.text       start:0x8002F79C end:0x8002FC58
+
+game/menuPokemonChange_candidate_8002FC58.c:
+	.text       start:0x8002FC58 end:0x80030170
+
+game/gs_npc_event_exact_80030170.c:
+	.text       start:0x80030170 end:0x800301B0
+
+game/gs_npc_event_candidate_800301B0.c:
+	.text       start:0x800301B0 end:0x80030370
+
+game/gs_npc_event_exact_80030370.c:
+	.text       start:0x80030370 end:0x8003037C
+
+game/gs_npc_event_candidate_8003037C.c:
+	.text       start:0x8003037C end:0x8003042C
+
+game/gs_npc_event_candidate_8003037C_r40_8003042C_gc20.c:
+	.text       start:0x8003042C end:0x80030574
+
+game/gs_npc_event_candidate_8003037C_r40_80030574_gc20.c:
+	.text       start:0x80030574 end:0x800307A8
+
+game/gs_npc_event_candidate_8003037C_r40_800307A8_gc20.c:
+	.text       start:0x800307A8 end:0x800308D4
+
+game/gs_npc_event_candidate_8003037C_r40_800308D4.c:
+	.text       start:0x800308D4 end:0x80030A44
+
+game/gs_npc_event_candidate_8003037C_r40_80030A44_gc20.c:
+	.text       start:0x80030A44 end:0x80030C14
+
+game/gs_npc_event_candidate_8003037C_r40_80030C14.c:
+	.text       start:0x80030C14 end:0x80030D34
+
+game/gs_npc_event_candidate_8003037C_r40_80030D34_gc20.c:
+	.text       start:0x80030D34 end:0x80030F0C
+
+game/gs_npc_event_candidate_8003037C_r40_80030F0C_gc20.c:
+	.text       start:0x80030F0C end:0x80031188
+
+game/gs_npc_event_candidate_8003037C_r40_80031188.c:
+	.text       start:0x80031188 end:0x80031228
+
+game/gs_npc_event_candidate_8003037C_r40_80031228_gc20.c:
+	.text       start:0x80031228 end:0x80031404
+
+game/gs_npc_event_candidate_8003037C_r40_80031404_gc20.c:
+	.text       start:0x80031404 end:0x80031648
+
+game/gs_npc_event_candidate_8003037C_r40_80031648_gc20.c:
+	.text       start:0x80031648 end:0x800318D8
+
+game/gs_npc_event_candidate_8003037C_r40_800318D8.c:
+	.text       start:0x800318D8 end:0x80031B4C
+
+game/gs_npc_event_candidate_80031B4C_o3.c:
+	.text       start:0x80031B4C end:0x800324A0
+
+game/gs_npc_event_candidate_800324A0.c:
+	.text       start:0x800324A0 end:0x800327FC
+	.data       start:0x802E4FE0 end:0x802E50E0
+
+game/gs_npc_event_candidate_800327FC_o4s.c:
+	.text       start:0x800327FC end:0x80032ED8
+
+game/gs_npc_event_candidate_80032ED8.c:
+	.text       start:0x80032ED8 end:0x80033278
+
+game/gs_range_80033278.c:
+	.text       start:0x80033278 end:0x80035C48
+
+game/gs_exact_80035C48.c:
+	.text       start:0x80035C48 end:0x80035DD4
+
+game/movie.c:
+	.text       start:0x80035DD4 end:0x80037158
+	.rodata     start:0x80266FE8 end:0x80267060
+	.data       start:0x802E50E0 end:0x802E51C8
+	.bss        start:0x803A3E58 end:0x803A6498
+	.sdata2     start:0x8047BA30 end:0x8047BA58
+
+game/data/sdata2_8047BA58.c:
+	.sdata2     start:0x8047BA58 end:0x8047BA9C
+
+game/data/sdata2_8047BAA0.c:
+	.sdata2     start:0x8047BAA0 end:0x8047BB9E
+
+game/data/sdata2_8047BBA0.c:
+	.sdata2     start:0x8047BBA0 end:0x8047BCA0
+
+game/data/sdata2_8047BCA0.c:
+	.sdata2     start:0x8047BCA0 end:0x8047BDA0
+
+game/data/sdata2_8047BDA0.c:
+	.sdata2     start:0x8047BDA0 end:0x8047BE08
+
+game/data/bss_803A6498.c:
+	.bss        start:0x803A6498 end:0x803A9E40
+
+game/data/bss_803A9E40.c:
+	.bss        start:0x803A9E40 end:0x803B6E40
+
+game/data/bss_803B6E40.c:
+	.bss        start:0x803B6E40 end:0x803D6E40
+
+game/data/bss_803D6E40.c:
+	.bss        start:0x803D6E40 end:0x803F6E40
+
+game/data/bss_803F6E40.c:
+	.bss        start:0x803F6E40 end:0x803FB380
+
+game/data/data_802E51C8.c:
+	.data       start:0x802E51C8 end:0x802E6270
+
+game/data/rodata_80267060.c:
+	.rodata     start:0x80267060 end:0x80267250
+
+game/data/rodata_80267250.c:
+	.rodata     start:0x80267250 end:0x80267350
+
+game/data/rodata_80267350.c:
+	.rodata     start:0x80267350 end:0x80267398
+
+game/data/rodata_80267398.c:
+	.rodata     start:0x80267398 end:0x80267840
+
+game/menu/pda_range_80037158.c:
+	.text       start:0x80037158 end:0x80037174
+
+game/menu/pda_exact_80037174.c:
+	.text       start:0x80037174 end:0x800376F8
+
+game/menu/pda_candidate_800376F8.c:
+	.text       start:0x800376F8 end:0x80038124
+
+game/menu/pda_exact_80038124.c:
+	.text       start:0x80038124 end:0x80038170
+
+game/menu/pda_candidate_80038170.c:
+	.text       start:0x80038170 end:0x80038250
+
+game/menu/pda_exact_80038250.c:
+	.text       start:0x80038250 end:0x8003842C
+
+game/menu/pda_candidate_8003842C.c:
+	.text       start:0x8003842C end:0x800388C4
+
+game/menu/pda_exact_800388C4.c:
+	.text       start:0x800388C4 end:0x80038990
+
+game/menu/pda_candidate_80038990.c:
+	.text       start:0x80038990 end:0x80038A00
+
+game/menu/pda_exact_80038A00.c:
+	.text       start:0x80038A00 end:0x80038A0C
+
+game/menu/pda_candidate_80038A0C.c:
+	.text       start:0x80038A0C end:0x80039004
+
+game/menu/pda_exact_80039004.c:
+	.text       start:0x80039004 end:0x80039128
+
+game/menu/pda_candidate_80039128.c:
+	.text       start:0x80039128 end:0x80039498
+
+game/menu/pda_exact_80039498.c:
+	.text       start:0x80039498 end:0x80039644
+
+game/menu/pda_candidate_80039644.c:
+	.text       start:0x80039644 end:0x800398D4
+
+game/menu/pda_exact_800398D4.c:
+	.text       start:0x800398D4 end:0x80039A50
+
+game/menu/pda_candidate_80039A50.c:
+	.text       start:0x80039A50 end:0x80039F44
+
+game/menu/pda_exact_80039F44.c:
+	.text       start:0x80039F44 end:0x80039F70
+
+game/menu/pda_candidate_80039F70.c:
+	.text       start:0x80039F70 end:0x8003A520
+
+game/menu/pda_range_r47_8003A520_o2.c:
+	.text       start:0x8003A520 end:0x8003A6C0
+
+game/menu/pda_range_r47_8003A6C0.c:
+	.text       start:0x8003A6C0 end:0x8003AFDC
+
+game/menu/pda_range_r46_8003AFDC_o4s.c:
+	.text       start:0x8003AFDC end:0x8003B2D8
+
+game/menu/pda_range_r46_8003B2D8.c:
+	.text       start:0x8003B2D8 end:0x8003B6D0
+
+game/menu/pda_candidate_8003B6D0_gc20.c:
+	.text       start:0x8003B6D0 end:0x8003B814
+
+game/menu/pda_candidate_8003B814.c:
+	.text       start:0x8003B814 end:0x8003CF38
+
+game/menu/pda_candidate_8003B814_r46_8003CF38_o4s.c:
+	.text       start:0x8003CF38 end:0x8003D1FC
+
+game/menu/pda_candidate_8003B814_r46_8003D1FC.c:
+	.text       start:0x8003D1FC end:0x8003F2DC
+
+game/menu/pda_exact_8003F2DC.c:
+	.text       start:0x8003F2DC end:0x8003F464
+
+game/menu/pda_candidate_8003B814_r46_8003F464.c:
+	.text       start:0x8003F464 end:0x80041114
+
+game/menu/pda_exact_80041114.c:
+	.text       start:0x80041114 end:0x800411FC
+
+game/menu/pda_candidate_800411FC.c:
+	.text       start:0x800411FC end:0x80041B5C
+
+game/menu/pda_exact_80041B5C.c:
+	.text       start:0x80041B5C end:0x80041E48
+
+game/menu/pda_candidate_8003B814_r46_80041B5C.c:
+	.text       start:0x80041E48 end:0x80043DC0
+
+game/menu/pda_exact_80043DC0.c:
+	.text       start:0x80043DC0 end:0x80043EC8
+
+game/menu/pda_exact_80043EC8.c:
+	.text       start:0x80043EC8 end:0x80043FA8
+
+game/menu/pda_candidate_8003B814_r46_80043FA8.c:
+	.text       start:0x80043FA8 end:0x80044378
+
+game/menu/pda_exact_80044378.c:
+	.text       start:0x80044378 end:0x80044630
+
+game/menu/pda_candidate_8003B814_r46_80044630.c:
+	.text       start:0x80044630 end:0x800472CC
+
+game/menu/pda_exact_800472CC.c:
+	.text       start:0x800472CC end:0x800473E0
+
+game/menu/pda_candidate_8003B814_r46_800473E0.c:
+	.text       start:0x800473E0 end:0x80047CC0
+
+game/menu/pda_exact_80047CC0.c:
+	.text       start:0x80047CC0 end:0x800484A4
+
+game/menu/pda_exact_800484A4.c:
+	.text       start:0x800484A4 end:0x80048918
+
+game/menu/pda_candidate_8003B814_r46_800484A4.c:
+	.text       start:0x80048918 end:0x800492CC
+
+game/menu/pda_exact_800492CC_gc20.c:
+	.text       start:0x800492CC end:0x800495C8
+
+game/menu/pda_candidate_800495C8.c:
+	.text       start:0x800495C8 end:0x8004B598
+
+game/menu/pda_exact_8004B598.c:
+	.text       start:0x8004B598 end:0x8004B7EC
+
+game/menu/menu_pda_mail_r54b_8004B7EC_gc13_o4s.c:
+	.text       start:0x8004B7EC end:0x8004BDB8
+
+game/menu/menu_pda_mail_exact_8004BDB8.c:
+	.text       start:0x8004BDB8 end:0x8004BFB0
+
+game/menu/menu_pda_mail_r54b_8004BDB8_suffix.c:
+	.text       start:0x8004BFB0 end:0x8004C2D8
+
+game/menu/menu_pda_mail_exact_8004C2D8.c:
+	.text       start:0x8004C2D8 end:0x8004C3E4
+
+game/menu/menu_pda_mail_candidate_8004C3E4.c:
+	.text       start:0x8004C3E4 end:0x8004C5B0
+	.sdata2     start:0x8047BE08 end:0x8047BE18
+
+game/data/sdata2_8047BE18.c:
+	.sdata2     start:0x8047BE18 end:0x8047BE58
+
+game/menu/menu_pda_mail_exact_8004C5B0.c:
+	.text       start:0x8004C5B0 end:0x8004C6C0
+
+game/menu/menu_pda_mail_exact_8004C6C0.c:
+	.text       start:0x8004C6C0 end:0x8004CF78
+
+game/menu/menu_pda_mail_exact_8004CF78.c:
+	.text       start:0x8004CF78 end:0x8004D34C
+
+game/menu/menu_pda_mail_candidate_8004D34C.c:
+	.text       start:0x8004D34C end:0x8004D590
+
+game/menu/menu_pda_mail_exact_8004D590.c:
+	.text       start:0x8004D590 end:0x8004D6AC
+
+game/menu/menu_pda_mail_exact_8004D6AC.c:
+	.text       start:0x8004D6AC end:0x8004D6F0
+
+game/menu/menu_pda_mail_exact_8004D6F0.c:
+	.text       start:0x8004D6F0 end:0x8004DA64
+
+game/menu/menu_pda_mail_candidate_8004DA64.c:
+	.text       start:0x8004DA64 end:0x8004DB34
+
+game/menu/menu_pda_mail_exact_8004DB34.c:
+	.text       start:0x8004DB34 end:0x8004DDC0
+
+game/menu/menu_pda_mail_candidate_8004DDC0.c:
+	.text       start:0x8004DDC0 end:0x8004DF34
+
+game/menu/menu_pda_mail_exact_8004DF34.c:
+	.text       start:0x8004DF34 end:0x8004DFCC
+
+game/menu/menu_pda_mail_candidate_8004DFCC.c:
+	.text       start:0x8004DFCC end:0x8004E790
+
+game/menu/menu_pda_mail_exact_8004E790.c:
+	.text       start:0x8004E790 end:0x8004E9C0
+
+game/menu/menu_pda_mail_candidate_8004E9C0.c:
+	.text       start:0x8004E9C0 end:0x8004EADC
+
+game/menu/menu_bag.c:
+	.text       start:0x8004EADC end:0x80051710
+
+game/fight_range_80051710.c:
+	.text       start:0x80051710 end:0x8005344C
+
+game/menu/menuCB_range_8005344C.c:
+	.text       start:0x8005344C end:0x80054914
+	.sdata2     start:0x8047BE58 end:0x8047BE98
+
+game/data/sdata2_8047BE98.c:
+	.sdata2     start:0x8047BE98 end:0x8047BE9C
+
+game/menu/menuCB_exact_80054914.c:
+	.text       start:0x80054914 end:0x800552D4
+
+game/menu/menuCB_suffix_800552D4.c:
+	.text       start:0x800552D4 end:0x80055E38
+	.data       start:0x802E6270 end:0x802E6290
+
+game/menu/menuCB_80055E38.c:
+	.text       start:0x80055E38 end:0x80056C54
+	.sdata2     start:0x8047BEA0 end:0x8047BEE0
+
+game/menu/menuCB_80056C54.c:
+	.text       start:0x80056C54 end:0x80057B34
+	.sdata2     start:0x8047BEE0 end:0x8047BF10
+
+game/data/sdata2_8047BF10.c:
+	.sdata2     start:0x8047BF10 end:0x8047BFA0
+
+game/data/sdata2_8047BFA0.c:
+	.sdata2     start:0x8047BFA0 end:0x8047BFC8
+
+game/menu/menuColosseumBattle_exact_80057B34.c:
+	.text       start:0x80057B34 end:0x80057C9C
+
+game/menu/menuColosseumBattle_candidate_80057C9C.c:
+	.text       start:0x80057C9C end:0x80057DE8
+
+game/menu/menuColosseumBattle_exact_80057DE8.c:
+	.text       start:0x80057DE8 end:0x80057E70
+
+game/menu/menuColosseumBattle_r56_80057E70_prefix.c:
+	.text       start:0x80057E70 end:0x80057F94
+
+game/menu/menuColosseumBattle_r56_80057F94_o1.c:
+	.text       start:0x80057F94 end:0x80058150
+
+game/menu/menuColosseumBattle_prefix.c:
+	.text       start:0x80058150 end:0x80058754
+
+game/menu/menuColosseumBattle_exact.c:
+	.text       start:0x80058754 end:0x80058DCC
+
+game/menu/menuColosseumBattle_candidate_80058DCC.c:
+	.text       start:0x80058DCC end:0x80058F08
+
+game/menu/menuColosseumBattle_exact_80058F08.c:
+	.text       start:0x80058F08 end:0x80059034
+
+game/menu/menuColosseumBattle_pre_main.c:
+	.text       start:0x80059034 end:0x800599AC
+	.data       start:0x802E6290 end:0x802E62B0
+
+game/menu/menuColosseumBattle_exact_800599AC.c:
+	.text       start:0x800599AC end:0x80059BDC
+
+game/menu/menuColosseumBattle_candidate_80059BDC.c:
+	.text       start:0x80059BDC end:0x8005CCD0
+	.rodata     start:0x80267840 end:0x80267A5C
+	.data       start:0x802E62B0 end:0x802E6428
+
+game/data/data_802E6428.c:
+	.data       start:0x802E6428 end:0x802ED9B8
+
+game/data/rodata_80267A5C.c:
+	.rodata     start:0x80267A5C end:0x80267C18
+
+game/menu/menuColosseumBattle_exact_8005CCD0.c:
+	.text       start:0x8005CCD0 end:0x8005CD88
+
+game/menu/menuColosseumBattle_exact_8005CD88.c:
+	.text       start:0x8005CD88 end:0x8005CEE8
+
+game/menu/menuColosseumBattle_exact_8005CEE8.c:
+	.text       start:0x8005CEE8 end:0x8005D184
+
+game/menu/menuColosseumBattle_tail.c:
+	.text       start:0x8005D184 end:0x8005D26C
+
+game/menu/menuColosseumBattle_tail_exact_8005D26C.c:
+	.text       start:0x8005D26C end:0x8005D2E8
+
+game/menu/menuColosseumBattle_tail_candidate_8005D2E8.c:
+	.text       start:0x8005D2E8 end:0x8005D3D0
+
+game/menu/menuColosseumBattle_tail_exact_8005D3D0.c:
+	.text       start:0x8005D3D0 end:0x8005D5CC
+
+game/menu/menuColosseumBattle_tail_candidate_8005D5CC.c:
+	.text       start:0x8005D5CC end:0x8005D6A8
+
+game/menu/menuColosseumBattle_tail_exact_8005D6A8.c:
+	.text       start:0x8005D6A8 end:0x8005D7F8
+
+game/menu/menu_bios_range_8005D7F8.c:
+	.text       start:0x8005D7F8 end:0x8005DA48
+
+game/menu/menu_debug_exact_8005DA48.c:
+	.text       start:0x8005DA48 end:0x8005DBC4
+
+game/menu/menu_debug_exact_8005DBC4.c:
+	.text       start:0x8005DBC4 end:0x8005DC24
+
+game/menu/menu_debug_exact_8005DC24.c:
+	.text       start:0x8005DC24 end:0x8005DCC4
+
+game/menu/menu_debug_exact_8005DCC4.c:
+	.text       start:0x8005DCC4 end:0x8005DEE8
+
+game/menu/menu_debug_exact_8005DEE8.c:
+	.text       start:0x8005DEE8 end:0x8005DFC8
+
+game/menu/menuCB_BattleStart.c:
+	.text       start:0x8005DFC8 end:0x8005E690
+
+game/menu/menuCB_BattleStart_exact_8005E690_inline_off.c:
+	.text       start:0x8005E690 end:0x8005FFE4
+
+game/menu/menuCB_BattleStart_candidate_8005FFE4.c:
+	.text       start:0x8005FFE4 end:0x80060434
+
+game/menu/menuCB_BattleStart_exact_80060434.c:
+	.text       start:0x80060434 end:0x800609B4
+
+game/menu/menuCB_BattleStart_candidate_800609B4.c:
+	.text       start:0x800609B4 end:0x80060D70
+
+game/menu/menuCB_BattleStart_exact_80060D70.c:
+	.text       start:0x80060D70 end:0x8006106C
+
+game/menu/menuCB_BattleStart_candidate_8006106C.c:
+	.text       start:0x8006106C end:0x80061454
+
+game/menu/menuCB_BattleStart_exact_80061454.c:
+	.text       start:0x80061454 end:0x80061BBC
+
+game/menu/menuCB_BattleStart_candidate_80061BBC.c:
+	.text       start:0x80061BBC end:0x80061D34
+
+game/menu/menuCB_BattleStart_exact_80061D34.c:
+	.text       start:0x80061D34 end:0x80061F6C
+
+game/menu/menuCB_BattleStart_candidate_80061F6C.c:
+	.text       start:0x80061F6C end:0x80062284
+
+game/menu/menuCB_BattleStart_exact_80062284.c:
+	.text       start:0x80062284 end:0x80062334
+
+game/menu/menuCB_BattleStart_candidate_80062334.c:
+	.text       start:0x80062334 end:0x800626CC
+
+game/menu/menuCB_BattleStart_exact_800626CC.c:
+	.text       start:0x800626CC end:0x80062834
+
+game/menu/menuCB_BattleStart_exact_80062834_gc125n.c:
+	.text       start:0x80062834 end:0x80062948
+
+game/menu/menuCB_range_80062948.c:
+	.text       start:0x80062948 end:0x800638F4
+	.data       start:0x802ED9B8 end:0x802ED9EC
+
+game/data/data_802ED9F0.c:
+	.data       start:0x802ED9F0 end:0x802EDB40
+
+game/menu/menuCB_range_exact_800638F4.c:
+	.text       start:0x800638F4 end:0x80063AD4
+
+game/menu/menuCB_range_80063AD4.c:
+	.text       start:0x80063AD4 end:0x80063D10
+	.sdata2     start:0x8047BFC8 end:0x8047BFE8
+
+game/data/sdata2_8047BFE8.c:
+	.sdata2     start:0x8047BFE8 end:0x8047C098
+
+game/menu/menuCB_range_exact_80063D10.c:
+	.text       start:0x80063D10 end:0x80063D14
+
+game/menu/menuCB_range_80063D14.c:
+	.text       start:0x80063D14 end:0x80064378
+
+game/menu/menuCB_range_exact_80064378.c:
+	.text       start:0x80064378 end:0x800643D4
+
+game/menu/menuCB_r57_800643D4_prefix.c:
+	.text       start:0x800643D4 end:0x80065628
+
+game/menu/menuCB_r57_80065628_o1.c:
+	.text       start:0x80065628 end:0x80065730
+
+game/menu/menuCB_r57_80065730_suffix.c:
+	.text       start:0x80065730 end:0x80065A48
+
+game/menu/menuCB_range_exact_80065A48.c:
+	.text       start:0x80065A48 end:0x800676EC
+	.data       start:0x802EDB40 end:0x802EDE54
+
+game/data/data_802EDE54.c:
+	.data       start:0x802EDE54 end:0x802EDE78
+
+game/menu/menuCB_range_800676EC.c:
+	.text       start:0x800676EC end:0x80068738
+
+game/menu/menuCB_range_exact_80068738.c:
+	.text       start:0x80068738 end:0x80068794
+
+game/menu/menuCB_r55_80068794_gc13_o4s.c:
+	.text       start:0x80068794 end:0x800688C4
+
+game/menu/menuCB_exact_800688C4.c:
+	.text       start:0x800688C4 end:0x80068DBC
+
+game/menu/menuCB_r55_800688C4_suffix.c:
+	.text       start:0x80068DBC end:0x80069048
+
+game/menu/menuCB_range_exact_80069048.c:
+	.text       start:0x80069048 end:0x8006905C
+
+game/menu/menuCB_r50_8006905C_prefix.c:
+	.text       start:0x8006905C end:0x80069220
+
+game/menu/menuCB_r50_80069220_o4s.c:
+	.text       start:0x80069220 end:0x800693A4
+
+game/menu/menuCB_r50_800693A4_suffix.c:
+	.text       start:0x800693A4 end:0x800697C4
+
+game/menu/menuCB_range_exact_800697C4.c:
+	.text       start:0x800697C4 end:0x800697F4
+
+game/menu/menuCB_range_800697F4.c:
+	.text       start:0x800697F4 end:0x80069A08
+
+game/menu/menuCB_range_exact_80069A08.c:
+	.text       start:0x80069A08 end:0x80069A60
+
+game/menu/menuCB_Battle.c:
+	.text       start:0x80069A60 end:0x80069C0C
+
+game/menu/menu_middle_range_80069C0C.c:
+	.text       start:0x80069C0C end:0x8006A65C
+	.rodata     start:0x80267C18 end:0x80267DD8
+
+game/data/rodata_80267DD8.c:
+	.rodata     start:0x80267DD8 end:0x80268424
+
+game/data/rodata_80268424.c:
+	.rodata     start:0x80268424 end:0x8026860C
+
+game/data/rodata_8026860C.c:
+	.rodata     start:0x8026860C end:0x80268DC0
+
+game/menu/menu_middle_exact_8006A65C.c:
+	.text       start:0x8006A65C end:0x8006A824
+
+game/menu/menu_middle_exact_8006A824.c:
+	.text       start:0x8006A824 end:0x8006A990
+
+game/menu/menu_middle_range_8006A990.c:
+	.text       start:0x8006A990 end:0x8006AC28
+
+game/menu/menu_middle_exact_8006AC28.c:
+	.text       start:0x8006AC28 end:0x8006ACCC
+
+game/menu/menu_middle_range_8006ACCC.c:
+	.text       start:0x8006ACCC end:0x8006ADB4
+
+game/menu/menu_middle_exact_8006ADB4.c:
+	.text       start:0x8006ADB4 end:0x8006AE18
+
+game/menu/menu_middle_range_8006AE18.c:
+	.text       start:0x8006AE18 end:0x8006AEEC
+
+game/menu/menu_middle_exact_8006AEEC.c:
+	.text       start:0x8006AEEC end:0x8006AF44
+
+game/menu/menu_middle_range_8006AF44.c:
+	.text       start:0x8006AF44 end:0x8006AFC4
+
+game/menu/menu_middle_exact_8006AFC4.c:
+	.text       start:0x8006AFC4 end:0x8006AFE4
+
+game/menu/menu_middle_range_8006AFE4.c:
+	.text       start:0x8006AFE4 end:0x8006B09C
+
+game/menu/menu_middle_exact_8006B09C.c:
+	.text       start:0x8006B09C end:0x8006B154
+
+game/menu/menu_middle_range_8006B154.c:
+	.text       start:0x8006B154 end:0x8006B1C0
+
+game/menu/menu_middle_exact_8006B1C0.c:
+	.text       start:0x8006B1C0 end:0x8006B2A4
+
+game/menu/menu_middle_range_8006B2A4.c:
+	.text       start:0x8006B2A4 end:0x8006B354
+
+game/menu/menu_middle_exact_8006B354.c:
+	.text       start:0x8006B354 end:0x8006B420
+
+game/menu/menu_middle_range_8006B420.c:
+	.text       start:0x8006B420 end:0x8006B4AC
+
+game/menu/menu_middle_exact_8006B4AC.c:
+	.text       start:0x8006B4AC end:0x8006B5D0
+
+game/menu/menu_middle_r48_8006B5D0_prefix.c:
+	.text       start:0x8006B5D0 end:0x8006B6B4
+
+game/menu/menu_middle_exact_8006B6B4.c:
+	.text       start:0x8006B6B4 end:0x8006B8E8
+
+game/menu/menu_middle_exact_8006B8E8.c:
+	.text       start:0x8006B8E8 end:0x8006B9B8
+
+game/menu/menu_middle_range_8006B9B8.c:
+	.text       start:0x8006B9B8 end:0x8006BB34
+
+game/menu/menu_middle_range_8006B9B8_r41_8006BB34.c:
+	.text       start:0x8006BB34 end:0x8006C164
+
+game/menu/menu_middle_r59_8006C164_o1.c:
+	.text       start:0x8006C164 end:0x8006C5D8
+	.data       start:0x802EDE78 end:0x802EDF20
+
+game/menu/menu_middle_r59_8006C5D8_suffix.c:
+	.text       start:0x8006C5D8 end:0x8006C7D4
+
+game/menu/menu_middle_candidate_8006C7D4.c:
+	.text       start:0x8006C7D4 end:0x8006CCC0
+	.data       start:0x802EDF20 end:0x802EDFB0
+
+game/menu/menu_middle_r59_8006CCC0_o1.c:
+	.text       start:0x8006CCC0 end:0x8006D940
+	.data       start:0x802EDFB0 end:0x802EE06C
+
+game/data/data_802EE06C.c:
+	.data       start:0x802EE06C end:0x802EE0F0
+
+game/menu/menu_middle_r59_8006D940_suffix.c:
+	.text       start:0x8006D940 end:0x8006DC28
+
+game/menu/menu_middle_candidate_8006DC28.c:
+	.text       start:0x8006DC28 end:0x8006E338
+
+game/menu/menu_middle_r59_8006E338_o1.c:
+	.text       start:0x8006E338 end:0x8006E798
+
+game/menu/menu_middle_r59_8006E798_middle.c:
+	.text       start:0x8006E798 end:0x8006E9A4
+
+game/menu/menu_middle_r59_8006E9A4_o1.c:
+	.text       start:0x8006E9A4 end:0x8006EE7C
+
+game/menu/menu_middle_r50_8006EE7C_prefix.c:
+	.text       start:0x8006EE7C end:0x8006EFF8
+
+game/menu/menu_middle_r50_8006EFF8_gc20_o4s.c:
+	.text       start:0x8006EFF8 end:0x8006F284
+
+game/menu/menu_middle_r59_8006F284_prefix.c:
+	.text       start:0x8006F284 end:0x8006F720
+
+game/menu/menu_middle_r59_8006F720_o1.c:
+	.text       start:0x8006F720 end:0x8006FBFC
+
+game/menu/menu_middle_r59_8006FBFC_suffix.c:
+	.text       start:0x8006FBFC end:0x8006FCF8
+
+game/menu/menu_middle_exact_8006FCF8.c:
+	.text       start:0x8006FCF8 end:0x8006FEE4
+
+game/menu/menu_middle_range_8006FEE4.c:
+	.text       start:0x8006FEE4 end:0x80070274
+
+game/menu/menu_middle_exact_80070274.c:
+	.text       start:0x80070274 end:0x80070318
+
+game/menu/menu_middle_range_80070318.c:
+	.text       start:0x80070318 end:0x800704A4
+
+game/menu/menu_middle_exact_800704A4.c:
+	.text       start:0x800704A4 end:0x800704AC
+
+game/menu/menu_middle_r47_prefix.c:
+	.text       start:0x800704AC end:0x80070D84
+	.data       start:0x802EE0F0 end:0x802EE454
+
+game/data/data_802EE458.c:
+	.data       start:0x802EE458 end:0x802EE4D8
+
+game/menu/menu_middle_r47_80070D84_o2.c:
+	.text       start:0x80070D84 end:0x8007109C
+
+game/menu/menu_r56b_8007109C_prefix.c:
+	.text       start:0x8007109C end:0x80071398
+
+game/menu/menu_r56b_80071398_o1.c:
+	.text       start:0x80071398 end:0x800714C8
+
+game/menu/menu_r56b_800714C8_suffix.c:
+	.text       start:0x800714C8 end:0x800716C8
+
+game/menu/pkjb_exact_800716C8.c:
+	.text       start:0x800716C8 end:0x80071AE4
+
+game/menu/pkjb_candidate_80071AE4.c:
+	.text       start:0x80071AE4 end:0x80071E34
+
+game/menu/pkjb_exact_80071E34.c:
+	.text       start:0x80071E34 end:0x80071EA4
+
+game/menu/pkjb_candidate_80071EA4.c:
+	.text       start:0x80071EA4 end:0x800722A0
+
+game/menu/pkjb_exact_800722A0.c:
+	.text       start:0x800722A0 end:0x80072A00
+
+game/menu/pkjb_candidate_80072A00.c:
+	.text       start:0x80072A00 end:0x80072C74
+
+game/menu/pkjb_exact_80072C74.c:
+	.text       start:0x80072C74 end:0x80072D58
+
+game/menu/pkjb_candidate_80072D58.c:
+	.text       start:0x80072D58 end:0x80073034
+
+game/menu/pkjb_exact_80073034.c:
+	.text       start:0x80073034 end:0x800733D0
+
+game/menu/pkjb_candidate_800733D0.c:
+	.text       start:0x800733D0 end:0x80073690
+
+game/menu/pkjb_exact_80073690.c:
+	.text       start:0x80073690 end:0x80073700
+
+game/menu/pkjb_candidate_80073700.c:
+	.text       start:0x80073700 end:0x80073990
+
+game/menu/pkjb_exact_80073990.c:
+	.text       start:0x80073990 end:0x80073E8C
+
+game/menu/menu_candidate_80073E8C_gc20.c:
+	.text       start:0x80073E8C end:0x80074324
+
+game/menu/menu_candidate_80074324.c:
+	.text       start:0x80074324 end:0x8007480C
+
+game/menu/menu_candidate_8007480C_gc125n.c:
+	.text       start:0x8007480C end:0x80075390
+
+game/menu/menu_candidate_80075390.c:
+	.text       start:0x80075390 end:0x80075A34
+	.sdata2     start:0x8047C098 end:0x8047C0C0
+
+game/data/sdata2_8047C0C0.c:
+	.sdata2     start:0x8047C0C0 end:0x8047C0F0
+
+game/menu/menu_exact_80075A34.c:
+	.text       start:0x80075A34 end:0x80075DC8
+
+game/menu/menu_candidate_80075DC8.c:
+	.text       start:0x80075DC8 end:0x80075EE0
+
+game/menu/menu_exact_80075EE0.c:
+	.text       start:0x80075EE0 end:0x80076054
+
+game/menu/menu_candidate_80076054.c:
+	.text       start:0x80076054 end:0x80076334
+
+game/menu/menu_exact_80076334.c:
+	.text       start:0x80076334 end:0x80076A8C
+
+game/menu/menu_candidate_80076A8C.c:
+	.text       start:0x80076A8C end:0x80076F2C
+
+game/menu/menu_exact_80076F2C.c:
+	.text       start:0x80076F2C end:0x800776E4
+
+game/menu/menu_candidate_800776E4.c:
+	.text       start:0x800776E4 end:0x80077A5C
+
+game/menu/menu_exact_80077A5C.c:
+	.text       start:0x80077A5C end:0x80077ED4
+
+game/menu/menu_candidate_r47_80077ED4.c:
+	.text       start:0x80077ED4 end:0x800798E8
+	.data       start:0x802EE4D8 end:0x802EE508
+	.sdata2     start:0x8047C0F0 end:0x8047C100
+
+game/data/sdata2_8047C100.c:
+	.sdata2     start:0x8047C100 end:0x8047C118
+
+game/menu/menu_exact_800798E8.c:
+	.text       start:0x800798E8 end:0x80079C1C
+
+game/menu/menu_candidate_r47_80079C1C.c:
+	.text       start:0x80079C1C end:0x8007B350
+	.data       start:0x802EE508 end:0x802EE604
+	.sdata2     start:0x8047C118 end:0x8047C128
+
+game/data/sdata2_8047C128.c:
+	.sdata2     start:0x8047C128 end:0x8047C180
+
+game/data/data_802EE608.c:
+	.data       start:0x802EE608 end:0x802EE890
+
+game/menu/menu_exact_8007B350.c:
+	.text       start:0x8007B350 end:0x8007B6A4
+
+game/menu/menu_exact_8007B6A4.c:
+	.text       start:0x8007B6A4 end:0x8007B6D8
+
+game/menu/menu_candidate_80075390_r46_8007B6D8_o3.c:
+	.text       start:0x8007B6D8 end:0x8007C23C
+
+game/menu/menu_candidate_80075390_r46_8007C23C.c:
+	.text       start:0x8007C23C end:0x8007C260
+
+game/menu/menu_poke_coupon.c:
+	.text       start:0x8007C260 end:0x8007C300
+
+game/menu/menu_carde_r48_8007C300_prefix.c:
+	.text       start:0x8007C300 end:0x8007C7EC
+
+game/menu/menu_carde_r48_8007C7EC_o2.c:
+	.text       start:0x8007C7EC end:0x8007CAB0
+
+game/menu/menu_carde_r48_8007CAB0_suffix.c:
+	.text       start:0x8007CAB0 end:0x8007CBB4
+
+game/menu/menu_carde_matrix_candidate_8007CBB4.c:
+	.text       start:0x8007CBB4 end:0x8007D4FC
+
+game/menu/menu_carde_matrix_candidate_8007D4FC_gc20.c:
+	.text       start:0x8007D4FC end:0x8007D978
+
+game/menu/menu_carde_matrix_candidate_8007D978.c:
+	.text       start:0x8007D978 end:0x8007FD64
+
+game/menu/cardesavedata_exact_8007FD64.c:
+	.text       start:0x8007FD64 end:0x8007FDBC
+
+game/menu/cardesavedata.c:
+	.text       start:0x8007FDBC end:0x80080310
+
+game/menu/cardesavedata_decode_80080310.c:
+	.text       start:0x80080310 end:0x80082650
+	.rodata     start:0x80268DC0 end:0x8026F1C8
+	.data       start:0x802EE890 end:0x802EEB78
+
+game/data/data_802EEB78.c:
+	.data       start:0x802EEB78 end:0x802EF038
+
+game/menu/cardesavedata_grid_80082650.c:
+	.text       start:0x80082650 end:0x80083AF4
+	.rodata     start:0x8026F1C8 end:0x8026F2E8
+	.sdata2     start:0x8047C180 end:0x8047C190
+
+game/data/sdata2_8047C190.c:
+	.sdata2     start:0x8047C190 end:0x8047C19F
+
+game/data/sdata2_8047C1A0.c:
+	.sdata2     start:0x8047C1A0 end:0x8047C240
+
+game/data/rodata_8026F2E8.c:
+	.rodata     start:0x8026F2E8 end:0x8026F4F8
+
+game/menu/cardesavedata_r51_80083AF4_suffix.c:
+	.text       start:0x80083AF4 end:0x80083CBC
+
+game/menu/cardesavedata_exact_80083CBC.c:
+	.text       start:0x80083CBC end:0x80083D30
+
+game/menu/cardesavedata_r51_80083D30.c:
+	.text       start:0x80083D30 end:0x80084034
+
+game/menu/cardesavedata_exact_80084034.c:
+	.text       start:0x80084034 end:0x80084038
+
+game/menu/cardesavedata_80084038.c:
+	.text       start:0x80084038 end:0x800849B4
+
+game/menu/cardesavedata_exact_800849B4.c:
+	.text       start:0x800849B4 end:0x80084A8C
+
+game/menu/cardesavedata_candidate_80084A8C_o3.c:
+	.text       start:0x80084A8C end:0x80087AE8
+
+game/menu/cardesavedata_exact_80087AE8.c:
+	.text       start:0x80087AE8 end:0x80087C64
+
+game/menu/cardesavedata_candidate_80087AE8.c:
+	.text       start:0x80087C64 end:0x80088428
+
+game/gba/gba_conv_r49_80088428_prefix.c:
+	.text       start:0x80088428 end:0x800884BC
+
+game/gba/gba_conv_r49_800884BC_gc125_o2.c:
+	.text       start:0x800884BC end:0x800886D0
+
+game/gba/gba_conv_r59_800886D0_o1.c:
+	.text       start:0x800886D0 end:0x80088964
+
+game/gba/gba_conv_r59_80088964_middle.c:
+	.text       start:0x80088964 end:0x800889E4
+
+game/gba/gba_conv_r59_800889E4_o1.c:
+	.text       start:0x800889E4 end:0x80088C60
+	.rodata     start:0x8026F4F8 end:0x8026F568
+
+game/data/rodata_8026F568.c:
+	.rodata     start:0x8026F568 end:0x8026F610
+
+game/gba/gba_conv_r59_80088C60_suffix.c:
+	.text       start:0x80088C60 end:0x80088EA8
+
+game/gba/gba_conv_exact_80088EA8.c:
+	.text       start:0x80088EA8 end:0x80088F58
+
+game/gba/gba_conv_candidate_80088F58.c:
+	.text       start:0x80088F58 end:0x80089028
+
+game/gba/gba_conv_exact_80089028.c:
+	.text       start:0x80089028 end:0x80089030
+
+game/gba/gba_conv_candidate_80089030.c:
+	.text       start:0x80089030 end:0x80089048
+
+game/pokeconv.c:
+	.text       start:0x80089048 end:0x800896B8
+
+game/gba/gba_misc_exact_800896B8.c:
+	.text       start:0x800896B8 end:0x800896E8
+
+game/gba/gba_misc_r51_800896E8_o2.c:
+	.text       start:0x800896E8 end:0x80089978
+
+game/gba/gba_misc_r51_80089978_o2.c:
+	.text       start:0x80089978 end:0x80089B8C
+
+game/gba/gba_misc_r51_80089B8C_suffix.c:
+	.text       start:0x80089B8C end:0x80089CA8
+
+game/gba/gba_misc_exact_80089CA8.c:
+	.text       start:0x80089CA8 end:0x80089D30
+
+game/gba/gba_misc_exact_80089D30.c:
+	.text       start:0x80089D30 end:0x80089D98
+
+game/gba/gba_misc_exact_80089D98.c:
+	.text       start:0x80089D98 end:0x80089E20
+
+game/gba/gba_misc_candidate_80089E20.c:
+	.text       start:0x80089E20 end:0x80089F58
+
+game/gba/gba_misc_exact_80089F58.c:
+	.text       start:0x80089F58 end:0x80089F78
+
+game/gba/gba_misc_candidate_80089F78.c:
+	.text       start:0x80089F78 end:0x8008A99C
+
+game/gba/gba_misc_exact_8008A99C.c:
+	.text       start:0x8008A99C end:0x8008A9AC
+
+game/gba/gba_misc_exact_8008A9AC.c:
+	.text       start:0x8008A9AC end:0x8008A9E4
+
+game/gba/gba_misc_candidate_8008A9E4.c:
+	.text       start:0x8008A9E4 end:0x8008AB4C
+
+game/gba/gba_misc_exact_8008AB4C.c:
+	.text       start:0x8008AB4C end:0x8008ABE4
+
+game/gba/gba_misc_exact_8008ABE4.c:
+	.text       start:0x8008ABE4 end:0x8008AC34
+
+game/gba/gba_misc_candidate_8008ABE4_r42_8008AC34_gc20.c:
+	.text       start:0x8008AC34 end:0x8008AE18
+
+game/gba/gba_misc_r58_8008AE18_prefix.c:
+	.text       start:0x8008AE18 end:0x8008C5D4
+
+game/gba/gba_misc_r58_8008C5D4_o1.c:
+	.text       start:0x8008C5D4 end:0x8008C6FC
+
+game/gba/gba_misc_r58_8008C6FC_suffix.c:
+	.text       start:0x8008C6FC end:0x8008C7B0
+
+game/gbaCommunication_prefix.c:
+	.text       start:0x8008C7B0 end:0x80090720
+
+game/gbaCommunication_exact_80090720.c:
+	.text       start:0x80090720 end:0x80091DA4
+
+game/gbaCommunication_candidate_80091DA4.c:
+	.text       start:0x80091DA4 end:0x80092FC8
+
+game/gbaCommunication_exact_80092FC8.c:
+	.text       start:0x80092FC8 end:0x800937F4
+
+game/gbaCommunication_candidate_800937F4.c:
+	.text       start:0x800937F4 end:0x80093F2C
+
+game/gbaCommunication_exact_80093F2C.c:
+	.text       start:0x80093F2C end:0x80094650
+
+game/gbaCommunication_candidate_80094650_gc125n.c:
+	.text       start:0x80094650 end:0x8009567C
+
+game/gbaCommunication_candidate_8009567C.c:
+	.text       start:0x8009567C end:0x800965C8
+
+game/gbaCommunication_candidate_800965C8_gc20.c:
+	.text       start:0x800965C8 end:0x80096C48
+
+game/gbaCommunication_candidate_80096C48.c:
+	.text       start:0x80096C48 end:0x800973EC
+	.data       start:0x802EF038 end:0x802EF0A4
+
+game/data/data_802EF0A8.c:
+	.data       start:0x802EF0A8 end:0x8030FFA0
+
+game/gbaCommunication_exact_800973EC.c:
+	.text       start:0x800973EC end:0x80097FFC
+
+dolphin/os/PPCArch.c:
+	.text       start:0x80097FFC end:0x80098108
+
+dolphin/sdk_r48_80098108_prefix.c:
+	.text       start:0x80098108 end:0x80099400
+
+dolphin/sdk_r48_80099400_o2.c:
+	.text       start:0x80099400 end:0x80099790
+
+dolphin/sdk_r48_80099790_suffix.c:
+	.text       start:0x80099790 end:0x8009A0E0
+	.data       start:0x8030FFA0 end:0x80310198
+	.bss        start:0x803FB4A0 end:0x803FB4F0
+	.sdata      start:0x80478970 end:0x8047897C
+
+dolphin/os/OSGetExceptionHandler.c:
+	.text       start:0x8009A0E0 end:0x8009A0F4
+
+dolphin/sdk_range_8009A0F4.c:
+	.text       start:0x8009A0F4 end:0x8009A27C
+
+dolphin/os/OSAlarm.c:
+	.text       start:0x8009A27C end:0x8009A92C
+	.sbss       start:0x8047A6E0 end:0x8047A6E8
+
+dolphin/sdk_exact_8009A92C.c:
+	.text       start:0x8009A92C end:0x8009A9D8
+
+dolphin/sdk_range_8009A9D8.c:
+	.text       start:0x8009A9D8 end:0x8009ABD0
+
+dolphin/sdk_exact_8009ABD0.c:
+	.text       start:0x8009ABD0 end:0x8009AC3C
+
+dolphin/sdk_candidate_8009AC50.c:
+	.text       start:0x8009AC3C end:0x8009AFB0
+	.data       start:0x80310198 end:0x80310530
+
+dolphin/os/OSArena.c:
+	.text       start:0x8009AFB0 end:0x8009AFD0
+
+dolphin/sdk_exact_8009AFD0.c:
+	.text       start:0x8009AFD0 end:0x8009AFFC
+
+dolphin/os/OSAudioSystem.c:
+	.text       start:0x8009AFFC end:0x8009B290
+	.data       start:0x80310530 end:0x803105B0
+
+dolphin/os/OSCache.c:
+	.text       start:0x8009B290 end:0x8009B914
+	.data       start:0x803105B0 end:0x803107E0
+
+dolphin/os/OSContext.c:
+	.text       start:0x8009B914 end:0x8009C2E0
+	.data       start:0x803107E0 end:0x803109B8
+
+dolphin/os/OSError.c:
+	.text       start:0x8009C2E0 end:0x8009C860
+	.data       start:0x803109B8 end:0x80310CD8
+	.bss        start:0x803FB4F0 end:0x803FB538
+	.sdata      start:0x80478990 end:0x80478998
+
+game/data/data_80310CD8.c:
+	.data       start:0x80310CD8 end:0x80311818
+
+dolphin/sdk_exact_8009C860.c:
+	.text       start:0x8009C860 end:0x8009CD38
+
+dolphin/sdk_candidate_8009CD38.c:
+	.text       start:0x8009CD38 end:0x8009D510
+	.sdata2     start:0x8047C240 end:0x8047C280
+
+game/data/sdata2_8047C280.c:
+	.sdata2     start:0x8047C280 end:0x8047C2A0
+
+game/data/sdata2_8047C2A0_prefix.c:
+	.sdata2     start:0x8047C2A0 end:0x8047C2E0
+
+dolphin/sdk_exact_8009D510.c:
+	.text       start:0x8009D510 end:0x8009DF3C
+
+dolphin/sdk_candidate_8009DF3C.c:
+	.text       start:0x8009DF3C end:0x8009DF88
+
+dolphin/os/OSInterruptHandlers.c:
+	.text       start:0x8009DF88 end:0x8009DFB8
+	.sbss       start:0x8047A710 end:0x8047A714
+
+dolphin/os/OSInterrupt.c:
+	.text       start:0x8009DFB8 end:0x8009E7A8
+
+dolphin/os/OSEXI_fn_8009E7A8.c:
+	.text       start:0x8009E7A8 end:0x8009E7AC
+
+dolphin/os/OSEXI_fn_8009E7AC.c:
+	.text       start:0x8009E7AC end:0x8009E7B0
+
+dolphin/sdk_range_8009E7B0.c:
+	.text       start:0x8009E7B0 end:0x8009ED4C
+	.data       start:0x80311818 end:0x80311840
+
+dolphin/sdk_exact_8009ED4C.c:
+	.text       start:0x8009ED4C end:0x8009ED70
+
+dolphin/sdk_candidate_8009ED70.c:
+	.text       start:0x8009ED70 end:0x8009F1B8
+	.data       start:0x80311840 end:0x80311868
+
+game/data/data_80311868.c:
+	.data       start:0x80311868 end:0x803119B8
+
+game/data/data_803119F0.c:
+	.data       start:0x803119F0 end:0x80311A24
+
+dolphin/os/OSMemory_exact_8009F1B8.c:
+	.text       start:0x8009F1B8 end:0x8009F54C
+
+dolphin/os/OSMemory_privileged.c:
+	.text       start:0x8009F54C end:0x8009F77C
+
+dolphin/sdk_range_8009F77C_prefix.c:
+	.text       start:0x8009F77C end:0x8009F958
+
+dolphin/sdk_exact_8009F958.c:
+	.text       start:0x8009F958 end:0x8009F9C8
+
+dolphin/sdk_exact_8009F9C8.c:
+	.text       start:0x8009F9C8 end:0x8009FADC
+
+dolphin/sdk_candidate_8009FADC.c:
+	.text       start:0x8009FADC end:0x8009FAEC
+
+dolphin/os/OSState_fn_8009FAEC.c:
+	.text       start:0x8009FAEC end:0x8009FAF8
+
+dolphin/os/OSReset_candidate_prefix.c:
+	.text       start:0x8009FAF8 end:0x8009FF50
+
+dolphin/os/OSReset_exact.c:
+	.text       start:0x8009FF50 end:0x8009FFC0
+
+dolphin/os/OSReset_candidate_suffix.c:
+	.text       start:0x8009FFC0 end:0x800A03B4
+
+dolphin/sdk_range_800A03B4.c:
+	.text       start:0x800A03B4 end:0x800A064C
+
+dolphin/os/OSRtc.c:
+	.text       start:0x800A064C end:0x800A0D00
+	.bss        start:0x803FB840 end:0x803FB894
+
+dolphin/sdk_range_800A0D00.c:
+	.text       start:0x800A0D00 end:0x800A128C
+
+dolphin/os/OSThread.c:
+	.text       start:0x800A128C end:0x800A2778
+	.bss        start:0x803FB898 end:0x803FC290
+	.sdata      start:0x804789A8 end:0x804789AC
+	.sbss       start:0x8047A760 end:0x8047A76C
+
+dolphin/os/OSTime_range_800A2778.c:
+	.text       start:0x800A2778 end:0x800A27FC
+
+dolphin/os/OSTime.c:
+	.text       start:0x800A27FC end:0x800A2B9C
+
+dolphin/sdk_range_800A2B9C.c:
+	.text       start:0x800A2B9C end:0x800A2C30
+
+dolphin/db/DBInit.c:
+	.text       start:0x800A2C30 end:0x800A2C58
+
+dolphin/db/DBGetFirstCallback.c:
+	.text       start:0x800A2C58 end:0x800A2C74
+
+dolphin/db/DB.c:
+	.text       start:0x800A2C74 end:0x800A2CCC
+
+dolphin/db/DBIsExceptionMarked.c:
+	.text       start:0x800A2CCC end:0x800A2CE8
+
+dolphin/db/DBPrintf.c:
+	.text       start:0x800A2CE8 end:0x800A2D38
+
+dolphin/sdk_r58_800A2D38_prefix.c:
+	.text       start:0x800A2D38 end:0x800A30E4
+
+dolphin/sdk_r58_800A30E4_o2.c:
+	.text       start:0x800A30E4 end:0x800A3194
+
+dolphin/sdk_r59_800A3194_prefix.c:
+	.text       start:0x800A3194 end:0x800A335C
+
+dolphin/sdk_r59_800A335C_o2.c:
+	.text       start:0x800A335C end:0x800A33B4
+
+dolphin/sdk_r59_800A33B4_suffix.c:
+	.text       start:0x800A33B4 end:0x800A3458
+
+dolphin/sdk_candidate_800A3458.c:
+	.text       start:0x800A3458 end:0x800A35E4
+
+dolphin/sdk_candidate_800A35E4_suffix.c:
+	.text       start:0x800A35E4 end:0x800A3744
+
+dolphin/sdk_exact_800A3744.c:
+	.text       start:0x800A3744 end:0x800A37CC
+
+dolphin/sdk_range_800A37CC.c:
+	.text       start:0x800A37CC end:0x800A3874
+
+dolphin/sdk_exact_800A3874.c:
+	.text       start:0x800A3874 end:0x800A3A78
+
+dolphin/sdk_candidate_800A3A78.c:
+	.text       start:0x800A3A78 end:0x800A3C54
+
+dolphin/sdk_candidate_800A3C54.c:
+	.text       start:0x800A3C54 end:0x800A3CB0
+
+dolphin/sdk_candidate_800A3CB0.c:
+	.text       start:0x800A3CB0 end:0x800A3D3C
+
+dolphin/sdk_candidate_800A3D3C.c:
+	.text       start:0x800A3D3C end:0x800A3EB0
+
+crt/__start.c:
+	.init       start:0x80003100 end:0x80003458
+	.sbss       start:0x8047A770 end:0x8047A778
+
+dolphin/dvd/DVDLow.c:
+	.text       start:0x800A3EB0 end:0x800A4CF0
+	.bss        start:0x803FC290 end:0x803FC360
+	.sdata      start:0x804789B8 end:0x804789BC
+	.sbss       start:0x8047A780 end:0x8047A7C8
+
+dolphin/dvd/DVDFs.c:
+	.text       start:0x800A4CF0 end:0x800A4D28
+	.sbss       start:0x8047A7C8 end:0x8047A7D8
+
+dolphin/dvd/dvdfs_range_800A4D28.c:
+	.text       start:0x800A4D28 end:0x800A5624
+
+dolphin/dvd/DVD_exact_800A5624.c:
+	.text       start:0x800A5624 end:0x800A5784
+	.data       start:0x80311AC8 end:0x80311AD4
+
+game/data/data_80311AD4.c:
+	.data       start:0x80311AD4 end:0x80311B08
+
+dolphin/dvd/DVD_exact_800A5784.c:
+	.text       start:0x800A5784 end:0x800A5810
+
+dolphin/dvd/DVD_range_800A5810.c:
+	.text       start:0x800A5810 end:0x800A58BC
+
+dolphin/dvd/DVD_exact_800A58BC.c:
+	.text       start:0x800A58BC end:0x800A58F0
+
+dolphin/dvd/DVD_exact_800A58F0.c:
+	.text       start:0x800A58F0 end:0x800A5918
+
+dolphin/dvd/DVD_exact_800A5918.c:
+	.text       start:0x800A5918 end:0x800A59CC
+
+dolphin/dvd/DVD_exact_800A59CC.c:
+	.text       start:0x800A59CC end:0x800A5C60
+
+dolphin/dvd/DVD_exact_800A5C60.c:
+	.text       start:0x800A5C60 end:0x800A5CC8
+
+dolphin/dvd/DVD_exact_800A5CC8.c:
+	.text       start:0x800A5CC8 end:0x800A5D60
+
+dolphin/dvd/DVD_exact_800A5D60.c:
+	.text       start:0x800A5D60 end:0x800A5D88
+
+dolphin/dvd/DVD_range_800A5D88.c:
+	.text       start:0x800A5D88 end:0x800A5EE0
+
+dolphin/dvd/DVD_exact_800A5EE0.c:
+	.text       start:0x800A5EE0 end:0x800A60D4
+
+dolphin/dvd/DVD_range_800A60D4.c:
+	.text       start:0x800A60D4 end:0x800A62CC
+
+dolphin/dvd/DVD_exact_800A62CC.c:
+	.text       start:0x800A62CC end:0x800A63C8
+
+dolphin/dvd/DVD_range_800A63C8.c:
+	.text       start:0x800A63C8 end:0x800A640C
+
+dolphin/dvd/DVD_exact_800A640C.c:
+	.text       start:0x800A640C end:0x800A6508
+
+dolphin/dvd/DVD_exact_800A6508.c:
+	.text       start:0x800A6508 end:0x800A6578
+
+dolphin/dvd/DVD_exact_800A6578.c:
+	.text       start:0x800A6578 end:0x800A6684
+
+dolphin/dvd/DVD_range_800A6684.c:
+	.text       start:0x800A6684 end:0x800A7484
+	.data       start:0x80311B08 end:0x80311B48
+
+game/data/data_80311B48.c:
+	.data       start:0x80311B48 end:0x80311B98
+
+dolphin/dvd/DVD_exact_800A7484.c:
+	.text       start:0x800A7484 end:0x800A76E4
+
+dolphin/dvd/DVD_exact_800A76E4.c:
+	.text       start:0x800A76E4 end:0x800A7728
+
+dolphin/dvd/DVD_range_800A7728.c:
+	.text       start:0x800A7728 end:0x800A7820
+
+dolphin/sdk_exact_800A7820.c:
+	.text       start:0x800A7820 end:0x800A7880
+
+dolphin/dvd/DVD_range_800A7880.c:
+	.text       start:0x800A7880 end:0x800A7CCC
+	.data       start:0x80311B98 end:0x80311C00
+
+game/data/data_80311C00.c:
+	.data       start:0x80311C00 end:0x80311CB8
+
+game/data/data_80311D38.c:
+	.data       start:0x80311D38 end:0x80311DB8
+
+game/data/data_80311E54.c:
+	.data       start:0x80311E54 end:0x80311FEC
+
+dolphin/dvd/DVD_exact_800A7CCC.c:
+	.text       start:0x800A7CCC end:0x800A7DE8
+
+dolphin/dvd/DVDQueue.c:
+	.text       start:0x800A7DE8 end:0x800A7FE0
+	.bss        start:0x803FC3F8 end:0x803FC418
+
+dolphin/dvd/DVDError_ErrorCode2Num.c:
+	.text       start:0x800A7FE0 end:0x800A80FC
+
+dolphin/dvd/DVDError.c:
+	.text       start:0x800A80FC end:0x800A8178
+
+dolphin/vi/VI_exact_800A8178.c:
+	.text       start:0x800A8178 end:0x800A839C
+
+dolphin/dvd/fstload.c:
+	.text       start:0x800A839C end:0x800A85DC
+	.data       start:0x80312078 end:0x803120E8
+	.bss        start:0x803FC418 end:0x803FC488
+	.sdata      start:0x804789E8 end:0x804789F8
+	.sbss       start:0x8047A838 end:0x8047A848
+
+dolphin/vi/vi.c:
+	.text       start:0x800A85DC end:0x800AA4D4
+	.data       start:0x803120E8 end:0x803124B8
+	.bss        start:0x803FC488 end:0x803FC5D0
+	.sdata      start:0x804789F8 end:0x80478A08
+	.sbss       start:0x8047A848 end:0x8047A8A0
+
+game/data/data_80312500.c:
+	.data       start:0x80312500 end:0x80312554
+
+game/data/data_80312558.c:
+	.data       start:0x80312558 end:0x8031259C
+
+game/data/data_803125E8.c:
+	.data       start:0x803125E8 end:0x80312668
+
+dolphin/pad/PAD.c:
+	.text       start:0x800AA4D4 end:0x800AC02C
+	.bss        start:0x803FC5D0 end:0x803FC620
+
+dolphin/ai_exact_800AC02C.c:
+	.text       start:0x800AC02C end:0x800AC440
+
+dolphin/sdk_range_800AC440.c:
+	.text       start:0x800AC440 end:0x800AC5AC
+
+dolphin/ai_exact_800AC5AC.c:
+	.text       start:0x800AC5AC end:0x800AC6D4
+
+dolphin/sdk_range_800AC6D4.c:
+	.text       start:0x800AC6D4 end:0x800AC910
+
+dolphin/ar_exact_800AC910.c:
+	.text       start:0x800AC910 end:0x800AC954
+
+dolphin/ar_exact_800AC954.c:
+	.text       start:0x800AC954 end:0x800ACB44
+
+dolphin/ar_exact_800ACB44.c:
+	.text       start:0x800ACB44 end:0x800ACBFC
+
+dolphin/sdk_exact_800ACBFC.c:
+	.text       start:0x800ACBFC end:0x800AE3F0
+
+dolphin/ar_dsp_exact_800AE3F0.c:
+	.text       start:0x800AE3F0 end:0x800AE9FC
+
+dolphin/dsp_task.c:
+	.text       start:0x800AE9FC end:0x800AF280
+	.data       start:0x80312668 end:0x803127A8
+
+game/data/data_803127F0_prefix.c:
+	.data       start:0x803127F0 end:0x80312AE0
+
+dolphin/sdk_exact_800AF280.c:
+	.text       start:0x800AF280 end:0x800AF35C
+
+dolphin/sdk_candidate_800AF35C.c:
+	.text       start:0x800AF35C end:0x800AF474
+
+dolphin/card_exact_800AF474.c:
+	.text       start:0x800AF474 end:0x800AF8A0
+
+dolphin/sdk_range_800AF8A0.c:
+	.text       start:0x800AF8A0 end:0x800B016C
+	.bss        start:0x803FC620 end:0x803FC840
+
+dolphin/sdk_exact_800B016C.c:
+	.text       start:0x800B016C end:0x800B0174
+
+dolphin/sdk_exact_800B0174.c:
+	.text       start:0x800B0174 end:0x800B01AC
+
+dolphin/sdk_exact_800B01AC.c:
+	.text       start:0x800B01AC end:0x800B0694
+
+dolphin/card_exact_800B0694.c:
+	.text       start:0x800B0694 end:0x800B1788
+
+dolphin/card_exact_800B1788.c:
+	.text       start:0x800B1788 end:0x800B2070
+
+dolphin/sdk_range_800B2070.c:
+	.text       start:0x800B2070 end:0x800B2968
+
+dolphin/sdk_exact_800B2968.c:
+	.text       start:0x800B2968 end:0x800B29F4
+
+dolphin/sdk_candidate_800B29F4.c:
+	.text       start:0x800B29F4 end:0x800B2F84
+
+dolphin/sdk_exact_800B2F84.c:
+	.text       start:0x800B2F84 end:0x800B3078
+
+dolphin/sdk_candidate_800B3078.c:
+	.text       start:0x800B3078 end:0x800B38DC
+
+dolphin/sdk_exact_800B38DC.c:
+	.text       start:0x800B38DC end:0x800B3978
+
+dolphin/sdk_candidate_800B3978.c:
+	.text       start:0x800B3978 end:0x800B3B68
+
+dolphin/card_exact_800B3B68.c:
+	.text       start:0x800B3B68 end:0x800B4644
+
+dolphin/sdk_candidate_800B4644.c:
+	.text       start:0x800B4644 end:0x800B4DC4
+
+dolphin/sdk_exact_800B4DC4.c:
+	.text       start:0x800B4DC4 end:0x800B4E50
+
+dolphin/sdk_candidate_800B4E50.c:
+	.text       start:0x800B4E50 end:0x800B4FC0
+
+dolphin/sdk_exact_800B4FC0.c:
+	.text       start:0x800B4FC0 end:0x800B5070
+
+dolphin/sdk_candidate_800B5070.c:
+	.text       start:0x800B5070 end:0x800B5184
+
+dolphin/sdk_exact_800B5184.c:
+	.text       start:0x800B5184 end:0x800B5228
+
+dolphin/sdk_candidate_800B5228.c:
+	.text       start:0x800B5228 end:0x800B5AE0
+
+dolphin/sdk_exact_800B5AE0.c:
+	.text       start:0x800B5AE0 end:0x800B5BA4
+
+dolphin/sdk_exact_800B5BA4.c:
+	.text       start:0x800B5BA4 end:0x800B5C5C
+
+dolphin/sdk_candidate_800B5C5C.c:
+	.text       start:0x800B5C5C end:0x800B6FE0
+	.bss        start:0x803FC860 end:0x803FCDD8
+	.sbss       start:0x8047A978 end:0x8047A9A0
+	.sdata2     start:0x8047C2E0 end:0x8047C308
+
+dolphin/sdk_exact_800B6FE0.c:
+	.text       start:0x800B6FE0 end:0x800B71F0
+
+dolphin/gx/GX_fn_800B71F0.c:
+	.text       start:0x800B71F0 end:0x800B71FC
+
+dolphin/sdk_range_800B71FC.c:
+	.text       start:0x800B71FC end:0x800B770C
+
+dolphin/gx/GX_fn_800B770C.c:
+	.text       start:0x800B770C end:0x800B7714
+
+dolphin/gx/GX_fn_800B7714.c:
+	.text       start:0x800B7714 end:0x800B771C
+
+dolphin/sdk_range_800B771C.c:
+	.text       start:0x800B771C end:0x800B7C18
+	.data       start:0x80312AE0 end:0x80312B48
+
+dolphin/sdk_range_800B771C_r40_800B7C18_gc11p1.c:
+	.text       start:0x800B7C18 end:0x800B7D3C
+
+dolphin/sdk_range_800B771C_r40_800B7D3C.c:
+	.text       start:0x800B7D3C end:0x800B856C
+	.data       start:0x80312B48 end:0x80312BD0
+
+dolphin/gx/GX_fn_800B856C.c:
+	.text       start:0x800B856C end:0x800B857C
+
+dolphin/gx/GX_exact_800B857C.c:
+	.text       start:0x800B857C end:0x800B884C
+	.data       start:0x80312BD0 end:0x80312C40
+
+game/data/data_80312C40_suffix.c:
+	.data       start:0x80312C40 end:0x80313364
+
+dolphin/gx/GX_exact_800B884C.c:
+	.text       start:0x800B884C end:0x800B8AE8
+
+dolphin/sdk_range_800B8AE8.c:
+	.text       start:0x800B8AE8 end:0x800B8DA8
+
+dolphin/gx/GX_exact_800B8DA8.c:
+	.text       start:0x800B8DA8 end:0x800B8E74
+
+dolphin/sdk_range_800B8E74.c:
+	.text       start:0x800B8E74 end:0x800B8E98
+
+dolphin/sdk_exact_800B8E98.c:
+	.text       start:0x800B8E98 end:0x800B9578
+
+dolphin/sdk_range_800B9578.c:
+	.text       start:0x800B9578 end:0x800BA198
+	.sdata2     start:0x8047C308 end:0x8047C318
+
+game/data/sdata2_8047C318.c:
+	.sdata2     start:0x8047C318 end:0x8047C348
+
+dolphin/gx/GX_fn_800BA198.c:
+	.text       start:0x800BA198 end:0x800BA1B4
+
+dolphin/sdk_range_800BA1B4.c:
+	.text       start:0x800BA1B4 end:0x800BA414
+
+dolphin/gx/GX_fn_800BA414.c:
+	.text       start:0x800BA414 end:0x800BA424
+
+dolphin/gx/GX_fn_800BA424.c:
+	.text       start:0x800BA424 end:0x800BA440
+
+dolphin/gx/GX_fn_800BA440.c:
+	.text       start:0x800BA440 end:0x800BA44C
+
+dolphin/sdk_range_800BA44C.c:
+	.text       start:0x800BA44C end:0x800BA4C8
+
+dolphin/gx/GX_exact_800BA4C8.c:
+	.text       start:0x800BA4C8 end:0x800BA7C0
+
+dolphin/sdk_range_800BA7C0.c:
+	.text       start:0x800BA7C0 end:0x800BAE5C
+	.data       start:0x80313368 end:0x8031358C
+	.sdata2     start:0x8047C348 end:0x8047C370
+
+dolphin/gx/GX_fn_800BAE5C.c:
+	.text       start:0x800BAE5C end:0x800BAE64
+
+dolphin/sdk_range_800BAE64.c:
+	.text       start:0x800BAE64 end:0x800BB2E4
+
+dolphin/gx/GX_fn_800BB2E4.c:
+	.text       start:0x800BB2E4 end:0x800BB2F8
+
+dolphin/gx/GX_fn_800BB2F8.c:
+	.text       start:0x800BB2F8 end:0x800BB30C
+
+dolphin/sdk_range_800BB30C_prefix.c:
+	.text       start:0x800BB30C end:0x800BB780
+
+dolphin/gx/GX_exact_800BB780.c:
+	.text       start:0x800BB780 end:0x800BB81C
+
+dolphin/sdk_range_800BB81C.c:
+	.text       start:0x800BB81C end:0x800BC114
+	.sdata2     start:0x8047C370 end:0x8047C388
+
+dolphin/gx/GXTev.c:
+	.text       start:0x800BC114 end:0x800BC8F8
+	.data       start:0x80313590 end:0x80313608
+
+game/data/data_80313608.c:
+	.data       start:0x80313608 end:0x80313628
+
+dolphin/sdk_candidate_800BC8F8.c:
+	.text       start:0x800BC8F8 end:0x800BCEBC
+	.sdata2     start:0x8047C388 end:0x8047C3E0
+
+dolphin/gx/GX_exact_800BCEBC.c:
+	.text       start:0x800BCEBC end:0x800BCFDC
+
+dolphin/sdk_candidate_800BCFDC.c:
+	.text       start:0x800BCFDC end:0x800BD07C
+
+dolphin/gx/GX_exact_800BD07C.c:
+	.text       start:0x800BD07C end:0x800BD16C
+
+dolphin/sdk_candidate_800BD16C.c:
+	.text       start:0x800BD16C end:0x800BD394
+	.sdata2     start:0x8047C3E0 end:0x8047C3E8
+
+game/data/sdata2_8047C3E8.c:
+	.sdata2     start:0x8047C3E8 end:0x8047C3F0
+
+dolphin/gx/GX_exact_800BD394.c:
+	.text       start:0x800BD394 end:0x800BD454
+
+dolphin/sdk_candidate_800BD454.c:
+	.text       start:0x800BD454 end:0x800BD554
+	.sdata2     start:0x8047C3F0 end:0x8047C3F8
+
+dolphin/gx/GX_exact_800BD554.c:
+	.text       start:0x800BD554 end:0x800BD58C
+
+dolphin/sdk_candidate_800BD58C.c:
+	.text       start:0x800BD58C end:0x800BD744
+	.sdata2     start:0x8047C3F8 end:0x8047C400
+
+dolphin/gx/GX_exact_800BD744.c:
+	.text       start:0x800BD744 end:0x800BD7A0
+
+dolphin/sdk_r52_800BD7A0_prefix.c:
+	.text       start:0x800BD7A0 end:0x800BE30C
+	.data       start:0x80313628 end:0x80313770
+
+dolphin/gx/GX_exact_800BE30C.c:
+	.text       start:0x800BE30C end:0x800BE348
+
+dolphin/sdk_candidate_800BE348.c:
+	.text       start:0x800BE348 end:0x800BE464
+
+trk/TRKConstructEvent.c:
+	.text       start:0x800BE464 end:0x800BE47C
+
+trk/TRKNub_exact_800BE47C.c:
+	.text       start:0x800BE47C end:0x800BE6B4
+	.rodata     start:0x8026F610 end:0x8026F640
+
+game/data/rodata_8026F640.c:
+	.rodata     start:0x8026F640 end:0x8026F688
+
+trk/TRKNub_candidate_800BE6B4.c:
+	.text       start:0x800BE6B4 end:0x800BE800
+
+trk/TRKNub_exact_800BE800.c:
+	.text       start:0x800BE800 end:0x800BE844
+
+trk/TRKNub_candidate_800BE844.c:
+	.text       start:0x800BE844 end:0x800BEBB0
+
+trk/TRKNub_exact_800BEBB0.c:
+	.text       start:0x800BEBB0 end:0x800BEC18
+
+trk/TRKNub_exact_800BEC18.c:
+	.text       start:0x800BEC18 end:0x800BED14
+
+trk/TRKNub_exact_800BED14.c:
+	.text       start:0x800BED14 end:0x800BEE44
+
+trk/TRKBufferReset.c:
+	.text       start:0x800BEE44 end:0x800BEE74
+
+trk/TRKNub_range_800BEE74.c:
+	.text       start:0x800BEE74 end:0x800BEF18
+
+trk/TRKGetBuffer.c:
+	.text       start:0x800BEF18 end:0x800BEF44
+
+trk/TRKBuffer.c:
+	.text       start:0x800BEF44 end:0x800BF080
+
+trk/TRKTerminateSerialHandler.c:
+	.text       start:0x800BF080 end:0x800BF088
+
+trk/TRKSerial_range_800BF088.c:
+	.text       start:0x800BF088 end:0x800BF338
+	.rodata     start:0x8026F688 end:0x8026F811
+
+game/data/rodata_8026F818.c:
+	.rodata     start:0x8026F818 end:0x8026F858
+
+trk/usr_put_initialize.c:
+	.text       start:0x800BF338 end:0x800BF33C
+
+dolphin/sdk_range_800BF33C.c:
+	.text       start:0x800BF33C end:0x800BF534
+	.data       start:0x80313770 end:0x803137DC
+
+trk/TRKDispatchInit.c:
+	.text       start:0x800BF534 end:0x800BF53C
+
+trk/TRKDispatch_range_800BF53C.c:
+	.text       start:0x800BF53C end:0x800C04E8
+	.rodata     start:0x8026F858 end:0x8026FA34
+	.data       start:0x803137E0 end:0x80313818
+
+game/data/data_80313824.c:
+	.data       start:0x80313824 end:0x803138B0
+
+game/data/rodata_8026FA34.c:
+	.rodata     start:0x8026FA34 end:0x8026FA40
+
+trk/TRKDispatchConnected.c:
+	.text       start:0x800C04E8 end:0x800C0504
+
+trk/TRKDispatch_r52_800C0504_prefix.c:
+	.text       start:0x800C0504 end:0x800C08C0
+
+trk/TRKDispatch_r52_800C08C0_inline_noauto.c:
+	.text       start:0x800C08C0 end:0x800C0AA0
+	.rodata     start:0x8026FA40 end:0x8026FAE8
+
+game/data/rodata_8026FAE8.c:
+	.rodata     start:0x8026FAE8 end:0x8026FB80
+
+trk/TRKDispatch_range_800C0504_r41_800C0AA0.c:
+	.text       start:0x800C0AA0 end:0x800C0CC0
+
+trk/TRKDispatchMutex.c:
+	.text       start:0x800C0CC0 end:0x800C0CD8
+
+trk/TRKDispatch_exact_800C0CD8.c:
+	.text       start:0x800C0CD8 end:0x800C0D70
+
+trk/TRKDispatch_range_800C0CD8.c:
+	.text       start:0x800C0D70 end:0x800C0DA8
+
+trk/TRKDispatch_exact_800C0DA8.c:
+	.text       start:0x800C0DA8 end:0x800C0E60
+
+trk/TRKDispatch_candidate_800C0E60.c:
+	.text       start:0x800C0E60 end:0x800C0EAC
+
+trk/TRKInterrupt.c:
+	.text       start:0x800C0EAC end:0x800C1300
+
+trk/TRKTargetState.c:
+	.text       start:0x800C1300 end:0x800C1310
+
+trk/TRKTarget_range_800C1310.c:
+	.text       start:0x800C1310 end:0x800C1328
+
+trk/TRKTargetStopped.c:
+	.text       start:0x800C1328 end:0x800C1348
+
+trk/TRKTarget_range_800C1348.c:
+	.text       start:0x800C1348 end:0x800C1548
+
+trk/TRKTarget_exact_800C1548.c:
+	.text       start:0x800C1548 end:0x800C17CC
+
+trk/TRKTarget_residual_800C17CC.c:
+	.text       start:0x800C17CC end:0x800C195C
+
+trk/TRKTarget_exact_800C195C.c:
+	.text       start:0x800C195C end:0x800C1A08
+
+trk/TRKTarget_residual_800C1A08.c:
+	.text       start:0x800C1A08 end:0x800C1FB0
+
+trk/TRKTarget_residual_800C1A08_r41_800C1FB0.c:
+	.text       start:0x800C1FB0 end:0x800C24BC
+
+trk/TRKTarget_exact_800C24BC.c:
+	.text       start:0x800C24BC end:0x800C25FC
+
+trk/TRKTarget_residual_800C25FC.c:
+	.text       start:0x800C25FC end:0x800C29F0
+
+trk/targsupp.c:
+	.text       start:0x800C29F0 end:0x800C2A10
+
+trk/TRKSaveState.c:
+	.text       start:0x800C2A10 end:0x800C2D80
+
+trk/TRKInit.c:
+	.text       start:0x800C2D80 end:0x800C33BC
+
+trk/TRKBoard_exact_800C33BC.c:
+	.text       start:0x800C33BC end:0x800C3414
+	.rodata     start:0x8026FB80 end:0x8026FB8B
+	.bss        start:0x803FED60 end:0x803FED64
+
+trk/TRKBoard_candidate_800C3414.c:
+	.text       start:0x800C3414 end:0x800C349C
+
+trk/TRKBoard_exact_800C349C.c:
+	.text       start:0x800C349C end:0x800C3588
+	.rodata     start:0x8026FB90 end:0x8026FB94
+
+game/data/rodata_8026FB94.c:
+	.rodata     start:0x8026FB94 end:0x8026FC98
+
+trk/TRKBoard.c:
+	.text       start:0x800C3588 end:0x800C3630
+
+trk/TRKBoard_range_800C3630.c:
+	.text       start:0x800C3630 end:0x800C3678
+
+trk/TRKComm_range_800C3678.c:
+	.text       start:0x800C3678 end:0x800C39A0
+
+trk/TRKCommState.c:
+	.text       start:0x800C39A0 end:0x800C39BC
+
+trk/TRKComm_exact_800C39BC.c:
+	.text       start:0x800C39BC end:0x800C3BB8
+
+trk/udp_cc.c:
+	.text       start:0x800C3BB8 end:0x800C3C00
+
+trk/ddh_cc_range_800C3C00.c:
+	.text       start:0x800C3C00 end:0x800C3E88
+	.rodata     start:0x8026FC98 end:0x8026FD49
+
+game/data/rodata_8026FD4C.c:
+	.rodata     start:0x8026FD4C end:0x8026FD78
+
+trk/ddh_cc_close.c:
+	.text       start:0x800C3E88 end:0x800C3E90
+
+trk/ddh_cc_range_800C3E90.c:
+	.text       start:0x800C3E90 end:0x800C3EB4
+
+trk/ddh_cc_shutdown.c:
+	.text       start:0x800C3EB4 end:0x800C3EBC
+
+trk/trk_exact_800C3EBC.c:
+	.text       start:0x800C3EBC end:0x800C3F44
+
+trk/trk_range_800C3EBC.c:
+	.text       start:0x800C3F44 end:0x800C4154
+
+trk/trk_exact_800C4154.c:
+	.text       start:0x800C4154 end:0x800C41A4
+
+trk/circle_buffer_count.c:
+	.text       start:0x800C41A4 end:0x800C41AC
+
+trk/gdev_cc_range_800C41AC.c:
+	.text       start:0x800C41AC end:0x800C443C
+	.rodata     start:0x8026FD78 end:0x8026FE29
+
+game/data/rodata_8026FE58.c:
+	.rodata     start:0x8026FE2C end:0x8026FE58
+
+trk/gdev_cc_close.c:
+	.text       start:0x800C443C end:0x800C4444
+
+trk/gdev_cc_range_800C4444.c:
+	.text       start:0x800C4444 end:0x800C4468
+
+trk/gdev_cc_shutdown.c:
+	.text       start:0x800C4468 end:0x800C4470
+
+trk/trk_range_800C4470.c:
+	.text       start:0x800C4470 end:0x800C459C
+
+crt/mwtrace_helpers.c:
+	.text       start:0x800C459C end:0x800C45A0
+
+game/gs_range_800C45A0.c:
+	.text       start:0x800C45A0 end:0x800C4668
+
+crt/global_destructor_chain_exact_800C4668.c:
+	.text       start:0x800C4668 end:0x800C46B0
+	.sbss       start:0x8047A9F0 end:0x8047A9F4
+
+crt/runtime.c:
+	.text       start:0x800C46B0 end:0x800C4D8C
+	.rodata     start:0x8026FE58 end:0x8026FE70
+
+game/data/rodata_8026FE70.c:
+	.rodata     start:0x8026FE70 end:0x8026FF00
+
+dolphin/sdk_r52_800C4D8C_suffix.c:
+	.text       start:0x800C4D8C end:0x800C4E44
+
+crt/exit.c:
+	.text       start:0x800C4E44 end:0x800C5458
+
+dolphin/sdk_range_800C5458.c:
+	.text       start:0x800C5458 end:0x800C754C
+	.rodata     start:0x8026FF00 end:0x8026FFE0
+	.data       start:0x803139F0 end:0x80313B14
+	.sdata2     start:0x8047C400 end:0x8047C408
+
+game/data/sdata2_8047C408.c:
+	.sdata2     start:0x8047C408 end:0x8047C410
+
+game/data/data_80313B18.c:
+	.data       start:0x80313B18 end:0x80313D18
+
+crt/critical_regions.c:
+	.text       start:0x800C754C end:0x800C7558
+
+crt/stdio_range_800C7558.c:
+	.text       start:0x800C7558 end:0x800C7FB8
+
+crt/wchar_range_800C7FB8.c:
+	.text       start:0x800C7FB8 end:0x800C80D0
+
+crt/wchar.c:
+	.text       start:0x800C80D0 end:0x800C811C
+
+crt/mem_range_800C811C.c:
+	.text       start:0x800C811C end:0x800C8174
+
+crt/mem.c:
+	.text       start:0x800C8174 end:0x800C8510
+
+crt/stdio_atexit.c:
+	.text       start:0x800C8510 end:0x800C8520
+
+crt/printf.c:
+	.text       start:0x800C8520 end:0x800C87F8
+
+crt/printf_exact_800C87F8.c:
+	.text       start:0x800C87F8 end:0x800C8864
+
+crt/printf_residual_800C8864.c:
+	.text       start:0x800C8864 end:0x800CA78C
+	.rodata     start:0x8026FFE0 end:0x80270008
+	.data       start:0x80313D18 end:0x80313F44
+	.sdata      start:0x80478AB8 end:0x80478ABC
+	.sdata2     start:0x8047C410 end:0x8047C418
+
+game/data/sdata2_8047C418.c:
+	.sdata2     start:0x8047C418 end:0x8047C4A0
+
+crt/string_range_800CA78C.c:
+	.text       start:0x800CA78C end:0x800CA7FC
+
+crt/string.c:
+	.text       start:0x800CA7FC end:0x800CAA58
+
+crt/math_range_800CAA58.c:
+	.text       start:0x800CAA58 end:0x800CB024
+	.sdata2     start:0x8047C4A0 end:0x8047C528
+
+crt/math_ieee754_atan2.c:
+	.text       start:0x800CB024 end:0x800CB2B4
+	.sdata2     start:0x8047C528 end:0x8047C580
+
+crt/math_range_800CB2B4.c:
+	.text       start:0x800CB2B4 end:0x800CB4D8
+	.rodata     start:0x80270008 end:0x80270038
+	.sdata2     start:0x8047C580 end:0x8047C5F8
+
+crt/math_range_800CB4D8.c:
+	.text       start:0x800CB4D8 end:0x800CB814
+	.rodata     start:0x80270038 end:0x80270048
+
+crt/math_e_log_800CB814.c:
+	.text       start:0x800CB814 end:0x800CBA90
+	.sbss       start:0x8047AA20 end:0x8047AA28
+	.sdata2     start:0x8047C5F8 end:0x8047C678
+
+crt/math_e_pow_800CBA90.c:
+	.text       start:0x800CBA90 end:0x800CC2C0
+	.rodata     start:0x80270048 end:0x80270078
+	.sdata2     start:0x8047C678 end:0x8047C788
+
+crt/math_e_rem_pio2_800CC2C0.c:
+	.text       start:0x800CC2C0 end:0x800CC660
+	.rodata     start:0x80270078 end:0x80270200
+	.sdata2     start:0x8047C788 end:0x8047C7E0
+
+game/data/rodata_80270200.c:
+	.rodata     start:0x80270200 end:0x80270250
+
+crt/math_kernel_cos.c:
+	.text       start:0x800CC660 end:0x800CC754
+	.sdata2     start:0x8047C7E0 end:0x8047C828
+
+crt/math_kernel_rem_pio2.c:
+	.text       start:0x800CC754 end:0x800CD5A8
+	.sdata2     start:0x8047C828 end:0x8047C868
+
+crt/math_kernel_sin.c:
+	.text       start:0x800CD5A8 end:0x800CD648
+	.sdata2     start:0x8047C868 end:0x8047C8A0
+
+crt/math_kernel_tan.c:
+	.text       start:0x800CD648 end:0x800CD85C
+	.rodata     start:0x80270250 end:0x802702B8
+	.sdata2     start:0x8047C8A0 end:0x8047C8D8
+
+crt/math_atan.c:
+	.text       start:0x800CD85C end:0x800CDA74
+	.rodata     start:0x802702B8 end:0x80270350
+	.sdata2     start:0x8047C8D8 end:0x8047C900
+
+game/data/rodata_80270350.c:
+	.rodata     start:0x80270350 end:0x802703C0
+
+crt/math_ceil.c:
+	.text       start:0x800CDA74 end:0x800CDBB8
+	.sdata2     start:0x8047C900 end:0x8047C910
+
+crt/sdata2_math_8047C910.c:
+	.sdata2     start:0x8047C910 end:0x8047C968
+
+crt/math_copysign.c:
+	.text       start:0x800CDBB8 end:0x800CDBE0
+
+crt/math_range_800CDBE0.c:
+	.text       start:0x800CDBE0 end:0x800CE04C
+
+crt/math_exact_800CE04C.c:
+	.text       start:0x800CE04C end:0x800CE378
+
+crt/math_range_800CE378.c:
+	.text       start:0x800CE378 end:0x800CE59C
+	.sdata2     start:0x8047C968 end:0x8047C970
+
+crt/sdata2_math_8047C970.c:
+	.sdata2     start:0x8047C970 end:0x8047C990
+
+game/gs_render_util_sdata2.c:
+	.sdata2     start:0x8047C990 end:0x8047C99C
+
+game/data/sdata2_8047C9A0.c:
+	.sdata2     start:0x8047C9A0 end:0x8047C9A8
+
+crt/math_exact_800CE59C.c:
+	.text       start:0x800CE59C end:0x800CE79C
+
+dolphin/exi/EXI2Stubs.c:
+	.text       start:0x800CE79C end:0x800CE7DC
+
+dolphin/sdk_range_800CE7DC.c:
+	.text       start:0x800CE7DC end:0x800CEA3C
+
+dolphin/exi/EXI2_range_800CEA3C.c:
+	.text       start:0x800CEA3C end:0x800CEB64
+
+dolphin/sdk_exact_800CEB64.c:
+	.text       start:0x800CEB64 end:0x800CED58
+
+dolphin/sdk_residual_800CED58.c:
+	.text       start:0x800CED58 end:0x800CEF10
+
+dolphin/sdk_exact_800CEF10.c:
+	.text       start:0x800CEF10 end:0x800CF254
+
+dolphin/sdk_exact_800CF254.c:
+	.text       start:0x800CF254 end:0x800CF47C
+
+dolphin/sdk_exact_800CF47C.c:
+	.text       start:0x800CF47C end:0x800CF708
+
+dolphin/si/SI_range_800CF764.c:
+	.text       start:0x800CF708 end:0x800D0DF8
+	.data       start:0x80313F48 end:0x80313FB0
+	.bss        start:0x803FFFB0 end:0x804001B0
+	.sdata      start:0x80478AD8 end:0x80478ADC
+	.sbss       start:0x8047AA50 end:0x8047AA60
+
+game/data/data_80313F48.c:
+	.data       start:0x80313FB0 end:0x80314060
+
+dolphin/si/SITypeDecode.c:
+	.text       start:0x800D0DF8 end:0x800D0F44
+
+dolphin/si/SI_fn_800D0F44.c:
+	.text       start:0x800D0F44 end:0x800D0F68
+
+dolphin/si/SI_range_800D0F68.c:
+	.text       start:0x800D0F68 end:0x800D104C
+	.data       start:0x80314060 end:0x803140F3
+
+dolphin/si/SI_fn_800D104C.c:
+	.text       start:0x800D104C end:0x800D1070
+
+game/gs_range_800D1070.c:
+	.text       start:0x800D1070 end:0x800D13C4
+	.sdata2     start:0x8047C9A8 end:0x8047C9B0
+
+game/data/sdata2_8047C9B0.c:
+	.sdata2     start:0x8047C9B0 end:0x8047C9F0
+
+game/gs_render_util_exact_800D13C4.c:
+	.text       start:0x800D13C4 end:0x800D1B3C
+
+game/gs_render_util_exact_800D1B3C.c:
+	.text       start:0x800D1B3C end:0x800D1EB8
+
+game/gs_render_util_exact_800D1EB8.c:
+	.text       start:0x800D1EB8 end:0x800D1F58
+
+game/gs_render_util_exact_800D1F58.c:
+	.text       start:0x800D1F58 end:0x800D207C
+
+game/gs_render_util_exact_800D207C.c:
+	.text       start:0x800D207C end:0x800D20CC
+
+game/gs_render_util_exact_800D20CC.c:
+	.text       start:0x800D20CC end:0x800D2150
+
+game/gs_render_util_candidate_800D2150.c:
+	.text       start:0x800D2150 end:0x800D21C8
+
+game/gs_render_util_exact_800D21C8.c:
+	.text       start:0x800D21C8 end:0x800D2248
+
+game/gs_render_util_exact_800D2248.c:
+	.text       start:0x800D2248 end:0x800D2584
+
+game/gs_render_util_exact_800D2584.c:
+	.text       start:0x800D2584 end:0x800D258C
+
+game/gs_render_util_candidate_800D258C.c:
+	.text       start:0x800D258C end:0x800D2738
+
+game/gs_render_util_exact_800D2738.c:
+	.text       start:0x800D2738 end:0x800D27FC
+
+game/gs_render_util_candidate_800D27FC.c:
+	.text       start:0x800D27FC end:0x800D2B44
+
+game/gs_render_util_exact_800D2B44.c:
+	.text       start:0x800D2B44 end:0x800D2B90
+
+game/gs_gfx_range_800D2B90.c:
+	.text       start:0x800D2B90 end:0x800D377C
+	.sdata2     start:0x8047C9F0 end:0x8047CA10
+
+game/data/sdata2_8047CA10.c:
+	.sdata2     start:0x8047CA10 end:0x8047CA20
+
+game/gs_gfx_exact_800D377C.c:
+	.text       start:0x800D377C end:0x800D37D4
+
+game/gs_gfx_candidate_800D37D4.c:
+	.text       start:0x800D37D4 end:0x800D3E4C
+	.data       start:0x803140F8 end:0x80314188
+
+game/gs_gfx_core.c:
+	.text       start:0x800D3E4C end:0x800D3FA4
+
+game/gs_gfx_candidate_800D3FA4.c:
+	.text       start:0x800D3FA4 end:0x800D45F8
+	.sdata2     start:0x8047CA20 end:0x8047CA30
+
+game/gs_gfx_exact_800D45F8.c:
+	.text       start:0x800D45F8 end:0x800D461C
+
+game/gs_gfx_candidate_800D461C.c:
+	.text       start:0x800D461C end:0x800D4F98
+	.data       start:0x80314188 end:0x803142F8
+
+game/gs_gfx_exact_800D4F98.c:
+	.text       start:0x800D4F98 end:0x800D55D0
+	.rodata     start:0x802703C0 end:0x80270440
+	.data       start:0x803142F8 end:0x8031434C
+
+game/data/data_80314350.c:
+	.data       start:0x80314350 end:0x803152B8
+
+game/data/rodata_80270440.c:
+	.rodata     start:0x80270440 end:0x802704A0
+
+game/gs_gfx_candidate_800D55D0.c:
+	.text       start:0x800D55D0 end:0x800D56C0
+	.sdata2     start:0x8047CA30 end:0x8047CA40
+
+game/gs_gfx_exact_800D56C0.c:
+	.text       start:0x800D56C0 end:0x800D67BC
+
+game/gs_gfx_candidate_800D67BC.c:
+	.text       start:0x800D67BC end:0x800D6A00
+
+game/gs_gfx_exact_800D6A00.c:
+	.text       start:0x800D6A00 end:0x800D6B00
+
+game/gs_gfx_layer_candidate_800D6B00.c:
+	.text       start:0x800D6B00 end:0x800D7230
+	.bss        start:0x804007E8 end:0x80400948
+
+game/gs_gfx_layer_exact_800D7230.c:
+	.text       start:0x800D7230 end:0x800D76A8
+
+game/gs_gfx_layer_exact_800D76A8.c:
+	.text       start:0x800D76A8 end:0x800D7820
+
+game/gs_gfx_layer_exact_800D7820.c:
+	.text       start:0x800D7820 end:0x800D7894
+
+game/gs_gfx_layer_candidate_800D7894.c:
+	.text       start:0x800D7894 end:0x800D7940
+
+game/gs_gfx_layer_exact_800D7940.c:
+	.text       start:0x800D7940 end:0x800D7A70
+
+game/gs_gfx_layer_exact_800D7A70.c:
+	.text       start:0x800D7A70 end:0x800D7D90
+
+game/gs_gfx_layer_candidate_800D7D90.c:
+	.text       start:0x800D7D90 end:0x800D7E5C
+
+game/gs_gfx_layer_exact_800D7E5C.c:
+	.text       start:0x800D7E5C end:0x800D85D4
+
+game/gs_gfx_layer_candidate_800D85D4.c:
+	.text       start:0x800D85D4 end:0x800D87AC
+	.sdata2     start:0x8047CA40 end:0x8047CA50
+
+game/data/sdata2_8047CA50.c:
+	.sdata2     start:0x8047CA50 end:0x8047CA58
+
+game/gs_gfx_layer_exact_800D87AC.c:
+	.text       start:0x800D87AC end:0x800D892C
+
+game/gs_gfx_layer_candidate_800D892C.c:
+	.text       start:0x800D892C end:0x800D923C
+
+game/gs_gfx_layer_candidate_800D923C.c:
+	.text       start:0x800D923C end:0x800D963C
+
+game/gs_gfx_layer_candidate_800D963C.c:
+	.text       start:0x800D963C end:0x800D9AF0
+
+game/gs_gfx_range_800D9AF0.c:
+	.text       start:0x800D9AF0 end:0x800D9D68
+	.sdata2     start:0x8047CA58 end:0x8047CA70
+
+game/data/sdata2_8047CA70.c:
+	.sdata2     start:0x8047CA70 end:0x8047CA80
+
+game/gs_gfx_exact_800D9D68.c:
+	.text       start:0x800D9D68 end:0x800DA578
+
+game/gs_gfx_dl.c:
+	.text       start:0x800DA578 end:0x800DB890
+	.data       start:0x803152B8 end:0x80315384
+
+game/gs_gfx_range_800DB890.c:
+	.text       start:0x800DB890 end:0x800DC298
+
+game/gs_gfx_backfb.c:
+	.text       start:0x800DC298 end:0x800DC560
+
+game/gs_light_exact_800DC560.c:
+	.text       start:0x800DC560 end:0x800DC6D8
+
+game/gs_light_candidate_800DC6D8.c:
+	.text       start:0x800DC6D8 end:0x800DC874
+	.sdata2     start:0x8047CA80 end:0x8047CA88
+
+game/data/sdata2_8047CA88.c:
+	.sdata2     start:0x8047CA88 end:0x8047CA9D
+
+game/gs_light_exact_800DC874.c:
+	.text       start:0x800DC874 end:0x800DC878
+
+game/gs_light_candidate_800DC878.c:
+	.text       start:0x800DC878 end:0x800DCA10
+
+game/gs_light_exact_800DCA10.c:
+	.text       start:0x800DCA10 end:0x800DCC3C
+
+game/gs_light_exact_800DCC3C.c:
+	.text       start:0x800DCC3C end:0x800DCC84
+
+game/gs_light_candidate_800DCC84.c:
+	.text       start:0x800DCC84 end:0x800DD270
+
+game/gs_log.cpp:
+	.text       start:0x800DD270 end:0x800DEFC8
+	.rodata     start:0x802704A0 end:0x80270528
+	.data       start:0x80315388 end:0x80315490
+	.bss        start:0x80400F30 end:0x804011B8
+	.sdata      start:0x80478AE8 end:0x80478AF0
+	.sbss       start:0x8047AAF8 end:0x8047AB18
+	.sdata2     start:0x8047CAA0 end:0x8047CAC8
+
+game/data/sdata2_8047CAC8.c:
+	.sdata2     start:0x8047CAC8 end:0x8047CAF8
+
+game/data/data_80315490.c:
+	.data       start:0x80315490 end:0x803155B0
+
+game/data/rodata_80270528.c:
+	.rodata     start:0x80270528 end:0x80270EB8
+
+game/gs_material_800DEFC8.c:
+	.text       start:0x800DEFC8 end:0x800DF028
+
+game/gs_material.c:
+	.text       start:0x800DF028 end:0x800DF11C
+
+game/gs_material_exact_800DF11C.c:
+	.text       start:0x800DF11C end:0x800DF140
+
+game/gs_material_candidate_800DF140.c:
+	.text       start:0x800DF140 end:0x800DF188
+
+game/gs_material_exact_800DF188.c:
+	.text       start:0x800DF188 end:0x800DF1B8
+
+game/gs_material_exact_800DF1B8.c:
+	.text       start:0x800DF1B8 end:0x800DF21C
+
+game/gs_material_exact_800DF21C.c:
+	.text       start:0x800DF21C end:0x800DF240
+
+game/gs_material_exact_800DF240.c:
+	.text       start:0x800DF240 end:0x800DF248
+
+game/gs_material_candidate_800DF248.c:
+	.text       start:0x800DF248 end:0x800DF470
+
+game/gs_material_exact_800DF470.c:
+	.text       start:0x800DF470 end:0x800DF498
+
+game/gs_material_exact_800DF498.c:
+	.text       start:0x800DF498 end:0x800DFABC
+
+game/gs_material_candidate_800DFABC.c:
+	.text       start:0x800DFABC end:0x800DFE98
+
+game/gs_material_exact_800DFE98.c:
+	.text       start:0x800DFE98 end:0x800DFEEC
+
+game/gs_math_vec.c:
+	.text       start:0x800DFEEC end:0x800E0218
+
+game/gs_math_mtx.c:
+	.text       start:0x800E0218 end:0x800E0678
+
+game/gs_math_mtx44.c:
+	.text       start:0x800E0678 end:0x800E06B8
+
+game/gs_math_quat.c:
+	.text       start:0x800E06B8 end:0x800E0790
+
+game/gs_math_init.c:
+	.text       start:0x800E0790 end:0x800E07E4
+
+game/gs_math_bezier.c:
+	.text       start:0x800E07E4 end:0x800E090C
+
+game/gs_math_lerp.c:
+	.text       start:0x800E090C end:0x800E09E8
+
+game/gs_math_range_800E09E8.c:
+	.text       start:0x800E09E8 end:0x800E0BA0
+	.sdata2     start:0x8047CAF8 end:0x8047CB10
+
+game/data/sdata2_8047CB10.c:
+	.sdata2     start:0x8047CB10 end:0x8047CB40
+
+game/gs_math_random_exact_800E0BA0.c:
+	.text       start:0x800E0BA0 end:0x800E0C04
+
+game/gs_math_random_candidate_800E0C04.c:
+	.text       start:0x800E0C04 end:0x800E0C54
+
+game/gs_math_random_exact_800E0C54.c:
+	.text       start:0x800E0C54 end:0x800E0CA0
+
+game/gs_math_random_exact_800E0CA0.c:
+	.text       start:0x800E0CA0 end:0x800E0D24
+
+game/gs_math_util_exact_800E0D24.c:
+	.text       start:0x800E0D24 end:0x800E0DDC
+	.sdata2     start:0x8047CB40 end:0x8047CB48
+
+game/data/sdata2_8047CB48.c:
+	.sdata2     start:0x8047CB48 end:0x8047CB58
+
+game/gs_range_800E0DDC_r58_prefix.c:
+	.text       start:0x800E0DDC end:0x800E0E14
+
+game/gs_range_800E0E14_r58_o1.c:
+	.text       start:0x800E0E14 end:0x800E1544
+
+game/gs_range_800E0DDC_r40_800E1544_gc125n.c:
+	.text       start:0x800E1544 end:0x800E202C
+
+game/gs_mem.c:
+	.text       start:0x800E202C end:0x800E3604
+	.sdata      start:0x80478AF0 end:0x80478AF8
+
+game/gs_model_main.c:
+	.text       start:0x800E3604 end:0x800E3928
+	.sdata2     start:0x8047CB58 end:0x8047CB60
+
+game/data/sdata2_8047CB60.c:
+	.sdata2     start:0x8047CB60 end:0x8047CB88
+
+game/gs_model_main_exact_800E3928.c:
+	.text       start:0x800E3928 end:0x800E4AC0
+
+game/gs_model_main_suffix_candidate_800E4AC0.c:
+	.text       start:0x800E4AC0 end:0x800E4BF4
+
+game/gs_model_main_suffix_exact_800E4BF4.c:
+	.text       start:0x800E4BF4 end:0x800E4C98
+
+game/gs_model_main_suffix_exact_800E4C98.c:
+	.text       start:0x800E4C98 end:0x800E4D18
+
+game/gs_model_main_suffix_exact_800E4D18.c:
+	.text       start:0x800E4D18 end:0x800E4D3C
+
+game/gs_model_main_suffix_exact_800E4D3C.c:
+	.text       start:0x800E4D3C end:0x800E4DB0
+
+game/gs_model_main_suffix_exact_800E4DB0.c:
+	.text       start:0x800E4DB0 end:0x800E4E8C
+
+game/gs_model_main_suffix_exact_800E4E8C.c:
+	.text       start:0x800E4E8C end:0x800E50A8
+
+game/gs_model_main_suffix_exact_800E50A8.c:
+	.text       start:0x800E50A8 end:0x800E5188
+
+game/gs_model_main_suffix_exact_800E5188.c:
+	.text       start:0x800E5188 end:0x800E51A4
+
+game/gs_model_main_suffix_exact_800E51A4.c:
+	.text       start:0x800E51A4 end:0x800E5550
+
+game/gs_model_main_suffix_exact_800E5550.c:
+	.text       start:0x800E5550 end:0x800E563C
+
+game/gs_model_main_suffix_candidate_800E563C.c:
+	.text       start:0x800E563C end:0x800E5790
+
+game/gs_model_main_suffix_exact_800E5790.c:
+	.text       start:0x800E5790 end:0x800E584C
+
+game/gs_model_main_suffix_candidate_800E584C.c:
+	.text       start:0x800E584C end:0x800E5978
+
+game/gs_model_main_suffix_exact_800E5978.c:
+	.text       start:0x800E5978 end:0x800E59C8
+
+game/gs_model_main_suffix_exact_800E59C8.c:
+	.text       start:0x800E59C8 end:0x800E5A74
+
+game/gs_model_main_suffix_exact_800E5A74.c:
+	.text       start:0x800E5A74 end:0x800E5B68
+
+game/gs_model_main_suffix_exact_800E5B68.c:
+	.text       start:0x800E5B68 end:0x800E5BE0
+
+game/gs_model_main_suffix_candidate_800E5BE0.c:
+	.text       start:0x800E5BE0 end:0x800E5D40
+
+game/gs_model_main_suffix_exact_800E5D40.c:
+	.text       start:0x800E5D40 end:0x800E5E34
+
+game/gs_model_main_suffix_candidate_800E5E34.c:
+	.text       start:0x800E5E34 end:0x800E5FAC
+
+game/gs_model_main_suffix_exact_800E5FAC.c:
+	.text       start:0x800E5FAC end:0x800E5FFC
+
+game/gs_model_main_suffix_exact_800E5FFC.c:
+	.text       start:0x800E5FFC end:0x800E60F0
+
+game/gs_model_main_suffix_exact_800E60F0.c:
+	.text       start:0x800E60F0 end:0x800E61BC
+
+game/gs_model_main_suffix_candidate_800E61BC.c:
+	.text       start:0x800E61BC end:0x800E638C
+
+game/gs_model_main_suffix_exact_800E638C.c:
+	.text       start:0x800E638C end:0x800E6478
+
+game/gs_model_main_suffix_candidate_800E6478.c:
+	.text       start:0x800E6478 end:0x800E65CC
+
+game/gs_model_main_suffix_exact_800E65CC.c:
+	.text       start:0x800E65CC end:0x800E66B8
+
+game/gs_model_main_suffix_candidate_800E66B8.c:
+	.text       start:0x800E66B8 end:0x800E6804
+
+game/gs_model_main_suffix_exact_800E6804.c:
+	.text       start:0x800E6804 end:0x800E68D8
+	.sdata2     start:0x8047CB88 end:0x8047CB98
+
+game/data/sdata2_8047CB98.c:
+	.sdata2     start:0x8047CB98 end:0x8047CBC0
+
+game/gs_model_main_suffix_exact_800E68D8.c:
+	.text       start:0x800E68D8 end:0x800E69C4
+
+game/gs_model_main_suffix_candidate_800E69C4.c:
+	.text       start:0x800E69C4 end:0x800E6B20
+
+game/gs_model_main_suffix_exact_800E6B20.c:
+	.text       start:0x800E6B20 end:0x800E6BC8
+
+game/gs_model_main_suffix_exact_800E6BC8.c:
+	.text       start:0x800E6BC8 end:0x800E6DC0
+
+game/gs_model_main_suffix_exact_800E6DC0.c:
+	.text       start:0x800E6DC0 end:0x800E6DCC
+
+game/gs_model_main_suffix_exact_800E6DCC.c:
+	.text       start:0x800E6DCC end:0x800E7290
+
+game/gs_model_main_suffix_exact_800E7290.c:
+	.text       start:0x800E7290 end:0x800E732C
+
+game/gs_model_main_suffix_candidate_800E732C.c:
+	.text       start:0x800E732C end:0x800E85E8
+
+game/gs_model_main_suffix_exact_800E85E8.c:
+	.text       start:0x800E85E8 end:0x800E8684
+
+game/gs_model_shadow_candidate_800E8684.c:
+	.text       start:0x800E8684 end:0x800E8EFC
+	.sdata2     start:0x8047CBC0 end:0x8047CBE8
+
+game/data/sdata2_8047CBE0.c:
+	.sdata2     start:0x8047CBE8 end:0x8047CC80
+
+game/gs_model_shadow_exact_800E8EFC.c:
+	.text       start:0x800E8EFC end:0x800E8F80
+
+game/gs_model_shadow_candidate_800E8F80.c:
+	.text       start:0x800E8F80 end:0x800E8FE8
+
+game/gs_model_shadow_exact_800E8FE8.c:
+	.text       start:0x800E8FE8 end:0x800E90C8
+
+game/gs_model_shadow_flags_exact_800E90C8.c:
+	.text       start:0x800E90C8 end:0x800E9148
+
+game/gs_model_shadow_candidate_800E9148.c:
+	.text       start:0x800E9148 end:0x800E9288
+
+game/gs_model_shadow_exact_800E9288.c:
+	.text       start:0x800E9288 end:0x800E92D8
+
+game/gs_model_shadow_exact_800E92D8.c:
+	.text       start:0x800E92D8 end:0x800E9358
+
+game/gs_model_shadow_candidate_800E9358.c:
+	.text       start:0x800E9358 end:0x800E9B2C
+
+game/gs_model_state.c:
+	.text       start:0x800E9B2C end:0x800E9E34
+
+game/gs_model_parse.c:
+	.text       start:0x800E9E34 end:0x800EAFE4
+
+game/gs_model_parse_exact_800EAFE4.c:
+	.text       start:0x800EAFE4 end:0x800EB268
+	.rodata     start:0x80270EB8 end:0x80270EE8
+
+game/data/rodata_80270EE8.c:
+	.rodata     start:0x80270EE8 end:0x80271068
+
+game/gs_model_bound.c:
+	.text       start:0x800EB268 end:0x800EB414
+
+game/gs_model_bound_exact_800EB414.c:
+	.text       start:0x800EB414 end:0x800EB464
+
+game/gs_model_bound_exact_800EB464.c:
+	.text       start:0x800EB464 end:0x800EB5A0
+
+game/gs_model_bound_r55_800EB5A0_gc13_o2.c:
+	.text       start:0x800EB5A0 end:0x800EB6E0
+
+game/gs_model_bound_r55_800EB6E0_suffix.c:
+	.text       start:0x800EB6E0 end:0x800EBEEC
+
+game/gs_model_anim_candidate_800EBEEC.c:
+	.text       start:0x800EBEEC end:0x800EC0E8
+
+game/gs_model_anim_exact_800EC0E8.c:
+	.text       start:0x800EC0E8 end:0x800EC35C
+
+game/gs_model_anim_candidate_800EC35C.c:
+	.text       start:0x800EC35C end:0x800EC4D0
+
+game/gs_model_anim_exact_800EC4D0.c:
+	.text       start:0x800EC4D0 end:0x800ED4D4
+
+game/gs_model_anim_suffix_exact_800ED4D4.c:
+	.text       start:0x800ED4D4 end:0x800ED8C4
+	.data       start:0x803155B0 end:0x803155D0
+
+game/data/data_803155D0.c:
+	.data       start:0x803155D0 end:0x80315678
+
+game/data/data_80315690.c:
+	.data       start:0x80315690 end:0x8035B060
+
+game/gs_model_anim_suffix_candidate_800ED8C4.c:
+	.text       start:0x800ED8C4 end:0x800EE044
+	.sdata2     start:0x8047CC80 end:0x8047CC90
+
+game/data/sdata2_8047CC90.c:
+	.sdata2     start:0x8047CC90 end:0x8047CC98
+
+game/data/sdata2_8047CC98.c:
+	.sdata2     start:0x8047CC98 end:0x8047CCB8
+
+game/gs_model_anim_suffix_exact_800EE044.c:
+	.text       start:0x800EE044 end:0x800EE150
+
+game/gs_part_exact_800EE150.c:
+	.text       start:0x800EE150 end:0x800EE3BC
+
+game/gs_part.c:
+	.text       start:0x800EE3BC end:0x800EE6B4
+
+game/gs_part_exact_800EE6B4.c:
+	.text       start:0x800EE6B4 end:0x800EE928
+
+game/gs_scratch_800EE928.c:
+	.text       start:0x800EE928 end:0x800EEC38
+
+game/gs_scratch_alloc_800EEC38.c:
+	.text       start:0x800EEC38 end:0x800EEDF8
+
+game/gs_scratch_exact_800EEDF8.c:
+	.text       start:0x800EEDF8 end:0x800EEF48
+
+game/gs_texture_range_800EEF48.c:
+	.text       start:0x800EEF48 end:0x800EF098
+
+game/gs_texture.c:
+	.text       start:0x800EF098 end:0x800EF1E8
+
+game/gs_texture_exact_800EF1E8.c:
+	.text       start:0x800EF1E8 end:0x800EF3E0
+
+game/gs_texture_getters_exact_800EF3E0.c:
+	.text       start:0x800EF3E0 end:0x800EF504
+
+game/gs_texture_exact_800EF504.c:
+	.text       start:0x800EF504 end:0x800EF548
+
+game/gs_texture_exact_800EF548.c:
+	.text       start:0x800EF548 end:0x800EF578
+
+game/gs_texture_exact_800EF578.c:
+	.text       start:0x800EF578 end:0x800EF5A4
+
+game/gs_texture_exact_800EF5A4.c:
+	.text       start:0x800EF5A4 end:0x800EF5FC
+
+game/gs_texture_candidate_800EF5FC.c:
+	.text       start:0x800EF5FC end:0x800EFD14
+
+game/gs_texture_exact_800EFD14.c:
+	.text       start:0x800EFD14 end:0x800EFFC0
+
+game/gs_texture_exact_800EFFC0.c:
+	.text       start:0x800EFFC0 end:0x800F0030
+
+game/gs_thread_exact_800F0030.c:
+	.text       start:0x800F0030 end:0x800F036C
+
+game/gs_thread_exact_800F036C.c:
+	.text       start:0x800F036C end:0x800F0424
+
+game/gs_thread_exact_800F0424.c:
+	.text       start:0x800F0424 end:0x800F106C
+
+game/gs_thread_exact_800F106C.c:
+	.text       start:0x800F106C end:0x800F10E8
+
+game/gs_vm_exact_800F10E8.c:
+	.text       start:0x800F10E8 end:0x800F13D0
+
+game/gs_vm_exact_800F13D0.c:
+	.text       start:0x800F13D0 end:0x800F16C0
+
+game/gs_vm_exact_800F16C0.c:
+	.text       start:0x800F16C0 end:0x800F1A0C
+
+game/gs_vm.c:
+	.text       start:0x800F1A0C end:0x800F75FC
+	.rodata     start:0x80271068 end:0x80271300
+	.sdata      start:0x80478B00 end:0x80478B08
+	.sdata2     start:0x8047CCB8 end:0x8047CCC8
+	.sbss2      start:0x8047E710 end:0x8047E718
+
+game/data/rodata_80271300.c:
+	.rodata     start:0x80271300 end:0x80271E00
+
+game/input/input_exact_800F75FC.c:
+	.text       start:0x800F75FC end:0x800F760C
+
+game/input/input_candidate_800F760C.c:
+	.text       start:0x800F760C end:0x800F76E4
+
+game/input/input_exact_800F76E4.c:
+	.text       start:0x800F76E4 end:0x800F7758
+
+game/input/input.c:
+	.text       start:0x800F7758 end:0x800F915C
+	.bss        start:0x80401C10 end:0x80401DE0
+	.sdata2     start:0x8047CCC8 end:0x8047CD00
+
+game/gs_res.c:
+	.text       start:0x800F915C end:0x800F96E4
+
+game/gs_msg_exact_800F96E4.c:
+	.text       start:0x800F96E4 end:0x800F9AEC
+
+game/gs_msg_r56b_800F9AEC.c:
+	.text       start:0x800F9AEC end:0x800F9D04
+
+game/GSmsg_800F9D04.c:
+	.text       start:0x800F9D04 end:0x800FE35C
+	.bss        start:0x80401DE0 end:0x80402518
+	.sdata2     start:0x8047CD00 end:0x8047CD50
+
+game/data/bss_80402518.c:
+	.bss        start:0x80402518 end:0x80404B68
+
+game/gs_thread_hi_range_800FE35C.c:
+	.text       start:0x800FE35C end:0x800FE6DC
+	.sdata2     start:0x8047CD50 end:0x8047CD80
+
+game/gs_gapp.c:
+	.text       start:0x800FE6DC end:0x800FEC34
+
+game/gs_thread_hi_range_800FEC34.c:
+	.text       start:0x800FEC34 end:0x800FF0A0
+
+game/gs_floor_data_exact_800FF0A0.c:
+	.text       start:0x800FF0A0 end:0x800FF178
+
+game/gs_floor_data_residual_800FF178.c:
+	.text       start:0x800FF178 end:0x800FF4D4
+
+game/gs_floor_data_exact_800FF4D4.c:
+	.text       start:0x800FF4D4 end:0x800FF58C
+
+game/gs_floor_data_residual_800FF58C.c:
+	.text       start:0x800FF58C end:0x800FF660
+
+game/gs_floor_data_exact_800FF660.c:
+	.text       start:0x800FF660 end:0x800FF730
+
+game/gs_floor_data_residual_800FF730.c:
+	.text       start:0x800FF730 end:0x800FF788
+
+game/gs_floor.c:
+	.text       start:0x800FF788 end:0x80101910
+
+game/gs_range_80101910.c:
+	.text       start:0x80101910 end:0x80101A70
+
+game/kaisuu.c:
+	.text       start:0x80101A70 end:0x80101B34
+
+game/gapp_exact_80101B34.c:
+	.text       start:0x80101B34 end:0x80101B90
+
+game/gapp_exact_80101B90.c:
+	.text       start:0x80101B90 end:0x80101FB8
+	.sdata2     start:0x8047CD80 end:0x8047CDC0
+
+game/gs_model_sdata2_8047CDC0.c:
+	.sdata2     start:0x8047CDC0 end:0x8047CDC8
+
+game/gapp_exact_80101FB8.c:
+	.text       start:0x80101FB8 end:0x80102004
+
+game/menu_get_last_error_exact_80102004.c:
+	.text       start:0x80102004 end:0x80102014
+
+game/menu_r50_80102014_prefix.c:
+	.text       start:0x80102014 end:0x80102F38
+
+game/menu_r50_80102F38_o3.c:
+	.text       start:0x80102F38 end:0x80103484
+
+game/menu_exact_80103484.c:
+	.text       start:0x80103484 end:0x80103614
+
+game/menu_exact_80103614.c:
+	.text       start:0x80103614 end:0x801038F8
+	.rodata     start:0x80271E00 end:0x80271E10
+	.sdata2     start:0x8047CDC8 end:0x8047CDE0
+
+game/data/sdata2_8047CDE0.c:
+	.sdata2     start:0x8047CDE0 end:0x8047CE10
+
+game/data/rodata_80271E10.c:
+	.rodata     start:0x80271E10 end:0x80272088
+
+game/menu_exact_801038F8.c:
+	.text       start:0x801038F8 end:0x80103BA8
+
+game/menu_exact_80103BA8.c:
+	.text       start:0x80103BA8 end:0x80103E68
+
+game/cursor_bios.c:
+	.text       start:0x80103E68 end:0x80103FE4
+
+game/window_exact_80103FE4.c:
+	.text       start:0x80103FE4 end:0x80103FFC
+
+game/window.c:
+	.text       start:0x80103FFC end:0x801040A0
+
+game/window_exact_801040A0.c:
+	.text       start:0x801040A0 end:0x801040F0
+
+game/window_exact_801040F0.c:
+	.text       start:0x801040F0 end:0x80104160
+
+game/window_exact_80104160.c:
+	.text       start:0x80104160 end:0x80104318
+
+game/window_exact_80104318.c:
+	.text       start:0x80104318 end:0x80104530
+
+game/window_candidate_80104530.c:
+	.text       start:0x80104530 end:0x801045A8
+
+game/window_exact_801045A8.c:
+	.text       start:0x801045A8 end:0x801046B8
+
+game/window_exact_801046B8.c:
+	.text       start:0x801046B8 end:0x801046C8
+
+game/window_candidate_801046C8.c:
+	.text       start:0x801046C8 end:0x80104704
+
+game/window_exact_80104704.c:
+	.text       start:0x80104704 end:0x8010474C
+
+game/window_exact_8010474C.c:
+	.text       start:0x8010474C end:0x80104828
+
+game/window_candidate_80104828.c:
+	.text       start:0x80104828 end:0x80104A94
+
+game/window_r50_80104A94_o2.c:
+	.text       start:0x80104A94 end:0x80104CA0
+
+game/window_r50_80104CA0_suffix.c:
+	.text       start:0x80104CA0 end:0x80105410
+
+game/window_exact_80105410.c:
+	.text       start:0x80105410 end:0x801054B8
+
+game/window_exact_801054B8.c:
+	.text       start:0x801054B8 end:0x80105624
+
+game/window_exact_80105624.c:
+	.text       start:0x80105624 end:0x80105634
+
+game/window_candidate_80105634.c:
+	.text       start:0x80105634 end:0x801058CC
+	.data       start:0x8035B088 end:0x8035B0F8
+	.sdata2     start:0x8047CE10 end:0x8047CE20
+
+game/win_msg.c:
+	.text       start:0x801058CC end:0x80105A3C
+
+game/win_msg_exact_80105A3C.c:
+	.text       start:0x80105A3C end:0x80106F98
+	.data       start:0x8035B0F8 end:0x8035B3F0
+
+game/win_sequence.c:
+	.text       start:0x80106F98 end:0x801070F4
+
+game/win_sequence_exact_801070F4.c:
+	.text       start:0x801070F4 end:0x80107170
+
+game/win_sprite.c:
+	.text       start:0x80107170 end:0x801093C8
+	.data       start:0x8035B400 end:0x8035B430
+	.bss        start:0x80404B68 end:0x80404BF0
+	.sdata2     start:0x8047CE20 end:0x8047CE48
+
+game/data/bss_80404BF0.c:
+	.bss        start:0x80404BF0 end:0x80408400
+
+game/data/bss_80408400_prefix.c:
+	.bss        start:0x80408400 end:0x80434A10
+
+game/data/data_8035B430.c:
+	.data       start:0x8035B430 end:0x8035B448
+
+game/data/data_8035B468.c:
+	.data       start:0x8035B468 end:0x8035B4FC
+
+game/data/data_8035B500.c:
+	.data       start:0x8035B500 end:0x8035B878
+
+game/data/data_8035B8A0.c:
+	.data       start:0x8035B8A0 end:0x8035B8B4
+
+game/data/data_8035B904.c:
+	.data       start:0x8035B904 end:0x8035B950
+
+game/data/data_8035B96C.c:
+	.data       start:0x8035B96C end:0x8035B988
+
+game/data/data_8035B9F8.c:
+	.data       start:0x8035B9F8 end:0x8035BA10
+
+game/data/data_8035BA48.c:
+	.data       start:0x8035BA48 end:0x8035BA60
+
+game/data/data_8035BB50.c:
+	.data       start:0x8035BB50 end:0x8035BB88
+
+game/menu_offscreen.c:
+	.text       start:0x801093C8 end:0x80109894
+	.sdata2     start:0x8047CE48 end:0x8047CE70
+
+game/data/sdata2_8047CE70.c:
+	.sdata2     start:0x8047CE70 end:0x8047CE98
+
+game/data/sdata2_8047CE98.c:
+	.sdata2     start:0x8047CE98 end:0x8047CEB8
+
+game/menu_model_exact_setMotion.c:
+	.text       start:0x80109894 end:0x80109934
+
+game/menu_model_render.c:
+	.text       start:0x80109934 end:0x80109B90
+
+game/menu_model_exact_check.c:
+	.text       start:0x80109B90 end:0x80109BFC
+
+game/menu_model_exact_free.c:
+	.text       start:0x80109BFC end:0x80109C88
+
+game/gs_range_80109C88.c:
+	.text       start:0x80109C88 end:0x8010A420
+
+game/gs_range_exact_8010A420.c:
+	.text       start:0x8010A420 end:0x8010A5BC
+
+game/gs_range_exact_menuModelInit.c:
+	.text       start:0x8010A5BC end:0x8010A88C
+
+game/gs_range_exact_8010A88C.c:
+	.text       start:0x8010A88C end:0x8010AB00
+
+game/gs_range_exact_8010AB00.c:
+	.text       start:0x8010AB00 end:0x8010AE2C
+
+game/gs_range_exact_8010AE2C.c:
+	.text       start:0x8010AE2C end:0x8010B01C
+
+game/gs_range_exact_8010B01C.c:
+	.text       start:0x8010B01C end:0x8010B16C
+
+game/gs_range_candidate_8010B16C.c:
+	.text       start:0x8010B16C end:0x8010B560
+
+game/gs_range_exact_8010B560.c:
+	.text       start:0x8010B560 end:0x8010B5C4
+
+game/gs_range_exact_8010B5C4.c:
+	.text       start:0x8010B5C4 end:0x8010B718
+
+game/gs_range_exact_8010B718.c:
+	.text       start:0x8010B718 end:0x8010B9E8
+
+game/gs_range_exact_8010B9E8.c:
+	.text       start:0x8010B9E8 end:0x8010BBB8
+
+game/gs_range_exact_8010BBB8.c:
+	.text       start:0x8010BBB8 end:0x8010BCE4
+
+game/gs_range_exact_8010BCE4.c:
+	.text       start:0x8010BCE4 end:0x8010BD6C
+
+game/gs_range_candidate_8010BD6C.c:
+	.text       start:0x8010BD6C end:0x8010C220
+
+game/gs_range_exact_8010C220.c:
+	.text       start:0x8010C220 end:0x8010C224
+
+game/gs_range_exact_8010C224.c:
+	.text       start:0x8010C224 end:0x8010C364
+
+game/gs_colsys.c:
+	.text       start:0x8010C364 end:0x8010C3FC
+
+game/gs_colsys_exact_8010C3FC.c:
+	.text       start:0x8010C3FC end:0x8010C46C
+
+game/gs_colsys_candidate_8010C46C.c:
+	.text       start:0x8010C46C end:0x8010C77C
+
+game/GScolsys2Util_exact_8010C77C.c:
+	.text       start:0x8010C77C end:0x8010C7BC
+
+game/gs_colsys_obj_enable_exact_8010C7BC.c:
+	.text       start:0x8010C7BC end:0x8010C8D0
+
+game/gs_colsys_exact_8010C8D0.c:
+	.text       start:0x8010C8D0 end:0x8010CBD0
+
+game/gs_range_8010CBD0.c:
+	.text       start:0x8010CBD0 end:0x8010D170
+
+game/gs_colsys_exact_8010D170.c:
+	.text       start:0x8010D170 end:0x8010D20C
+
+game/gs_colsys_exact_8010D20C.c:
+	.text       start:0x8010D20C end:0x8010DE00
+	.sdata2     start:0x8047CEB8 end:0x8047CEE0
+
+game/GScolsys2Walk.c:
+	.text       start:0x8010DE00 end:0x8010E138
+	.sdata2     start:0x8047CEE0 end:0x8047CEF0
+
+game/GScolsys2Walk_exact_8010E138.c:
+	.text       start:0x8010E138 end:0x8010E53C
+
+game/gs_colsys_candidate_8010E53C.c:
+	.text       start:0x8010E53C end:0x8010F4B8
+	.sdata2     start:0x8047CEF0 end:0x8047CF08
+
+game/data/sdata2_8047CF08.c:
+	.sdata2     start:0x8047CF08 end:0x8047CF10
+
+game/GScolsys2Util.c:
+	.text       start:0x8010F4B8 end:0x8010FAF4
+	.sdata2     start:0x8047CF10 end:0x8047CF20
+
+game/GScolsys2Human_range_8010FAF4.c:
+	.text       start:0x8010FAF4 end:0x8010FFC4
+	.sdata2     start:0x8047CF20 end:0x8047CF48
+
+game/GScolsys2Human_exact_8010FFC4.c:
+	.text       start:0x8010FFC4 end:0x801101B4
+
+game/GScolsys2Thru.c:
+	.text       start:0x801101B4 end:0x80111864
+	.sdata2     start:0x8047CF48 end:0x8047CF60
+
+game/data/sdata2_8047CF60.c:
+	.sdata2     start:0x8047CF60 end:0x8047CF68
+
+game/GScolsys2Thru_r56_80111864_o4s.c:
+	.text       start:0x80111864 end:0x80111B9C
+
+game/GScolsys2Check.c:
+	.text       start:0x80111B9C end:0x80111C24
+
+game/GScolsys2Sun.c:
+	.text       start:0x80111C24 end:0x80111DF8
+	.sdata2     start:0x8047CF68 end:0x8047CF70
+
+game/floor_range_80111DF8.c:
+	.text       start:0x80111DF8 end:0x80112380
+
+game/floor.c:
+	.text       start:0x80112380 end:0x801140DC
+	.rodata     start:0x80272088 end:0x802721FA
+	.sdata2     start:0x8047CF70 end:0x8047CF9C
+
+game/data/rodata_80272200.c:
+	.rodata     start:0x80272200 end:0x80272998
+
+game/field_range_801140DC.c:
+	.text       start:0x801140DC end:0x8011432C
+
+game/gs_field_resource.c:
+	.text       start:0x8011432C end:0x80114AE0
+
+game/field_range_80114AE0.c:
+	.text       start:0x80114AE0 end:0x80114CA8
+
+game/field_range_exact_80114CA8.c:
+	.text       start:0x80114CA8 end:0x80115250
+
+game/field_range_exact_80115250.c:
+	.text       start:0x80115250 end:0x80115280
+
+game/floor_data.c:
+	.text       start:0x80115280 end:0x80115CB4
+
+game/floor_event_exact_80115CB4.c:
+	.text       start:0x80115CB4 end:0x80115E6C
+
+game/floor_event_exact_80115E6C.c:
+	.text       start:0x80115E6C end:0x80116164
+
+game/floor_event_candidate_80116164.c:
+	.text       start:0x80116164 end:0x80116D30
+	.sdata2     start:0x8047CFA0 end:0x8047CFC0
+
+game/floor_character_exact_80116D30.cpp:
+	.text       start:0x80116D30 end:0x80116E6C
+
+game/floor_character_exact_80116E6C.c:
+	.text       start:0x80116E6C end:0x80116F68
+
+game/floor_character_exact_80116F68.c:
+	.text       start:0x80116F68 end:0x80117038
+	.sdata2     start:0x8047CFC0 end:0x8047CFD0
+
+game/data/sdata2_8047CFD0.c:
+	.sdata2     start:0x8047CFD0 end:0x8047CFF0
+
+game/floor_character_exact_80117038.c:
+	.text       start:0x80117038 end:0x80117070
+
+game/floor_character_exact_80117070.c:
+	.text       start:0x80117070 end:0x8011711C
+
+game/field_camera_exact_8011711C.c:
+	.text       start:0x8011711C end:0x801171C8
+
+game/field_camera.c:
+	.text       start:0x801171C8 end:0x801174C4
+
+game/field_camera_exact_801174C4.c:
+	.text       start:0x801174C4 end:0x80117514
+
+game/field_camera_r50_80117514_prefix.c:
+	.text       start:0x80117514 end:0x801176C8
+
+game/field_camera_r50_801176C8_o3.c:
+	.text       start:0x801176C8 end:0x8011791C
+
+game/field_camera_r50_8011791C_suffix.c:
+	.text       start:0x8011791C end:0x80117AD4
+
+game/field_camera_exact_80117AD4.c:
+	.text       start:0x80117AD4 end:0x80117AE4
+
+game/field_camera_exact_80117AE4.c:
+	.text       start:0x80117AE4 end:0x80117E58
+
+game/field_exact_80117E58.c:
+	.text       start:0x80117E58 end:0x80118100
+
+game/field_exact_80118100.c:
+	.text       start:0x80118100 end:0x801183EC
+
+game/field_candidate_801183EC.c:
+	.text       start:0x801183EC end:0x80118874
+	.data       start:0x8035BB88 end:0x8035BBA8
+
+game/data/data_8035BBA8.c:
+	.data       start:0x8035BBA8 end:0x8035C260
+
+game/field_exact_80118874.c:
+	.text       start:0x80118874 end:0x801195AC
+
+game/field_candidate_801195AC.c:
+	.text       start:0x801195AC end:0x80119824
+
+game/field_exact_80119824.c:
+	.text       start:0x80119824 end:0x80119BD0
+
+game/field_exact_80119BD0.c:
+	.text       start:0x80119BD0 end:0x80119D90
+
+game/field_exact_80119D90.c:
+	.text       start:0x80119D90 end:0x8011A0A8
+
+game/field_candidate_8011A0A8.c:
+	.text       start:0x8011A0A8 end:0x8011A280
+
+game/field_exact_8011A280.c:
+	.text       start:0x8011A280 end:0x8011B2C0
+
+game/field_candidate_8011B2C0.c:
+	.text       start:0x8011B2C0 end:0x8011B444
+
+game/field_exact_8011B444.c:
+	.text       start:0x8011B444 end:0x8011BA0C
+
+game/waza.c:
+	.text       start:0x8011BA0C end:0x8011CA60
+	.data       start:0x8035C260 end:0x8035C430
+
+game/data/data_8035C430.c:
+	.data       start:0x8035C430 end:0x8035E028
+
+game/pokemon_data.c:
+	.text       start:0x8011CA60 end:0x8011F5FC
+
+game/pokemon_range_exact_8011F5FC.c:
+	.text       start:0x8011F5FC end:0x8011F77C
+
+game/pokemon_range_8011F77C.c:
+	.text       start:0x8011F77C end:0x80120B00
+	.sdata2     start:0x8047CFF0 end:0x8047D020
+
+game/pokemon_range_exact_80120B00.c:
+	.text       start:0x80120B00 end:0x80121C18
+
+game/pokemon_range_80121C18.c:
+	.text       start:0x80121C18 end:0x80122040
+
+game/pokemon_range_exact_80122040.c:
+	.text       start:0x80122040 end:0x801226D0
+
+game/pokemon_range_801226D0.c:
+	.text       start:0x801226D0 end:0x801229F4
+
+game/pokemon_range_exact_801229F4.c:
+	.text       start:0x801229F4 end:0x801237B8
+
+game/pokemon_range_801237B8.c:
+	.text       start:0x801237B8 end:0x80123C54
+
+game/pokemon_range_exact_80123C54.c:
+	.text       start:0x80123C54 end:0x80123D58
+
+game/pokemon_exact_80123D58.c:
+	.text       start:0x80123D58 end:0x80123E70
+
+game/pokemon_range_exact_80123E70.c:
+	.text       start:0x80123E70 end:0x801240C4
+
+game/pokemon_range_exact_801240C4.c:
+	.text       start:0x801240C4 end:0x80124410
+
+game/pokemon_range_exact_80124410.c:
+	.text       start:0x80124410 end:0x801248C4
+
+game/pokemon_range_exact_801248C4.c:
+	.text       start:0x801248C4 end:0x801254B4
+
+game/pokemon_set_status_exact_801254B4.c:
+	.text       start:0x801254B4 end:0x8012640C
+	.data       start:0x8035E028 end:0x8035E4B0
+
+game/pokemon_get_status_exact_8012640C.c:
+	.text       start:0x8012640C end:0x8012795C
+	.data       start:0x8035E4B0 end:0x8035E940
+
+game/data/data_8035E940.c:
+	.data       start:0x8035E940 end:0x803634A8
+
+game/pokemon_range_8012795C.c:
+	.text       start:0x8012795C end:0x8012805C
+
+game/pokemon_evolution_exact_8012805C.c:
+	.text       start:0x8012805C end:0x80128524
+	.rodata     start:0x80272998 end:0x802729C0
+	.sdata2     start:0x8047D020 end:0x8047D028
+
+game/data/sdata2_8047D028.c:
+	.sdata2     start:0x8047D028 end:0x8047D030
+
+game/data/rodata_802729C0.c:
+	.rodata     start:0x802729C0 end:0x80272AE0
+
+game/pokemon_range_80128524.c:
+	.text       start:0x80128524 end:0x80128CC0
+
+game/pokemon_range_exact_80128CC0.c:
+	.text       start:0x80128CC0 end:0x80128E38
+
+game/hero.c:
+	.text       start:0x80128E38 end:0x80129280
+
+game/hero_savedata_exact_80129280.c:
+	.text       start:0x80129280 end:0x8012A450
+	.data       start:0x803634A8 end:0x803634EC
+
+game/data/data_803634EC.c:
+	.data       start:0x803634EC end:0x803634F0
+
+game/hero_bios_exact_8012A450.c:
+	.text       start:0x8012A450 end:0x8012AC9C
+	.data       start:0x803634F0 end:0x803635C0
+
+game/data/data_803635C0.c:
+	.data       start:0x803635C0 end:0x80363630
+
+game/hero_move.c:
+	.text       start:0x8012AC9C end:0x80130660
+	.sdata2     start:0x8047D030 end:0x8047D0E0
+
+game/hero_pokemon.c:
+	.text       start:0x80130660 end:0x80130CE0
+
+game/effect/gs_effect.c:
+	.text       start:0x80130CE0 end:0x80131574
+
+game/sex.c:
+	.text       start:0x80131574 end:0x80131588
+
+game/msgctrl.c:
+	.text       start:0x80131588 end:0x80131690
+
+game/msgctrl_exact_80131690.c:
+	.text       start:0x80131690 end:0x80131714
+
+game/msgctrl_candidate_80131714.c:
+	.text       start:0x80131714 end:0x801317FC
+
+game/msgctrl_exact_801317FC.c:
+	.text       start:0x801317FC end:0x8013182C
+
+game/msgctrl_r49_8013182C_o2.c:
+	.text       start:0x8013182C end:0x80131A34
+
+game/msgctrl_r49_80131A34_suffix.c:
+	.text       start:0x80131A34 end:0x80131BA0
+
+game/msgctrl_exact_80131BA0.c:
+	.text       start:0x80131BA0 end:0x80131BF8
+
+game/msgctrl_candidate_80131BF8.c:
+	.text       start:0x80131BF8 end:0x80131F9C
+
+game/msgctrl_exact_80131F9C.c:
+	.text       start:0x80131F9C end:0x80131FF4
+
+game/msgctrl_candidate_80131FF4.c:
+	.text       start:0x80131FF4 end:0x80132834
+	.sdata2     start:0x8047D0E0 end:0x8047D0E8
+
+game/data/sdata2_8047D0E8.c:
+	.sdata2     start:0x8047D0E8 end:0x8047D108
+
+game/msgctrl_candidate_80132834.c:
+	.text       start:0x80132834 end:0x80132A38
+
+game/msgctrl_exact_80132A38.c:
+	.text       start:0x80132A38 end:0x80132C6C
+	.data       start:0x80363630 end:0x80363774
+
+game/data/data_80363774.c:
+	.data       start:0x80363774 end:0x80363A70
+
+game/dbgMenu_r61_prefix_80132C6C.cpp:
+	.text       start:0x80132C6C end:0x80133050
+
+game/dbgMenu_candidate_80133050.c:
+	.text       start:0x80133050 end:0x8013308C
+
+game/dbgMenu_candidate_8013308C.c:
+	.text       start:0x8013308C end:0x801330C8
+
+game/dbgMenu_r61_middle_801330C8.c:
+	.text       start:0x801330C8 end:0x80133218
+
+game/dbgMenu_candidate_80133218.c:
+	.text       start:0x80133218 end:0x80133250
+
+game/dbgMenu_candidate_80133250.c:
+	.text       start:0x80133250 end:0x8013327C
+
+game/dbgMenu_r61_middle_8013327C.c:
+	.text       start:0x8013327C end:0x801333AC
+	.rodata     start:0x80272AE0 end:0x80272B08
+
+game/data/rodata_80272B08.c:
+	.rodata     start:0x80272B08 end:0x80272B40
+
+game/dbgMenu_candidate_801333AC.c:
+	.text       start:0x801333AC end:0x80133450
+
+game/dbgMenu_candidate_80133450.c:
+	.text       start:0x80133450 end:0x801334A8
+
+game/dbgMenu_candidate_801334A8.c:
+	.text       start:0x801334A8 end:0x801334DC
+
+game/dbgMenu_candidate_801334DC.c:
+	.text       start:0x801334DC end:0x80133510
+
+game/dbgMenu_r61_middle_80133510.c:
+	.text       start:0x80133510 end:0x80133630
+
+game/dbgMenu_candidate_80133630.c:
+	.text       start:0x80133630 end:0x80133664
+
+game/dbgMenu_r61_suffix_80133664.c:
+	.text       start:0x80133664 end:0x801337A0
+
+game/dbgMenu_exact_801337A0.c:
+	.text       start:0x801337A0 end:0x801337E4
+
+game/dbgMenu_exact_801337E4.c:
+	.text       start:0x801337E4 end:0x80133810
+
+game/dbgMenu_candidate_801337E4.c:
+	.text       start:0x80133810 end:0x80133BE4
+
+game/dbgMenu_exact_80133BE4.c:
+	.text       start:0x80133BE4 end:0x80133C3C
+
+game/dbgMenu_candidate_80133C3C.c:
+	.text       start:0x80133C3C end:0x80133E1C
+
+game/dbgMenu_exact_80133E1C.c:
+	.text       start:0x80133E1C end:0x80133E6C
+
+game/dbgMenu_candidate_80133E6C.c:
+	.text       start:0x80133E6C end:0x8013433C
+
+game/pcbox_candidate_8013433C.c:
+	.text       start:0x8013433C end:0x801347D0
+
+game/pcbox_exact_801347D0.c:
+	.text       start:0x801347D0 end:0x801347E8
+
+game/pcbox_exact_801347E8.c:
+	.text       start:0x801347E8 end:0x80134E10
+
+game/pcbox_r54_80134E10_gc125_o1.c:
+	.text       start:0x80134E10 end:0x80134EF0
+
+game/pcbox_r54_80134EF0_suffix.c:
+	.text       start:0x80134EF0 end:0x80135028
+
+game/pcbox_exact_80135028.c:
+	.text       start:0x80135028 end:0x80135030
+
+game/gamedatasave_status.c:
+	.text       start:0x80135030 end:0x8013528C
+	.data       start:0x80363A70 end:0x80363AC8
+	.sdata2     start:0x8047D108 end:0x8047D110
+
+game/data/sdata2_8047D110.c:
+	.sdata2     start:0x8047D110 end:0x8047D118
+
+game/gamedata.c:
+	.text       start:0x8013528C end:0x80135A30
+
+game/gamedataBios.c:
+	.text       start:0x80135A30 end:0x80135B1C
+
+game/gamedatasaveBios.c:
+	.text       start:0x80135B1C end:0x80135D10
+
+game/status.c:
+	.text       start:0x80135D10 end:0x80135F58
+	.data       start:0x80363AC8 end:0x80363B18
+
+game/data/data_80363B18.c:
+	.data       start:0x80363B18 end:0x80363C70
+
+game/koukaBios.c:
+	.text       start:0x80135F58 end:0x80136078
+
+game/kouka.c:
+	.text       start:0x80136078 end:0x80136368
+
+game/tenkouBios.c:
+	.text       start:0x80136368 end:0x801363E8
+
+game/tikeiBios.c:
+	.text       start:0x801363E8 end:0x801364A8
+
+game/effect/tracefx_r55_801364A8_gc13_o1.c:
+	.text       start:0x801364A8 end:0x8013796C
+	.data       start:0x80363C70 end:0x80363CA4
+	.sdata2     start:0x8047D118 end:0x8047D130
+
+game/data/data_80363CA8_prefix.c:
+	.data       start:0x80363CA8 end:0x80367D60
+
+game/effect/tracefx_r55_8013796C_suffix.c:
+	.text       start:0x8013796C end:0x801380D4
+	.sdata2     start:0x8047D130 end:0x8047D148
+
+game/effect/effect_visual_exact_801380D4.c:
+	.text       start:0x801380D4 end:0x8013814C
+
+game/effect/effect_visual_candidate_8013814C.c:
+	.text       start:0x8013814C end:0x80138630
+	.sdata2     start:0x8047D148 end:0x8047D160
+
+game/effect/effect_visual_sdata2_8047D160.c:
+	.sdata2     start:0x8047D160 end:0x8047D194
+
+game/effect/effect_visual_sdata2_8047D198.c:
+	.sdata2     start:0x8047D198 end:0x8047D1E0
+
+game/effect/effect_visual_exact_80138630.c:
+	.text       start:0x80138630 end:0x801386DC
+
+game/effect/effect_visual_candidate_801386DC.c:
+	.text       start:0x801386DC end:0x801387C0
+	.rodata     start:0x80272B40 end:0x80272C30
+
+game/data/rodata_80272C30.c:
+	.rodata     start:0x80272C30 end:0x80273338
+
+game/effect/effect_visual_exact_801387C0.c:
+	.text       start:0x801387C0 end:0x80138838
+
+game/effect/effect_visual_candidate_80138838.c:
+	.text       start:0x80138838 end:0x80138B00
+
+game/effect/effect_visual_exact_80138B00.c:
+	.text       start:0x80138B00 end:0x80138BBC
+
+game/effect/effect_visual_r49_80138BBC_prefix.c:
+	.text       start:0x80138BBC end:0x80138DE4
+
+game/effect/effect_visual_r49_80138DE4_o2.c:
+	.text       start:0x80138DE4 end:0x80139074
+
+game/effect/effect_visual_r49_80139074_suffix.c:
+	.text       start:0x80139074 end:0x80139820
+
+game/effect/effect_visual_exact_80139820.c:
+	.text       start:0x80139820 end:0x80139AC4
+
+game/effect/effect_visual_r50_80139AC4_prefix.c:
+	.text       start:0x80139AC4 end:0x80139E80
+
+game/effect/effect_visual_r50_80139E80_o4s.c:
+	.text       start:0x80139E80 end:0x8013A1D4
+
+game/effect/effect_visual_r50_8013A1D4_suffix.c:
+	.text       start:0x8013A1D4 end:0x8013A42C
+
+game/effect/effect_visual_exact_8013A42C.c:
+	.text       start:0x8013A42C end:0x8013A520
+
+game/effect/effect_visual_candidate_8013A520_gc125n.c:
+	.text       start:0x8013A520 end:0x8013AA8C
+
+game/effect/effect_visual_exact_8013AA8C.c:
+	.text       start:0x8013AA8C end:0x8013AB60
+
+game/effect/effect_visual_candidate_8013AB60.c:
+	.text       start:0x8013AB60 end:0x8013B490
+	.sdata2     start:0x8047D1E0 end:0x8047D200
+
+game/effect/effect_visual_exact_8013B490.c:
+	.text       start:0x8013B490 end:0x8013B5E4
+
+game/effect/effect_visual_r49_8013B5E4_prefix.c:
+	.text       start:0x8013B5E4 end:0x8013C074
+	.sdata2     start:0x8047D200 end:0x8047D230
+
+game/effect/effect_visual_candidate_8013C074_o2.c:
+	.text       start:0x8013C074 end:0x8013C5A0
+
+game/effect/effect_visual_exact_8013C5A0.c:
+	.text       start:0x8013C5A0 end:0x8013C670
+
+game/effect/effect_visual_r51_8013C670_prefix.c:
+	.text       start:0x8013C670 end:0x8013C718
+
+game/effect/effect_visual_r51_8013C718_o4s.c:
+	.text       start:0x8013C718 end:0x8013CA48
+	.sdata2     start:0x8047D230 end:0x8047D240
+
+game/effect/effect_visual_r51_8013CA48_suffix.c:
+	.text       start:0x8013CA48 end:0x8013CE58
+	.sdata2     start:0x8047D240 end:0x8047D260
+
+game/effect/effect_visual_exact_8013CE58.c:
+	.text       start:0x8013CE58 end:0x8013D0A8
+
+game/effect/effect_visual_r51_8013D0A8_o2.c:
+	.text       start:0x8013D0A8 end:0x8013D604
+
+game/effect/effect_visual_exact_8013D604.c:
+	.text       start:0x8013D604 end:0x8013D984
+
+game/effect/effect_visual_candidate_8013D984.c:
+	.text       start:0x8013D984 end:0x8013DB64
+	.sdata2     start:0x8047D260 end:0x8047D268
+
+game/effect/effect_visual_exact_8013DB64.c:
+	.text       start:0x8013DB64 end:0x8013DE6C
+
+game/effect/effect_visual_candidate_8013DE6C.c:
+	.text       start:0x8013DE6C end:0x8013E470
+	.sdata2     start:0x8047D268 end:0x8047D298
+
+game/effect/effect_visual_sdata2_8047D298.c:
+	.sdata2     start:0x8047D298 end:0x8047D2B8
+
+game/effect/effect_visual_exact_8013E470.c:
+	.text       start:0x8013E470 end:0x8013E54C
+
+game/effect/effect_visual_candidate_8013E54C.c:
+	.text       start:0x8013E54C end:0x8013E5AC
+
+game/effect/effect_visual_exact_8013E5AC.c:
+	.text       start:0x8013E5AC end:0x8013E8A4
+
+game/effect/effect_visual_candidate_8013E8A4.c:
+	.text       start:0x8013E8A4 end:0x8013F000
+	.sdata2     start:0x8047D2B8 end:0x8047D300
+
+game/effect/effect_visual_sdata2_8047D300.c:
+	.sdata2     start:0x8047D300 end:0x8047D310
+
+game/effect/effect_visual_exact_8013F000.c:
+	.text       start:0x8013F000 end:0x8013F344
+
+game/effect/effect_visual_candidate_8013F344.c:
+	.text       start:0x8013F344 end:0x8013F410
+
+game/effect/effect_visual_exact_8013F410.c:
+	.text       start:0x8013F410 end:0x8013F80C
+
+game/effect/effect_visual_candidate_8013F80C.c:
+	.text       start:0x8013F80C end:0x8013FBE0
+	.sdata2     start:0x8047D310 end:0x8047D328
+
+game/effect/effect_visual_sdata2_8047D328.c:
+	.sdata2     start:0x8047D328 end:0x8047D350
+
+game/effect/effect_visual_exact_8013FBE0.c:
+	.text       start:0x8013FBE0 end:0x8013FF0C
+
+game/effect/effect_visual_candidate_8013FF0C.c:
+	.text       start:0x8013FF0C end:0x80140138
+
+game/effect/effect_visual_exact_80140138.c:
+	.text       start:0x80140138 end:0x801402AC
+
+game/effect/effect_visual_candidate_801402AC.c:
+	.text       start:0x801402AC end:0x80140588
+
+game/people/people_data_r49_80140588_o4s.c:
+	.text       start:0x80140588 end:0x80140A9C
+
+game/people/people_data_r49_80140A9C_suffix.c:
+	.text       start:0x80140A9C end:0x80140ACC
+
+game/people/people_data_exact_80140ACC.c:
+	.text       start:0x80140ACC end:0x80141308
+
+game/people/people_data_exact_80141308.c:
+	.text       start:0x80141308 end:0x80142368
+
+game/people/people_data_exact_80142368.c:
+	.text       start:0x80142368 end:0x801425E8
+
+game/people/people_data_candidate_801425E8.c:
+	.text       start:0x801425E8 end:0x80142984
+
+game/people/people_field_lookup_exact_80142984.c:
+	.text       start:0x80142984 end:0x80142A88
+
+game/people/people_data_exact_80142A88.c:
+	.text       start:0x80142A88 end:0x80142B24
+
+game/people/people_data_exact_80142B24.c:
+	.text       start:0x80142B24 end:0x80142CF4
+	.data       start:0x80367D60 end:0x80367DE8
+
+game/people/people_data_exact_80142CF4.c:
+	.text       start:0x80142CF4 end:0x80142EF8
+	.data       start:0x80367DE8 end:0x80367E70
+
+game/people/people_data_r51_80142EF8_o4s.c:
+	.text       start:0x80142EF8 end:0x801431AC
+	.data       start:0x80367E70 end:0x80367EF0
+
+game/data/data_80367EF0.c:
+	.data       start:0x80367EF0 end:0x80368A30
+
+game/people/people_data_r51_801431AC_suffix.c:
+	.text       start:0x801431AC end:0x8014369C
+
+game/people/people_item_friend_exact_8014369C.c:
+	.text       start:0x8014369C end:0x801436F0
+
+game/people/people_data_candidate_801436F0.c:
+	.text       start:0x801436F0 end:0x80143718
+
+game/people/people_item_effort_exact_80143718.c:
+	.text       start:0x80143718 end:0x80143778
+
+game/people/people_data_candidate_80143778.c:
+	.text       start:0x80143778 end:0x801437A0
+
+game/people/people_item_ppup_exact_801437A0.c:
+	.text       start:0x801437A0 end:0x801437B8
+
+game/people/people_data_candidate_801437B8.c:
+	.text       start:0x801437B8 end:0x801437E0
+
+game/people/people_item_hpup_exact_801437E0.c:
+	.text       start:0x801437E0 end:0x801437F8
+
+game/people/people_data_candidate_801437F8.c:
+	.text       start:0x801437F8 end:0x801439B8
+
+game/people/people_item_battle_boost_exact_801439B8.c:
+	.text       start:0x801439B8 end:0x80143A44
+
+game/people/people_data_candidate_80143A44.c:
+	.text       start:0x80143A44 end:0x80143A94
+
+game/people/people_item_tables_setters_exact_80143A94.c:
+	.text       start:0x80143A94 end:0x80143C50
+
+game/people/people_item_getters_exact_80143C50.c:
+	.text       start:0x80143C50 end:0x80144064
+
+game/people/people_item_tail_exact_80144064.c:
+	.text       start:0x80144064 end:0x801441A8
+
+game/people/people_data_suffix_801441A8.c:
+	.text       start:0x801441A8 end:0x80144574
+
+game/item_range_80144574.c:
+	.text       start:0x80144574 end:0x8014635C
+
+musyx/runtime/seq_get_private_id_exact_8014635C.c:
+	.text       start:0x8014635C end:0x801463C4
+
+musyx/runtime/seq_residual_801463C4.c:
+	.text       start:0x801463C4 end:0x80146E88
+
+musyx/runtime/seq_exact_80146E88.c:
+	.text       start:0x80146E88 end:0x801485FC
+
+musyx/runtime/seq_residual_801485FC.c:
+	.text       start:0x801485FC end:0x80149090
+	.data       start:0x80368A30 end:0x80368A80
+
+musyx/runtime/seq_exact_80149090.c:
+	.text       start:0x80149090 end:0x8014A23C
+	.sdata2     start:0x8047D350 end:0x8047D370
+
+musyx/runtime/synth.c:
+	.text       start:0x8014A23C end:0x8014D598
+	.bss        start:0x80434A10 end:0x80435FF8
+	.sbss       start:0x8047AF18 end:0x8047AF60
+	.sdata2     start:0x8047D370 end:0x8047D3B0
+
+game/data/sdata2_8047D3B0.c:
+	.sdata2     start:0x8047D3B0 end:0x8047D3B8
+
+game/data/bss_80435FF8.c:
+	.bss        start:0x80435FF8 end:0x80445F30
+
+musyx/runtime/seq_api.c:
+	.text       start:0x8014D598 end:0x8014D75C
+
+musyx/runtime/snd_synthapi.c:
+	.text       start:0x8014D75C end:0x8014DDD8
+
+musyx/runtime/stream.c:
+	.text       start:0x8014DDD8 end:0x80150C78
+	.sdata2     start:0x8047D3B8 end:0x8047D3C0
+
+game/data/sdata2_8047D3C0_prefix.c:
+	.sdata2     start:0x8047D3C0 end:0x8047D3C8
+
+musyx/runtime/synthdata.c:
+	.text       start:0x80150C78 end:0x801525E4
+	.sbss       start:0x8047AF68 end:0x8047AFB0
+
+musyx/runtime/synthmacros.c:
+	.text       start:0x801525E4 end:0x80157280
+	.data       start:0x80368A80 end:0x80368EC8
+	.bss        start:0x80445F30 end:0x80445F50
+	.sbss       start:0x8047AFB0 end:0x8047AFD0
+	.sdata2     start:0x8047D3C8 end:0x8047D3F0
+
+musyx/runtime/synthvoice.c:
+	.text       start:0x80157280 end:0x80158BB4
+	.bss        start:0x80445F50 end:0x80446F10
+	.sbss       start:0x8047AFD0 end:0x8047AFE8
+
+game/data/bss_80446F10.c:
+	.bss        start:0x80446F10 end:0x80448440
+
+game/data/bss_80448440.c:
+	.bss        start:0x80448440 end:0x80448540
+
+musyx/runtime/synth_ac.c:
+	.text       start:0x80158BB4 end:0x80158CD4
+	.data       start:0x80368EC8 end:0x803692C8
+	.sdata2     start:0x8047D3F0 end:0x8047D408
+
+game/data/data_803692C8.c:
+	.data       start:0x803692C8 end:0x80369A68
+
+musyx/runtime/synth_adsr.c:
+	.text       start:0x80158CD4 end:0x80159494
+	.sdata2     start:0x8047D408 end:0x8047D430
+
+musyx/runtime/synth_vsamples.c:
+	.text       start:0x80159494 end:0x80159C48
+
+musyx/runtime/s_data.c:
+	.text       start:0x80159C48 end:0x8015A484
+
+musyx/runtime/hw_dspctrl_exact_8015A484.c:
+	.text       start:0x8015A484 end:0x8015A838
+
+musyx/runtime/hw_dspctrl_exact_8015A838.c:
+	.text       start:0x8015A838 end:0x8015A950
+
+musyx/runtime/hw_dspctrl_exact_8015A950.c:
+	.text       start:0x8015A950 end:0x8015AAA0
+
+musyx/runtime/hw_dspctrl_exact_8015AAA0.c:
+	.text       start:0x8015AAA0 end:0x8015AD1C
+
+musyx/runtime/hw_dspctrl_exact_8015AD1C.c:
+	.text       start:0x8015AD1C end:0x8015B250
+
+musyx/runtime/hw_dspctrl_exact_8015B250.c:
+	.text       start:0x8015B250 end:0x8015D408
+
+musyx/runtime/hw_dspctrl_exact_8015D408.c:
+	.text       start:0x8015D408 end:0x8015D7D0
+
+musyx/runtime/hw_volconv.c:
+	.text       start:0x8015D7D0 end:0x8015DEC0
+	.data       start:0x80369A68 end:0x80369C90
+	.sdata2     start:0x8047D430 end:0x8047D468
+
+musyx/runtime/snd3d.c:
+	.text       start:0x8015DEC0 end:0x8015FE88
+	.bss        start:0x80448540 end:0x80449390
+	.sbss       start:0x8047B030 end:0x8047B050
+	.sdata2     start:0x8047D468 end:0x8047D4B8
+
+musyx/runtime/snd_init.c:
+	.text       start:0x8015FE88 end:0x8015FFDC
+
+musyx/runtime/snd_math.c:
+	.text       start:0x8015FFDC end:0x8016039C
+	.sdata2     start:0x8047D4B8 end:0x8047D4D8
+
+musyx/runtime/snd_midictrl.c:
+	.text       start:0x8016039C end:0x80162070
+	.rodata     start:0x80273338 end:0x80273448
+	.data       start:0x80369C90 end:0x80369D1C
+	.bss        start:0x80449390 end:0x8044FB90
+
+game/data/bss_8044FB90.c:
+	.bss        start:0x8044FB90 end:0x80452500
+
+game/data/bss_80452500.c:
+	.bss        start:0x80452500 end:0x80452708
+
+game/data/data_80369D20.c:
+	.data       start:0x80369D20 end:0x8036BF00
+
+musyx/runtime/snd_service_exact_80162070.c:
+	.text       start:0x80162070 end:0x8016221C
+
+musyx/runtime/hardware.c:
+	.text       start:0x8016221C end:0x80163214
+	.rodata     start:0x80273448 end:0x80273548
+	.sdata      start:0x80478BF8 end:0x80478C08
+	.sdata2     start:0x8047D4D8 end:0x8047D4F0
+
+game/data/rodata_80273548.c:
+	.rodata     start:0x80273548 end:0x802737B8
+
+musyx/runtime/hw_aramdma.c:
+	.text       start:0x80163214 end:0x80163EE0
+
+musyx/runtime/hw_dolphin.c:
+	.text       start:0x80163EE0 end:0x801643D8
+
+musyx/musyx_candidate_801643D8.c:
+	.text       start:0x801643D8 end:0x80164488
+
+musyx/musyx_exact_80164488.c:
+	.text       start:0x80164488 end:0x801644E0
+
+musyx/musyx_r50_801644E0_prefix.c:
+	.text       start:0x801644E0 end:0x80164520
+
+musyx/runtime/reverb_candidate_80164520.c:
+	.text       start:0x80164520 end:0x801653BC
+	.data       start:0x8036BF00 end:0x8036BF20
+	.sdata2     start:0x8047D4F0 end:0x8047D540
+
+game/data/sdata2_8047D528.c:
+	.sdata2     start:0x8047D540 end:0x8047D548
+
+game/sound/sound.c:
+	.text       start:0x801653BC end:0x801653CC
+
+game/gs_range_801653CC_prefix.c:
+	.text       start:0x801653CC end:0x801654E0
+
+game/gs_range_801653CC_exact_801654E0.c:
+	.text       start:0x801654E0 end:0x80165D0C
+
+game/gs_range_801653CC_candidate_80165D0C.c:
+	.text       start:0x80165D0C end:0x80165DEC
+	.sdata2     start:0x8047D548 end:0x8047D558
+
+game/gs_range_801653CC_exact_80165DEC.c:
+	.text       start:0x80165DEC end:0x80165FDC
+
+game/gs_range_801653CC_candidate_80165FDC.c:
+	.text       start:0x80165FDC end:0x8016604C
+
+game/gs_range_801653CC_exact_8016604C.c:
+	.text       start:0x8016604C end:0x80166D48
+
+game/gs_range_801653CC_candidate_80166D48.c:
+	.text       start:0x80166D48 end:0x80166E44
+
+game/gs_range_801653CC_exact_80166E44.c:
+	.text       start:0x80166E44 end:0x80166E88
+
+game/gs_range_801653CC.c:
+	.text       start:0x80166E88 end:0x80167040
+	.sdata2     start:0x8047D558 end:0x8047D560
+
+game/data/sdata2_8047D560.c:
+	.sdata2     start:0x8047D560 end:0x8047D5B0
+
+game/gs_dvd_candidate_80167040.c:
+	.text       start:0x80167040 end:0x80167E54
+	.data       start:0x8036BF20 end:0x8036BF80
+
+game/gs_dvd_exact_80167E54.c:
+	.text       start:0x80167E54 end:0x80167E64
+
+game/gs_dvd_candidate_80167E64.c:
+	.text       start:0x80167E64 end:0x80167FA4
+
+game/gs_dvd_exact_80167FA4.c:
+	.text       start:0x80167FA4 end:0x80167FA8
+
+game/gs_dvd_r47_prefix.c:
+	.text       start:0x80167FA8 end:0x80168638
+
+game/gs_dvd_r47_80168638_o4s.c:
+	.text       start:0x80168638 end:0x80168934
+
+game/pslist.c:
+	.text       start:0x80168934 end:0x80169034
+	.rodata     start:0x802737B8 end:0x80273820
+	.bss        start:0x80452708 end:0x804527C8
+
+game/particle.c:
+	.text       start:0x80169034 end:0x8016A644
+	.rodata     start:0x80273820 end:0x802738B8
+	.data       start:0x8036BF80 end:0x8036BFA4
+	.bss        start:0x804527C8 end:0x80452DE8
+	.sdata2     start:0x8047D5B0 end:0x8047D5C0
+
+game/data/sdata2_8047D5C0.c:
+	.sdata2     start:0x8047D5C0 end:0x8047D5C8
+
+game/ps_app_srt_exact_8016A644.c:
+	.text       start:0x8016A644 end:0x8016A79C
+
+game/ps_candidate_8016A79C.c:
+	.text       start:0x8016A79C end:0x8016A93C
+
+game/ps_app_srt_exact_8016A93C.c:
+	.text       start:0x8016A93C end:0x8016A9B4
+
+game/ps_exact_8016A9B4.c:
+	.text       start:0x8016A9B4 end:0x8016AAAC
+
+game/ps_app_srt_exact_8016AAAC.c:
+	.text       start:0x8016AAAC end:0x8016AB94
+
+game/psdisp.c:
+	.text       start:0x8016AB94 end:0x8016EC1C
+	.rodata     start:0x802738B8 end:0x8027399B
+	.data       start:0x8036BFC0 end:0x8036BFE0
+	.bss        start:0x80452DE8 end:0x80452EC8
+	.sbss       start:0x8047B128 end:0x8047B170
+	.sdata2     start:0x8047D5C8 end:0x8047D628
+
+game/data/bss_80452EC8.c:
+	.bss        start:0x80452EC8 end:0x80454018
+
+game/psdisptev.c:
+	.text       start:0x8016EC1C end:0x8016F430
+	.sbss       start:0x8047B170 end:0x8047B178
+
+game/psinterpret.c:
+	.text       start:0x8016F430 end:0x80173624
+	.rodata     start:0x802739A0 end:0x802739AE
+	.data       start:0x8036BFE0 end:0x8036C1E0
+	.sbss       start:0x8047B178 end:0x8047B180
+	.sdata2     start:0x8047D628 end:0x8047D6B0
+
+game/generator.c:
+	.text       start:0x80173624 end:0x80175F6C
+	.rodata     start:0x802739B0 end:0x80273A00
+	.data       start:0x8036C1E0 end:0x8036C248
+	.sdata      start:0x80478C38 end:0x80478C40
+	.sbss       start:0x8047B180 end:0x8047B1A0
+	.sdata2     start:0x8047D6B0 end:0x8047D720
+
+game/data/rodata_80273A00.c:
+	.rodata     start:0x80273A00 end:0x80273D98
+
+game/gs_xfb_capture.c:
+	.text       start:0x80175F6C end:0x80176068
+
+game/gs_spline.c:
+	.text       start:0x80176068 end:0x801765F4
+
+game/camera_801765F4.c:
+	.text       start:0x801765F4 end:0x80179DFC
+	.rodata     start:0x80273D98 end:0x80273DC8
+	.data       start:0x8036C248 end:0x8036C29C
+	.sdata2     start:0x8047D720 end:0x8047D790
+
+game/data/data_8036C2A0.c:
+	.data       start:0x8036C2A0 end:0x8036C4E8
+
+game/data/rodata_80273DC8.c:
+	.rodata     start:0x80273DC8 end:0x80273F90
+
+game/camera_exact_80179DFC.c:
+	.text       start:0x80179DFC end:0x80179E04
+
+game/camera_candidate_80179E04.c:
+	.text       start:0x80179E04 end:0x80179F4C
+
+game/gs_range_80179F4C_exact_80179F4C.c:
+	.text       start:0x80179F4C end:0x80179FA4
+
+game/gs_range_80179F4C.c:
+	.text       start:0x80179FA4 end:0x8017A5FC
+
+game/gs_range_8017A5FC_prefix.c:
+	.text       start:0x8017A5FC end:0x8017A624
+
+game/gs_range_8017A624_middle.c:
+	.text       start:0x8017A624 end:0x8017A814
+
+game/gs_range_8017A814_suffix.c:
+	.text       start:0x8017A814 end:0x8017AAA4
+
+game/fsys/fsys_system_8017AAA4.c:
+	.text       start:0x8017AAA4 end:0x8017AF6C
+
+game/fsys/fsys_request_8017AF6C.c:
+	.text       start:0x8017AF6C end:0x8017B07C
+
+game/fsys/fsys_file.c:
+	.text       start:0x8017B07C end:0x8017B1AC
+
+game/fsys/fsys_file_exact_8017B1AC.c:
+	.text       start:0x8017B1AC end:0x8017B1CC
+
+game/fsys/fsys_slot_8017B1CC.c:
+	.text       start:0x8017B1CC end:0x8017B4BC
+
+game/fsys/fsys_file_r48_8017B4BC_prefix.c:
+	.text       start:0x8017B4BC end:0x8017B5C0
+
+game/fsys/fsys_file_exact_8017B5C0.c:
+	.text       start:0x8017B5C0 end:0x8017B6B8
+
+game/fsys/fsys_file_r48_8017B6B8_suffix.c:
+	.text       start:0x8017B6B8 end:0x8017BC90
+
+game/fsys/fsys_file_exact_8017BC90.c:
+	.text       start:0x8017BC90 end:0x8017BD34
+
+game/fsys/fsys_file_r48_8017BD34_o2.c:
+	.text       start:0x8017BD34 end:0x8017BFE8
+
+game/fsys/fsys_file_exact_8017BFE8.c:
+	.text       start:0x8017BFE8 end:0x8017C008
+
+game/fsys/fsys_file_candidate_8017C008.c:
+	.text       start:0x8017C008 end:0x8017C074
+
+game/fsys/fsys_file_candidate_8017C074.c:
+	.text       start:0x8017C074 end:0x8017C1D8
+
+game/fsys/fsys_file_exact_8017C1D8.c:
+	.text       start:0x8017C1D8 end:0x8017C394
+
+game/fsys/fsys_file_exact_8017C394.c:
+	.text       start:0x8017C394 end:0x8017C39C
+
+game/fsys/fsys_file_candidate_8017C39C.c:
+	.text       start:0x8017C39C end:0x8017C414
+
+game/fsys/fsys_file_candidate_8017C414.c:
+	.text       start:0x8017C414 end:0x8017C568
+
+game/fsys/fsys_file_exact_8017C568.c:
+	.text       start:0x8017C568 end:0x8017C5B8
+
+game/fsys/fsys_file_r51_8017C5B8_prefix.c:
+	.text       start:0x8017C5B8 end:0x8017C6E0
+
+game/fsys/fsys_file_r51_8017C6E0_o4s.c:
+	.text       start:0x8017C6E0 end:0x8017C88C
+
+game/fsys/fsys_file_exact_8017C88C.c:
+	.text       start:0x8017C88C end:0x8017C894
+
+game/fsys/fsys_file_candidate_8017C894.c:
+	.text       start:0x8017C894 end:0x8017C8C0
+
+game/fsys/fsys_file_exact_8017C8C0.c:
+	.text       start:0x8017C8C0 end:0x8017C8C8
+
+game/fsys/fsys_file_candidate_8017C8C8.c:
+	.text       start:0x8017C8C8 end:0x8017C8F4
+
+game/fsys/fsys_file_exact_8017C8F4.c:
+	.text       start:0x8017C8F4 end:0x8017C8FC
+
+game/fsys/fsys_file_r49_8017C8FC_o4s.c:
+	.text       start:0x8017C8FC end:0x8017CE7C
+
+game/fsys/fsys_file_r49_8017CE7C_suffix.c:
+	.text       start:0x8017CE7C end:0x8017CEC8
+
+game/fsys/fsys_file_exact_8017CEC8.c:
+	.text       start:0x8017CEC8 end:0x8017CED8
+
+game/fsys/fsys_file_candidate_8017CED8.c:
+	.text       start:0x8017CED8 end:0x8017D3A0
+
+game/fsys/fsys_file_exact_8017D3A0.c:
+	.text       start:0x8017D3A0 end:0x8017D3D4
+
+game/fsys/fsys_file_candidate_8017D3D4.c:
+	.text       start:0x8017D3D4 end:0x8017D400
+
+game/fsys/fsys_file_exact_8017D400.c:
+	.text       start:0x8017D400 end:0x8017D410
+
+game/fsys/fsys_file_r52_8017D410_prefix.c:
+	.text       start:0x8017D410 end:0x8017D960
+
+game/fsys/fsys_file_r52_8017D960_o4s_inline_noauto.c:
+	.text       start:0x8017D960 end:0x8017DAB8
+
+game/fsys/fsys_file_r52_8017DAB8_suffix.c:
+	.text       start:0x8017DAB8 end:0x8017DB74
+
+game/fsys/fsys_file_candidate_8017DB74_gc20.c:
+	.text       start:0x8017DB74 end:0x8017DEA4
+
+game/fsys/fsys_file_candidate_8017DEA4.c:
+	.text       start:0x8017DEA4 end:0x8017E30C
+
+game/fsys/fsys_file_candidate_8017E30C_o2.c:
+	.text       start:0x8017E30C end:0x8017EB6C
+
+game/fsys/fsys_file_exact_8017EB6C.c:
+	.text       start:0x8017EB6C end:0x8017F108
+	.sdata2     start:0x8047D790 end:0x8047D798
+
+game/fsys/fsys_file_r56_8017F108_suffix.c:
+	.text       start:0x8017F108 end:0x8017F2C4
+
+game/gs_range_8017F2C4.c:
+	.text       start:0x8017F2C4 end:0x8017F3F8
+
+game/gs_range_8017F3F8_middle.c:
+	.text       start:0x8017F3F8 end:0x8017FA5C
+
+game/gs_range_8017FA5C_exact.c:
+	.text       start:0x8017FA5C end:0x8017FB08
+
+game/gs_range_8017FA5C_suffix.c:
+	.text       start:0x8017FB08 end:0x8017FDB0
+
+game/gs_range_8017FA5C_exact_8017FDB0.c:
+	.text       start:0x8017FDB0 end:0x801800F8
+
+game/gs_range_8017FA5C_exact_801800F8.c:
+	.text       start:0x801800F8 end:0x80180320
+	.bss        start:0x80454018 end:0x80455070
+
+game/data/bss_80455070.c:
+	.bss        start:0x80455070 end:0x80465080
+
+game/gs_range_8017FA5C_exact_80180320.c:
+	.text       start:0x80180320 end:0x8018094C
+
+game/gs_range_8017FA5C_residual_8018094C.c:
+	.text       start:0x8018094C end:0x80180B94
+
+game/gs_range_8017FA5C_exact_80180B94.c:
+	.text       start:0x80180B94 end:0x80180C78
+
+game/gs_range_8017FA5C_exact_80180C78.c:
+	.text       start:0x80180C78 end:0x801812C4
+
+game/people/people.c:
+	.text       start:0x801812C4 end:0x8018F470
+	.rodata     start:0x80273F90 end:0x802741F8
+	.data       start:0x8036C4E8 end:0x8036C53C
+	.sbss       start:0x8047B1F0 end:0x8047B1F8
+	.sdata2     start:0x8047D798 end:0x8047D8A8
+
+game/data/sdata2_8047D8A8.c:
+	.sdata2     start:0x8047D8A8 end:0x8047D908
+
+game/data/rodata_802741F8.c:
+	.rodata     start:0x802741F8 end:0x802744F0
+
+game/people/people_exact_8018F470.c:
+	.text       start:0x8018F470 end:0x8018F4C8
+
+game/people/people_candidate_8018F4C8.c:
+	.text       start:0x8018F4C8 end:0x8018F5B4
+	.data       start:0x8036C540 end:0x8036C564
+
+game/data/data_8036C568.c:
+	.data       start:0x8036C568 end:0x8036C638
+
+game/people/people_exact_8018F5B4.c:
+	.text       start:0x8018F5B4 end:0x8018F730
+
+game/people/people_candidate_8018F730.c:
+	.text       start:0x8018F730 end:0x8018FB2C
+
+game/people/people_exact_8018FB2C.c:
+	.text       start:0x8018FB2C end:0x8018FB94
+
+game/people/people_exact_8018FB94.c:
+	.text       start:0x8018FB94 end:0x8018FBAC
+
+game/people/people_exact_8018FBAC.c:
+	.text       start:0x8018FBAC end:0x8018FC50
+
+game/people/people_exact_8018FC50.c:
+	.text       start:0x8018FC50 end:0x8018FC74
+
+game/people/people_exact_8018FC74.c:
+	.text       start:0x8018FC74 end:0x8018FCE0
+
+game/people/people_candidate_8018FCE0.c:
+	.text       start:0x8018FCE0 end:0x8018FD88
+
+game/people/people_exact_8018FD88.c:
+	.text       start:0x8018FD88 end:0x8018FE30
+
+game/gs_range_8018FE30.c:
+	.text       start:0x8018FE30 end:0x801902E0
+
+game/gs_flag_test_exact_801902E0.c:
+	.text       start:0x801902E0 end:0x801903B0
+
+game/gs_range_8018FE30_suffix_801903B0.c:
+	.text       start:0x801903B0 end:0x801906A0
+
+game/gs_flag_get_exact_801906A0.c:
+	.text       start:0x801906A0 end:0x8019075C
+
+game/gs_range_8018FE30_suffix_8019075C.c:
+	.text       start:0x8019075C end:0x801908D4
+
+game/gs_flag_exact_801908D4.c:
+	.text       start:0x801908D4 end:0x80190E34
+
+hsd/hsd_object.c:
+	.text       start:0x80190E34 end:0x801914F4
+
+hsd/hsd_wobj.c:
+	.text       start:0x801914F4 end:0x801920E4
+
+hsd/bytecode.c:
+	.text       start:0x801920E4 end:0x80193748
+	.rodata     start:0x802744F0 end:0x80274590
+	.sdata2     start:0x8047D908 end:0x8047D950
+
+hsd/class.c:
+	.text       start:0x80193748 end:0x80193C24
+	.rodata     start:0x80274590 end:0x80274628
+	.data       start:0x8036C638 end:0x8036C678
+	.sbss       start:0x8047B220 end:0x8047B230
+	.sdata2     start:0x8047D950 end:0x8047D958
+
+hsd/cobj.c:
+	.text       start:0x80193C24 end:0x80196CE0
+	.rodata     start:0x80274628 end:0x802746A0
+	.data       start:0x8036C678 end:0x8036C714
+	.sdata      start:0x80478C50 end:0x80478C5C
+	.sbss       start:0x8047B230 end:0x8047B238
+	.sdata2     start:0x8047D958 end:0x8047D9D8
+
+hsd/debug.c:
+	.text       start:0x80196CE0 end:0x80196EB4
+	.rodata     start:0x802746A0 end:0x802746D0
+	.bss        start:0x80465080 end:0x80465348
+	.sbss       start:0x8047B238 end:0x8047B240
+	.sdata2     start:0x8047D9D8 end:0x8047D9E0
+
+hsd/displayfunc.c:
+	.text       start:0x80196EB4 end:0x80198F7C
+	.rodata     start:0x802746D0 end:0x80274708
+	.data       start:0x8036C720 end:0x8036C7A0
+	.bss        start:0x80465348 end:0x80465378
+	.sdata      start:0x80478C60 end:0x80478C70
+	.sbss       start:0x8047B240 end:0x8047B260
+	.sdata2     start:0x8047D9E0 end:0x8047DA18
+
+hsd/hsd_sdata2_8047DA18.c:
+	.sdata2     start:0x8047DA18 end:0x8047DA30
+
+game/data/bss_80465378.c:
+	.bss        start:0x80465378 end:0x804653A8
+
+game/data/data_8036C7A0.c:
+	.data       start:0x8036C7A0 end:0x8036C7E8
+
+game/data/rodata_80274708.c:
+	.rodata     start:0x80274708 end:0x80274758
+
+hsd/dobj_exact_80198F7C.c:
+	.text       start:0x80198F7C end:0x801993A4
+
+hsd/dobj_exact_801993A4.c:
+	.text       start:0x801993A4 end:0x80199568
+
+hsd/dobj_exact_80199568.c:
+	.text       start:0x80199568 end:0x8019970C
+
+hsd/fobj.c:
+	.text       start:0x8019970C end:0x8019B7C0
+	.rodata     start:0x80274758 end:0x802747B8
+	.sdata2     start:0x8047DA30 end:0x8047DA60
+
+hsd/fog.c:
+	.text       start:0x8019B7C0 end:0x8019BFE8
+	.rodata     start:0x802747B8 end:0x80274800
+	.data       start:0x8036C7E8 end:0x8036C8BC
+	.sdata2     start:0x8047DA60 end:0x8047DA98
+
+hsd/hash.c:
+	.text       start:0x8019BFE8 end:0x8019C0F8
+	.rodata     start:0x80274800 end:0x80274818
+	.sdata2     start:0x8047DA98 end:0x8047DAA0
+
+hsd/id.c:
+	.text       start:0x8019C0F8 end:0x8019C3C4
+	.bss        start:0x804653A8 end:0x80465568
+	.sdata2     start:0x8047DAA0 end:0x8047DAB0
+
+hsd/initialize.c:
+	.text       start:0x8019C3C4 end:0x8019CE50
+	.rodata     start:0x80274818 end:0x80274AA0
+	.data       start:0x8036C8C0 end:0x8036C8E0
+	.bss        start:0x80465568 end:0x80465588
+	.sdata      start:0x80478C70 end:0x80478C88
+	.sbss       start:0x8047B268 end:0x8047B298
+	.sdata2     start:0x8047DAB0 end:0x8047DB20
+	.sbss2      start:0x8047E728 end:0x8047E730
+
+hsd/jobj.c:
+	.text       start:0x8019CE50 end:0x801A3E64
+	.rodata     start:0x80274AA0 end:0x80274D58
+	.data       start:0x8036C8E0 end:0x8036CA1C
+	.sbss       start:0x8047B298 end:0x8047B2B0
+	.sdata2     start:0x8047DB20 end:0x8047DBA0
+
+hsd/list.c:
+	.text       start:0x801A3E64 end:0x801A4000
+	.bss        start:0x80465588 end:0x804655E0
+	.sdata2     start:0x8047DBA0 end:0x8047DBB8
+
+hsd/lobj.c:
+	.text       start:0x801A4000 end:0x801A6928
+	.rodata     start:0x80274D58 end:0x80274E10
+	.data       start:0x8036CA20 end:0x8036CB30
+	.bss        start:0x804655E0 end:0x80465608
+	.sbss       start:0x8047B2B0 end:0x8047B2D0
+	.sdata2     start:0x8047DBB8 end:0x8047DC18
+
+hsd/memory.c:
+	.text       start:0x801A6928 end:0x801A6A34
+	.rodata     start:0x80274E10 end:0x80274E38
+	.bss        start:0x80465608 end:0x80465620
+
+hsd/mobj.c:
+	.text       start:0x801A6A34 end:0x801A8478
+	.rodata     start:0x80274E38 end:0x80274E90
+	.data       start:0x8036CB30 end:0x8036CBBC
+	.sdata      start:0x80478C88 end:0x80478C90
+	.sbss       start:0x8047B2D0 end:0x8047B2E0
+	.sdata2     start:0x8047DC18 end:0x8047DC48
+
+hsd/mtx.c:
+	.text       start:0x801A8478 end:0x801AA350
+	.data       start:0x8036CBC0 end:0x8036CBF0
+	.bss        start:0x80465620 end:0x80465678
+	.sdata2     start:0x8047DC48 end:0x8047DC98
+
+hsd/objalloc.c:
+	.text       start:0x801AA350 end:0x801AA568
+	.rodata     start:0x80274E90 end:0x80274EC8
+	.data       start:0x8036CBF0 end:0x8036CC00
+	.sbss       start:0x8047B2E0 end:0x8047B2E8
+	.sdata2     start:0x8047DC98 end:0x8047DCA0
+
+hsd/hsd_sdata2_8047DCA0.c:
+	.sdata2     start:0x8047DCA0 end:0x8047DCB8
+
+game/data/data_8036CC00.c:
+	.data       start:0x8036CC00 end:0x8036CCD0
+
+game/data/rodata_80274EC8.c:
+	.rodata     start:0x80274EC8 end:0x80274EE0
+
+hsd/hsd_obj_info_exact_801AA568.c:
+	.text       start:0x801AA568 end:0x801AA608
+
+hsd/pobj.c:
+	.text       start:0x801AA608 end:0x801AD7CC
+	.rodata     start:0x80274EE0 end:0x80275168
+	.data       start:0x8036CCD0 end:0x8036CD84
+	.bss        start:0x80465678 end:0x80465688
+	.sbss       start:0x8047B2E8 end:0x8047B304
+	.sdata2     start:0x8047DCB8 end:0x8047DD18
+
+hsd/quatlib.c:
+	.text       start:0x801AD7CC end:0x801ADC08
+	.sdata2     start:0x8047DD18 end:0x8047DD40
+
+hsd/random.c:
+	.text       start:0x801ADC08 end:0x801ADD0C
+	.sdata      start:0x80478C90 end:0x80478C98
+	.sdata2     start:0x8047DD40 end:0x8047DD50
+
+hsd/robj.c:
+	.text       start:0x801ADD0C end:0x801B019C
+	.rodata     start:0x80275168 end:0x802752C0
+	.data       start:0x8036CD88 end:0x8036CDC8
+	.bss        start:0x80465688 end:0x804656E0
+	.sbss       start:0x8047B308 end:0x8047B310
+	.sdata2     start:0x8047DD50 end:0x8047DDB8
+
+hsd/shadow.c:
+	.text       start:0x801B019C end:0x801B1890
+	.rodata     start:0x802752C0 end:0x802753A8
+	.data       start:0x8036CDC8 end:0x8036CE88
+	.bss        start:0x804656E0 end:0x80465710
+	.sbss       start:0x8047B310 end:0x8047B318
+	.sdata2     start:0x8047DDB8 end:0x8047DE00
+
+game/data/bss_80465710.c:
+	.bss        start:0x80465710 end:0x80465728
+
+hsd/spline.c:
+	.text       start:0x801B1890 end:0x801B25C4
+	.sdata2     start:0x8047DE00 end:0x8047DE50
+
+hsd/state.c:
+	.text       start:0x801B25C4 end:0x801B3168
+	.data       start:0x8036CE88 end:0x8036CFA8
+	.sdata      start:0x80478C98 end:0x80478CA0
+	.sdata2     start:0x8047DE50 end:0x8047DE60
+
+game/data/data_8036CFA8.c:
+	.data       start:0x8036CFA8 end:0x8036CFE8
+
+hsd/tev.c:
+	.text       start:0x801B3168 end:0x801B42C0
+	.data       start:0x8036CFE8 end:0x8036D258
+	.bss        start:0x80465728 end:0x804657AC
+	.sbss       start:0x8047B358 end:0x8047B374
+	.sdata2     start:0x8047DE60 end:0x8047DE70
+
+hsd/texp.c:
+	.text       start:0x801B42C0 end:0x801B7CA0
+	.rodata     start:0x802753A8 end:0x802755F0
+	.data       start:0x8036D258 end:0x8036D37C
+	.sdata2     start:0x8047DE70 end:0x8047DEA8
+
+hsd/texpdag.c:
+	.text       start:0x801B7CA0 end:0x801BBAC8
+	.rodata     start:0x802755F0 end:0x80275638
+	.data       start:0x8036D380 end:0x8036D3F0
+	.sdata      start:0x80478CA0 end:0x80478CA8
+	.sdata2     start:0x8047DEA8 end:0x8047DEB0
+	.sbss2      start:0x8047E730 end:0x8047E738
+
+hsd/tobj.c:
+	.text       start:0x801BBAC8 end:0x801BF098
+	.rodata     start:0x80275638 end:0x802756F8
+	.data       start:0x8036D3F0 end:0x8036D798
+	.sbss       start:0x8047B378 end:0x8047B380
+	.sdata2     start:0x8047DEB0 end:0x8047DF20
+
+hsd/util.c:
+	.text       start:0x801BF098 end:0x801BF1F0
+	.data       start:0x8036D798 end:0x8036D7C0
+	.sdata2     start:0x8047DF20 end:0x8047DF30
+
+hsd/video.c:
+	.text       start:0x801BF1F0 end:0x801C0270
+	.rodata     start:0x802756F8 end:0x80275780
+	.bss        start:0x804657C0 end:0x80466DB8
+	.sbss       start:0x8047B380 end:0x8047B388
+	.sdata2     start:0x8047DF30 end:0x8047DF40
+
+hsd/aobj.c:
+	.text       start:0x801C0270 end:0x801C2AE8
+	.rodata     start:0x80275780 end:0x802757F0
+	.data       start:0x8036D7C0 end:0x8036DCA8
+	.bss        start:0x80466DB8 end:0x80466DE8
+	.sbss       start:0x8047B388 end:0x8047B398
+	.sdata2     start:0x8047DF40 end:0x8047DF58
+
+hsd/hsd_sdata2_8047DF58.c:
+	.sdata2     start:0x8047DF58 end:0x8047DF90
+
+game/battle_sdata2_8047DF90.c:
+	.sdata2     start:0x8047DF90 end:0x8047DF98
+
+game/data/bss_80466DE8.c:
+	.bss        start:0x80466DE8 end:0x804670E8
+
+game/data/rodata_802757F0.c:
+	.rodata     start:0x802757F0 end:0x802758E8
+
+game/battle/battle_camera_exact_801C2AE8.c:
+	.text       start:0x801C2AE8 end:0x801C2BE0
+
+game/battle/battle_camera.c:
+	.text       start:0x801C2BE0 end:0x801C2D5C
+
+game/battle/battle_camera_exact_801C2D5C.c:
+	.text       start:0x801C2D5C end:0x801C2D80
+
+game/battle/battle_camera_r50_801C2D80_o2.c:
+	.text       start:0x801C2D80 end:0x801C2F00
+
+game/battle/battle_camera_r50_801C2F00_suffix.c:
+	.text       start:0x801C2F00 end:0x801C3108
+
+game/battle/battle_grid_exact_801C3108.c:
+	.text       start:0x801C3108 end:0x801C3114
+
+game/battle/battle_grid_r56_801C3114_prefix.c:
+	.text       start:0x801C3114 end:0x801C3A64
+	.sdata2     start:0x8047DF98 end:0x8047DFA0
+
+game/battle_sdata2_8047DFA0.c:
+	.sdata2     start:0x8047DFA0 end:0x8047DFA8
+
+game/battle/battle_grid_r56_801C3A64_o1.c:
+	.text       start:0x801C3A64 end:0x801C3B80
+
+game/battle/battle_grid_residual_801C3114_r40_801C3B80_gc125n.c:
+	.text       start:0x801C3B80 end:0x801C3C98
+
+game/battle/battle_grid_exact_801C3C98.c:
+	.text       start:0x801C3C98 end:0x801C3E3C
+
+game/battle/battle_grid_residual_801C3E3C.c:
+	.text       start:0x801C3E3C end:0x801C3F10
+
+game/battle/battle_grid_exact_801C3F10.c:
+	.text       start:0x801C3F10 end:0x801C4078
+
+game/effect/fade.c:
+	.text       start:0x801C4078 end:0x801C4814
+	.sdata2     start:0x8047DFA8 end:0x8047DFD8
+
+game/effect/fade_effect.c:
+	.text       start:0x801C4814 end:0x801C6934
+	.sdata2     start:0x8047DFD8 end:0x8047E0A8
+
+game/effect/fade_range_801C6934.c:
+	.text       start:0x801C6934 end:0x801C766C
+	.sdata2     start:0x8047E0A8 end:0x8047E100
+
+game/battle_sdata2_8047E0A8.c:
+	.sdata2     start:0x8047E100 end:0x8047E150
+
+game/gs_exact_801C766C.c:
+	.text       start:0x801C766C end:0x801C7730
+
+game/gs_candidate_801C7730.c:
+	.text       start:0x801C7730 end:0x801C84FC
+
+game/gs_exact_801C84FC.c:
+	.text       start:0x801C84FC end:0x801C8834
+	.data       start:0x8036DCB8 end:0x8036DD90
+
+game/gs_exact_801C8834.c:
+	.text       start:0x801C8834 end:0x801C8DD0
+	.data       start:0x8036DD90 end:0x8036DE6C
+
+game/gs_exact_801C8DD0.c:
+	.text       start:0x801C8DD0 end:0x801CA7EC
+
+game/field_range_801CA7EC_prefix.c:
+	.text       start:0x801CA7EC end:0x801CA9F0
+
+game/field_exact_801CA9F0.c:
+	.text       start:0x801CA9F0 end:0x801CA9F8
+
+game/field_exact_801CA9F8.c:
+	.text       start:0x801CA9F8 end:0x801CAA08
+
+game/field_exact_801CAA08.c:
+	.text       start:0x801CAA08 end:0x801CAAF4
+
+game/field_candidate_801CAAF4.c:
+	.text       start:0x801CAAF4 end:0x801CAC6C
+
+game/field_exact_801CAC6C.c:
+	.text       start:0x801CAC6C end:0x801CADA0
+
+game/field_exact_801CADA0.c:
+	.text       start:0x801CADA0 end:0x801CADA8
+
+game/field_candidate_801CADA8.c:
+	.text       start:0x801CADA8 end:0x801CAE80
+
+game/field_exact_801CAE80.c:
+	.text       start:0x801CAE80 end:0x801CAEA0
+
+game/field_exact_801CAEA0.c:
+	.text       start:0x801CAEA0 end:0x801CAF0C
+
+game/field_range_801CAF0C.c:
+	.text       start:0x801CAF0C end:0x801CB180
+
+game/field_range_801CB180.c:
+	.text       start:0x801CB180 end:0x801CB59C
+
+game/field_exact_801CB59C.c:
+	.text       start:0x801CB59C end:0x801CB61C
+
+game/field_candidate_801CB61C.c:
+	.text       start:0x801CB61C end:0x801CB7C4
+
+game/field_exact_801CB7C4.c:
+	.text       start:0x801CB7C4 end:0x801CB834
+
+game/field_candidate_801CB834.c:
+	.text       start:0x801CB834 end:0x801CB9D8
+	.sdata2     start:0x8047E150 end:0x8047E160
+
+game/field_exact_801CB9D8.c:
+	.text       start:0x801CB9D8 end:0x801CBA0C
+
+game/field_candidate_801CBA0C.c:
+	.text       start:0x801CBA0C end:0x801CBA84
+
+game/field_exact_801CBA84.c:
+	.text       start:0x801CBA84 end:0x801CBA90
+
+game/field_exact_801CBA90.c:
+	.text       start:0x801CBA90 end:0x801CBAB8
+
+game/field_r55_801CBAB8.c:
+	.text       start:0x801CBAB8 end:0x801CBBAC
+
+game/memcard.c:
+	.text       start:0x801CBBAC end:0x801D0AA0
+	.rodata     start:0x802758E8 end:0x80279320
+	.data       start:0x8036DE70 end:0x8036E030
+	.bss        start:0x804670E8 end:0x80467378
+	.sbss       start:0x8047B3D0 end:0x8047B3D8
+	.sdata2     start:0x8047E160 end:0x8047E180
+
+game/data/bss_80467378.c:
+	.bss        start:0x80467378 end:0x80467C80
+
+game/data/rodata_80279320_prefix.c:
+	.rodata     start:0x80279320 end:0x80279788
+
+game/battle/battle_exact_801D0AA0.c:
+	.text       start:0x801D0AA0 end:0x801D0C30
+
+game/battle/battle_candidate_801D0C30.c:
+	.text       start:0x801D0C30 end:0x801D1338
+	.data       start:0x8036E030 end:0x8036E0E0
+	.sdata2     start:0x8047E180 end:0x8047E1B0
+
+game/data/data_8036E0E0.c:
+	.data       start:0x8036E0E0 end:0x8036E130
+
+game/mail_exact_801D1338.c:
+	.text       start:0x801D1338 end:0x801D13E4
+
+game/mail_exact_801D13E4.c:
+	.text       start:0x801D13E4 end:0x801D142C
+
+game/mail_candidate_801D142C.c:
+	.text       start:0x801D142C end:0x801D1470
+
+game/mail_exact_801D1470.c:
+	.text       start:0x801D1470 end:0x801D167C
+
+game/mail_exact_801D167C.c:
+	.text       start:0x801D167C end:0x801D16F0
+
+game/mail_exact_801D16F0.c:
+	.text       start:0x801D16F0 end:0x801D1734
+
+game/mail_candidate_801D1734.c:
+	.text       start:0x801D1734 end:0x801D1A44
+
+game/mail_exact_801D1A44.c:
+	.text       start:0x801D1A44 end:0x801D1B10
+
+game/mail_exact_801D1B10.c:
+	.text       start:0x801D1B10 end:0x801D1E50
+
+game/mail_exact_801D1E50.c:
+	.text       start:0x801D1E50 end:0x801D1F0C
+
+game/mail_candidate_801D1F0C.c:
+	.text       start:0x801D1F0C end:0x801D2080
+
+game/mailMain.c:
+	.text       start:0x801D2080 end:0x801D2B4C
+	.data       start:0x8036E130 end:0x8036E14C
+	.sdata2     start:0x8047E1B0 end:0x8047E1D8
+
+game/data/data_8036E150.c:
+	.data       start:0x8036E150 end:0x803725C8
+
+game/wazaSequenceCamera_exact_801D2B4C.c:
+	.text       start:0x801D2B4C end:0x801D2C6C
+	.sdata2     start:0x8047E1D8 end:0x8047E1DC
+
+game/wazaSequenceCamera_exact_801D2C6C.c:
+	.text       start:0x801D2C6C end:0x801D2D28
+
+game/wazaSequenceCamera_file_801D2D28.c:
+	.text       start:0x801D2D28 end:0x801D5328
+	.sdata2     start:0x8047E1E0 end:0x8047E2E0
+
+game/battle_waza_sdata2_prefix_8047E290.c:
+	.sdata2     start:0x8047E2E0 end:0x8047E348
+
+game/wazaViewer_candidate_801D5328.c:
+	.text       start:0x801D5328 end:0x801D53D4
+
+game/wazaViewer_exact_801D53D4.c:
+	.text       start:0x801D53D4 end:0x801D53D8
+
+game/wazaViewer_exact_801D53D8.c:
+	.text       start:0x801D53D8 end:0x801D5464
+
+game/wazaViewer_candidate_801D5464.c:
+	.text       start:0x801D5464 end:0x801D56B0
+
+game/wazaViewer_candidate_801D56B0.c:
+	.text       start:0x801D56B0 end:0x801D744C
+
+game/wazaViewer_exact_801D744C.c:
+	.text       start:0x801D744C end:0x801D7464
+
+game/wazaViewer_candidate_801D7464.c:
+	.text       start:0x801D7464 end:0x801D7E58
+
+game/wazaSequenceEntry_r56_801D7E58_o1.c:
+	.text       start:0x801D7E58 end:0x801D81CC
+
+game/wazaSequenceEntry_r57_801D81CC_o1.c:
+	.text       start:0x801D81CC end:0x801D87B0
+	.data       start:0x803725C8 end:0x80372628
+
+game/wazaSequenceEntry_candidate_801D87B0_gc125.c:
+	.text       start:0x801D87B0 end:0x801D8B38
+	.data       start:0x80372628 end:0x80372660
+
+game/wazaSequenceEntry_particle_to_scale_801D8B38.c:
+	.text       start:0x801D8B38 end:0x801D9C1C
+	.data       start:0x80372660 end:0x80372700
+	.sdata2     start:0x8047E348 end:0x8047E350
+
+game/battle_waza_sdata2_middle_8047E350.c:
+	.sdata2     start:0x8047E350 end:0x8047E380
+
+game/wazaSequenceEntry_candidate_801D9C1C_gc125.c:
+	.text       start:0x801D9C1C end:0x801D9E1C
+	.sdata2     start:0x8047E380 end:0x8047E388
+
+game/battle_waza_sdata2_suffix_8047E388.c:
+	.sdata2     start:0x8047E388 end:0x8047E390
+
+game/data/sdata2_8047E390_prefix.c:
+	.sdata2     start:0x8047E390 end:0x8047E3A8
+
+game/wazaSequenceSys.c:
+	.text       start:0x801D9E1C end:0x801DAC90
+
+game/wazaSequenceSys_r52_801DAC90_prefix.c:
+	.text       start:0x801DAC90 end:0x801DADC0
+
+game/wazaSequenceSys_reset.c:
+	.text       start:0x801DADC0 end:0x801DB060
+	.bss        start:0x80467C80 end:0x80467CF8 align:4
+
+game/data/bss_80467CF8.c:
+	.bss        start:0x80467CF8 end:0x80469040
+
+game/wazaSequenceSys_tail_exact_801DB060.c:
+	.text       start:0x801DB060 end:0x801DB288
+
+game/wazaSequenceSys_tail_candidate_801DB288.c:
+	.text       start:0x801DB288 end:0x801DB3F8
+
+game/wazaSequenceSys_tail_candidate_801DB3F8.c:
+	.text       start:0x801DB3F8 end:0x801DB848
+	.rodata     start:0x80279788 end:0x802798F0
+	.data       start:0x80372700 end:0x80372760
+
+game/data/rodata_802798F0.c:
+	.rodata     start:0x802798F0 end:0x80279A68
+
+game/wazaSequenceSys_tail_exact_801DB848.c:
+	.text       start:0x801DB848 end:0x801DB988
+
+game/wazaSequence_candidate_801DB988.c:
+	.text       start:0x801DB988 end:0x801DBB10
+
+game/wazaSequence_exact_801DBB10.c:
+	.text       start:0x801DBB10 end:0x801DBDDC
+
+game/wazaSequence_candidate_801DBDDC.c:
+	.text       start:0x801DBDDC end:0x801DBFB0
+
+game/wazaSequence_exact_801DBFB0.c:
+	.text       start:0x801DBFB0 end:0x801DC014
+
+game/wazaSequence_r52_801DC014_prefix.c:
+	.text       start:0x801DC014 end:0x801DCAA0
+	.data       start:0x80372760 end:0x803727B0
+	.sdata2     start:0x8047E3A8 end:0x8047E3B0
+
+game/data/sdata2_8047E3B0.c:
+	.sdata2     start:0x8047E3B0 end:0x8047E3C0
+
+game/data/data_80372700.c:
+	.data       start:0x803727B0 end:0x803750C8
+
+game/wazaSequence_candidate_801DC014_r40_801DCAA0_gc125n.c:
+	.text       start:0x801DCAA0 end:0x801DCBC8
+
+game/wazaSequence_candidate_801DC014_r40_801DCBC8.c:
+	.text       start:0x801DCBC8 end:0x801DCDA8
+
+game/sequence_exact_801DCDA8.c:
+	.text       start:0x801DCDA8 end:0x801DCF00
+
+game/sequence_exact_801DCF00.c:
+	.text       start:0x801DCF00 end:0x801DCF84
+
+game/sequence_exact_801DCF84.c:
+	.text       start:0x801DCF84 end:0x801DD158
+
+game/sequence_candidate_801DD158.c:
+	.text       start:0x801DD158 end:0x801DD23C
+
+game/sequence_exact_801DD23C.c:
+	.text       start:0x801DD23C end:0x801DD45C
+
+game/sequence_candidate_801DD45C.c:
+	.text       start:0x801DD45C end:0x801DE164
+	.sdata2     start:0x8047E3C0 end:0x8047E3C8
+
+game/data/sdata2_8047E3C8_suffix.c:
+	.sdata2     start:0x8047E3C8 end:0x8047E3D8
+
+game/sequence_exact_801DE164.c:
+	.text       start:0x801DE164 end:0x801DE190
+
+game/sequence_r51_801DE190_prefix.c:
+	.text       start:0x801DE190 end:0x801DE418
+
+game/sequence_r51_801DE418_o4s.c:
+	.text       start:0x801DE418 end:0x801DE598
+
+game/sequence_r51_801DE598_suffix.c:
+	.text       start:0x801DE598 end:0x801DE654
+
+game/sequence_exact_801DE654.c:
+	.text       start:0x801DE654 end:0x801DE698
+
+game/gs_range_801DE698.c:
+	.text       start:0x801DE698 end:0x801DEE14
+
+game/gs_range_exact_801DEE14.c:
+	.text       start:0x801DEE14 end:0x801DF160
+
+game/gs_range_exact_801DF160.c:
+	.text       start:0x801DF160 end:0x801DF1D0
+
+game/gs_range_candidate_801DF1D0.c:
+	.text       start:0x801DF1D0 end:0x801DF474
+	.sdata2     start:0x8047E3D8 end:0x8047E3F0
+
+game/etctool.c:
+	.text       start:0x801DF474 end:0x801E0FB4
+	.data       start:0x803750C8 end:0x803751EC
+	.sdata2     start:0x8047E3F0 end:0x8047E428
+
+game/data/sdata2_8047E428.c:
+	.sdata2     start:0x8047E428 end:0x8047E480
+
+game/data/data_803751F0.c:
+	.data       start:0x803751F0 end:0x8037522C
+
+game/data/data_80375230.c:
+	.data       start:0x80375230 end:0x803752F8
+
+game/gs_exact_801E0FB4.c:
+	.text       start:0x801E0FB4 end:0x801E1170
+
+game/gs_exact_801E1170.c:
+	.text       start:0x801E1170 end:0x801E11F0
+
+game/gs_candidate_801E11F0.c:
+	.text       start:0x801E11F0 end:0x801E1258
+
+game/gs_exact_801E1258.c:
+	.text       start:0x801E1258 end:0x801E1300
+
+game/gs_candidate_801E1300.c:
+	.text       start:0x801E1300 end:0x801E16D0
+
+game/gs_exact_801E16D0.c:
+	.text       start:0x801E16D0 end:0x801E189C
+
+game/gs_movie_801E189C.c:
+	.text       start:0x801E189C end:0x801E1B54
+	.rodata     start:0x80279A68 end:0x80279AE8
+
+dolphin/thp/THPRead.c:
+	.text       start:0x801E1B54 end:0x801E1E1C
+	.bss        start:0x80469040 end:0x8046A440
+	.sbss       start:0x8047B460 end:0x8047B468
+
+dolphin/thp/THPDraw.c:
+	.text       start:0x801E1E1C end:0x801E25C8
+	.sdata2     start:0x8047E480 end:0x8047E4A8
+
+dolphin/thp/THPPlayer.c:
+	.text       start:0x801E25C8 end:0x801E4AC4
+	.bss        start:0x8046A440 end:0x8046AE20 align:32
+	.sdata      start:0x80478D00 end:0x80478D08
+	.sbss       start:0x8047B468 end:0x8047B480
+	.sdata2     start:0x8047E4A8 end:0x8047E4B0
+
+dolphin/thp/THPAudioDecode.c:
+	.text       start:0x801E4AC4 end:0x801E4EF0
+	.bss        start:0x8046AE20 end:0x8046C190
+	.sbss       start:0x8047B480 end:0x8047B488
+
+dolphin/thp/THPVideoDecode.c:
+	.text       start:0x801E4EF0 end:0x801E5548
+	.bss        start:0x8046C190 end:0x8046D500
+	.sbss       start:0x8047B488 end:0x8047B490
+
+dolphin/thp/THPDec.c:
+	.text       start:0x801E5548 end:0x801ECFE0
+	.rodata     start:0x80279AE8 end:0x80279B78
+	.bss        start:0x8046D500 end:0x8046D630
+	.sbss       start:0x8047B4A0 end:0x8047B5B8
+	.sdata2     start:0x8047E4B0 end:0x8047E4D0
+
+game/data/bss_8046D630.c:
+	.bss        start:0x8046D630 end:0x804782E0
+
+game/data/rodata_80279B78.c:
+	.rodata     start:0x80279B78 end:0x8027A4F0
+
+game/field_range_801ECFE0.c:
+	.text       start:0x801ECFE0 end:0x801ED218
+
+game/field_exact_801ED218.c:
+	.text       start:0x801ED218 end:0x801ED310
+
+game/field_candidate_801ED310.c:
+	.text       start:0x801ED310 end:0x801ED388
+
+game/field_exact_801ED388.c:
+	.text       start:0x801ED388 end:0x801ED3B8
+
+game/field_exact_801ED3B8.c:
+	.text       start:0x801ED3B8 end:0x801ED640
+
+game/battle/battle_range_exact_801ED640.c:
+	.text       start:0x801ED640 end:0x801ED780
+
+game/battle/battle_range_candidate_801ED780.c:
+	.text       start:0x801ED780 end:0x801EE034
+	.sdata2     start:0x8047E4D0 end:0x8047E508
+
+game/data/sdata2_8047E508.c:
+	.sdata2     start:0x8047E508 end:0x8047E528
+
+game/battle/battle_range_exact_801EE034.c:
+	.text       start:0x801EE034 end:0x801EE0BC
+
+game/battle/battle_range_exact_801EE0BC.c:
+	.text       start:0x801EE0BC end:0x801EE958
+
+game/battle/battle_range_candidate_801EE958.c:
+	.text       start:0x801EE958 end:0x801EEAD0
+
+game/battle/battle_range_exact_801EEAD0.c:
+	.text       start:0x801EEAD0 end:0x801EEB34
+
+game/battle/battle_range_candidate_801EEB34.c:
+	.text       start:0x801EEB34 end:0x801EEC74
+
+game/battle/battle_range_exact_801EEC74.c:
+	.text       start:0x801EEC74 end:0x801EEE6C
+
+game/battle/battle_range_candidate_801EEE6C.c:
+	.text       start:0x801EEE6C end:0x801EEEB8
+
+game/battle/battle_range_exact_801EEEB8.c:
+	.text       start:0x801EEEB8 end:0x801EF02C
+
+game/battle/battle_main_exact_801EF02C.c:
+	.text       start:0x801EF02C end:0x801EF4B0
+
+game/battle/battle_main_residual_801EF4B0.c:
+	.text       start:0x801EF4B0 end:0x801EF5C0
+
+game/battle/battle_main_exact_801EF5C0.c:
+	.text       start:0x801EF5C0 end:0x801EFA08
+
+game/battle/battle_main_candidate_801EFA08.c:
+	.text       start:0x801EFA08 end:0x801EFFC4
+
+game/battle/battle_main_exact_801EFFC4.c:
+	.text       start:0x801EFFC4 end:0x801F0058
+
+game/fight_target_exact_801F0058.c:
+	.text       start:0x801F0058 end:0x801F0134
+
+game/fight_target_801F0134.c:
+	.text       start:0x801F0134 end:0x801F0204
+
+game/fight_target_exact_801F0204.c:
+	.text       start:0x801F0204 end:0x801F0898
+	.data       start:0x803752F8 end:0x8037532C
+
+game/fight_action_range_801F0898.c:
+	.text       start:0x801F0898 end:0x801F108C
+
+game/fight_action_exact_801F108C.c:
+	.text       start:0x801F108C end:0x801F1170
+
+game/fight_action_range_candidate_801F1170.c:
+	.text       start:0x801F1170 end:0x801F150C
+
+game/fight_floor_exact_801F150C.c:
+	.text       start:0x801F150C end:0x801F1588
+
+game/fight_floor_candidate_801F1588.c:
+	.text       start:0x801F1588 end:0x801F1700
+
+game/fight_floor_exact_801F1700.c:
+	.text       start:0x801F1700 end:0x801F1990
+
+game/fight_floor_candidate_801F1990.c:
+	.text       start:0x801F1990 end:0x801F1A6C
+
+game/fight_floor_exact_801F1A6C.c:
+	.text       start:0x801F1A6C end:0x801F1B14
+
+game/fight_floor_candidate_801F1B14.c:
+	.text       start:0x801F1B14 end:0x801F1F30
+
+game/fight_floor_exact_801F1F30.c:
+	.text       start:0x801F1F30 end:0x801F1F7C
+
+game/fight_floor_candidate_801F1F7C.c:
+	.text       start:0x801F1F7C end:0x801F2020
+
+game/fight_floor_exact_801F2020.c:
+	.text       start:0x801F2020 end:0x801F2350
+
+game/fight_floor_candidate_801F2350.c:
+	.text       start:0x801F2350 end:0x801F2654
+
+game/fight_floor_exact_801F2654.c:
+	.text       start:0x801F2654 end:0x801F26A8
+
+game/fight_floor_candidate_801F26A8.c:
+	.text       start:0x801F26A8 end:0x801F27D4
+
+game/fight_floor_exact_801F27D4.c:
+	.text       start:0x801F27D4 end:0x801F2B5C
+
+game/fight_floor_candidate_801F2B5C.c:
+	.text       start:0x801F2B5C end:0x801F32B0
+
+game/fight_floor_exact_801F32B0.c:
+	.text       start:0x801F32B0 end:0x801F32EC
+
+game/fight_floor_candidate_801F32EC.c:
+	.text       start:0x801F32EC end:0x801F33E8
+
+game/fight_floor_exact_801F33E8.c:
+	.text       start:0x801F33E8 end:0x801F37B0
+
+game/fight_floor_candidate_801F37B0.c:
+	.text       start:0x801F37B0 end:0x801F3B24
+
+game/fight_floor_exact_801F3B24.c:
+	.text       start:0x801F3B24 end:0x801F3BB4
+
+game/fight_floor_candidate_801F3BB4.c:
+	.text       start:0x801F3BB4 end:0x801F4220
+
+game/fight_floor_exact_801F4220.c:
+	.text       start:0x801F4220 end:0x801F4354
+
+game/fight_floor_candidate_801F4354.c:
+	.text       start:0x801F4354 end:0x801F4460
+
+game/fight_floor_exact_801F4460.c:
+	.text       start:0x801F4460 end:0x801F61BC
+	.data       start:0x80375330 end:0x80375624
+
+game/fight_floor_exact_801F61BC.c:
+	.text       start:0x801F61BC end:0x801F61EC
+
+game/fight_floor_candidate_801F61EC.c:
+	.text       start:0x801F61EC end:0x801F640C
+
+game/fight_floor_bios.c:
+	.text       start:0x801F640C end:0x801F6B54
+
+game/fight_side_exact_801F6B54.c:
+	.text       start:0x801F6B54 end:0x801F6F38
+
+game/fight_side_candidate_801F6F38.c:
+	.text       start:0x801F6F38 end:0x801F7258
+
+game/fight_side_exact_801F7258.c:
+	.text       start:0x801F7258 end:0x801F72B0
+
+game/fight_side_candidate_801F72B0.c:
+	.text       start:0x801F72B0 end:0x801F7388
+
+game/fight_side_exact_801F7388.c:
+	.text       start:0x801F7388 end:0x801F75F8
+
+game/fight_side_exact_801F75F8.c:
+	.text       start:0x801F75F8 end:0x801F7798
+	.data       start:0x80375628 end:0x80375670
+
+game/fight_side_bios.c:
+	.text       start:0x801F7798 end:0x801F7954
+
+game/fight_trainer_range_801F7954.c:
+	.text       start:0x801F7954 end:0x801F7F80
+
+game/fight_trainer_exact_801F7F80.c:
+	.text       start:0x801F7F80 end:0x801F81F8
+
+game/fight_trainer_range_801F7F80.c:
+	.text       start:0x801F81F8 end:0x801F8424
+
+game/fight_trainer_exact_801F8424.c:
+	.text       start:0x801F8424 end:0x801F87CC
+
+game/fight_trainer_range_801F87CC.c:
+	.text       start:0x801F87CC end:0x801F8A18
+
+game/fight_trainer_range_801F87CC_r41_801F8A18.c:
+	.text       start:0x801F8A18 end:0x801F8D80
+
+game/fight_trainer_exact_801F8D80.c:
+	.text       start:0x801F8D80 end:0x801F9130
+
+game/fight_trainer_r53_801F9130_prefix.c:
+	.text       start:0x801F9130 end:0x801F93F8
+
+game/fight_trainer_r53_801F93F8_gc20p1_o1.c:
+	.text       start:0x801F93F8 end:0x801F9600
+
+game/fight_trainer_r53_801F9600_suffix.c:
+	.text       start:0x801F9600 end:0x801F9790
+
+game/fight_trainer_exact_801F9790.c:
+	.text       start:0x801F9790 end:0x801F99C8
+
+game/fight_trainer_r51_801F99C8_prefix.c:
+	.text       start:0x801F99C8 end:0x801F9F78
+
+game/fight_trainer_r51_801F9F78_gc20_o2.c:
+	.text       start:0x801F9F78 end:0x801FA4B4
+
+game/fight_trainer_exact_801FA4B4.c:
+	.text       start:0x801FA4B4 end:0x801FA524
+
+game/fight_trainer_range_801FA524.c:
+	.text       start:0x801FA524 end:0x801FA634
+
+game/fight_trainer_exact_801FA634.c:
+	.text       start:0x801FA634 end:0x801FAA58
+
+game/fight_trainer_range_801FAA58.c:
+	.text       start:0x801FAA58 end:0x801FB8F8
+	.data       start:0x80375670 end:0x80375934
+
+game/fight_trainer_exact_801FB8F8.c:
+	.text       start:0x801FB8F8 end:0x801FBAD4
+
+game/fight_trainer_range_801FBAD4.c:
+	.text       start:0x801FBAD4 end:0x801FBD10
+
+game/fight_trainer_db_range_801FBD10.c:
+	.text       start:0x801FBD10 end:0x801FDB78
+
+game/fight_pokemon_range_801FDB78.c:
+	.text       start:0x801FDB78 end:0x801FE168
+
+game/fight_pokemon_candidate_801FE168_gc20.c:
+	.text       start:0x801FE168 end:0x801FE3F8
+
+game/fight_pokemon_candidate_801FE3F8.c:
+	.text       start:0x801FE3F8 end:0x801FE91C
+
+game/fight_pokemon_candidate_801FE3F8_r40_801FE91C_gc125n.c:
+	.text       start:0x801FE91C end:0x801FEC10
+
+game/fight_pokemon_r58_801FEC10_prefix.c:
+	.text       start:0x801FEC10 end:0x801FED3C
+
+game/fight_pokemon_r58_801FED3C_o1.c:
+	.text       start:0x801FED3C end:0x801FEF74
+
+game/fight_pokemon_r58_801FEF74_middle.c:
+	.text       start:0x801FEF74 end:0x801FF1BC
+
+game/fight_pokemon_r58_801FF1BC_o1.c:
+	.text       start:0x801FF1BC end:0x80200A5C
+
+game/fight_pokemon_r58_80200A5C_middle.c:
+	.text       start:0x80200A5C end:0x80200B10
+
+game/fight_pokemon_r58_80200B10_o1.c:
+	.text       start:0x80200B10 end:0x80200E00
+
+game/fight_pokemon_candidate_80200E00_gc20.c:
+	.text       start:0x80200E00 end:0x802010C8
+
+game/fight_pokemon_candidate_802010C8.c:
+	.text       start:0x802010C8 end:0x80201248
+
+game/fight_pokemon_exact_80201248.c:
+	.text       start:0x80201248 end:0x80201764
+
+game/fight_range_80201764.c:
+	.text       start:0x80201764 end:0x80202810
+
+game/fight_out_pokemon_candidate_80202810.c:
+	.text       start:0x80202810 end:0x8020355C
+
+game/fight_out_pokemon_exact_8020355C.c:
+	.text       start:0x8020355C end:0x802038A4
+
+game/fight_out_pokemon_candidate_802038A4.c:
+	.text       start:0x802038A4 end:0x80203A6C
+
+game/fight_out_pokemon_exact_80203A6C.c:
+	.text       start:0x80203A6C end:0x80203EDC
+
+game/fight_out_pokemon.c:
+	.text       start:0x80203EDC end:0x80206A04
+
+game/fight_out_pokemon_exact_80206A04.c:
+	.text       start:0x80206A04 end:0x80207C6C
+
+game/fight_out_pokemon_suffix_80207C6C.c:
+	.text       start:0x80207C6C end:0x80207F5C
+
+game/fight_out_pokemon_exact_80207F5C.c:
+	.text       start:0x80207F5C end:0x802096E8
+
+game/fight_out_pokemon_exact_802096E8.c:
+	.text       start:0x802096E8 end:0x8020A8E0
+
+game/fight_out_pokemon_suffix_8020A8E0.c:
+	.text       start:0x8020A8E0 end:0x8020AE30
+	.data       start:0x80375938 end:0x80375970
+
+game/data/data_80375938.c:
+	.data       start:0x80375970 end:0x80375E60
+
+game/data/data_80375F98.c:
+	.data       start:0x80375F98 end:0x80375F9C
+
+game/data/data_803760D8.c:
+	.data       start:0x803760D8 end:0x80376104
+
+game/data/data_80376FCC.c:
+	.data       start:0x80376FCC end:0x80377088
+
+game/data/data_80377B0C.c:
+	.data       start:0x80377B0C end:0x80377D90
+
+game/data/data_803784C0.c:
+	.data       start:0x803784C0 end:0x80378538
+
+game/data/data_803786D0.c:
+	.data       start:0x803786D0 end:0x80378724
+
+game/data/data_80378794.c:
+	.data       start:0x80378794 end:0x80378798
+
+game/data/data_803788C0.c:
+	.data       start:0x803788C0 end:0x80378968
+
+game/data/data_80378A7C.c:
+	.data       start:0x80378A7C end:0x80378AA0
+
+game/data/data_80378B00.c:
+	.data       start:0x80378B00 end:0x80378B44
+
+game/data/data_80378D14.c:
+	.data       start:0x80378D14 end:0x80378D7C
+
+game/data/data_80379388.c:
+	.data       start:0x80379388 end:0x8037939C
+
+game/data/data_8037943C.c:
+	.data       start:0x8037943C end:0x80379478
+
+game/data/data_803794CC.c:
+	.data       start:0x803794CC end:0x803795D8
+
+game/data/data_80379714.c:
+	.data       start:0x80379714 end:0x80379808
+
+game/data/data_80379A3C.c:
+	.data       start:0x80379A3C end:0x80379B0C
+
+game/data/data_80379BF4.c:
+	.data       start:0x80379BF4 end:0x8038FF64
+
+game/data/data_8038FFFC.c:
+	.data       start:0x8038FFFC end:0x8039A028
+
+game/fight_action_exact_8020AE30.c:
+	.text       start:0x8020AE30 end:0x8020AED0
+
+game/fight_action_exact_8020AED0.c:
+	.text       start:0x8020AED0 end:0x8020AF30
+
+game/fight_action_exact_8020AF30.c:
+	.text       start:0x8020AF30 end:0x8020B058
+
+game/fight_action_exact_8020B058.c:
+	.text       start:0x8020B058 end:0x8020B72C
+
+game/fight_action_r51_8020B058_prefix.c:
+	.text       start:0x8020B72C end:0x8020B910
+
+game/fight_action_exact_8020B910.c:
+	.text       start:0x8020B910 end:0x8020CA98
+
+game/fight_action_r51_8020CA98_o3.c:
+	.text       start:0x8020CA98 end:0x8020CFE0
+
+game/fight_action_exact_8020CFE0.c:
+	.text       start:0x8020CFE0 end:0x8020D1FC
+
+game/fight_action_r51_8020CFE0_suffix.c:
+	.text       start:0x8020D1FC end:0x8020D698
+
+game/fight_action_exact_8020D698.c:
+	.text       start:0x8020D698 end:0x8020D784
+
+game/fight_action_exact_8020D784.c:
+	.text       start:0x8020D784 end:0x8020D844
+
+game/fight_action_exact_8020D844.c:
+	.text       start:0x8020D844 end:0x8020D868
+
+game/fight_action_exact_8020D868.c:
+	.text       start:0x8020D868 end:0x8020D968
+
+game/fight_kouka_exact_8020D968.c:
+	.text       start:0x8020D968 end:0x8020DA14
+
+game/fight_candidate_8020DA14.c:
+	.text       start:0x8020DA14 end:0x8020DAD0
+
+game/fight_candidate_8020DAD0.c:
+	.text       start:0x8020DAD0 end:0x8020DD44
+	.sdata2     start:0x8047E528 end:0x8047E530
+
+game/data/sdata2_8047E530.c:
+	.sdata2     start:0x8047E530 end:0x8047E538
+
+game/data/sdata2_8047E538.c:
+	.sdata2     start:0x8047E538 end:0x8047E618
+
+game/fight_encount_exact_8020DD44.c:
+	.text       start:0x8020DD44 end:0x8020DF10
+
+game/fight_encount_exact_8020DF10.c:
+	.text       start:0x8020DF10 end:0x8020DF90
+
+game/fight_encount_exact_8020DF90.c:
+	.text       start:0x8020DF90 end:0x8020E020
+
+game/fight_encount_exact_8020E020.c:
+	.text       start:0x8020E020 end:0x8020E0B0
+
+game/fight_encount_exact_8020E0B0.c:
+	.text       start:0x8020E0B0 end:0x8020E124
+
+game/fight_exact_8020E124.c:
+	.text       start:0x8020E124 end:0x8020E1A4
+
+game/fight_exact_8020E1A4.c:
+	.text       start:0x8020E1A4 end:0x8020E4E8
+
+game/fight_trainer.c:
+	.text       start:0x8020E4E8 end:0x8020EE1C
+
+game/fight_waza.c:
+	.text       start:0x8020EE1C end:0x80211170
+
+game/fight_seq_candidate_80211170.c:
+	.text       start:0x80211170 end:0x802117FC
+
+game/fight_seq_exact_802117FC.c:
+	.text       start:0x802117FC end:0x80211810
+
+game/fight_seq_r54_80211810_prefix.c:
+	.text       start:0x80211810 end:0x80211830
+
+game/fight_seq_r54_80211830_gc13_o4p.c:
+	.text       start:0x80211830 end:0x802118FC
+
+game/fight_seq_r54_802118FC_suffix.c:
+	.text       start:0x802118FC end:0x802119D4
+
+game/fight_seq_exact_802119D4.c:
+	.text       start:0x802119D4 end:0x80211A00
+
+game/fight_range_80211A00.c:
+	.text       start:0x80211A00 end:0x80212840
+
+game/fight_range_exact_80212840.c:
+	.text       start:0x80212840 end:0x802128D0
+
+game/fight_range_exact_802128D0.c:
+	.text       start:0x802128D0 end:0x80213158
+
+game/fight_range_exact_80213158.c:
+	.text       start:0x80213158 end:0x80213270
+
+game/fight_range_802128D0.c:
+	.text       start:0x80213270 end:0x802134D4
+
+game/fight_range_exact_802134D4.c:
+	.text       start:0x802134D4 end:0x80213558
+
+game/fight_range_80213558.c:
+	.text       start:0x80213558 end:0x802136A4
+
+game/fight_range_exact_802136A4.c:
+	.text       start:0x802136A4 end:0x80213A78
+
+game/fight_range_exact_80213A78.c:
+	.text       start:0x80213A78 end:0x80213E94
+
+game/fight_range_80213A78.c:
+	.text       start:0x80213E94 end:0x80214450
+
+game/fight_range_80211A00_exact_80214450.c:
+	.text       start:0x80214450 end:0x80216A58
+
+game/fight_range_80211A00_suffix_80216A58.c:
+	.text       start:0x80216A58 end:0x80217018
+
+game/fight_range_exact_80217018.c:
+	.text       start:0x80217018 end:0x80217D34
+
+game/fight_range_80217D34.c:
+	.text       start:0x80217D34 end:0x80217E20
+	.data       start:0x8039A028 end:0x8039A048
+
+game/fight_range_exact_80217E20.c:
+	.text       start:0x80217E20 end:0x80218BD4
+
+game/fight_range_80218BD4.c:
+	.text       start:0x80218BD4 end:0x80218D24
+
+game/fight_range_exact_80218D24.c:
+	.text       start:0x80218D24 end:0x80218FDC
+
+game/fight_range_exact_80218FDC.c:
+	.text       start:0x80218FDC end:0x8021908C
+
+game/fight_range_80218FDC.c:
+	.text       start:0x8021908C end:0x80219270
+
+game/fight_range_exact_80219270.c:
+	.text       start:0x80219270 end:0x802192B4
+
+game/fight_range_candidate_802192B4.c:
+	.text       start:0x802192B4 end:0x80219804
+
+game/fight_range_exact_80219804.c:
+	.text       start:0x80219804 end:0x80219838
+
+game/fight_range_candidate_80219838.c:
+	.text       start:0x80219838 end:0x80219D98
+
+game/fight_range_exact_80219D98.c:
+	.text       start:0x80219D98 end:0x80219E10
+
+game/fight_range_exact_80219E10.c:
+	.text       start:0x80219E10 end:0x80219FE4
+
+game/fight_range_80219FE4.c:
+	.text       start:0x80219FE4 end:0x8021A054
+
+game/fight_range_exact_8021A054.c:
+	.text       start:0x8021A054 end:0x8021A2C0
+
+game/fight_range_exact_8021A2C0.c:
+	.text       start:0x8021A2C0 end:0x8021A338
+
+game/fight_range_8021A338.c:
+	.text       start:0x8021A338 end:0x8021A6CC
+
+game/fight_range_exact_8021A6CC.c:
+	.text       start:0x8021A6CC end:0x8021B910
+
+game/fight_range_8021B910.c:
+	.text       start:0x8021B910 end:0x8021C034
+	.data       start:0x8039A048 end:0x8039A068
+
+game/fight_range_exact_8021C034.c:
+	.text       start:0x8021C034 end:0x8021C0F4
+	.data       start:0x8039A068 end:0x8039A088
+
+game/data/data_8039A088.c:
+	.data       start:0x8039A088 end:0x8039A0A8
+
+game/fight_range_exact_8021C0F4.c:
+	.text       start:0x8021C0F4 end:0x8021CA00
+
+game/fight_range_8021CA00.c:
+	.text       start:0x8021CA00 end:0x8021CB58
+
+game/fight_range_exact_8021CB58.c:
+	.text       start:0x8021CB58 end:0x8021D40C
+
+game/fight_range_8021D40C.c:
+	.text       start:0x8021D40C end:0x8021D9C0
+
+game/fight_range_exact_8021D9C0.c:
+	.text       start:0x8021D9C0 end:0x8021FAD4
+
+game/fight_range_8021FAD4.c:
+	.text       start:0x8021FAD4 end:0x80220778
+	.data       start:0x8039A0A8 end:0x8039A0F0
+
+game/data/data_8039A0F0.c:
+	.data       start:0x8039A0F0 end:0x8039A130
+
+game/fight_range_exact_80220778.c:
+	.text       start:0x80220778 end:0x80220868
+
+game/fight_range_80220868.c:
+	.text       start:0x80220868 end:0x80220B8C
+
+game/fight_range_exact_80220B8C.c:
+	.text       start:0x80220B8C end:0x8022106C
+	.data       start:0x8039A130 end:0x8039A1C8
+
+game/fight_range_8022106C.c:
+	.text       start:0x8022106C end:0x80221104
+
+game/fight_range_exact_80221104.c:
+	.text       start:0x80221104 end:0x80222110
+	.data       start:0x8039A1C8 end:0x8039A200
+
+game/fight_range_exact_80222110.c:
+	.text       start:0x80222110 end:0x80222BD8
+
+game/fight_range_80222BD8.c:
+	.text       start:0x80222BD8 end:0x80222C44
+
+game/fight_range_exact_80222C44.c:
+	.text       start:0x80222C44 end:0x802230BC
+
+game/fight_range_802230BC.c:
+	.text       start:0x802230BC end:0x80223A24
+
+game/fight_range_exact_80223A24.c:
+	.text       start:0x80223A24 end:0x80224158
+	.data       start:0x8039A200 end:0x8039A220
+
+game/fight_range_80224158.c:
+	.text       start:0x80224158 end:0x80224740
+
+game/fight_range_exact_80224740.c:
+	.text       start:0x80224740 end:0x802247D0
+
+game/fight_range_exact_802247D0.c:
+	.text       start:0x802247D0 end:0x802249B8
+
+game/fight_range_802249B8_to_8022BB84.c:
+	.text       start:0x802249B8 end:0x8022BB84
+	.data       start:0x8039A220 end:0x8039A388
+
+game/fight_range_exact_8022BB84.c:
+	.text       start:0x8022BB84 end:0x8022BE2C
+
+game/fight_range_8022BE2C.c:
+	.text       start:0x8022BE2C end:0x8022D20C
+	.data       start:0x8039A388 end:0x8039A478
+
+game/fight_range_8022D20C.c:
+	.text       start:0x8022D20C end:0x8022D6BC
+
+game/fight_range_8022D6BC.c:
+	.text       start:0x8022D6BC end:0x8022DCB8
+	.data       start:0x8039A478 end:0x8039A538
+
+game/fight_range_exact_8022DCB8.c:
+	.text       start:0x8022DCB8 end:0x8022F2F8
+
+game/fight_range_8022F2F8.c:
+	.text       start:0x8022F2F8 end:0x8022FE20
+	.data       start:0x8039A538 end:0x8039A578
+
+game/fight_range_exact_8022FE20.c:
+	.text       start:0x8022FE20 end:0x80230568
+
+game/fight_range_80230568.c:
+	.text       start:0x80230568 end:0x802316FC
+
+game/fight_range_exact_802316FC.c:
+	.text       start:0x802316FC end:0x80232110
+
+game/fight_range_80232110.c:
+	.text       start:0x80232110 end:0x80232D28
+
+game/fight_range_exact_80232D28.c:
+	.text       start:0x80232D28 end:0x80232FE4
+
+game/fight_range_exact_80232FE4.c:
+	.text       start:0x80232FE4 end:0x802331F4
+
+game/fight_range_802331F4.c:
+	.text       start:0x802331F4 end:0x80233DB0
+
+game/fight_range_exact_80233DB0.c:
+	.text       start:0x80233DB0 end:0x80234A0C
+
+game/fight_range_80234A0C.c:
+	.text       start:0x80234A0C end:0x8023565C
+
+game/fight_range_8023565C_exact.c:
+	.text       start:0x8023565C end:0x802373B0
+
+game/fight_range_802373B0.c:
+	.text       start:0x802373B0 end:0x8023753C
+	.sdata2     start:0x8047E618 end:0x8047E628
+
+game/data/sdata2_8047E628.c:
+	.sdata2     start:0x8047E628 end:0x8047E658
+
+game/colosseum_battle_sdata2.c:
+	.sdata2     start:0x8047E658 end:0x8047E6D0
+
+game/fight_range_8023753C_exact.c:
+	.text       start:0x8023753C end:0x80238060
+
+game/fight_range_80238060.c:
+	.text       start:0x80238060 end:0x802381C4
+
+game/fight_range_802381C4_exact.c:
+	.text       start:0x802381C4 end:0x80238B0C
+
+game/fight_range_80238B0C.c:
+	.text       start:0x80238B0C end:0x80238E30
+
+game/fight_range_80238E30_exact.c:
+	.text       start:0x80238E30 end:0x8023A308
+
+game/fight_range_8023A308.c:
+	.text       start:0x8023A308 end:0x8023A740
+
+game/fight_range_8023A740.c:
+	.text       start:0x8023A740 end:0x8023B498
+
+game/fight_range_8023B498.c:
+	.text       start:0x8023B498 end:0x8023CA9C
+	.data       start:0x8039A578 end:0x8039A5D8
+
+game/fight_range_80211A00_exact_8023CA9C.c:
+	.text       start:0x8023CA9C end:0x802405C0
+
+game/fight_trainer_ai_waza_value_prefix.c:
+	.text       start:0x802405C0 end:0x80240BD0
+
+game/fight_trainer_ai_waza_value_exact_80240BD0.c:
+	.text       start:0x80240BD0 end:0x80241660
+
+game/fight_trainer_ai_waza_value_candidate_80241660.c:
+	.text       start:0x80241660 end:0x80241B70
+
+game/fight_trainer_ai_waza_value_exact_80241B70.c:
+	.text       start:0x80241B70 end:0x80243CD8
+
+game/fight_trainer_ai_waza_value_middle.c:
+	.text       start:0x80243CD8 end:0x80244318
+
+game/fight_trainer_ai_waza_value_middle_exact_80244318.c:
+	.text       start:0x80244318 end:0x8024498C
+
+game/fight_trainer_ai_waza_value_middle_suffix_8024498C.c:
+	.text       start:0x8024498C end:0x802451C0
+
+game/fight_trainer_ai_waza_value_exact_802451C0.c:
+	.text       start:0x802451C0 end:0x80245FC4
+
+game/fight_trainer_ai_waza_value_candidate_80245FC4.c:
+	.text       start:0x80245FC4 end:0x80247048
+	.data       start:0x8039A5D8 end:0x8039A648
+
+game/data/data_8039A648.c:
+	.data       start:0x8039A648 end:0x8039A690
+
+game/data/data_8039A6A8.c:
+	.data       start:0x8039A6A8 end:0x8039A6B8
+
+game/fight_trainer_ai_waza_value_exact_80247048.c:
+	.text       start:0x80247048 end:0x8024A170
+
+game/fight_trainer_ai_waza_value.c:
+	.text       start:0x8024A170 end:0x8024A664
+
+game/fight_trainer_ai_waza_value_exact_8024A664.c:
+	.text       start:0x8024A664 end:0x8024B474
+
+game/fight_trainer_ai_waza_value_residual_8024B474.c:
+	.text       start:0x8024B474 end:0x8024BA44
+
+game/fight_trainer_ai_waza_value_exact_8024BA44.c:
+	.text       start:0x8024BA44 end:0x8024BFC0
+
+game/fight_trainer_ai_waza_value_residual_8024BFC0.c:
+	.text       start:0x8024BFC0 end:0x8024C5BC
+
+game/fight_trainer_ai_waza_value_exact_8024C5BC.c:
+	.text       start:0x8024C5BC end:0x8024D818
+
+game/fight_trainer_ai_waza_value_exact_8024D818.c:
+	.text       start:0x8024D818 end:0x8024DC7C
+
+game/fight_trainer_ai_waza_value_candidate_8024DC7C.c:
+	.text       start:0x8024DC7C end:0x8024DE8C
+
+game/fight_trainer_ai_waza_value_exact_8024DE8C.c:
+	.text       start:0x8024DE8C end:0x8024E578
+
+game/fight_trainer_ai_irekae.c:
+	.text       start:0x8024E578 end:0x8024E690
+
+game/fight_trainer_ai_irekae_candidate_8024E690_gc20.c:
+	.text       start:0x8024E690 end:0x8024F8B4
+
+game/fight_trainer_ai_irekae_r58b_8024F8B4_o1.c:
+	.text       start:0x8024F8B4 end:0x80250070
+
+game/fight_trainer_ai_irekae_r58b_80250070_suffix.c:
+	.text       start:0x80250070 end:0x802502EC
+
+game/fight_trainer_ai_irekae_r47_select_item_o2.c:
+	.text       start:0x802502EC end:0x80250980
+
+game/fight_trainer_ai_waza_damage.c:
+	.text       start:0x80250980 end:0x80253950
+
+game/fight_trainer_ai_waza_hit_exact_80253950.c:
+	.text       start:0x80253950 end:0x802546E8
+
+game/fight_trainer_ai_waza_hit_candidate_802546E8.c:
+	.text       start:0x802546E8 end:0x80254810
+
+game/fight_trainer_ai_waza_hit_exact_80254810.c:
+	.text       start:0x80254810 end:0x80256ED0
+
+game/fight_trainer_ai_waza_hit_candidate_80256ED0.c:
+	.text       start:0x80256ED0 end:0x802570D0
+
+game/fight_trainer_ai_waza_hit_exact_802570D0.c:
+	.text       start:0x802570D0 end:0x8025C264
+
+game/fight_trainer_ai_waza_hit.c:
+	.text       start:0x8025C264 end:0x8025C5A4
+
+game/fight_trainer_ai2_exact_8025C5A4.c:
+	.text       start:0x8025C5A4 end:0x8025C6BC
+
+game/fight_trainer_ai2.c:
+	.text       start:0x8025C6BC end:0x8025C770
+
+game/fight_trainer_ai2_exact_8025C770.c:
+	.text       start:0x8025C770 end:0x8025C808
+
+game/fight_trainer_ai2_candidate_8025C808.c:
+	.text       start:0x8025C808 end:0x8025CAA8
+
+game/fight_trainer_ai2_exact_8025CAA8.c:
+	.text       start:0x8025CAA8 end:0x8025CD64
+
+game/toolentry_exact_8025CD64.c:
+	.text       start:0x8025CD64 end:0x8025CDB8
+
+game/toolentry.c:
+	.text       start:0x8025CDB8 end:0x8025D06C
+
+game/toolentry_exact_8025D06C.c:
+	.text       start:0x8025D06C end:0x8025D164
+
+game/toolentry_candidate_8025D164.c:
+	.text       start:0x8025D164 end:0x8025D28C
+
+game/toolentry_exact_8025D28C.c:
+	.text       start:0x8025D28C end:0x8025D364
+
+game/toolentry_r55_8025D364_prefix.c:
+	.text       start:0x8025D364 end:0x8025D3F4
+
+game/toolentry_r55_8025D3F4_gc13_o1.c:
+	.text       start:0x8025D3F4 end:0x8025D560
+
+game/toolentry_exact_8025D560.c:
+	.text       start:0x8025D560 end:0x8025D644
+
+game/toolentry_candidate_8025D644.c:
+	.text       start:0x8025D644 end:0x8025D744
+
+game/toolentry_exact_8025D744.c:
+	.text       start:0x8025D744 end:0x8025D788
+
+game/toolentry_candidate_8025D788.c:
+	.text       start:0x8025D788 end:0x8025D914
+
+game/toolentry_exact_8025D914.c:
+	.text       start:0x8025D914 end:0x8025D938
+
+game/toolentry_exact_8025D938.c:
+	.text       start:0x8025D938 end:0x8025D9A8
+
+game/toolentry_exact_8025D9A8.c:
+	.text       start:0x8025D9A8 end:0x8025DBB0
+
+game/toolentry_exact_8025DBB0.c:
+	.text       start:0x8025DBB0 end:0x8025DBD4
+
+game/table_res_bios.c:
+	.text       start:0x8025DBD4 end:0x8025DC2C
+
+game/pokemon_relive.c:
+	.text       start:0x8025DC2C end:0x8025F2FC
+
+game/gba/GBA.c:
+	.text       start:0x8025F2FC end:0x8025F524
+	.data       start:0x8039A6B8 end:0x8039A6C8
+	.bss        start:0x804782E0 end:0x804787E0
+	.sbss       start:0x8047B670 end:0x8047B678
+
+game/data/bss_804787E0.c:
+	.bss        start:0x804787E0 end:0x80478800
+
+game/gba/GBARead.c:
+	.text       start:0x8025F524 end:0x8025F618
+
+game/gba/GBAWrite.c:
+	.text       start:0x8025F618 end:0x8025F70C
+
+game/gba/GBAXfer.c:
+	.text       start:0x8025F70C end:0x8025FA20
+
+game/memo_r57b_8025FA20_prefix.c:
+	.text       start:0x8025FA20 end:0x8025FBCC
+
+game/memo_r57b_8025FBCC_o2.c:
+	.text       start:0x8025FBCC end:0x8025FD34
+
+game/memo_r57b_8025FD34_suffix.c:
+	.text       start:0x8025FD34 end:0x8025FEE4
+
+game/memo_exact_8025FEE4.c:
+	.text       start:0x8025FEE4 end:0x8025FF18
+
+game/memo_candidate_8025FF18.c:
+	.text       start:0x8025FF18 end:0x802600E4
+
+game/evolution_r57b_802600E4_prefix.c:
+	.text       start:0x802600E4 end:0x80260EBC
+
+game/evolution_r57b_80260EBC_o4p.c:
+	.text       start:0x80260EBC end:0x802612D0
+
+game/evolution_r57b_802612D0_suffix.c:
+	.text       start:0x802612D0 end:0x80261388
+
+game/char_name_bios.c:
+	.text       start:0x80261388 end:0x802614B4
+
+game/fight_gsfloor.c:
+	.text       start:0x802614B4 end:0x80261B68
+
+game/fight_menu.c:
+	.text       start:0x80261B68 end:0x8026316C
+
+game/fight_menu_candidate_8026316C_o2.c:
+	.text       start:0x8026316C end:0x80263BC8
+
+game/fight_menu_exact_80263BC8.c:
+	.text       start:0x80263BC8 end:0x80263DE4
+
+game/fight_menu_candidate_80263BC8.c:
+	.text       start:0x80263DE4 end:0x80264ADC
+	.sdata2     start:0x8047E6D0 end:0x8047E6D8
+
+game/fight_menu_exact_80264ADC.c:
+	.text       start:0x80264ADC end:0x80264D58
+
+game/fight_menu_candidate_80264D58.c:
+	.text       start:0x80264D58 end:0x8026503C
+
+game/fight_menu_exact_8026503C.c:
+	.text       start:0x8026503C end:0x802658C8
+
+game/fight_timer.c:
+	.text       start:0x802658C8 end:0x80265E34
+	.sdata2     start:0x8047E6D8 end:0x8047E6F8
+
+game/colosseum_battle_sdata2_8047E6F8.c:
+	.sdata2     start:0x8047E6F8 end:0x8047E700
+
+game/d2present.c:
+	.text       start:0x80265E34 end:0x80265EC4
+
+game/gs_range_80265EC4_exact.c:
+	.text       start:0x80265EC4 end:0x80265F94
+
+game/gs_range_80265F94_suffix.c:
+	.text       start:0x80265F94 end:0x8026635C
+
+crt/__start_mem_80003458.c:
+	.init       start:0x80003458 end:0x80005544

@@ -1,0 +1,149 @@
+# Equivalent-function registry — the Pikmin2/TWW "Equivalent" tier for this project.
+#
+# A function listed here has REAL, CORRECT, decompiled C that does NOT byte-match
+# because it hits a confirmed, C-uncontrollable wall (see WALLS.md for the class).
+# It counts toward the C-converted axis and is a HARD-SKIP: do not re-grind it.
+#
+# Format: one `fn_XXXXXXXX` per line; everything after `#` is a comment.
+# Add a function here ONLY after it is logged in WALLS.md (class confirmed, or
+# tested-and-didn't-move). Read by tools/decomp_work/progress2.py.
+#
+# Kept OUT of config/GC6E01/ (build-truth dir) so no build glob can ingest it.
+
+fn_800E3604   # gs_material      — W1 data-flow-locked reg-alloc (live-range coalescing); 99.37%, inversion-tested, locked
+fn_8023CE60   # colosseum_script — W1 param landed one saved-reg off (data-flow-locked); 98.26%, inversion-tested, locked
+fn_80129280   # gs_field_world   — W6 jumptable NAME only (@6029 vs jumptable_803634A8); 99.85%, bytes link identical; annealer isolated frame scores 0
+fn_80132A38   # effect_util      — W6 jumptable NAME only (@559 vs jumptable_80363630); 99.92%, bytes link identical
+fn_80029FAC   # gs_worldmap       — W2 scheduling (SDA-load-first issue order); 97.01%, exhaustively swept 2026-06-10
+fn_8002A0B8   # gs_worldmap       — W2 scheduling, sibling of fn_80029FAC (same wall)
+fn_80065A48   # ui_core          � W6 jumptable NAME only (@2187 vs jumptable_802EDB7C); 99.99%, bytes link identical
+fn_800E4170   # gs_material      — W1 register-recycling (linear-scan slot reuse in section 3); 94.3%, C is correct
+fn_800E8EFC   # gs_material      — W2 prologue scheduling (addi via r0 vs direct addi r30); 92.9%, C is correct
+fn_800E8FA0   # gs_material      — W-peephole bgtlr-fusion (ble @L; blr not reproducible); 88.9%, C is correct
+fightSideGetStatus	# pokemon.c 99.82%: instructions byte-exact; sole diff = CW anonymous local jumptable symbol vs target's named jumptable_8037564C (dtk-named). Unreachable from C.
+fn_800218BC   # gs_title.c    — W2 instruction scheduling (lfs f31 before li r31 at loop-init; CW issues SDA load first, target issues zero-init first); 98.35%, C is correct
+fn_8002537C   # gs_title.c    - W-branch-collapse: target keeps cmpw;bne increment;b found, CW emits cmpw;beq found; 97.1%, tested 2026-06-19; C is correct
+fn_80025490   # gs_title.c    - W-branch-collapse: sibling of fn_8002537C; same cmpw branch-pair wall; 97.1%, tested 2026-06-19; C is correct
+fn_800D13C8   # gs_render_util.c — W2 instruction scheduling (lis r4 between lis r3 / addi r6 in HSD_ForeachAnim call setup) + W-SDA-RELOC-C (lfd @sda21(r0) vs -27880(r2)); 99.4%, C is correct
+fn_80005E00   # main.c — W1 volatile-FPR rotation + anonymous conversion-literal reloc artifact; 99.39% parent-verified (2 independent agents), TaskRetraceMain C is correct
+fn_800A4C94   # DVDLow.c — W-operand-order: target emits `lis r3`(addr) before `li r0`(value) in the 0xCC006004 store; CW emits value-first across ALL 7 CW versions (1.1–2.0), ~20 phrasings swept; 71.4% parent-verified, DVDCBCallback read-and-clear getter C is correct (un-wrapped from codex's undocumented asm-flip 2708d871)
+fn_801A6DDC   # hsd_mobj.c — W-peephole branch-merge: CW fuses `bne L; blr` -> `beqlr`; target keeps the inner `mat` null-check un-merged; 77.8% parent-verified (20%->77.8% via #pragma optimization_level 1 + guard-clause restructure), HSD_MObj alpha-setter C is correct (un-wrapped from codex 2708d871)
+
+# colosseum_script.c confirmed reg-alloc/scheduler walls (>=95%, correct C, 2026-06-14)
+fn_80212D6C	# 96.16%
+fn_80214B68	# 98.95%
+fn_80216410	# 95.75%
+fn_8021847C	# 98.46%
+fn_8021C308	# 98.32%
+fn_8021E754	# 97.64%
+fn_80222ADC	# 95.00%
+fn_80228DAC	# 99.18%
+fn_80229C90	# 96.28%
+fn_802389D4	# 97.76%
+fn_8023CFDC	# 98.26%
+
+fn_80162FB0   # people_field.c - float-conversion-in-TU: readable typed C active; match_scan 78.3%, single-symbol diff 98.48%; only meaningful residual is CW anonymous @405 u32->f32 magic double vs target lbl_8047D4E8
+
+# === 2026-06-15: 3 colosseum_event walls already confirmed/tested in WALLS.md,
+# === promoted to registry (were missing). Other walltriage-classified walls staged in _wall_candidates.md.
+fn_8020B330   # colosseum_event.c - W1 saved-band tie-break locked at opt4 (7 variants inert) - WALLS.md
+fn_8020341C   # colosseum_event.c - W1 saved-vs-temp tie-break (ANNEAL sweep inert) - WALLS.md
+fn_8020EED4   # colosseum_event.c - W1 saved-band tie-break (comma-op/param-split inert at opt4) - WALLS.md
+fn_80024DBC   # gs_title         — W6 anon int→f64 conversion-literal reloc (@257 vs lbl_8047B8B8) + W2 branch-fusion; 98.75%, manual-conv regressed to 89.5%; WALLS.md 2026-06-16
+fn_80024F2C   # gs_title         — W6 anon int→f64 conversion-literal reloc (@257 vs lbl_8047B8B8) + W2 branch-fusion; 98.75%, twin of fn_80024DBC; WALLS.md 2026-06-16
+fn_8002509C   # gs_title         — W6 anon int→f64 conversion-literal reloc (@257 vs lbl_8047B8B8) + W2 branch-fusion; 98.75%, twin of fn_80024DBC; WALLS.md 2026-06-16
+fn_800DAF60   # gs_render        — W2 coupled loop-codegen: entry ble-vs-beq guard + inner branch-fusion (bne tail;b found vs fused beq); 98.53%, one-case-switch lever inert here (in-loop goto collapses), (s32)count>0 regresses; WALLS.md 2026-06-16
+fn_800263B0   # gs_worldmap      — reg-coalescing li-vs-mr for default 0xff; 95.56%; not C-controllable (cdx2 triage 2026-06-16)
+fn_8002A1C4   # gs_worldmap      — schedule-only slwi r0,r3,2 vs lwz ordering; 96.97%; not C-controllable (cdx2 triage 2026-06-16)
+fn_8002A2CC   # gs_worldmap      — schedule-only slwi/SDA-load ordering (twin of fn_8002A1C4); 96.97%; not C-controllable (cdx2 triage 2026-06-16)
+fn_80194400   # hsd_cobj  — 99.51% byte-exact; residual = (f32)(s16) conversion-literal reloc (anon vs named @sda21); named-symbol regressed to 68.9%; W6 wall (wrk9 2026-06-16)
+fn_80194510   # hsd_cobj  — 99.50% byte-exact; residual = f1<->f2 register-coloring swap after call; reg-alloc wall (wrk9 2026-06-16)
+fn_800BD91C   # GXInit    — 94.90% byte-exact (GXSetPixelFmt old/new fmt dispatch, 2112B); residual = CW won't reuse r0 for the `*(p)=(*(p)&mask)|c` RMW temp (picks rN), cascades to gx-ptr r7-vs-r8 in the z-fmt block + 2 CW-eliminated dead `b` branches + jumptable slwi/addi schedule; pragma-sweep (peephole/scheduling) + OR-operand-flip + permuter(1300 iters, stuck at base 1525) all 0 movement; reg-alloc/schedule wall (cmpB 2026-06-17)
+fn_801920E4   # hsd_aobj - 88.62% byte-harness real C; giant HAL bytecode stack-machine wall: frsqrte Newton expansion + cntlzw boolean lowering + broad saved-register coloring drift; O4/peephole/scheduling/literal-label/decl-order/pointer-split variants inert or regressed (d6 2026-06-17)
+fn_8000C824   # gs_party_access — branch-topology (bge call;b) wall; 98.33% real C, salvaged 2026-06-18
+fn_8000C92C   # gs_party_access — same branch-topology wall; 98.33% real C, salvaged 2026-06-18
+fn_8000BFA0   # gs_party_access — reg/scheduling wall; 95.04% real C, salvaged 2026-06-18
+fn_8000DEC4   # gs_npc_interact — reg-alloc wall; 94.77% real C, salvaged 2026-06-18
+fn_80200E00   # pl_trainer - W-param-coalesce-r28 wall; 97.98% real C, 2026-06-19
+fn_80200B10   # pl_trainer - W-param-coalesce-r28 wall; 97.87% real C, 2026-06-19
+
+# gs_model.c — six model-ID dispatchers, W6 jumptable-NAME-only (2026-06-22)
+# Real correct C; bytes link identical in ROM. CW anonymous local jumptable (@NNN)
+# vs target named jumptable_8035Bxxx. Not band.py-saveable. See WALLS.md 2026-06-22.
+fn_80105C68   # gs_model — W6 jumptable NAME only (@591 vs jumptable_8035B0F8); 99.82%
+fn_80106080   # gs_model — W6 jumptable NAME only (@634 vs jumptable_8035B170); 99.82%
+fn_801065B8   # gs_model — W6 jumptable NAME only (@712 vs jumptable_8035B238); 99.82%
+fn_801064E0   # gs_model — W6 jumptable NAME only (@692 vs jumptable_8035B210); 99.81%
+fn_80106160   # gs_model — W6 jumptable NAME only (@659 vs jumptable_8035B198); 99.82%
+fn_80106934   # gs_model — W6 jumptable NAME only (@740 vs jumptable_8035B2B0); 99.80%
+
+# gs_field_resource.c — archive loader, W1 reg-coloring + base-remat (2026-06-22)
+fn_80114AE0   # gs_field_resource — real C (sibling of 100% fn_801149BC); 94.55%; 8-reg coloring not decl-steerable (6 variants identical map) + base+0xAC remat scheduling artifact
+
+# trainer.c — scene-dispatch handler, scheduling/peephole branch tie (2026-06-22)
+fn_801FEF74   # trainer — real C (0.68%->99.25%); round-trip(sched-on) vs redundant-branch(sched-off) opposed by same pragma; u16 fn_80119ED0 mask + shared-return + separate obj/obj2 levers
+
+# tracefx.c — tracefxInit, src-dup reg-coloring + W6 float-const reloc (2026-06-22)
+fn_8013735C   # tracefx — real C (82->86.32); src-dup 5-reg stmw coloring (sibling of 95.66 fn_8013757C) not C-forceable + float-const band-isolation reloc (lbl_8047D128 @nn, integrate-only)
+
+# DVDLow.c — DVD command drivers, W-operand-order/addi-vs-mr (2026-06-22, same class as fn_800A4C94)
+fn_800A47AC   # DVDLow — real C (DVDLowReadDiskID-style: DI regs 0xCC006008-601c + timeout alarm); 56.88%; CW 1.2.5n hoists const materializations + emits mr (vs target addi rD,rS,0) for param/arg moves + two-base DI materialize. asm stays active.
+fn_800A42C4   # DVDLow — real C (DVDLowRead: cmd 0xA8000000, offset>>2, length, DMA + >0xA00000 timeout branch); 72.15%; same addi-vs-mr + const-hoist + two-base operand-order artifacts. asm stays active.
+
+# battle_waza.c — entry/count reg-coloring pinned + shape walls (2026-06-22)
+fn_801DA9E8   # battle_waza — real C (waza sound effect play, do-while over lbl_80467CC0 entries); 99.29%; entry r29↔r31 count r31↔r29 swap PINNED (6 decl perms + 2 init orders exhausted). asm stays active.
+fn_801DA5C4   # battle_waza — real C (waza state check, do-while + arg0 branch); 83.40%; SHAPE build artifact. asm stays active.
+fn_801D1FA8   # battle_waza — real C (memset + sth 0xff fill loop 16×32, void fn_801D2B08); 89.91%; SHAPE (classify_residual shape:2 reg-coloring:35) fill→r0 vs r3, ptr→r3 vs r4 PINNED (named-fill, O2-pragma, pre-memset-fill, 4 decl orders exhausted). asm stays active.
+fn_801D2080   # battle_waza — real C (waza seq start: clip seqH u16→r30, mailGetReceiveNumber, lbl_80467390 guard, fn_8016557C audioHandle); 98.22%; W2 scheduling: CW hoists lis r3,0x1 after bl fn_8016557C filling load-use latency→mr r0,r3;mr r30,r0 instead of direct mr r30,r3. scheduling off fixes audioHandle but breaks epilogue (li r0 vs li r4 + lwz restore order). Opposing constraints not C-steerable.
+
+# OSMemory.c — OSProtectRange, CW1.2.5n MMIO base-fold (2026-06-22, same class as SI.c 04D0 / fn_800A4C94)
+fn_8009F488   # OSMemory — OSProtectRange real C (78.92); CW1.2.5n MMIO 0xCC004000 base-fold (target lis 0xcc00;addi 0x4000 reused vs ours subis/disp) not-C-steerable + linked frame -0x30/-0x38 + param r27<->r30 coloring. asm stays active.
+
+# hsd_cobj.c — fn_80195A6C camera set-current/program-GX dispatcher (2026-06-23)
+fn_80195A6C   # hsd_cobj — real C (HSD camera set-current: mode-dispatch viewport/scissor/projection, 273 instr); 79.81% (0%→79.81% via 2 workflow rounds). W1 4-vs-5 FPR coloring (5th f27 unreachable) cascading into W6 conv-literal (EFB int→double magic lands anon @926 vs named lbl_8047D9C0). See WALLS.md 2026-06-23. asm stays #if 0 / C active.
+
+# gs_render.c — fresh-but-walled near-misses (surgical round 2026-06-24, w4fycokd3) — register as EQUIVALENT to stop re-grinding
+fn_800DB758   # gs_render — real C 99.55%; conv-literal/named-jumptable wall (CW emits anon @1311 vs named jumptable_80315364) + tail r3/r4 reg-perm. SKIP
+fn_800D7B80   # gs_render — real C 86.50%; li-vs-mr zero-coalescing wall (const-0 store value: target mr r4,r5 from off-zero reg, CW const-folds to li r4,0). SKIP
+fn_800DF854   # gs_render — real C 86.33%; scheduling/coalescing wall (off=0 li hoist above SDA store + mr-vs-li const-0 store value). SKIP
+fn_800DD0B8   # gs_render — real C 85.54%; register-coloring/copy-prop wall (mr r4,r5 vs li r4,0 for loop-invariant const-0 store). SKIP
+fn_800DF140   # gs_render — real C 77.17%; conv-literal ((f32)(u8) magic @1832 vs named lbl_8047CAD0) + scheduling tie. SKIP
+
+# gs_worldmap.c — fresh-but-walled near-misses (surgical round 2026-06-24, wz1ckmhxh)
+fn_800265C0   # gs_worldmap — real C 96.88%; reg-permutation family wall (GSmap state-table lookup: ctx r3-vs-r5 + lbl_80266DD8 materialize order). Family: 26600/26640/26680/266C0/26700. SKIP
+fn_8002AE9C   # gs_worldmap — real C ~96.9%; same reg-permutation/scheduling family. SKIP
+
+# colosseum_battle.c / battle_logic.c — fresh-but-walled near-misses (surgical round 2026-06-24, wlv0va5d0)
+fn_80261CBC   # colosseum_battle — real C 99.42%; reg-permutation wall (two u32 params home to nonvol in incoming order; sibling fn_80261D8C identical). SKIP
+fn_801E11F0   # battle_logic — real C 93.85%; W-scheduling prologue tie (lis/addi base-ptr split across r31 save; addi->r0 before save vs ->r31 after). SKIP
+fn_801E1FF8   # battle_logic — real C 98.64%; conv-literal wall ((f32) cast magic-double bias anon @947 vs named lbl_8047E4A0). SKIP
+
+# pokemon.c - fn_801F4C14 PokemonSet W6 jump-table-name wall (2026-06-25)
+fn_801F4C14   # pokemon.c - W6 jumptable NAME only (@2020 vs jumptable_80375330); 99.97%, real C active, classifier RELOC
+
+# pokemon.c — fresh-but-walled near-misses (surgical round 2026-06-25, w30z7nx8y); fleet pre-cracked during conversion, residuals are hard walls
+fn_801F6B54   # pokemon — real C 99.60%; reg-permutation wall (inner/outer count clrlwi r30<->r31 + extsh r0-vs-r7, allocator tiebreak). SKIP
+fn_801F3430   # pokemon — real C 98.89%; 2-param register-permutation wall (param_1 referenced before buf pins it to r30 first; target wants inverse). SKIP
+fn_801F4220   # pokemon — real C 98.57%; un-inverted loop-match branch-fold wall (people-findloop family; CW folds !=/== to beq + elides redundant found-test). SKIP
+fn_801F4718   # pokemon — real C 98.46%; li-vs-mr zero-copy peephole wall (1-instr: redundant zero-materialize li r4,0 vs mr r4,r5). SKIP
+
+# gs_party_access.c — fn_8000CF68 CRACKED 2026-06-28 (pl_glm): was misfiled W2 wall;
+# classifier said SHAPE. Nested loop (outer CTR/bdnz, inner unrolled) + idx init after
+# block copy -> 100% byte-exact. Lever: for-loop-unroll-pointer-advance.
+
+# fsys_file.c — W-debug-frame wall (2026-06-25, pl_sonnet)
+fn_8017B5A4   # fsys_file — real C 27.86%; W-debug-frame: target is leaf-with-r31-frame compiled under -g; no per-function -g pragma; adding -g to TU regresses 9 neighbors (49→41 byte-exact). SKIP
+
+# OSInterrupt.c — address-mode reloc-name wall (2026-06-25, pl_glm)
+fn_8009E414   # OSInterrupt ExternalInterruptHandler — real C 99.48%; @ha/@l reloc-name wall. Struct extern + #pragma address produces the EXACT target instruction pattern (lis+addi+lwz/lhz split for non-zero member offsets on hardware registers) but objdiff in band mode cannot resolve the @ha/@l relocations to numeric values (symbols are undefined externs, not in target object). All 10 residual lines are lis/addi reloc-name-only mismatches; every lwz/lhz load instruction matches. Lever: #pragma address + struct extern (>8 bytes to avoid SDA) forces CW 1.2.5n to emit @ha/@l relocations with member-offset addressing instead of folding. In a full link these resolve to byte-exact.
+fn_80022B3C  # gs_title.c pl_opus: W1 reg-perm (arg0 r30/r31 pivot w/ table struct-copy), shape 100%, 94.24%
+
+# OSReset.c — W-MMIO-base-fold wall (2026-06-26, pl_glm); same class as OSMemory.c fn_8009F488
+fn_8009FFC0  # OSReset __OSDoHotReset — real C 91.06% (CW 1.2.5n + -opt noprop); W-MMIO-base-fold: CW folds 0xCC002000+2 into single large disp (lis; sth 0x2002) but target splits (lis; addi 0x2000; sth 0x2). 15+ C forms + 8 CW versions + 6 opt-flag combos all fold identically. Not C-reachable. SKIP
+
+# SI.c — W-MMIO-base-fold wall (2026-06-28, pl_glm); same class as fn_8009F488 / fn_8009FFC0
+fn_800D04D0  # SI SIGetResponseRaw — real C 94.77% (CW 1.2.5n); W-MMIO-base-fold: CW folds 0xCC006400+chan*12 into subis r,0x3400 + large disp but target splits (lis 0xcc00; addi 0x6400; add). callback-param-home-frame lever (3-param decl) fixed frame 0x20→0x28. Residual: MMIO fold + Packet_803FFFB0 vs bss.0 reloc-name. Not C-reachable. SKIP
+fn_800D05A4  # SI SIGetResponse — real C 94.35% (CW 1.2.5n); same W-MMIO-base-fold (subis vs lis+addi+add for __SIRegs[chan*3+1/2]). Frame already 0x28 via stmw r27. Same reloc-name (Packet_803FFFB0 vs bss.0). Not C-reachable. SKIP
+
+# hsd_cobj.c — PPC exception/debug context capture (2026-06-28)
+fn_80196CE0  # hsd_cobj — real C active, 0.0%; target saves live GPR/SPR/GQR/CR/LR/CTR/XER/SRR state into lbl_80465080 via PPC-only instructions then calls OSFillFPUContext. Portable C can only set the expressible context-state bit and call OSFillFPUContext; not C-reachable without inline asm.

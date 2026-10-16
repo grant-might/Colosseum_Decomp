@@ -1,0 +1,345 @@
+[
+ {
+  "fn": "fn_8009EFE4",
+  "xd_name": "OSUnlink",
+  "n": 117,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_800A5268",
+  "xd_name": "DVDGetCurrentDir",
+  "n": 49,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_8001BD80",
+  "xd_name": "menuPokemonOpenFight",
+  "n": 29,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_80255C18",
+  "xd_name": "fightTrainerAiWazaHit160",
+  "n": 29,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_8020FC04",
+  "xd_name": "fightWazaWzxVariationFuncWeatherHP",
+  "n": 27,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_802400D8",
+  "xd_name": "fightTrainerAiWazaValueOomugaesi",
+  "n": 27,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_80258A64",
+  "xd_name": "fightTrainerAiWazaHit079",
+  "n": 27,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_80255AE4",
+  "xd_name": "fightTrainerAiWazaHit162",
+  "n": 26,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_80259A84",
+  "xd_name": "fightTrainerAiWazaHit057",
+  "n": 26,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_801F00D0",
+  "xd_name": "fightTargetGetRelativeHostSideFightTargetIdToTragetPtr",
+  "n": 25,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_802564C8",
+  "xd_name": "fightTrainerAiWazaHit142",
+  "n": 25,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_8000FDD8",
+  "xd_name": "menuFightCtrlSecretWazaTop",
+  "n": 24,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_8020EDBC",
+  "xd_name": "fightTrainerEnemyPokemonInitFightOutStatus",
+  "n": 24,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_8022FE20",
+  "xd_name": "fightSeqWazaOutBeforeCheckSub",
+  "n": 24,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_80251070",
+  "xd_name": "fightTrainerAiWazaDamage189",
+  "n": 23,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_802574AC",
+  "xd_name": "fightTrainerAiWazaHit114",
+  "n": 23,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_8000FF50",
+  "xd_name": "menuFightCtrlSecretMain",
+  "n": 22,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_801F2654",
+  "xd_name": "fightFloorGetValidFightOutPokemonCount",
+  "n": 21,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_8020C108",
+  "xd_name": "_fightActionFlowKaisiPostSubFightOutPokemonDarkCheckAppear__FPvUsPv",
+  "n": 21,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_8020E758",
+  "xd_name": "fightOutPokemonEnemyInit",
+  "n": 21,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_80252918",
+  "xd_name": "fightTrainerAiWazaDamage091",
+  "n": 21,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_8001BCEC",
+  "xd_name": "menuPokemonOpenItemGive",
+  "n": 20,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_800A7830",
+  "xd_name": "DVDResume",
+  "n": 20,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_8000C358",
+  "xd_name": "dbgMenuMemcardLoad",
+  "n": 19,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_8000F310",
+  "xd_name": "menuFightCtrlSecretPokemonTop",
+  "n": 19,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_80204A10",
+  "xd_name": "fightOutPokemonIsGcHeroFightOutPokemon",
+  "n": 19,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_802118FC",
+  "xd_name": "_fightSeqInitSubFightOutPokemon__FPvUsPv",
+  "n": 19,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_80210610",
+  "xd_name": "fightWazaWzxVariationFuncTikyuunage",
+  "n": 18,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_8001BD3C",
+  "xd_name": "menuPokemonOpenItemUse",
+  "n": 17,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_801DE654",
+  "xd_name": "soundSetVolume",
+  "n": 17,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_80255DB4",
+  "xd_name": "fightTrainerAiWazaHit156",
+  "n": 17,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_80218FDC",
+  "xd_name": "fightSeqRendouWazaCheck",
+  "n": 16,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_8000C2A0",
+  "xd_name": "dbgMenuGSvtrChangeDisp",
+  "n": 15,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_8000C2DC",
+  "xd_name": "dbgMenuGSvtrChangeActive",
+  "n": 15,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_801F32B0",
+  "xd_name": "fightFloorIsIrekaeFightOutPokemon",
+  "n": 15,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_8020ECA4",
+  "xd_name": "fightTrainerEnemyPokemonCheckValid",
+  "n": 15,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_80254F1C",
+  "xd_name": "fightTrainerAiWazaHit180",
+  "n": 14,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_80256AE0",
+  "xd_name": "fightTrainerAiWazaHit127",
+  "n": 14,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_80257EAC",
+  "xd_name": "fightTrainerAiWazaHit098",
+  "n": 14,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_8012F11C",
+  "xd_name": "heroMoveIsMember",
+  "n": 13,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_800FE35C",
+  "xd_name": "menuSubOpenYesNoField",
+  "n": 12,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_80186254",
+  "xd_name": "peopleGazeHeroCheck",
+  "n": 12,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_8010C74C",
+  "xd_name": "zokuseiGetWazaJoutai",
+  "n": 12,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_801CAAC8",
+  "xd_name": "scriptGetItem",
+  "n": 11,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_801E1274",
+  "xd_name": "GSvtrLoadTexture",
+  "n": 11,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_80262308",
+  "xd_name": "fightMenuYesNo",
+  "n": 11,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_800E064C",
+  "xd_name": "memcardMemAllocForSavedata",
+  "n": 11,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_80097FD0",
+  "xd_name": "menuKeyDiscMain",
+  "n": 10,
+  "confidence": "MED",
+  "shared_strings": []
+ },
+ {
+  "fn": "fn_80135CE8",
+  "xd_name": "gamedatasaveInit",
+  "n": 10,
+  "confidence": "MED",
+  "shared_strings": []
+ }
+]

@@ -1,0 +1,64 @@
+# IDE folders
+.idea/
+.vs/
+
+# Caches
+__pycache__
+.mypy_cache
+.cache/
+
+# Original files
+orig/*/*
+!orig/*/.gitkeep
+*.dol
+*.rel
+*.elf
+*.o
+*.map
+*.MAP
+*.iso
+*.gcm
+*.ciso
+*.rvz
+
+# Build files
+build/
+.ninja_*
+build.ninja
+
+# decompctx output
+ctx.*
+*.ctx
+
+# Generated configs
+objdiff.json
+compile_commands.json
+
+# Local documentation screenshots
+docs/images/
+
+# Generated local assembly / extracted snippets
+asm/
+*.inc
+
+# Toolchain binaries
+tools/dtk
+tools/dtk.exe
+tools/objdiff-cli
+tools/objdiff-cli.exe
+tools/mwcc_compiler/
+
+# Miscellaneous
+/*.txt
+*.exe
+*.orig
+*.pre
+
+# Windows compile dependency scratch (Z:\tmp\wt* .d files)
+/*.d
+
+# Local reference data / scratch (not tracked in git)
+tools/symbolmap/xd_ref/GXXE01/_xdsplit/
+tools/symbolmap/xd_ref/GXXE01/config/
+tools/decomp_work/scratch/
+.pi-sessions/
