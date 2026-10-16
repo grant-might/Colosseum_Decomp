@@ -18,10 +18,10 @@ from. Re-render it with
 | Metric | Value |
 |---|---|
 | Fuzzy match | 99.69% |
-| Function match | 98.38% (8,536 / 8,677 functions) |
-| Code match | 91.86% (2,301,148 / 2,504,940 matched code bytes) |
+| Function match | 98.44% (8,542 / 8,677 functions) |
+| Code match | 92.01% (2,304,736 / 2,504,940 matched code bytes) |
 | Data match | 97.59% (3,479,997 / 3,566,037 matched data bytes) |
-| Source-linked | 1,969 / 2,165 units complete, 90.95% of units (code 90.48%, data 68.81%) |
+| Source-linked | 1,972 / 2,168 units complete, 90.96% of units (code 90.62%, data 68.81%) |
 
 "Matched" counts bytes that score. "Complete" counts bytes inside units that carry no
 residue at all, which is why that row reports the unit, code and data figures

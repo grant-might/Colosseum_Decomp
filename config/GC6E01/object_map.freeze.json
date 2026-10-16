@@ -6,24 +6,24 @@
     "total_code": 2504940,
     "total_data": 3566037,
     "total_functions": 8677,
-    "total_units": 2165
+    "total_units": 2168
   },
   "topology_status": {
     "auto_units": 21,
-    "named_units": 2144,
-    "source_backed_units": 2143,
+    "named_units": 2147,
+    "source_backed_units": 2146,
     "auto_code": 0,
     "auto_data": 24956,
     "auto_functions": 0
   },
   "baseline_progress": {
-    "matched_code": "2301148",
-    "matched_code_percent": 91.864395,
-    "matched_data": "3473109",
-    "matched_data_percent": 97.39409,
-    "matched_functions": 8536,
-    "matched_functions_percent": 98.375015,
-    "fuzzy_match_percent": 99.688705
+    "matched_code": "2304736",
+    "matched_code_percent": 92.00763,
+    "matched_data": "3479997",
+    "matched_data_percent": 97.58724,
+    "matched_functions": 8542,
+    "matched_functions_percent": 98.44416,
+    "fuzzy_match_percent": 99.691696
   },
   "unit_topology": [
     {
@@ -507,17 +507,30 @@
       "total_functions": 1
     },
     {
-      "name": "main/game/menuFight_r51_8000DE24",
+      "name": "main/game/menuFight_exact_8000DEC4",
       "sections": [
         {
           "name": ".text",
-          "size": 832,
+          "size": 300,
           "virtual_address": 2147540676
         }
       ],
-      "total_code": 832,
+      "total_code": 300,
       "total_data": 0,
-      "total_functions": 2
+      "total_functions": 1
+    },
+    {
+      "name": "main/game/menuFight_r51_8000DFF0",
+      "sections": [
+        {
+          "name": ".text",
+          "size": 532,
+          "virtual_address": 2147540976
+        }
+      ],
+      "total_code": 532,
+      "total_data": 0,
+      "total_functions": 1
     },
     {
       "name": "main/game/menuFight_exact_8000E204",
@@ -564,30 +577,35 @@
       "total_functions": 2
     },
     {
-      "name": "main/game/data/data_802E4CA8",
+      "name": "main/game/menuFight_exact_8000F400",
       "sections": [
         {
           "name": ".data",
           "size": 48,
           "virtual_address": 2150517928
-        }
-      ],
-      "total_code": 0,
-      "total_data": 48,
-      "total_functions": 0
-    },
-    {
-      "name": "main/game/menuFight_r51_8000F400",
-      "sections": [
+        },
         {
           "name": ".text",
-          "size": 1380,
+          "size": 872,
           "virtual_address": 2147546112
         }
       ],
-      "total_code": 1380,
+      "total_code": 872,
+      "total_data": 48,
+      "total_functions": 1
+    },
+    {
+      "name": "main/game/menuFight_r51_8000F768",
+      "sections": [
+        {
+          "name": ".text",
+          "size": 508,
+          "virtual_address": 2147546984
+        }
+      ],
+      "total_code": 508,
       "total_data": 0,
-      "total_functions": 2
+      "total_functions": 1
     },
     {
       "name": "main/game/menuFight_exact_8000F964",
@@ -2444,7 +2462,7 @@
       "total_functions": 1
     },
     {
-      "name": "main/game/menuPokemonChange_r41_8002EA5C",
+      "name": "main/game/menuPokemonChange_exact_8002EA5C",
       "sections": [
         {
           "name": ".text",
@@ -3084,13 +3102,39 @@
       "sections": [
         {
           "name": ".text",
-          "size": 2604,
+          "size": 752,
           "virtual_address": 2147710712
         }
       ],
-      "total_code": 2604,
+      "total_code": 752,
       "total_data": 0,
-      "total_functions": 8
+      "total_functions": 4
+    },
+    {
+      "name": "main/game/menu/pda_exact_800379E8",
+      "sections": [
+        {
+          "name": ".text",
+          "size": 1368,
+          "virtual_address": 2147711464
+        }
+      ],
+      "total_code": 1368,
+      "total_data": 0,
+      "total_functions": 3
+    },
+    {
+      "name": "main/game/menu/pda_candidate_80037F40",
+      "sections": [
+        {
+          "name": ".text",
+          "size": 484,
+          "virtual_address": 2147712832
+        }
+      ],
+      "total_code": 484,
+      "total_data": 0,
+      "total_functions": 1
     },
     {
       "name": "main/game/menu/pda_exact_80038124",
