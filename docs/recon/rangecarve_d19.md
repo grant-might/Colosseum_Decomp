@@ -55,7 +55,7 @@ them. The claims list was checked before each edit instead.
 ## Still to do (all functions 100%, unit incomplete)
 
 Ranked by size. fight_*, gs_msg*, THPDec, OSCache, camera and mtx.c are
-excluded, for the reasons in D18's notes.
+excluded, for the reasons in the earlier notes.
 
 - **sdk_candidate_800B671C** (__GXInitGX, GXCPInterruptHandler,
   GXInitFifoBase, GXInitFifoPtrs). It spans the GXInit.c end and the
@@ -63,7 +63,7 @@ excluded, for the reasons in D18's notes.
   0x80313294) and .sdata2 (0x8047C2E4-0x8047C300). Check that pool's other
   readers before choosing stand-ins over ownership.
 - **hero_move** r49_8012B5E4_o4s, r49_8012BBA8_suffix and r46_8012C540.
-  D18's hero_move carves are the pattern to follow.
+  The hero_move carves are the pattern to follow.
 - **msgctrl** (0x80131588), msgctrl_candidate_80131714 and
   msgctrl_r49_80131A34_suffix. The msgctrl TU is `-O4,p` with the peephole
   off (see msgctrl_exact_80132A38.c). The digit functions may inline

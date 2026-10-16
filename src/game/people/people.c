@@ -4000,7 +4000,7 @@ void std131_characterSurpriseAnimation(u32 groupId, u32 index) {
 }
 
 /*
- * Helpers admitted under the same-engine sister-title clause of docs/CAMPAIGN_OPERATIONS.md
+ * Helpers admitted under the same-engine sister-title clause
  * (user decision, 2026-09-28; XD names from TeamOrre/xd-decomp symbols.txt at 4989794e,
  * XD code from trevor403/xd-asm at b1087f18; see docs/recon/title_walls_evidence.md). Pokemon XD keeps
  * both of fn_80181850's inline bodies as named statics:

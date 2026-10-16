@@ -1,6 +1,6 @@
 # Near-link tier 2 (2026-09-30)
 
-Worktree `/private/tmp/pkmn-decomp-d12`, branch `decomp-d25-tier2`.
+Worked in a separate git worktree.
 
 ## How the list was built
 
@@ -9,8 +9,8 @@ with at most 4 inexact functions, all at 93% or better. It is ranked by unit
 bytes per missing byte.
 
 These were skipped, as the brief asked:
-- fight_* (D24);
-- GScolsys2Thru* (D23);
+- fight_* (the fight sweep);
+- GScolsys2Thru*;
 - gs_msg* and gs_title*;
 - hsd/bytecode;
 - the camera, cbPoison and _flagSet walls;

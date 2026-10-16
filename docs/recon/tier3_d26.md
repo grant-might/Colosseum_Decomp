@@ -1,6 +1,6 @@
 # Near-link tier 3 (2026-09-30)
 
-Worktree `/private/tmp/pkmn-decomp-d12`, branch `decomp-d26-tier3`.
+Worked in a separate git worktree.
 Stopped early: work moved to the title-screen boot path.
 
 ## How the list was built

@@ -3489,8 +3489,7 @@ s32 fn_8007A82C(void) {
  * literals, so we emit private .sdata2 pool entries (@2117/@2119) where retail
  * relocates against lbl_8047C118/lbl_8047C120 in the canonical sdata2 unit.
  * Every other instruction, register and branch matches. This is the
- * "private unowned sdata2 constants" class recorded in
- * docs/CAMPAIGN_OPERATIONS.md; no C construct emits `fsubs` against a named
+ * "private unowned sdata2 constants" class; no C construct emits `fsubs` against a named
  * external double (a union spelling yields fsub+frsp). */
 void fn_8007A850(void)
 {

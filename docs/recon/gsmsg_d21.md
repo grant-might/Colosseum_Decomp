@@ -15,8 +15,8 @@ cannot link.
 ## fn_800FD69C: how it went exact
 
 1. **The simulator located the wall.** In the multiply-assigned-`lo`
-   form (`lo = ...; lo += (s32)buffer;`), D16's simplify simulator
-   (`scratchpad/d16/simp.py`, K=29, `pass` sweeps) reproduces the
+   form (`lo = ...; lo += (s32)buffer;`), the simplify simulator
+   (`simp.py`, K=29, `pass` sweeps) reproduces the
    allocation exactly. A what-if beam search moved nodes only within the
    frontend range (named/@ objects) or only within the backend-temp range.
    It stalled at 11 mismatches. It reaches 0 only when the `lo + image`
@@ -43,7 +43,7 @@ cannot link.
    to come first, otherwise the result is `li r0,0; mr r3,r0`. This gives
    retail's `li r3,0; mr r0,r3`, with xPos in r10.
 
-The scripts are in `scratchpad/d21`:
+The scripts are in the scratch dir:
 
 - `wi.py`: what-if with the retail want-map translated between dumps.
 - `beam.py`: constrained beam search.
@@ -132,4 +132,4 @@ frontend and backend copy/constant propagation only). The compiler has no
 pragma string for add propagation: the `opt_*` names in GC/1.3's
 mwcceppc.exe are the ones listed above plus `opt_partial`,
 `opt_unroll_count`, `opt_unroll_instr_count` and `opt_vectorize_loops`.
-The scripts are `scratchpad/d21/p1.py` to `p3.py`.
+The scripts are `p1.py` to `p3.py`.

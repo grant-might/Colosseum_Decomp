@@ -1,6 +1,6 @@
 # Fight near-links (2026-09-30)
 
-Scope: the fight units D24 did not try (fight_range_8023B498, fn_80213E94,
+Scope: the fight units not tried earlier (fight_range_8023B498, fn_80213E94,
 fn_8023A308, fn_80220868, fn_802232F4), then other fight_* near-link units
 in the report. I skipped the documented walls. Every linked unit passed:
 
@@ -36,7 +36,7 @@ in the report. I skipped the documented walls. Every linked unit passed:
   loop, and the declaration order now counts.
 - **Declaration search over structural forms.** For the hensin function I
   tried each of 36 inline/direct form combinations, then each form's
-  declaration permutations, all compiled in a loop (scratchpad/d27/hs/gen.py,
+  declaration permutations, all compiled in a loop (hs/gen.py,
   gen2.py). The loop-body inline was the only structure that reached 100%.
   The simulator (simclimb) pointed to it first: the needed order put an
   inline temp between named locals.
@@ -125,15 +125,15 @@ in the report. I skipped the documented walls. Every linked unit passed:
 
 ### Not attempted
 
-- fn_802232F4: its sibling fn_802230BC is a D24 wall, so the unit cannot
+- fn_802232F4: its sibling fn_802230BC is a documented wall, so the unit cannot
   link alone.
 - fight_floor_candidate_801F2B5C: four functions, all register rotations.
 - fight_range_802274F0, fight_range_80230568, fight_range_802331F4,
   fight_range_80234A0C.
 
-Tools, all in scratchpad/d27:
+Tools, all in the scratch dir:
 
 - var2.py: a variant runner that reports the named function. It inserts the
   `pre` text at a `//NULLDEF` marker.
 - hs/gen.py and hs/gen2.py: the form x declaration searches.
-- cmp.py, ext.py, dbg.sh, vmap.py, simclimb.py: copies of D24's tools.
+- cmp.py, ext.py, dbg.sh, vmap.py, simclimb.py: copies of the earlier tools.

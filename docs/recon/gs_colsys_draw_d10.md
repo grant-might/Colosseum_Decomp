@@ -39,7 +39,7 @@ The four colours are the first four words of the TU's `.sdata2` pool
 - fn_8010D20C, 99.3%: only register order. Retail colours the loop index
   after the matrix and group parameters, the 0x4330 conversion constant and
   the vertex pointer (index r26). Here it is coloured right after `tri`
-  (r30). A K=25 colouring replay (GC/2.6 mwcc-debugger + D7's simulator)
+  (r30). A K=25 colouring replay (GC/2.6 mwcc-debugger + the colouring simulator)
   finds no single renumbering, merge or extra interference that gives
   retail. Retail's index must have a much lower interference degree. About
   720 declaration orders and the loop shapes were tried.

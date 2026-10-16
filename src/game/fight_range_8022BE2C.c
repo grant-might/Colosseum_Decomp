@@ -5,7 +5,7 @@
  *        0x8039A478).
  *
  * Standalone copy of the shared candidate body at GC/1.3 -O4,s with no
- * pragmas. What D17's 99.81% wall needed:
+ * pragmas. What the 99.81% wall needed:
  * - the max HP (g, u16, assigned straight from the call so it keeps its own
  *   register web), the case-7 loop index (i) and the PP / stat loop value
  *   (pp) are separate locals, pp declared second and g where t4 was;

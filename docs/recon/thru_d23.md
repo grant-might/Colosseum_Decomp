@@ -8,7 +8,7 @@ Matching unit, `src/game/GScolsys2Thru.c`:
 - .sdata2 0x8047CF48-0x8047CF60: the two {1, 2, 4} mask initialisers, then
   0.0f and 1.0f.
 
-The pool entries are real literals, so D22's GetEventID extern stand-ins are
+The pool entries are real literals, so the earlier GetEventID extern stand-ins are
 gone. `sdata2_8047CF60.c` keeps 0x8047CF60-0x8047CF68 for fn_80111864's
 unit. Validation:
 
@@ -54,11 +54,11 @@ conditions apply:
   returned pointer is not enough; the frontend propagates `verts` back into
   the IV init. X needs a later use. It has to be a d-form memory use, which
   the backend folds back onto r1. addList's struct copies are that use.
-  - A later call-argument use would keep X live instead (D14's -21 rows).
+  - A later call-argument use would keep X live instead (as seen in the -21 rows).
 
 ### 2. Registers
 
-The GPR model is D16's `simp.py` with K=29 and `pass` sweeps, plus
+The GPR model is `simp.py` with K=29 and `pass` sweeps, plus
 `simg_sel.select`. It reproduces these dumps exactly.
 
 - The low-degree tail pops in descending vreg order.
@@ -85,7 +85,7 @@ What the what-if search needed:
     order `addi v; addi src; cmpwi; addi dst`;
   - the function returns `copy`, which addList reads.
 
-## Forms that did not work (mini tests in scratchpad/d23/m)
+## Forms that did not work (mini tests in the scratch dir)
 
 These gave the same `mr` first:
 
@@ -99,10 +99,10 @@ gets fn_801101B4 to only 22 rows. The two functions need different shapes.
 
 ## Tools
 
-The scratch tools are in `scratchpad/d23`:
+The scratch tools are kept locally:
 
 - `mv.py`: mini-test variant runner.
 - `rv.py`: real-file variant runner.
-- `wi.py`: what-if renumbering over D16's simulator.
+- `wi.py`: what-if renumbering over the simulator.
 - `ord.py`: colour-order dump.
 - `cm.sh`: merged-unit compare.

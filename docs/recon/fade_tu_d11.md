@@ -1,4 +1,4 @@
-# Fade effect TU: flags, pool and whole-TU link plan (D11, 2026-09-30)
+# Fade effect TU: flags, pool and whole-TU link plan (2026-09-30)
 
 ## Flags
 

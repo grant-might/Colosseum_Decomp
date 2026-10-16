@@ -27,7 +27,7 @@ references that pool by name, so a text-only carve cannot own it.
   fn_800FB43C/FB680/FB8C8.
 - A **double** conversion (`fsub`: _msgGetSize, GSmsgExec,
   GSmsgSetFontInfo) can be written as a union against the named bias.
-  For _msgGetSize, `scratchpad/d14/carve_FE010.c` gets to 6 rows. The
+  For _msgGetSize, `carve_FE010.c` gets to 6 rows. The
   only difference is that the bias and the stack value swap f1/f2. MWCC
   colours FPRs in descending virtual-register order, and the native
   conversion creates the bias register before the stack load. The union
@@ -57,7 +57,7 @@ walls are all that is left.
   order. Inlines expand round by round (top-level calls in textual order,
   then nested ones). Taking the dispatcher's entry pointer through a
   one-line inline (`msgCtrlEntry`) moved it after the renderer's other
-  temporaries, giving retail's r22/r19. The select rule from D5's
+  temporaries, giving retail's r22/r19. The select rule from the
   `simg_sel.py` reproduces MWCC exactly: volatiles first, then the
   lowest already-used saved register, then a new one from r31 down. Use it
   with the mwcc-debugger dump to find which colouring order the target
@@ -98,7 +98,7 @@ walls are all that is left.
    single expression: pointer, integer, casts, `&a[i]`, inline returns.
    The retail form appears only when `lo` is a multiply-defined variable
    (`lo = ...; lo += (s32)image; *(u8*)(hi + lo) = v;`, see
-   `scratchpad/d14/c8*.c`). In the real function that extra variable
+   `c8*.c`). In the real function that extra variable
    shifts the whole register assignment (+150 rows). Hill-climbs over
    declaration order (30 locals, with and without `opt_propagation off`)
    found nothing.
@@ -109,11 +109,11 @@ walls are all that is left.
 
 ### fn_800F9AEC / fn_800F9C04
 
-Unchanged: the switch-leaf `beq` wall (D9). They are now split off by
+Unchanged: the switch-leaf `beq` wall. They are now split off by
 themselves (`gs_msg_r56b_800F9AEC`), so they do not block the pool object.
 
-## Scripts (scratchpad/d14)
+## Scripts (scratch dir)
 
 `msgdiff.py` (whole-TU function diff), `tv.py` (variant runner),
 `hc.py` (declaration-order hill-climb), `dbg.sh` (mwcc-debugger replay),
-`simg.py`/`simg_sel.py` (D5's GPR select simulator), `carve_FE010.c`.
+`simg.py`/`simg_sel.py` (the GPR select simulator), `carve_FE010.c`.

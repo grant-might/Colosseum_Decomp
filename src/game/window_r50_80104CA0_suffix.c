@@ -33,7 +33,7 @@
  *   the open list in priority order; the retail expansion
  *   (0x80105118 - 0x80105198) is the same code.
  * Both are named after the XD functions (leading underscore dropped):
- * sister-title clause, docs/CAMPAIGN_OPERATIONS.md.
+ * sister-title clause.
  *
  * Colosseum's own same-TU functions that retail inlines here, kept as
  * compile-only copies (as in musyx seq_exact_80146E88.c):

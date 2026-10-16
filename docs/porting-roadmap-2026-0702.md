@@ -1,6 +1,6 @@
 # GC6E01 Porting Roadmap — Portable Library Recovery
 
-**Scope:** portable, reference-backed library code only. Game-logic units (fight AI, colosseum_battle, gs_*, menu, people, people_field item-prefix, gbaCommunication) are excluded — they belong to the Fable type-recovery track.
+**Scope:** portable, reference-backed library code only. Game-logic units (fight AI, colosseum_battle, gs_*, menu, people, people_field item-prefix, gbaCommunication) are excluded — they belong to the type-recovery track.
 
 **Portable universe (unmatched code bytes):**
 

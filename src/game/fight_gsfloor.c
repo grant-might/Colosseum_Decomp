@@ -257,7 +257,7 @@ typedef struct FightGSfloorGridRow {
  * expands it in both, and each expansion keeps its NULL-sequence guard even
  * though the callback has already returned for a NULL sequence (retail
  * 0x80261790 and 0x802618BC). Admitted under the same-engine sister-title
- * clause of docs/CAMPAIGN_OPERATIONS.md. With it both callbacks are exact
+ * clause. With it both callbacks are exact
  * in natural form (the pokemon callback was 95.6% written in place) and
  * the unit needs none of its former peephole/optimize_for_size pragmas.
  */

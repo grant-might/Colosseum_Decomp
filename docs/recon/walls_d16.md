@@ -15,7 +15,7 @@ Simplify:
   cost / current degree. On a tie, the highest vreg wins.
 - The degree counts every neighbour in the dump, including physical
   registers, r3-precoloured call-result copies, and coalesced-away nodes.
-- `simg_sel.select` (D5) then gives the exact registers.
+- `simg_sel.select` then gives the exact registers.
 
 This reproduced the coloring order of every function below.
 
@@ -105,9 +105,9 @@ This has two independent problems.
 - There is no rule exception. See the carve header
   (src/game/menu_r50_80102F38_o3.c).
 
-### fightFloorGetStatus (99.75% linked form; D11's u16-target form 99.29%): walled
+### fightFloorGetStatus (99.75% linked form; the u16-target form 99.29%): walled
 
-These notes use D11's instruction-exact form: a u16 `target = index;` just
+These notes use the instruction-exact form: a u16 `target = index;` just
 before the outer loop.
 
 - Simulator (it reproduces the replay):
@@ -147,4 +147,4 @@ before the outer loop.
   The volatile registers then read 97.9%.
 - A position-only what-if over the 20 volatile webs of that form reaches
   18/20. Retail's allocation likely also needs a different web structure,
-  such as a CSE'd table-address temp (D12).
+  such as a CSE'd table-address temp.

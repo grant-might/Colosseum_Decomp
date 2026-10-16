@@ -23,7 +23,7 @@ Checks:
 ## Why fn_800FAEF8's `mr r7,r30` was a wall
 
 Retail clears the print task through r30 (`addi r30,r31,0x5D0`) and fills it
-through `mr r7,r30`. D21 showed that the copy comes from post-allocation CSE
+through `mr r7,r30`. Analysis showed that the copy comes from post-allocation CSE
 rewriting a second `addi base,0x5D0`. Add propagation normally folds such an
 addi into the store displacements. The per-use predicate is at 0x56bcd0 in
 GC/2.6's mwcceppc.exe, called from the driver at 0x56aeb0. It only rejects a
@@ -44,7 +44,7 @@ static as `addi rX, poolbase, <object>`, and the compiler version decides
 what happens to that addi:
 
 - GC/1.3 folds the object offsets into the store displacements.
-- GC/1.3.2 keeps them out (D15 saw the same in win_sprite).
+- GC/1.3.2 keeps them out (the same was seen in win_sprite).
 
 With the buffers declared as statics and built with 1.3.2, the fill keeps its
 own addi until register allocation, and post-allocation CSE produces
@@ -81,7 +81,7 @@ each object:
 
 The TU's own reference order gives str before code, and lbl_804024E8 before
 lbl_80402480. An unreferenced static helper at the top of the file,
-`msgBssLayout` (the D15 precedent), touches the objects in retail's order.
+`msgBssLayout` (the same precedent), touches the objects in retail's order.
 The linker dead-strips it, so the object's .text is 0x30 larger than the
 split range. This is tagged RULE-EXCEPTION.
 
@@ -123,9 +123,9 @@ The other entries are literals. In msgSetFontInfo, `0.5 * x + 1.0` creates
 - config/GC6E01/object_map.freeze.json still names the removed units. That
   freeze was already out of date and is on the user's list.
 
-## Scripts (scratchpad/d23)
+## Scripts (scratch dir)
 
-- `md.py`: whole-TU function diff (D14's msgdiff for this worktree).
+- `md.py`: whole-TU function diff (the msgdiff tool for this worktree).
 - `gc.sh` / `gc2.sh`: compile one FAEF8 variant with a chosen compiler
   version.
 - `gv*.py`: variant runners.

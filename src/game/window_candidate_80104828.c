@@ -41,7 +41,7 @@
  * result in r6 and the copy disappeared.
  *
  * The XD helpers are named after the XD functions (leading underscore
- * dropped): sister-title clause, docs/CAMPAIGN_OPERATIONS.md.
+ * dropped): sister-title clause.
  */
 #include "dolphin/types.h"
 

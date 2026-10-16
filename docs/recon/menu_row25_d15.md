@@ -44,7 +44,7 @@ MWCC lays pooled statics out in first-reference order. Retail needs the 15.0 rin
 
 ## menuCursorNormal (98.42%): still walled
 
-I tried the following. None beat D11's result by much, and none changed the retail pattern: up spilled late (r23), right/left/down colored r29-r27, and the phase-2 ranges swapped.
+I tried the following. None beat the previous result by much, and none changed the retail pattern: up spilled late (r23), right/left/down colored r29-r27, and the phase-2 ranges swapped.
 
 | Attempt | Best result |
 |---|---|
@@ -62,7 +62,7 @@ From the GC/2.6 replay:
 
 I found nothing in the retail code that shows where that difference comes from.
 
-### Second pass (D14's inline-return renumbering)
+### Second pass (inline-return renumbering)
 
 I tried taking values through one-line inline returns at 10 sites:
 
@@ -73,7 +73,7 @@ I tried taking values through one-line inline returns at 10 sites:
 
 I combined these with random declaration orders (1200 samples). The best is 98.67%.
 
-scratchpad/d13's vmap/whatif simulator doesn't reproduce our own allocation for this function. For example, it colours window r25 where the compiler gives r26. So I couldn't use it to steer, and the wall stands.
+The vmap/whatif scratch simulator doesn't reproduce our own allocation for this function. For example, it colours window r25 where the compiler gives r26. So I couldn't use it to steer, and the wall stands.
 
 ## People-frame colsys
 

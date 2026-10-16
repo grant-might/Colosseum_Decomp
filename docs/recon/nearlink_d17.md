@@ -1,7 +1,7 @@
 # Near-link sweep (2026-09-30)
 
 Scope: incomplete units whose inexact functions are all 98%+ (recomputed
-from build/GC6E01/report.json), then, after the D17/D18 split, only the
+from build/GC6E01/report.json), then, after the split, only the
 fight_* units, plus the fight_* units whose functions were already all
 100% but unlinked.
 
@@ -29,7 +29,7 @@ to exact that way).
 
 - Two variables take swapped callee-saved registers: `t4` (retail r29) and
   the first web of `g` (the `(u16)fn_8012640C(e, 0, 0x87, 0)` limit, temp
-  r120, retail r25). The mwcc-debugger dump plus D16's simp.py (K=29,
+  r120, retail r25). The mwcc-debugger dump plus simp.py (K=29,
   mincd, pass) reproduces ours. Retail colours t4 before the g webs.
 - Also left: `avail[fn_800E0C54() % t3]` has its three volatile temps in a
   different order (retail: rand r4, count r3, base r5), and an `and.`

@@ -10,16 +10,16 @@
 | 04506f45 | GScolsys2Thru_exact_80111470.c | GScolsys2ThruGetEventList |
 | 95eac1c8 | GScolsys2Walk_exact_8010E138.c | fn_8010E138 |
 
-Row 40's blocking list is clear apart from D9's GSmsg pair.
+Row 40's blocking list is clear apart from the GSmsg pair.
 
 ## Method: reading the colouring order
 
 The mwcc-debugger dump (GC/2.6 replays these units exactly) gives the
-interference graph. D7's simulator reproduces MWCC's order with K=29 for GPRs:
+interference graph. The simulator reproduces MWCC's order with K=29 for GPRs:
 simplify sweeps the nodes in vreg-number order and pushes any node whose
 degree is below K; select pops the nodes in reverse. FPR nodes here are all
 low-degree, so they are coloured in reverse creation order, each taking the
-lowest free register. `scratchpad/d13/vmap.py` maps every virtual register to
+lowest free register. `vmap.py` maps every virtual register to
 ours and retail's physical register (dump -> final order -> retail listing),
 and `whatif.py` tries renumberings. The numbering rules seen:
 

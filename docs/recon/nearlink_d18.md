@@ -2,8 +2,8 @@
 
 Worktree `/private/tmp/pkmn-decomp-d12`, branch `decomp-d18-nearlink`.
 The list was built from `build/GC6E01/report.json`: incomplete units whose
-inexact functions all score 98% or higher. fight_* units belong to D17, and
-the units on D16's, D14's, D13's and D11's documented walls were skipped.
+inexact functions all score 98% or higher. fight_* units are covered separately, and
+the units on the previously documented walls were skipped.
 Every link passed configure, `ninja all_source report`, a full `ninja` (main.dol and
 common_rel.rel SHA-1 OK), `quality_scan` and `check_regression`.
 
@@ -15,7 +15,7 @@ common_rel.rel SHA-1 OK), `quality_scan` and `check_regression`.
 | 15bf4d9f | battle/battle_grid_r56_801C3114_prefix | fn_801C3114, fn_801C31EC, battleGridUpdate | One file-scope `extern lbl_80466DE8`. Each block-scope extern is its own MWCC object, so they blocked address and compare CSE. The carve owns its int-to-float literal (split change) |
 | 03f7a163 | hero_move_r46_8012FCD4_suffix | heroMoveInit, heroMoveSyncWithHero, fn_8013024C | Standalone carve: static inline copies of the party helpers and pool stand-ins (`p[-1]/p[0]` table store, pointer-cast second read of 12.0f) |
 | b3b35968 | dolphin/sdk_candidate_8009CD38 | OSFatal, Halt | XD's form: timeout written in the loop condition over the address-bound `__OSBusClock`. The carve owns OSFatal's pool (split change) |
-| 142fcd5d | gs_material_candidate_800DFABC | _matGSmatEnableEnvMapExt | u16 extension mask (found with D16's simp.py) and the texture local declared first |
+| 142fcd5d | gs_material_candidate_800DFABC | _matGSmatEnableEnvMapExt | u16 extension mask (found with simp.py) and the texture local declared first |
 | 62110d4d | menu/menu_r56b_800714C8_suffix | _menuPop, _menuPush, fn_8007162C, menuCB_InitMenu, fn_8007169C | s32-array index for the flag clear. `-opt nopeephole`. fn_8007169C added to FORCEACTIVE |
 | fad34e99 | gbaCommunication_candidate_800965C8_gc20 | fn_800965C8 | u32 windowDrawSprite prototype, u8 status copy, sex cases 0-2, `-0x100 \| byte`, s8 state read, reused locals. `-opt nopeephole` |
 | 4a4e6f55 | hero_move_r46_8012EBD4 | heroMoveMain .. initFloor (8 functions) | Standalone carve. initFloor's register pair comes out as retail with the stand-ins; its 10.0f is read through a const pointer cast |
@@ -118,7 +118,7 @@ wrong unit boundary, never code.
   sdk_range_800B8AE8), OSThread, gba_conv/gba_misc, msgctrl, hero_move and
   people_data chunks. Each compiles a whole range file, so each needs a
   standalone carve like the ones above. Check data ownership with
-  `scratchpad/d18/secchk.py` (compiled vs target sections and globals)
+  `secchk.py` (compiled vs target sections and globals)
   before flipping.
 
 ### Lessons

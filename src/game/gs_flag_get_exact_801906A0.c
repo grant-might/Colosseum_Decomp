@@ -14,7 +14,7 @@
  * which logs "ERROR[GSflagGet]:Initialization has not finished." for a
  * missing buffer and otherwise extracts the flag's bits. The helper below
  * is named after it and makes the same call with the same argument
- * sources (same-engine sister-title clause, docs/CAMPAIGN_OPERATIONS.md).
+ * sources (same-engine sister-title clause).
  * References: TeamOrre/xd-decomp config/GXXE01/symbols.txt @ 4989794e,
  * trevor403/xd-asm @ b1087f18 (func_FUN_801a0364.s, func_FUN_801a03e8.s).
  * Colosseum's definitions are 8 bytes (XD's are 6).

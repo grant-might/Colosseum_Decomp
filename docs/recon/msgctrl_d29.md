@@ -30,7 +30,7 @@ references each callback, so none of them needed `force_active_symbols`.
 
 - **msgctrlCR**:
   `obj->field_10 += obj->field_64 * (obj->field_23 + obj->field_42);`
-  with field_23 as u8 and field_42 as s8 (D22's type fix). The old form had
+  with field_23 as u8 and field_42 as s8 (the same type fix). The old form had
   explicit casts and a float temporary. The remaining 0.24% came only from
   the literal relocation, and owning the .sdata2 literal fixed it.
 - **msgctrlWait**: `if (--obj->waitCounter <= 0)` directly, with no counter
@@ -125,7 +125,7 @@ The fsys archives of the other title-path floors hold no message files:
 - common.fsys holds only common_rel, mail, sound banks and textures.
 
 All three banks were decoded from the user's ISO: FST, then FSYS, then
-LZSS. The script is in the D29 scratch dir, `title_msgs.py` and
+LZSS. The script is in the scratch dir, `title_msgs.py` and
 `codeuse.py`. What they show:
 
 - **Time (76)** appears in one message, DOL 0x1794, which is just `{76}`.

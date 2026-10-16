@@ -1421,8 +1421,7 @@ static inline void* fightFloorLoopValidFightOutPokemonSub(void* floor, u16 side,
  * the Sub's own `cmplwi r21,0` guard. fightFloorLoopValidFightTrainer
  * (0x801F2B5C carve) expands the same function three more times, with the
  * same shape (0x801F2BFC, 0x801F2D9C, 0x801F2E6C). With it, the Sub makes
- * XD's three calls in XD's order. Sister-title clause,
- * docs/CAMPAIGN_OPERATIONS.md.
+ * XD's three calls in XD's order. Sister-title clause.
  *
  * The callback takes count as a u16, like the counter it is given. When the
  * callback was typed (void*, u32, void*), MWCC hoisted the u16->u32

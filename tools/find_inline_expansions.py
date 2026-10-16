@@ -2,7 +2,7 @@
 """Search the retail disassembly for repeated expansions of an instruction block.
 
 Evidence helper for the "Reconstructed inline helpers" policy in
-docs/CAMPAIGN_OPERATIONS.md: a `static inline` helper is admissible when the
+CONTRIBUTING.md ("Matching policy"): a `static inline` helper is admissible when the
 same instruction sequence appears at two or more call sites in the target.
 This tool takes a block of retail instructions (an address range) and looks
 for the same block, normalised for register allocation, in every other

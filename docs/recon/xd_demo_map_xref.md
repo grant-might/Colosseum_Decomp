@@ -92,7 +92,7 @@ Every candidate owner is `UNUSED` in the demo and absent from retail. So no
 XD body exists to test, and the scratch build that would add a real XD
 function to a Colosseum TU could not be run. The mechanism itself (uncalled
 functions stripped object by object, `.rodata` kept whole when a live function
-addresses it from the section base) was already shown by B43 in
+addresses it from the section base) was already shown in
 `.xd-ref/striptest`.
 
 Over the whole map, retail keeps functions that the demo strips in only a
@@ -122,7 +122,7 @@ exactly the size of XD's stripped `peopleMoveVector`. If it really is
 
 The demo has `cameraDispInfo` 0x3EC `UNUSED`. Retail `camera.o` has no extra
 function and no uncovered bytes, so the function is stripped in every XD build.
-No body exists. B43's finding stands: the 15 strings survive in Colosseum only
+No body exists. The finding stands: the 15 strings survive in Colosseum only
 because `cameraInit` addresses `.rodata` from its base.
 
 Two camera leads, from functions XD strips but Colosseum keeps:
@@ -199,7 +199,7 @@ The map does give the jobj work the names and sizes of the two owners.
   | `"GetFloatValue: spline parameters not initialised!"` 0x32 | `@807` 0x3A (`"GSsplineGetFloatValue: …"`) | `GSsplineGetFloatValue` | text differs |
   | `@808`, `@824`..`@826`, `@840`..`@842`, `@867`, `@935`..`@938` | same | GetFloatValue, AddControlVectorValue, AddControlFloatValue, Initialise, Create | same, one for one |
 
-- **Correction to B43.** Colosseum's first spline string is at 0x80273A10, not
+- **Correction.** Colosseum's first spline string is at 0x80273A10, not
   0x80273A80, and the two `GSsplineGetVectorValue` strings are present.
 - **The "GSspline" string.** Its position places its first use in
   `GSsplineGetVectorValue`, after that function's two log strings, or in
@@ -403,13 +403,13 @@ So the XD split is a hint, not proof, for Colosseum.
 
 | Area | Lead |
 |---|---|
-| **B7 hero_move** | `tools/xd_map_xref.py object heroMove.o` aligns 25 anchors. XD strips three functions that Colosseum keeps live: `heroMoveChkHinderClearPos` (0x344) at `fn_8012B19C` (0x448, 65%), `getCpLineCircle` (0x384) at `fn_8012D39C` (0x454) and `dispLeaderLog` (0xAC) at `fn_8012F1FC` (0x210). These are names only, with no XD body. XD retail bodies exist for the counterparts of the low-scoring Colosseum functions: `heroMoveChkHinderClear` 8014F070, `heroMoveInitEvent` 8014F5C0, `moveParty` 801502D0 (at `fn_8012DE94`), `updateLeaderMovement` 8015083C (at `fn_8012E388`, 0.62), `heroMoveTermEvent` 8014F518. XD's heroMove is C++ (`HEROMOVE_MEMBER`, `AnalogStickEmu`), so use these as structure references only. XD retail has one heroMove function the demo does not name, `fn_80151F6C` (0x20, not inspected). |
-| **B15 dbgMenu** | The TU question above (one object vs `dbgMenuSub` + `dbgMenu`). `fn_80132C6C` is a table allocator (two `_toolentryAlloc` / `fn_800E27B0` pairs, then 8 unrolled item resets). No XD retail window scores 0.5 against its first 61 instructions. The XD names that could fit are stripped in XD (`dbgMenuInit` 0xD4 in `dbgMenu.o`; `dbgMenuDispAMemInfo` / `dbgMenuDispMemInfo` in `dbgMenuSub.o`). `fn_80132F7C` toggles menu 0xAB (`menuIsCheck` / `menuClose` / `menuOpenCustom`). It is the Colosseum form of XD `debugMenuChangeMemInfo` / `debugMenuNodrawArea`: 0.72, with the same call list. |
-| **B15 spline** | Pool facts above: the Colosseum pool starts at 0x80273A10 with `GSsplineGetVectorValue`'s two strings; there is a Colosseum-only `"GSspline"` at 0x80273A78; and GetFloatValue's first string text differs. The owners, their order and their sizes are known from the map. No body exists in any build. |
-| **B23 gs_vm** | Nothing new. XD's VM is the C++ `GSscript::Tiga`, so there is no C-era operand helper in the map (as B43 found). |
-| **B30d/B30r people** | The two-object split of 0x8018F470-0x8018FE30 and its data (above). Ten candidate names for `peopleInfoBios` / `peopleBios` getters are in the table. For the 12-byte image, XD cannot supply any owner, live or stripped (above). Size lead: `fn_8018790C` (0x154) matches XD's `peopleMoveVector` (0x154). |
-| **B32 THP** | XD replaced the player with `GSmovie.a` (`movieStream.o`, `GSmovie.o`, `THPDraw.o`). By body: `fn_801E260C` ≈ `StreamUpdateCallback` (0.63), `fn_801E2B74` ≈ `GetAudioSample` (0.60), `fn_801E34F0` ≈ `_StreamInitFillStreamBuffer` (0.52), `fn_801E2CA8` ≈ `StreamUpdateCallback` (0.40, weak). `movieStream.o` has these inlined-only `UNUSED` helpers: `FillStreamBuffer` 0x130 (the helper already admitted), `CheckBoundary` 0x78, `EntryBoundary` 0x40, `_movieStreamAudioDecode` 0x224 and `_movieStreamVideoDecode` 0x264. They are names with no body, so the sister-title clause is not met by them alone. |
-| **U5 carves** | The rename candidate table. floor.c's true extent, 0x80111DF8-~0x801142F8, matters when floor-adjacent carves are linked: `GScolsys2Sun_range_80111C24.c` holds four floor.c functions, and `field_range_801140DC.c` holds floor.c's tail plus the start of `floorRead.o` at 0x801142F8. `tools/xd_map_xref.py objects` shows, for every XD object, the Colosseum split units its range overlaps. A carve that spans two XD objects is a boundary to check. |
+| **hero_move** | `tools/xd_map_xref.py object heroMove.o` aligns 25 anchors. XD strips three functions that Colosseum keeps live: `heroMoveChkHinderClearPos` (0x344) at `fn_8012B19C` (0x448, 65%), `getCpLineCircle` (0x384) at `fn_8012D39C` (0x454) and `dispLeaderLog` (0xAC) at `fn_8012F1FC` (0x210). These are names only, with no XD body. XD retail bodies exist for the counterparts of the low-scoring Colosseum functions: `heroMoveChkHinderClear` 8014F070, `heroMoveInitEvent` 8014F5C0, `moveParty` 801502D0 (at `fn_8012DE94`), `updateLeaderMovement` 8015083C (at `fn_8012E388`, 0.62), `heroMoveTermEvent` 8014F518. XD's heroMove is C++ (`HEROMOVE_MEMBER`, `AnalogStickEmu`), so use these as structure references only. XD retail has one heroMove function the demo does not name, `fn_80151F6C` (0x20, not inspected). |
+| **dbgMenu** | The TU question above (one object vs `dbgMenuSub` + `dbgMenu`). `fn_80132C6C` is a table allocator (two `_toolentryAlloc` / `fn_800E27B0` pairs, then 8 unrolled item resets). No XD retail window scores 0.5 against its first 61 instructions. The XD names that could fit are stripped in XD (`dbgMenuInit` 0xD4 in `dbgMenu.o`; `dbgMenuDispAMemInfo` / `dbgMenuDispMemInfo` in `dbgMenuSub.o`). `fn_80132F7C` toggles menu 0xAB (`menuIsCheck` / `menuClose` / `menuOpenCustom`). It is the Colosseum form of XD `debugMenuChangeMemInfo` / `debugMenuNodrawArea`: 0.72, with the same call list. |
+| **spline** | Pool facts above: the Colosseum pool starts at 0x80273A10 with `GSsplineGetVectorValue`'s two strings; there is a Colosseum-only `"GSspline"` at 0x80273A78; and GetFloatValue's first string text differs. The owners, their order and their sizes are known from the map. No body exists in any build. |
+| **gs_vm** | Nothing new. XD's VM is the C++ `GSscript::Tiga`, so there is no C-era operand helper in the map (as noted above). |
+| **people** | The two-object split of 0x8018F470-0x8018FE30 and its data (above). Ten candidate names for `peopleInfoBios` / `peopleBios` getters are in the table. For the 12-byte image, XD cannot supply any owner, live or stripped (above). Size lead: `fn_8018790C` (0x154) matches XD's `peopleMoveVector` (0x154). |
+| **THP** | XD replaced the player with `GSmovie.a` (`movieStream.o`, `GSmovie.o`, `THPDraw.o`). By body: `fn_801E260C` ≈ `StreamUpdateCallback` (0.63), `fn_801E2B74` ≈ `GetAudioSample` (0.60), `fn_801E34F0` ≈ `_StreamInitFillStreamBuffer` (0.52), `fn_801E2CA8` ≈ `StreamUpdateCallback` (0.40, weak). `movieStream.o` has these inlined-only `UNUSED` helpers: `FillStreamBuffer` 0x130 (the helper already admitted), `CheckBoundary` 0x78, `EntryBoundary` 0x40, `_movieStreamAudioDecode` 0x224 and `_movieStreamVideoDecode` 0x264. They are names with no body, so the sister-title clause is not met by them alone. |
+| **carves** | The rename candidate table. floor.c's true extent, 0x80111DF8-~0x801142F8, matters when floor-adjacent carves are linked: `GScolsys2Sun_range_80111C24.c` holds four floor.c functions, and `field_range_801140DC.c` holds floor.c's tail plus the start of `floorRead.o` at 0x801142F8. `tools/xd_map_xref.py objects` shows, for every XD object, the Colosseum split units its range overlaps. A carve that spans two XD objects is a boundary to check. |
 
 ## Reproduction
 

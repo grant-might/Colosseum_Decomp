@@ -25,7 +25,7 @@
  * effect is scheduling, which the strict policy rejects (see
  * docs/RULE_EXCEPTIONS.md). It is used because the user chose byte-exact
  * title-path code first (2026-09-28); the policy-clean search is recorded
- * in this file's git history (fc9e71ca, 4e65d59a, B15's GNT4 notes).
+ * in this file's git history (fc9e71ca, 4e65d59a, GNT4 notes).
  *
  * Cardinal case of splGetSplinePoint (fn_801B2038). The helper reads
  * tension through a local copy (f32 t = tension). The register coalescer

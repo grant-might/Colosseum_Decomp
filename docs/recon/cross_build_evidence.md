@@ -39,7 +39,7 @@ only.map` is a byte-signature port, and it is noisy**: for example, it gives
 
 ## Findings by wall
 
-### B43: camera.c (`cameraPlayAnime` row 43; `.rodata` and `cameraUpdate`)
+### camera.c (`cameraPlayAnime` row 43; `.rodata` and `cameraUpdate`)
 
 1. **The stripped debug function is `cameraDispInfo`.** From `NXXJ01.map`, camera.o:
    ```

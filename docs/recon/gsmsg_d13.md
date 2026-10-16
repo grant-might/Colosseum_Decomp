@@ -14,7 +14,7 @@ functions at 100%.
 
 ## How MWCC keeps a register copy (from mwcc-debugger IR)
 
-These observations come from `scratchpad/d13/msg/dbg*`:
+These observations come from `msg/dbg*` in the scratch dir:
 
 - **Parameter binding.** The inliner substitutes an argument expression
   into the body unless the body assigns the parameter. A bound parameter
@@ -52,13 +52,13 @@ after the memset for the stores.
   each inline, labels and `goto` between the inlines, expression
   spellings (`&base[0x5D0]`, `(u32)` adds, casts), a separate pointer
   variable, and `#pragma opt_propagation off` / `opt_common_subs off`.
-  They are in `scratchpad/d13/msg/v*.py`.
+  They are the `msg/v*.py` scratch scripts.
 - **msgSetFontInfo addressing.** In this form, msgSetFontInfo's stores fold
   to base offsets instead of going through r30.
 
 ## fn_800FD69C
 
-- D14's multiply-defined `lo` (`lo = ...; lo += (s32)buffer;
+- The multiply-defined `lo` (`lo = ...; lo += (s32)buffer;
   *(u8*)(lo + hi*32) = v;`) gives retail's `add lo,lo,image; stbx`. The
   frontend normalizes the operand order, so `stbx` operand order follows
   register numbering.

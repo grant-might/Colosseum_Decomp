@@ -1,4 +1,4 @@
-# Row 7 residual walls after D11's pass (2026-09-30)
+# Row 7 residual walls after the matching pass (2026-09-30)
 
 ## fightFloorGetStatus (fight_floor_candidate_801F54A4, 99.73%, -O4,s)
 

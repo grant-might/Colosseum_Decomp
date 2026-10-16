@@ -57,7 +57,7 @@ There is no rule exception.
     second word as `lbl_8047D030+4` instead of `lbl_8047D034`, which scores
     99.94% and is not accepted by the report.
   - These don't work:
-    - element stores, including D18's `p[-1]/p[0]` form: 95.8%;
+    - element stores, including the `p[-1]/p[0]` form: 95.8%;
     - an explicit shared temporary: 97.4%, with an extra stack slot;
     - a compound literal: 85.5%.
   - A clean fix would need either the whole hero_move TU linked with its
@@ -155,7 +155,7 @@ validated tree.
   That unit's fn_801DF1D0 (93.8%) reads only 0x8047E3C8-0x8047E3E8, so the
   cut at 0x801DF474 and 0x8047E3F0 is clean.
 - **effect_visual_candidate_8013AB60.** Its int-to-float bias 0x8047D1E8 is
-  also read by the unlinked 8013AD9C and 8013B268 chunks. This is D18's
+  also read by the unlinked 8013AD9C and 8013B268 chunks. This is the
   conversion-bias wall.
 - **effect_visual_r51_8013C670.** It is exact only with
   `#pragma global_optimizer off`. A clean source form scores 76.9-84.6% at

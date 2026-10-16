@@ -2,7 +2,7 @@
 
 Six title-path functions are exact only when part of their body is written as
 a `static inline` helper. The "Reconstructed inline helpers" policy
-(docs/CAMPAIGN_OPERATIONS.md) admits such a helper only when the target itself
+admits such a helper only when the target itself
 proves it existed: repeated expansion at two or more call sites, a listed
 inline fingerprint, or an inlining-only copy (2026-09-27 clause). This recon
 searched Colosseum (DOL and REL 125), Pokemon XD, and the DOL/REL strings for
@@ -10,7 +10,7 @@ that evidence. Base: 085a52e7.
 
 **Decision (user, 2026-09-28).** A named Pokémon XD function with the same call
 sequence is now admitted evidence: see the "Same-engine sister-title function"
-clause in docs/CAMPAIGN_OPERATIONS.md. The three XD-backed helpers below
+clause. The three XD-backed helpers below
 (`floorInitScene`, `peopleMoveTypeRandomRot`, `peopleUpdateShadows`) have been
 merged. Where this report says "not admitted", it describes the policy at the
 time of the recon.

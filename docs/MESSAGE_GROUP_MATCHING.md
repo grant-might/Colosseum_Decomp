@@ -8,8 +8,7 @@ The initial relocation-based inventory covers 37 reported message functions
 and 331 functions in their outgoing dependency closure, with 258 incoming
 callers recorded separately. This is a lower bound: indirect calls, data
 dependencies and references through section symbols still need auditing.
-Generated inventories and experiment reports live under ignored
-`build/local_llm_campaign/manual/message_group_goal/`.
+Generated inventories and experiment reports live under an ignored scratch directory.
 
 ## GSmsgOpen boundary correction
 
@@ -97,8 +96,7 @@ cross-owner type audit before a linked promotion. No incomplete object was
 promoted. All newly edited candidate bodies in this round are free of local
 compiler controls; other legacy bodies in this owner still require auditing.
 
-Rejected experiments are preserved under ignored
-`build/local_llm_campaign/manual/message_group_exec/`: a font-ID switch,
+Rejected experiments are preserved under an ignored scratch directory: a font-ID switch,
 a font-spacing-only helper, and an isolated GC/1.2.5n compiler probe.
 The active compiler/configuration was not changed. The renderer's higher
 pragma-assisted intermediate score was not retained.
@@ -181,8 +179,7 @@ local compiler-control pragmas or disabled assembly arms. No .inc file changed.
 Configure, all_source/report, full link, retail SHA-1, progress, added-source
 quality scan, layout probe and diff checks pass. All 8,602 report functions were
 compared: four improve and none regress. Evidence, rejected variants, source
-snapshots and per-command logs are under ignored
-`build/local_llm_campaign/manual/message_group_dispatch/`.
+snapshots and per-command logs are under an ignored scratch directory.
 
 Remaining: mode-3 destinations are still unproven. The retained dispatcher
 keeps its previous current-cursor fallback; the size parser keeps its previous
@@ -249,8 +246,7 @@ quality checks and diff checks pass. No report regression across 8,602
 functions, no .inc edit, no newly emitted message helper in any of the ten
 message objects, no new matched bytes and no linked delta. All three edited
 owners were claimed throughout verification. Saved variants, rejected probes,
-source hashes and independent fingerprints are under ignored
-`build/local_llm_campaign/manual/message_group_color_ruby/`.
+source hashes and independent fingerprints are under an ignored scratch directory.
 
 Next: the shared font-initializer and mode-state expansions still need recovery;
 control-table installation/mutation remains open. The newly established color
@@ -286,8 +282,7 @@ Configure, all_source/report, full link, retail SHA, progress, added-source
 quality checks and diff checks pass. All 8,602 report functions were compared:
 three improve and none regress. No .inc changes, new emitted inline helpers,
 new exact functions, new matched bytes or newly linked bytes. Evidence and
-rejected variants are in ignored
-`build/local_llm_campaign/manual/message_group_lookup_font/`.
+rejected variants are in an ignored scratch directory.
 
 Next: fn_800FAEF8 supplies another font-initialization and character-rendering
 expansion. Mode-3 control semantics, runtime table mutation, cross-owner ABI
@@ -336,7 +331,7 @@ functions and four corresponding declarations equals this round's baseline.
 The formatted function's 25 direct calls match retail in order and targets,
 but instruction scheduling, register allocation and font-scan differences
 remain. Variants, source snapshots, command logs and fingerprints are retained
-under ignored `build/local_llm_campaign/manual/message_group_formatted/`.
+under an ignored scratch directory.
 
 The wider message/dependency objective is unchanged. Glyph renderer
 fn_800FD69C and shared font/work initialization provide remaining comparison
@@ -391,8 +386,7 @@ UV constant, and all 41 direct call targets in order. No standalone message
 helper is emitted in any of the ten scoring objects. Configure, all_source,
 canonical report, full link, retail SHA, progress, quality scan and diff checks
 pass. Variants, source snapshots, tests, the reviewed regression and per-command
-logs are retained under ignored
-`build/local_llm_campaign/manual/message_group_glyph_draw/`.
+logs are retained under an ignored scratch directory.
 
 Remaining glyph differences include atlas-address expression code generation,
 floating-point scheduling, register allocation and redundant conversions.
@@ -465,8 +459,7 @@ only the six table rows changed, with the one reviewed regression above.
 No standalone recovered helper is emitted in the ten message objects. No .inc
 file changed, no object was promoted, and matched-function, matched-code and
 linked-code deltas are all zero. Variants, source snapshots and verification
-artifacts are retained under ignored
-`build/local_llm_campaign/manual/message_group_font_lifecycle/`.
+artifacts are retained under an ignored scratch directory.
 
 The wider objective remains open. Font registration's residual code generation,
 the glyph search's extra retail branch/index calculation, initializer compiler
@@ -524,8 +517,7 @@ changes above. Source outside those three functions equals the round baseline;
 no .inc files, build options, shared headers or object splits changed. The
 source-owner queue refresh adds alignment as a manual partial and preserves
 all existing attempts; no queue-wide sync or worker restart was used.
-Artifacts and rejected variants are retained under ignored
-`build/local_llm_campaign/manual/message_group_alignment/`.
+Artifacts and rejected variants are retained under an ignored scratch directory.
 
 Remaining differences include converter branch simplification/index masking,
 copy-loop strength reduction and scheduling, and alignment's single load-base
@@ -578,8 +570,7 @@ objects. No .inc file changed. The source-owner queue refresh retains attempt
 history and requires no worker restart or queue-wide sync.
 
 Probe objects, compressed raw diffs, source variants, fingerprints and tests
-are retained under ignored
-`build/local_llm_campaign/manual/message_group_compiler_recovery/`.
+are retained under an ignored scratch directory.
 GScharCpy and GSmsgDaemon still require strict-source cleanup; reverse conversion
 no longer carries local controls, but remains nonexact. Compiler provenance,
 the other message residuals and the full dependency closure remain open.
@@ -616,8 +607,7 @@ relocation exactness. Source outside this function is unchanged. No .inc,
 shared-header, compiler-option or split changes were made. The active scoring
 object still uses GC/1.3 despite its legacy gc125 filename.
 
-Artifacts and rejected variants are retained under ignored
-`build/local_llm_campaign/manual/message_group_sjis/`. The known dependency
+Artifacts and rejected variants are retained under an ignored scratch directory. The known dependency
 closure remains 1,193 functions with 141 reported nonexact; indirect and data
 coverage and strict audits of reported exact source remain unfinished.
 
@@ -679,7 +669,7 @@ configuration edit; their existing profiles resume after validation. Owner-only
 queue refresh preserves attempts and proposals without a queue-wide sync.
 
 Source snapshots, rejected probes, runtime tests and verification evidence are
-under ignored `build/local_llm_campaign/manual/message_group_font_setter/`.
+under an ignored scratch directory.
 The wider message and dependency objective remains unfinished.
 
 ## Copy and daemon strict-source audit
@@ -741,8 +731,7 @@ are preserved, and no queue-wide sync or worker restart is needed. At the end
 of this round the only local compiler-control block left in gs_msg.c was
 fn_800F96E4; the following round removes it. Indirect
 dependencies, data coverage, compiler/TU provenance and the full goal remain
-open. Evidence is retained under ignored
-`build/local_llm_campaign/manual/message_group_copy_daemon/`.
+open. Evidence is retained under an ignored scratch directory.
 
 ## Bounded message expansion
 
@@ -793,8 +782,8 @@ claim on this owner and that provisioned venv:
 
 ```bash
 \
-  build/local_llm_campaign/manual/message_group_bounded_message/venv/bin/python \
-  build/local_llm_campaign/manual/message_group_bounded_message/ppc_check.py
+  <provisioned-venv>/bin/python \
+  ppc_check.py
 ```
 
 Configure, all_source/report, full link, retail SHA, progress, source scope,
@@ -803,7 +792,7 @@ one improves; matched functions, matched bytes and linked bytes are unchanged.
 Both existing worker handles were verified live; no restart or
 queue-wide sync was needed. Owner-only queue refresh preserves attempt history.
 Source snapshots, comparisons, tests, logs and review evidence remain under
-ignored `build/local_llm_campaign/manual/message_group_bounded_message/`.
+an ignored scratch directory.
 The full message/dependency objective remains open.
 
 ## Length wrapper arithmetic audit
@@ -841,8 +830,7 @@ quality and diff checks pass. All 8,602 function scores are unchanged, as are
 matched functions, matched bytes and linked bytes. No .inc, header, config or
 split change was made, and no existing helper is emitted in the ten message
 objects. Owner-only queue hashes are refreshed without deleting attempts or
-restarting the workers. Evidence is under ignored
-`build/local_llm_campaign/manual/message_group_length_arithmetic/`.
+restarting the workers. Evidence is under an ignored scratch directory.
 
 ## Signed TEV color setter
 
@@ -904,8 +892,7 @@ quality and diff checks pass; the 8,602-function report has no regressions.
 No .inc or shared header changed. The two existing workers remained live,
 with no restart or queue-wide sync. Owner-only queue refresh retains attempts
 and exposes the exact source for review. All probes, rejected variants,
-tests and audit records are under ignored
-`build/local_llm_campaign/manual/message_group_tev_ops/`.
+tests and audit records are under an ignored scratch directory.
 
 ## TEV preset recovery and exact ownership probe
 
@@ -978,7 +965,7 @@ Owner-only queue refresh preserves attempts and the earlier exact review,
 and records the exact probe separately from the live partial candidate.
 The two workers were verified live and were not restarted.
 Evidence, variants, test fixtures and the exact source reconstruction remain
-under ignored `build/local_llm_campaign/manual/message_group_tev_presets/`.
+under an ignored scratch directory.
 
 ## TEV color and alpha operation setters
 
@@ -1045,8 +1032,7 @@ The owner-only queue refresh records both exact candidates, preserves the
 earlier fn_800BC36C review and all earlier attempts, and updates the
 remaining-function counts without a queue-wide sync or restart. Source
 snapshots, full-owner comparisons, semantic tests, actual-link evidence and
-review reports are retained under ignored
-`build/local_llm_campaign/manual/message_group_tev_setters/`.
+review reports are retained under an ignored scratch directory.
 
 ## Live TEV preset ownership integration
 
@@ -1130,8 +1116,7 @@ absent before shared configuration edits. After verification and the 29-item
 owner-only queue update, the same worker arguments, models and context
 limits were restarted. No global sync or attempt-history reset was performed.
 Evidence, snapshots, the exact source/data pair, ownership census, test
-fixtures, reports and maintenance manifest are under ignored
-`build/local_llm_campaign/manual/message_group_tev_integration/`.
+fixtures, reports and maintenance manifest are under an ignored scratch directory.
 
 ## Unit-wide nopeephole and single-function links
 

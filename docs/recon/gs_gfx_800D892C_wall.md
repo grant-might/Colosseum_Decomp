@@ -3,7 +3,7 @@
 This is the source-backed `GSgfx_ConfigurePipeline` candidate in
 `src/game/gs_gfx_layer_candidate_800D892C.c`. **Resolved
 (2026-09-29): byte-exact and linked as Matching under the byte-match-first
-policy**, with tagged rule exceptions (see the D6 section below and
+policy**, with tagged rule exceptions (see the 2026-09-29 section below and
 docs/RULE_EXCEPTIONS.md). The history below is kept for the record.
 
 ## 2026-09-29: 98.52% -> 100%, linked
@@ -40,7 +40,7 @@ docs/RULE_EXCEPTIONS.md). The history below is kept for the record.
    `i` before `last` (`for (i = 0, last = 0; ...)`). Declaration order and
    variable names have no effect; first-use order does.
 4. **Layer-pointer trio.** The explicit form's eight load temps broke the
-   r6/r5/r4 trio (D5). Loading through one `u8 en` local
+   r6/r5/r4 trio. Loading through one `u8 en` local
    (`en = desc->attr[6 + k].enabled; if (en == 1) last = k;`) gives one
    node and 100%. An `int` `en` gives 8 rows; `u32` also works.
 5. With the pragma, the `(u32)chan` cast is still needed (98.74% without
@@ -223,7 +223,7 @@ in the callee-saved r18. We get the reverse (`both` r12, index r18).
   inline's definition it has no effect), so it cannot be scoped to the
   setter.
 
-### Tried without success (2026-09-29, D2)
+### Tried without success (2026-09-29)
 
 - `chan` as u32/u8/u16/s16/int: `int` and the unsigned types let the
   frontend fold the `chan == 4` test, which retail keeps; `s32` (long) is

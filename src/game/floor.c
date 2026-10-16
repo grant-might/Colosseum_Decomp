@@ -466,7 +466,7 @@ static inline void floorEnterReset(void) {
 
 
 /*
- * Helper admitted under the same-engine sister-title clause of docs/CAMPAIGN_OPERATIONS.md
+ * Helper admitted under the same-engine sister-title clause
  * (user decision, 2026-09-28; XD names from TeamOrre/xd-decomp symbols.txt at 4989794e,
  * XD code from trevor403/xd-asm at b1087f18; see docs/recon/title_walls_evidence.md): show the current
  * floor's map models and aim the sun. Pokemon XD has this body as the static

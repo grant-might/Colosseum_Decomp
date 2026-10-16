@@ -36,7 +36,7 @@
  * reference changes nothing but register colouring, so it is a temporary
  * whose only effect is allocation: a judgement call under the strict
  * acceptance policy.  The user admitted it on 2026-09-28 ("C++ reference
- * bindings" in docs/CAMPAIGN_OPERATIONS.md): in a TU evidenced as C++, a
+ * bindings" rule): in a TU evidenced as C++, a
  * reference to const bound to a computed value is natural C++ source.
  *
  * Linking needs "fn_80132F7C" and "dbgMenuMovieTest" in configure.py's

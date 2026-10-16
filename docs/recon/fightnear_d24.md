@@ -1,7 +1,7 @@
 # Fight near-links (2026-09-30)
 
 Scope: the fight_* units in build/GC6E01/report.json whose only inexact
-functions are at 98%+ (the list in the D24 brief, biggest first). Skipped as
+functions are at 98%+ (the working list, biggest first). Skipped as
 instructed: fight_floor_candidate_801F54A4, fn_80238B0C, and the fight_timer
 80265A6C/80265C84 pair. Every linked unit passed configure, report, full
 ninja (main.dol and common_rel.rel SHA-1 OK), quality_scan and
@@ -24,7 +24,7 @@ check_regression.
 - **Declaration order can be solved in the simulator, not by compiling.**
   Take an mwcc-debugger dump, then run `vmap.py` to get retail's register for
   each vreg. `simclimb.py` then searches vreg positions (declaration order)
-  with D16's wi5 `run()` and prints the order. It found fn_80216A58's exact
+  with the wi5 `run()` and prints the order. It found fn_80216A58's exact
   order in seconds, where a compile-based climb stalled at 99.70.
 - **When the simulator cannot reach retail, the cause is structural.** A
   miss that no declaration order fixes points at an inline, a missing
@@ -38,13 +38,13 @@ check_regression.
 - **Unprototyped u16 arguments create CSE temps.** fn_802249B8's `count`
   argument became a CSE'd `(u16)` temp; `fn_801F0134(u32, u16)` removes it.
 
-Tools (scratchpad/d24, copy them):
+Tools (scratch dir, copy them):
 - cmp.py: one-object compile plus objdiff.
 - ext.py: extracts a function from fight_range_80211A00.c with its needed
   declarations.
 - var.py: tries source variants.
 - climb.py, mvdecl.py, perm.py: compile-based declaration climbs.
-- vmap.py: D16's vreg-to-retail mapping, pointed at this worktree.
+- vmap.py: the vreg-to-retail mapping, pointed at this worktree.
 - simclimb.py: simulated declaration-order search.
 - applyorder.py: rewrites a declaration block into a given order.
 
@@ -52,7 +52,7 @@ Tools (scratchpad/d24, copy them):
 
 ### fn_802249B8 (fight_range_802249B8, 98.41% -> 98.52%)
 
-Best source is scratchpad/d24/best_802249B8.c (GC/1.3.2 -O4,s, standalone).
+Best source is the scratch file best_802249B8.c (GC/1.3.2 -O4,s, standalone).
 What it already has:
 - plain source with no pragmas or volatiles;
 - fightCheckJoutaiRule (fn_80229704's body as an inline) for cases 7/8;
@@ -75,7 +75,7 @@ What is left:
   (u32,u8,u8,u32), (u32,u8,u32,u32), (u8 x4), (u32 x4).
 - One `mr r7, r15` placement (case 31).
 
-Linking also needs the switch table at .data 0x8039A220, which D20's
+Linking also needs the switch table at .data 0x8039A220, which the
 fight_range_8022B2CC now owns as a data initializer.
 
 ### fn_8022F2F8 (fight_range_8022F2F8, 99.56% -> 99.43% size-equal variant)
@@ -110,7 +110,7 @@ fight_range_8022B2CC now owns as a data initializer.
 
 ### fn_8021D40C / fn_8021D688 (fight_range_8021D40C, 98.65 / 98.83)
 
-- fn_8021D40C case 1 is the Follow Me redirect. D20's fightGetFollowMeTarget
+- fn_8021D40C case 1 is the Follow Me redirect. The fightGetFollowMeTarget
   inline makes the size exact (98.18). Retail keeps a join
   (`mr r28,r31; mr r7,r28`) that the inline form folds away.
 - The in-place form with its own floor local gets 98.33. Permuting the

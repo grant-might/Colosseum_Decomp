@@ -13,7 +13,7 @@
  * main.dol and common_rel.rel SHA1 OK. The stream resync routine fn_801E2CA8
  * names the source pointer of its ring-rotation copies (`src`, see the
  * comment there). That local is admitted by the "named computed values" rule
- * in docs/CAMPAIGN_OPERATIONS.md (user decision, 2026-09-28). Without it the
+ * (user decision, 2026-09-28). Without it the
  * routine is 98.67%.
  *
  * Earlier state of that wall, for the record: all instructions matched, but

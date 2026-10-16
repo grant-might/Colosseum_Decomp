@@ -1,7 +1,7 @@
 # Fight register walls (2026-09-30)
 
-Scope: the fight walls D17 documented in `docs/recon/nearlink_d17.md`.
-Tools: D16's simplify simulator (`simp.py`, `trace.py`, `wi.py`) on
+Scope: the fight walls documented in `docs/recon/nearlink_d17.md`.
+Tools: the simplify simulator (`simp.py`, `trace.py`, `wi.py`) on
 mwcc-debugger (GC/2.6) dumps. Every linked unit passed configure, report,
 full ninja (main.dol and common_rel.rel SHA-1), quality_scan and
 check_regression.
@@ -39,7 +39,7 @@ check_regression.
 
 - Structure: tokusei check (0x1A with move type 4 -> 0x43), a two-slot
   type list (the same loop as exact fn_802389D4, with the
-  `pokemonGetStatus(u32, u32, u32, u8)` prototype that fixes D17's
+  `pokemonGetStatus(u32, u32, u32, u8)` prototype that fixes the
   clrlwi 16/24 difference), fn_8010C650, then a second tokusei check (0x19).
 - Committed as a standalone candidate at GC/1.3 -O4,s: aiGetTrainer,
   aiGetTokusei/aiIsTokusei and aiGetTypeList inlines. The type loop is an

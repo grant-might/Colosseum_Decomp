@@ -610,7 +610,7 @@ void fightMenuAllFightTrainerCloseStatusMenu(u32 wait)
  * TeamOrre/xd-decomp symbols.txt, trevor403/xd-asm b1087f1). Colosseum's
  * own out-of-line copy of the Pokemon one is at 0x802656AC
  * (FIGHT_MENU_EXACT_8026503C section below). Admitted as a repeated
- * expansion (docs/CAMPAIGN_OPERATIONS.md, "Reconstructed inline helpers").
+ * expansion ("Reconstructed inline helpers").
  *
  * Still a candidate (2026-09-28): with the helpers the six subs
  * below are exact only when the callback's void* argument is first taken

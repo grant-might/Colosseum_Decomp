@@ -2129,7 +2129,7 @@ static inline void initFootWork(FOOTWORK* footwork)
  *   read with the same type as the definition. A compare `mode < 0` reads a
  *   long (s32) variable as int, so a temp or local s32 mode keeps its range
  *   compares; the switch reads it as long and the store as long, so both
- *   fold. That is B7's "late-known value" row.
+ *   fold. That is the "late-known value" row.
  * - Retail's mix (range and switch compares kept, store folded) is exactly
  *   what a mode of ENUM type gives: the compares and the switch read the
  *   enum as int (not propagated), the store into an enum-typed neckMode

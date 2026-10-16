@@ -3,7 +3,7 @@
  * @brief GSpart (model part/joint-subtree accessors)
  *
  * Split from gs_range_800E202C.c (0x800EE150-0x800EE928) - one XD source unit per
- * segment (Fable re-split, 2026-07-07). Functions asm-only until matched.
+ * segment (re-split, 2026-07-07). Functions asm-only until matched.
  *
  * This candidate covers 0x800EE3BC - 0x800EE6B4 (GSpartGetTransform). The
  * exact head, 0x800EE150 - 0x800EE3BC, is linked as gs_part_exact_800EE150.c

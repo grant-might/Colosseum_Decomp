@@ -29,7 +29,7 @@
 ### 2026-09-29 second pass: 96.13% to 99.79%, not exact
 
 I replayed each step with mwcc-debugger (GC/2.6, same code as GC/1.3) and
-checked colouring orders with a copy of D5's GPR simulator
+checked colouring orders with a copy of the GPR simulator
 (`simg.py` plus a select pass; K between 26 and 30 reproduces the dump).
 
 - A pragma scoped to an inline's definition has no effect; only the pragma
@@ -117,7 +117,7 @@ the searched model and `j` are one register web.
 - XD's list loop (FUN_800fd4d4, trevor403/xd-asm @ b1087f18) is a rework.
   Its searched model is also coloured early (r27, shared with the receiver
   iterator), which fits the same kind of web merge.
-- `opt_dead_assignments off` alone (D6's fix), with or without
+- `opt_dead_assignments off` alone (the same fix), with or without
   `opt_loop_invariants off`, and also `opt_lifetimes`, `opt_propagation`,
   `opt_common_subs`, `opt_strength_reduction`, `opt_unroll_loops`,
   `opt_dead_code` and `optimization_level 1-3`: no change, or worse.

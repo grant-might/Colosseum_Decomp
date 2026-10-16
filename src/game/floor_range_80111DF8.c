@@ -42,7 +42,7 @@ extern void GSlightSetActive(void*, u8);
 /*
  * The four functions below are Pokemon XD's floor.cpp map-resource state code
  * with every helper inlined. The helpers are admitted under the same-engine
- * sister-title clause of docs/CAMPAIGN_OPERATIONS.md (user decision,
+ * sister-title clause (user decision,
  * 2026-09-28; XD names from TeamOrre/xd-decomp config/GXXE01/symbols.txt at
  * 4989794e, XD code from trevor403/xd-asm at b1087f18):
  *   floorMapResourceDataIterate  XD 0x8011E224 (global): walk the map's

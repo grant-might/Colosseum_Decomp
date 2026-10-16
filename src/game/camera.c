@@ -92,7 +92,7 @@
  * Every other function is exact.
  *
  * LINK BLOCKER STATEMENT (2026-09-28). Under the written policy
- * (docs/CAMPAIGN_OPERATIONS.md, "Strict acceptance policy" and
+ * ("Strict acceptance policy" and
  * "Reconstructed inline helpers") this unit cannot be linked, and with it
  * cameraPlayAnime, cameraPlayOffsetAnime, cameraUpdate, cameraInit,
  * cameraSetFloorDefault, fn_80179748, cameraResetFloor, cameraSetGScamera,
