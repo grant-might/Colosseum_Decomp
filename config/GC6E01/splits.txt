@@ -1890,6 +1890,9 @@ dolphin/dvd/DVDLow.c:
 	.sdata      start:0x804789B8 end:0x804789BC
 	.sbss       start:0x8047A780 end:0x8047A7C8
 
+game/data/sdata_804789BC.c:
+	.sdata      start:0x804789BC end:0x804789E8
+
 dolphin/dvd/DVDFs.c:
 	.text       start:0x800A4CF0 end:0x800A4D28
 	.sbss       start:0x8047A7C8 end:0x8047A7D8
@@ -2028,6 +2031,9 @@ dolphin/vi/vi.c:
 
 game/data/sbss_8047A8A0.c:
 	.sbss       start:0x8047A8A0 end:0x8047A978
+
+game/data/sdata_80478A08.c:
+	.sdata      start:0x80478A08 end:0x80478AB8
 
 game/data/data_803124B8.c:
 	.data       start:0x803124B8 end:0x80312500
@@ -2409,6 +2415,9 @@ game/data/data_80313818.c:
 
 game/data/data_80313824.c:
 	.data       start:0x80313824 end:0x803138B0
+
+game/data/data_803138B0.c:
+	.data       start:0x803138B0 end:0x803139F0
 
 game/data/rodata_8026FA34.c:
 	.rodata     start:0x8026FA34 end:0x8026FA40
@@ -3438,6 +3447,9 @@ game/gs_vm.c:
 	.sdata      start:0x80478B00 end:0x80478B08
 	.sdata2     start:0x8047CCB8 end:0x8047CCC8
 	.sbss2      start:0x8047E710 end:0x8047E718
+
+game/data/sdata_80478B08.c:
+	.sdata      start:0x80478B08 end:0x80478BF8
 
 game/data/rodata_80271300.c:
 	.rodata     start:0x80271300 end:0x80271E00
@@ -4638,6 +4650,9 @@ musyx/runtime/hardware.c:
 	.sdata      start:0x80478BF8 end:0x80478C08
 	.sdata2     start:0x8047D4D8 end:0x8047D4F0
 
+game/data/sdata_80478C08.c:
+	.sdata      start:0x80478C08 end:0x80478C38
+
 game/data/rodata_80273548.c:
 	.rodata     start:0x80273548 end:0x802737B8
 
@@ -4783,6 +4798,9 @@ game/generator.c:
 
 game/data/sbss_8047B1A0.c:
 	.sbss       start:0x8047B1A0 end:0x8047B1F0
+
+game/data/sdata_80478C40.c:
+	.sdata      start:0x80478C40 end:0x80478C50
 
 game/data/rodata_80273A00.c:
 	.rodata     start:0x80273A00 end:0x80273D98
@@ -6111,6 +6129,9 @@ game/fight_out_pokemon_suffix_8020A8E0.c:
 game/data/data_80375938.c:
 	.data       start:0x80375970 end:0x80375E60
 
+game/data/data_80375E60.c:
+	.data       start:0x80375E60 end:0x80375F98
+
 game/data/data_80375F98.c:
 	.data       start:0x80375F98 end:0x80375F9C
 
@@ -6120,11 +6141,17 @@ game/data/data_803760D8.c:
 game/data/data_80376FCC.c:
 	.data       start:0x80376FCC end:0x80377088
 
+game/data/data_80377088.c:
+	.data       start:0x80377088 end:0x80377B0C
+
 game/data/data_80377B0C.c:
 	.data       start:0x80377B0C end:0x80377D90
 
 game/data/data_803784C0.c:
 	.data       start:0x803784C0 end:0x80378538
+
+game/data/data_80378538.c:
+	.data       start:0x80378538 end:0x803786D0
 
 game/data/data_803786D0.c:
 	.data       start:0x803786D0 end:0x80378724
@@ -6132,11 +6159,20 @@ game/data/data_803786D0.c:
 game/data/data_80378794.c:
 	.data       start:0x80378794 end:0x80378798
 
+game/data/data_80378798.c:
+	.data       start:0x80378798 end:0x803788C0
+
 game/data/data_803788C0.c:
 	.data       start:0x803788C0 end:0x80378968
 
+game/data/data_80378968.c:
+	.data       start:0x80378968 end:0x80378A7C
+
 game/data/data_80378A7C.c:
 	.data       start:0x80378A7C end:0x80378AA0
+
+game/data/data_80378AA0.c:
+	.data       start:0x80378AA0 end:0x80378B00
 
 game/data/data_80378B00.c:
 	.data       start:0x80378B00 end:0x80378B44
@@ -6150,11 +6186,20 @@ game/data/data_80379388.c:
 game/data/data_8037943C.c:
 	.data       start:0x8037943C end:0x80379478
 
+game/data/data_80379478.c:
+	.data       start:0x80379478 end:0x803794CC
+
 game/data/data_803794CC.c:
 	.data       start:0x803794CC end:0x803795D8
 
+game/data/data_803795D8.c:
+	.data       start:0x803795D8 end:0x80379714
+
 game/data/data_80379714.c:
 	.data       start:0x80379714 end:0x80379808
+
+game/data/data_80379808.c:
+	.data       start:0x80379808 end:0x80379A3C
 
 game/data/data_80379A3C.c:
 	.data       start:0x80379A3C end:0x80379B0C

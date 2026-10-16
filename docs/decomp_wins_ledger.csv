@@ -3,3 +3,4 @@ win,date_utc,unit,function,size,base_fuzzy,head_fuzzy,bytes_closed,note
 0002,2026-10-15 20:34,(data units re-split or renamed by this change),(data - attributable only in aggregate),1338904,0.00000,100.00000,1338904,"lane E - common_rel data reconstruction (5 units, 1,338,904 B)"
 0003,2026-10-15 22:58,(data units re-split or renamed by this change),(data - attributable only in aggregate),28464,0.00000,100.00000,28464,"lane G - 32 DOL zero-fill .bss/.sbss units (28,464 B)"
 0004,2026-10-15 23:38,(data units re-split or renamed by this change),(data - attributable only in aggregate),1443,0.00000,100.00000,1443,"lane I - 27 DOL .data/.sdata units (1,443 B)"
+0005,2026-10-16 00:28,(data units re-split or renamed by this change),(data - attributable only in aggregate),5888,0.00000,100.00000,5888,"lane K - 15 pointer-bearing .data/.sdata units (5,888 B)"

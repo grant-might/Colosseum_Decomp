@@ -12661,6 +12661,86 @@ config.libs = [
                 extra_cflags=["-sdata 0"],
                 progress_category="game",
             ),
+            Object(
+                Matching,
+                "game/data/data_80375E60.c",
+                extra_cflags=["-sdata 0"],
+                progress_category="game",
+            ),
+            Object(
+                Matching,
+                "game/data/data_80378538.c",
+                progress_category="game",
+            ),
+            Object(
+                Matching,
+                "game/data/data_80378798.c",
+                extra_cflags=["-sdata 0"],
+                progress_category="game",
+            ),
+            Object(
+                Matching,
+                "game/data/data_80378968.c",
+                progress_category="game",
+            ),
+            Object(
+                Matching,
+                "game/data/data_80378AA0.c",
+                progress_category="game",
+            ),
+            Object(
+                Matching,
+                "game/data/data_80379478.c",
+                progress_category="game",
+            ),
+            Object(
+                Matching,
+                "game/data/data_803795D8.c",
+                extra_cflags=["-sdata 0"],
+                progress_category="game",
+            ),
+            Object(
+                Matching,
+                "game/data/sdata_804789BC.c",
+                progress_category="game",
+            ),
+            Object(
+                Matching,
+                "game/data/sdata_80478A08.c",
+                progress_category="game",
+            ),
+            Object(
+                Matching,
+                "game/data/sdata_80478B08.c",
+                progress_category="game",
+            ),
+            Object(
+                Matching,
+                "game/data/sdata_80478C08.c",
+                progress_category="game",
+            ),
+            Object(
+                Matching,
+                "game/data/sdata_80478C40.c",
+                progress_category="game",
+            ),
+            Object(
+                Matching,
+                "game/data/data_803138B0.c",
+                progress_category="game",
+            ),
+            Object(
+                Matching,
+                "game/data/data_80377088.c",
+                extra_cflags=["-sdata 0"],
+                progress_category="game",
+            ),
+            Object(
+                Matching,
+                "game/data/data_80379808.c",
+                extra_cflags=["-sdata 0"],
+                progress_category="game",
+            ),
         ],
     ),
     # REL 125 (common_rel, common.fsys member 0)
