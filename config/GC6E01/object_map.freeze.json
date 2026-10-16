@@ -9,18 +9,18 @@
     "total_units": 2165
   },
   "topology_status": {
-    "auto_units": 94,
-    "named_units": 2071,
-    "source_backed_units": 2070,
+    "auto_units": 63,
+    "named_units": 2102,
+    "source_backed_units": 2101,
     "auto_code": 0,
-    "auto_data": 60751,
+    "auto_data": 32287,
     "auto_functions": 0
   },
   "baseline_progress": {
     "matched_code": "2301148",
     "matched_code_percent": 91.864395,
-    "matched_data": "3437314",
-    "matched_data_percent": 96.390305,
+    "matched_data": "3465778",
+    "matched_data_percent": 97.1885,
     "matched_functions": 8536,
     "matched_functions_percent": 98.375015,
     "fuzzy_match_percent": 99.68869
@@ -40,7 +40,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_08_80478DC0_sbss",
+      "name": "main/game/data/sbss_80478DC0",
       "sections": [
         {
           "name": ".sbss",
@@ -2976,7 +2976,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_06_803FB380_bss",
+      "name": "main/game/data/bss_803FB380",
       "sections": [
         {
           "name": ".bss",
@@ -7252,7 +7252,7 @@
       "total_functions": 7
     },
     {
-      "name": "main/auto_08_8047A6E8_sbss",
+      "name": "main/game/data/sbss_8047A6E8",
       "sections": [
         {
           "name": ".sbss",
@@ -7443,7 +7443,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_06_803FB538_bss",
+      "name": "main/game/data/bss_803FB538",
       "sections": [
         {
           "name": ".bss",
@@ -8242,7 +8242,7 @@
       "total_functions": 8
     },
     {
-      "name": "main/auto_08_8047A778_sbss",
+      "name": "main/game/data/sbss_8047A778",
       "sections": [
         {
           "name": ".sbss",
@@ -8327,7 +8327,7 @@
       "total_functions": 1
     },
     {
-      "name": "main/auto_08_8047A7D8_sbss",
+      "name": "main/game/data/sbss_8047A7D8",
       "sections": [
         {
           "name": ".sbss",
@@ -8920,7 +8920,7 @@
       "total_functions": 20
     },
     {
-      "name": "main/auto_08_8047A8A0_sbss",
+      "name": "main/game/data/sbss_8047A8A0",
       "sections": [
         {
           "name": ".sbss",
@@ -9247,7 +9247,7 @@
       "total_functions": 7
     },
     {
-      "name": "main/auto_06_803FC840_bss",
+      "name": "main/game/data/bss_803FC840",
       "sections": [
         {
           "name": ".bss",
@@ -9574,7 +9574,7 @@
       "total_functions": 5
     },
     {
-      "name": "main/auto_08_8047A9A0_sbss",
+      "name": "main/game/data/sbss_8047A9A0",
       "sections": [
         {
           "name": ".sbss",
@@ -9587,7 +9587,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_06_803FCDD8_bss",
+      "name": "main/game/data/bss_803FCDD8",
       "sections": [
         {
           "name": ".bss",
@@ -10992,7 +10992,7 @@
       "total_functions": 1
     },
     {
-      "name": "main/auto_06_803FED64_bss",
+      "name": "main/game/data/bss_803FED64",
       "sections": [
         {
           "name": ".bss",
@@ -11376,7 +11376,7 @@
       "total_functions": 1
     },
     {
-      "name": "main/auto_08_8047A9F4_sbss",
+      "name": "main/game/data/sbss_8047A9F4",
       "sections": [
         {
           "name": ".sbss",
@@ -11802,7 +11802,7 @@
       "total_functions": 1
     },
     {
-      "name": "main/auto_08_8047AA28_sbss",
+      "name": "main/game/data/sbss_8047AA28",
       "sections": [
         {
           "name": ".sbss",
@@ -12264,7 +12264,7 @@
       "total_functions": 22
     },
     {
-      "name": "main/auto_08_8047AA60_sbss",
+      "name": "main/game/data/sbss_8047AA60",
       "sections": [
         {
           "name": ".sbss",
@@ -12290,7 +12290,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_06_804001B0_bss",
+      "name": "main/game/data/bss_804001B0",
       "sections": [
         {
           "name": ".bss",
@@ -12834,7 +12834,7 @@
       "total_functions": 1
     },
     {
-      "name": "main/auto_06_80400948_bss",
+      "name": "main/game/data/bss_80400948",
       "sections": [
         {
           "name": ".bss",
@@ -13287,7 +13287,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_08_8047AB18_sbss",
+      "name": "main/game/data/sbss_8047AB18",
       "sections": [
         {
           "name": ".sbss",
@@ -13300,7 +13300,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_06_804011B8_bss",
+      "name": "main/game/data/bss_804011B8",
       "sections": [
         {
           "name": ".bss",
@@ -19868,7 +19868,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_08_8047AF60_sbss",
+      "name": "main/game/data/sbss_8047AF60",
       "sections": [
         {
           "name": ".sbss",
@@ -20025,7 +20025,7 @@
       "total_functions": 17
     },
     {
-      "name": "main/auto_08_8047AFE8_sbss",
+      "name": "main/game/data/sbss_8047AFE8",
       "sections": [
         {
           "name": ".sbss",
@@ -21088,7 +21088,7 @@
       "total_functions": 11
     },
     {
-      "name": "main/auto_08_8047B1A0_sbss",
+      "name": "main/game/data/sbss_8047B1A0",
       "sections": [
         {
           "name": ".sbss",
@@ -22017,7 +22017,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_08_8047B1F8_sbss",
+      "name": "main/game/data/sbss_8047B1F8",
       "sections": [
         {
           "name": ".sbss",
@@ -22491,7 +22491,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_08_8047B260_sbss",
+      "name": "main/game/data/sbss_8047B260",
       "sections": [
         {
           "name": ".sbss",
@@ -23150,7 +23150,7 @@
       "total_functions": 17
     },
     {
-      "name": "main/auto_08_8047B318_sbss",
+      "name": "main/game/data/sbss_8047B318",
       "sections": [
         {
           "name": ".sbss",
@@ -23268,7 +23268,7 @@
       "total_functions": 22
     },
     {
-      "name": "main/auto_06_804657AC_bss",
+      "name": "main/game/data/bss_804657AC",
       "sections": [
         {
           "name": ".bss",
@@ -23513,7 +23513,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_08_8047B398_sbss",
+      "name": "main/game/data/sbss_8047B398",
       "sections": [
         {
           "name": ".sbss",
@@ -24197,7 +24197,7 @@
       "total_functions": 23
     },
     {
-      "name": "main/auto_08_8047B3D8_sbss",
+      "name": "main/game/data/sbss_8047B3D8",
       "sections": [
         {
           "name": ".sbss",
@@ -25514,7 +25514,7 @@
       "total_functions": 7
     },
     {
-      "name": "main/auto_08_8047B490_sbss",
+      "name": "main/game/data/sbss_8047B490",
       "sections": [
         {
           "name": ".sbss",
@@ -25560,7 +25560,7 @@
       "total_functions": 22
     },
     {
-      "name": "main/auto_08_8047B5B8_sbss",
+      "name": "main/game/data/sbss_8047B5B8",
       "sections": [
         {
           "name": ".sbss",
@@ -29788,7 +29788,7 @@
       "total_functions": 5
     },
     {
-      "name": "main/auto_08_8047B678_sbss",
+      "name": "main/game/data/sbss_8047B678",
       "sections": [
         {
           "name": ".sbss",
@@ -29814,7 +29814,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_06_80478800_bss",
+      "name": "main/game/data/bss_80478800",
       "sections": [
         {
           "name": ".bss",
