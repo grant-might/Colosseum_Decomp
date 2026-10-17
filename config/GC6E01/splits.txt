@@ -4647,6 +4647,9 @@ musyx/runtime/snd3d.c:
 	.sbss       start:0x8047B030 end:0x8047B050
 	.sdata2     start:0x8047D468 end:0x8047D4B8
 
+game/data/sbss_8047B050.c:
+	.sbss       start:0x8047B050 end:0x8047B128
+
 musyx/runtime/snd_init.c:
 	.text       start:0x8015FE88 end:0x8015FFDC
 
