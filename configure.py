@@ -3909,6 +3909,11 @@ Object(
                 progress_category="sdk",
             ),
             Object(
+                DataCandidate,
+                "game/data/sdata_8047897C.c",
+                progress_category="game",
+            ),
+            Object(
                 Matching,
                 "dolphin/sdk_range_8009A0F4.c",
                 mw_version="GC/1.2.5n",

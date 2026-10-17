@@ -1664,6 +1664,9 @@ dolphin/sdk_r48_80099790_suffix.c:
 	.bss        start:0x803FB4A0 end:0x803FB4F0
 	.sdata      start:0x80478970 end:0x8047897C
 
+game/data/sdata_8047897C.c:
+	.sdata      start:0x8047897C end:0x80478990
+
 dolphin/os/OSGetExceptionHandler.c:
 	.text       start:0x8009A0E0 end:0x8009A0F4
 
