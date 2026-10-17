@@ -3479,6 +3479,9 @@ game/gs_vm.c:
 	.sdata2     start:0x8047CCB8 end:0x8047CCC8
 	.sbss2      start:0x8047E710 end:0x8047E714
 
+game/data/sbss2_8047E714.c:
+	.sbss2      start:0x8047E714 end:0x8047E728
+
 game/data/sdata_80478B08.c:
 	.sdata      start:0x80478B08 end:0x80478BF8
 
