@@ -2015,6 +2015,9 @@ game/data/data_80311DB8.c:
 game/data/data_80311E54.c:
 	.data       start:0x80311E54 end:0x80311FEC
 
+game/data/data_80311FEC.c:
+	.data       start:0x80311FEC end:0x80312078
+
 dolphin/dvd/DVD_exact_800A7CCC.c:
 	.text       start:0x800A7CCC end:0x800A7DE8
 
