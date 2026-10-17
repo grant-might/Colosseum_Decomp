@@ -14,6 +14,9 @@ Sections:
 game/data/sbss_80478DC0.c:
 	.sbss       start:0x80478DC0 end:0x8047A6E0
 
+game/data/sdata_80478820.c:
+	.sdata      start:0x80478820 end:0x80478970
+
 game/data/bss_8039A700.c:
 	.bss        start:0x8039A700 end:0x8039E700
 

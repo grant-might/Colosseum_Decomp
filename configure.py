@@ -3897,7 +3897,12 @@ config.libs = [
                 cflags=["-O1" if flag == "-O4,p" else flag for flag in cflags_base],
                 progress_category="sdk",
             ),
-            Object(
+                        Object(
+                DataCandidate,
+                "game/data/sdata_80478820.c",
+                progress_category="game",
+            ),
+Object(
                 Matching,
                 "dolphin/sdk_r48_80099790_suffix.c",
                 mw_version="GC/1.2.5n",
