@@ -1749,6 +1749,9 @@ dolphin/os/OSInterruptHandlers.c:
 	.text       start:0x8009DF88 end:0x8009DFB8
 	.sbss       start:0x8047A710 end:0x8047A714
 
+game/data/sbss_8047A714.c:
+	.sbss       start:0x8047A714 end:0x8047A760
+
 dolphin/os/OSInterrupt.c:
 	.text       start:0x8009DFB8 end:0x8009E7A8
 
