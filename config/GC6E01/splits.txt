@@ -1772,6 +1772,9 @@ game/data/data_803119B8.c:
 game/data/data_803119F0.c:
 	.data       start:0x803119F0 end:0x80311A24
 
+game/data/data_80311A24.c:
+	.data       start:0x80311A24 end:0x80311AC8
+
 dolphin/os/OSMemory_exact_8009F1B8.c:
 	.text       start:0x8009F1B8 end:0x8009F54C
 
