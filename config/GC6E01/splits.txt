@@ -6214,6 +6214,9 @@ game/data/data_80378D7C.c:
 game/data/data_80379388.c:
 	.data       start:0x80379388 end:0x8037939C
 
+game/data/data_8037939C.c:
+	.data       start:0x8037939C end:0x8037943C
+
 game/data/data_8037943C.c:
 	.data       start:0x8037943C end:0x80379478
 

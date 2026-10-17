@@ -11911,6 +11911,11 @@ config.libs = [
             ),
             Object(
                 DataCandidate,
+                "game/data/data_8037939C.c",
+                progress_category="game",
+            ),
+            Object(
+                DataCandidate,
                 "game/data/data_8037943C.c",
                 progress_category="game",
             ),
