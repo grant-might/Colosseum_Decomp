@@ -11,6 +11,9 @@ Sections:
 	.sdata2     type:rodata align:32
 	.sbss2      type:bss align:4
 
+game/data/sbss2_8047E700.c:
+	.sbss2      start:0x8047E700 end:0x8047E710
+
 game/data/sbss_80478DC0.c:
 	.sbss       start:0x80478DC0 end:0x8047A6E0
 
