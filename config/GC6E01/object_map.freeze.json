@@ -9,18 +9,18 @@
     "total_units": 2169
   },
   "topology_status": {
-    "auto_units": 20,
-    "named_units": 2149,
-    "source_backed_units": 2148,
+    "auto_units": 19,
+    "named_units": 2150,
+    "source_backed_units": 2149,
     "auto_code": 0,
-    "auto_data": 23008,
+    "auto_data": 19224,
     "auto_functions": 0
   },
   "baseline_progress": {
     "matched_code": "2304736",
     "matched_code_percent": 92.00763,
-    "matched_data": "3540280",
-    "matched_data_percent": 99.28175,
+    "matched_data": "3544064",
+    "matched_data_percent": 99.38786,
     "matched_functions": 8542,
     "matched_functions_percent": 98.44416,
     "fuzzy_match_percent": 99.691696
@@ -27103,7 +27103,7 @@
       "total_functions": 0
     },
     {
-      "name": "main/auto_05_80376104_data",
+      "name": "main/game/data/data_80376104",
       "sections": [
         {
           "name": ".data",
