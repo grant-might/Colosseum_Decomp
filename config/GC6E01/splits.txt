@@ -3459,7 +3459,7 @@ game/gs_vm.c:
 	.rodata     start:0x80271068 end:0x80271300
 	.sdata      start:0x80478B00 end:0x80478B08
 	.sdata2     start:0x8047CCB8 end:0x8047CCC8
-	.sbss2      start:0x8047E710 end:0x8047E718
+	.sbss2      start:0x8047E710 end:0x8047E714
 
 game/data/sdata_80478B08.c:
 	.sdata      start:0x80478B08 end:0x80478BF8
