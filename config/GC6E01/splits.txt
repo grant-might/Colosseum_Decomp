@@ -6148,6 +6148,9 @@ game/data/data_80375E60.c:
 game/data/data_80375F98.c:
 	.data       start:0x80375F98 end:0x80375F9C
 
+game/data/data_80375F9C.c:
+	.data       start:0x80375F9C end:0x803760D8
+
 game/data/data_803760D8.c:
 	.data       start:0x803760D8 end:0x80376104
 
