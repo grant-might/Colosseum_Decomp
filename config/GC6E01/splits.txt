@@ -5807,6 +5807,9 @@ dolphin/thp/THPPlayer.c:
 	.sbss       start:0x8047B468 end:0x8047B480
 	.sdata2     start:0x8047E4A8 end:0x8047E4B0
 
+game/data/sdata_80478D08.c:
+	.sdata      start:0x80478D08 end:0x80478DB4
+
 dolphin/thp/THPAudioDecode.c:
 	.text       start:0x801E4AC4 end:0x801E4EF0
 	.bss        start:0x8046AE20 end:0x8046C190
