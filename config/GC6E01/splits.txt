@@ -2802,7 +2802,7 @@ dolphin/si/SI_range_800CF764.c:
 	.data       start:0x80313F48 end:0x80313FB0
 	.bss        start:0x803FFFB0 end:0x804001B0
 	.sdata      start:0x80478AD8 end:0x80478ADC
-	.sbss       start:0x8047AA50 end:0x8047AA60
+	.sbss       start:0x8047AA50 end:0x8047AA5C
 
 game/data/sbss_8047AA60.c:
 	.sbss       start:0x8047AA60 end:0x8047AAF8
@@ -4783,7 +4783,7 @@ game/psdisp.c:
 	.text       start:0x8016AB94 end:0x8016EC1C
 	.rodata     start:0x802738B8 end:0x8027399B
 	.data       start:0x8036BFC0 end:0x8036BFE0
-	.bss        start:0x80452DE8 end:0x80452EC8
+	.bss        start:0x80452DE8 end:0x80452EC4
 	.sbss       start:0x8047B128 end:0x8047B16C
 	.sdata2     start:0x8047D5C8 end:0x8047D628
 

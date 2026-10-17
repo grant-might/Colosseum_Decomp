@@ -4,7 +4,7 @@
   "purpose": "Freeze the dtk/objdiff denominator and object topology used for published GC6E01 progress. Progress counters may increase without updating this file.",
   "invariants": {
     "total_code": 2504940,
-    "total_data": 3565900,
+    "total_data": 3565892,
     "total_functions": 8677,
     "total_units": 2169
   },
@@ -19,8 +19,8 @@
   "baseline_progress": {
     "matched_code": "2304736",
     "matched_code_percent": 92.00763,
-    "matched_data": "3535076",
-    "matched_data_percent": 99.13559,
+    "matched_data": "3538436",
+    "matched_data_percent": 99.23004,
     "matched_functions": 8542,
     "matched_functions_percent": 98.44416,
     "fuzzy_match_percent": 99.691696
@@ -12302,7 +12302,7 @@
         },
         {
           "name": ".sbss",
-          "size": 16,
+          "size": 12,
           "virtual_address": 2152180304
         },
         {
@@ -12317,7 +12317,7 @@
         }
       ],
       "total_code": 5872,
-      "total_data": 636,
+      "total_data": 632,
       "total_functions": 22
     },
     {
@@ -21009,7 +21009,7 @@
       "sections": [
         {
           "name": ".bss",
-          "size": 224,
+          "size": 220,
           "virtual_address": 2152017384
         },
         {
@@ -21039,7 +21039,7 @@
         }
       ],
       "total_code": 16520,
-      "total_data": 647,
+      "total_data": 643,
       "total_functions": 10
     },
     {
