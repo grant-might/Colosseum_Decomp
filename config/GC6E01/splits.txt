@@ -6160,6 +6160,9 @@ game/data/data_80377088.c:
 game/data/data_80377B0C.c:
 	.data       start:0x80377B0C end:0x80377D90
 
+game/data/data_80377D90.c:
+	.data       start:0x80377D90 end:0x803784C0
+
 game/data/data_803784C0.c:
 	.data       start:0x803784C0 end:0x80378538
 
