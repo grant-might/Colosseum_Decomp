@@ -25,14 +25,21 @@
  *       position/rotation matrix, GX draw calls)
  *     Helper: fn_80138838 (0x2C8 bytes -- model transform)
  *
- *   leaffxStartEffect      (0x80138B00)  -- Leaf particle effect
+ *   leaffxEffectCreate     (0x80138B00)  -- Leaf particle effect allocator
+ *     GSeffectCreate(callbacks, 0x4c) + callback registration; called as
+ *     effect type 5 by the waza effect factory (wazaSequence.c).
+ *     Callbacks: start=leaffxStartEffect (0x80138CCC),
+ *                destroy=_leaffxDestroy, update=_leaffxUpdate,
+ *                render=_leaffxGenerateLeafData
+ *
+ *   leaffxStartEffect      (0x80138CCC)  -- Leaf start callback
  *     "leaffxStartEffect: Could not start leaf effect -
- *      invalid leaf model: groupRes %d, modelRes %d!"
- *     "leaffxStartEffect: Could not start leaf effect!"
+ *      invalid leaf model: groupRes %d, modelRes %d!"   (rodata 0x80272C30)
+ *     "leaffxStartEffect: Could not start leaf effect!"  (rodata 0x80272C90)
  *     "_leaffxGenerateLeafData: Could not create leaf clone model."
- *     Struct size: 0x98 bytes
- *     Callbacks: start=fn_80138CCC, stop=fn_80139074,
- *                update=fn_80138BBC, render=_leaffxGenerateLeafData
+ *     Fetches the leaf model, allocates the 0x5C-byte-per-leaf table and
+ *     generates one leaf per entry. The two error strings above are
+ *     referenced from here, not from the allocator.
  *     Core logic: fn_80138DE4 (0x290 bytes), fn_80139074 (0x304 bytes)
  *
  *   electronStartEffect    (0x80139820)  -- Electrical arc effect
@@ -252,10 +259,10 @@ extern void  DCFlushRange(void* ptr, u32 size);
 /* fn_80138838: _lightningTransformModel (0x2C8 bytes) */
 
 /* ---- Leaf effect ---- */
-/* leaffxStartEffect (0x80138B00) */
+/* leaffxEffectCreate (0x80138B00) */
 /* fn_80138B74: _leaffxHelper */
 /* fn_80138BBC: _leaffxUpdate callback */
-/* fn_80138CCC: _leaffxStart callback */
+/* leaffxStartEffect (0x80138CCC): _leaffxStart callback */
 /* fn_80138DE4: _leaffxGenerateLeafData (0x290 bytes) */
 /* fn_80139074: _leaffxStop callback (0x304 bytes) */
 /* _leaffxGenerateLeafData: _leaffxRender callback (0x4A8 bytes) */
@@ -374,7 +381,7 @@ extern u32 _lightningUpdate(void* ptr, u32 delta);
 extern void _lightningGenerate(void* ptr, u32 b);
 extern u32 _leaffxDestroy(void* ptr);
 extern u32 _leaffxStop(void* ptr);
-extern u32 fn_80138CCC(void* ptr);
+extern u32 leaffxStartEffect(void* ptr);
 extern u32 _leaffxUpdate(void* ptr, u32 delta);
 extern void _leaffxMoveLeaf(void* entry, u8* leaf);
 extern u8 _leaffxGenerateLeafData(void* ptr, void* entry);
@@ -808,13 +815,13 @@ void _lightningGenerate(void* ptr, u32 b) {
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_80138B00_80138BBC)
-u32 leaffxStartEffect(void* callbacks) {
+u32 leaffxEffectCreate(void* callbacks) {
     u32 effectId = GSeffectCreate(callbacks, 0x4c);
     if (effectId) {
         GSeffectSetCallbacks(effectId,
             0,
             (GSEffectStopFunc)_leaffxDestroy,
-            (GSEffectStartFunc)fn_80138CCC,
+            (GSEffectStartFunc)leaffxStartEffect,
             (GSEffectStopFunc)_leaffxStop,
             0,
             (GSEffectUpdateFunc)_leaffxUpdate,
@@ -896,7 +903,7 @@ u32 _leaffxStop(void* ptr) {
 }
 extern u8 lbl_80272C30[];
 extern u8 lbl_80272C90[];
-u32 fn_80138CCC(void* ptr) {
+u32 leaffxStartEffect(void* ptr) {
     u8* entry;
     u8* p;
     u16 handle;

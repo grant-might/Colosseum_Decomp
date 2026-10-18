@@ -672,7 +672,7 @@ void* _wazaSequenceEffectEntryLoad(void* entryPtr, void* dataPtr)
     extern u32 electronEffectCreate(void* callbacks);
     extern u32 lightningEffectCreate(void* callbacks);
     extern u32 fn_8013796C(void* callbacks);
-    extern u32 leaffxStartEffect(void* callbacks);
+    extern u32 leaffxEffectCreate(void* callbacks);
     extern u32 seaEffectCreate(void* callbacks);
     extern u32 surfEffectCreate(void* callbacks);
     extern u32 envMapEffectCreate(void* callbacks);
@@ -729,7 +729,7 @@ void* _wazaSequenceEffectEntryLoad(void* entryPtr, void* dataPtr)
         break;
     case 5:
         entry->field_80 = *(s16*)(parsed + 0x52);
-        entry->resourceId = leaffxStartEffect(parsed + 8);
+        entry->resourceId = leaffxEffectCreate(parsed + 8);
         handle = *(u16*)(parsed + 0x46);
         break;
     case 6:

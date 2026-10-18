@@ -27,13 +27,13 @@
 u16 lightningStartEffect(u16 group, u16 modelA, u16 modelB);
 
 /* -----------------------------------------------------------------------
- * Leaf particle effect (0x80138B00)
+ * Leaf particle effect (allocator 0x80138B00, start 0x80138CCC)
  *
  * Spawns leaf particles that drift and rotate. Used for Razor Leaf,
  * Leaf Blade, and similar grass-type moves. Also handles lightning
  * sub-particles. Allocates 0x98-byte work struct.
  * ----------------------------------------------------------------------- */
-u16 leaffxStartEffect(u16 group, u16 model, u16 param);
+u16 leaffxEffectCreate(u16 group, u16 model, u16 param);
 
 /* -----------------------------------------------------------------------
  * Electron arc effect (0x80139820)
