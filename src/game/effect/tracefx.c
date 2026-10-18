@@ -69,17 +69,17 @@ extern void* fn_800E27B0(u16 handle);                   /* GSmemGetPtr */
 extern void  fn_800E24B0(u16 handle);                   /* GSmemLock/free step */
 extern void  fn_800E209C(u16 handle);                   /* GSmemFree */
 extern u32   wazaSequenceSysGetResID(void);                          /* Random seed generator */
-extern void  fn_8010147C(u32 memOffset, u32 resId,
+extern void  loadArchivePtr(u32 memOffset, u32 resId,
                           u32 size, u32 handle);         /* GSfloor load resource */
-extern void  fn_801013A0(u32 memOffset, u32 size,
+extern void  loadModel(u32 memOffset, u32 size,
                           u32 data, u32 handle);         /* GSfloor load data */
 extern void  memset(void* dst, u32 val, u32 size);
 extern void  GXDrawDone(void);
 extern void  fn_800B856C(void);
 extern void  GStextureFree(void* p);
-extern void* fn_80131428(void* owner, u32 size);
-extern void  fn_80131200();
-extern void  fn_8013139C(void* obj, u32 flag);
+extern void* GSeffectCreate(void* owner, u32 size);
+extern void  GSeffectSetCallbacks();
+extern void  GSeffectSetup(void* obj, u32 flag);
 
 /* ===== GS immediate-mode render API (used by tracefxUpdate) ===== */
 extern void  _cameraLoadCameraMatrix__FP9_GScamera12GSgfxLayerID(void);
@@ -138,7 +138,7 @@ u8* fn_801364A8(u8* work, u8* params) {
     extern void fn_800EFD14(void*, u16);
     extern void GStextureSetWrap(void*, s32, s32);
     extern void* memcpy(void*, const void*, u32);
-    extern void fn_8013D604(u8*, s32, f32, f32);
+    extern void envMapAddKey(u8*, s32, f32, f32);
 
     u8* data;
     u8* aligned;
@@ -275,9 +275,9 @@ u8* fn_801364A8(u8* work, u8* params) {
         {
             void* model;
 
-            fn_8010147C((u32)cursor, *(s32*)(params + 0x34), 0x4E20, *(u16*)(work + 0x4A));
+            loadArchivePtr((u32)cursor, *(s32*)(params + 0x34), 0x4E20, *(u16*)(work + 0x4A));
             model = GSresGetResource(0x4E20, *(u16*)(work + 0x4A));
-            fn_801013A0((u32)model, 0x4E20, 0, *(u16*)(work + 0x4C));
+            loadModel((u32)model, 0x4E20, 0, *(u16*)(work + 0x4C));
             model = GSresGetResource(0x4E20, *(u16*)(work + 0x4C));
             if (model != 0) {
                 GSmodelSetVisibility(model, 0);
@@ -320,9 +320,9 @@ u8* fn_801364A8(u8* work, u8* params) {
         {
             void* model;
 
-            fn_8010147C((u32)aligned, *(s32*)(params + 0x2C), 0x4E20, *(u32*)(work + 0x60));
+            loadArchivePtr((u32)aligned, *(s32*)(params + 0x2C), 0x4E20, *(u32*)(work + 0x60));
             model = GSresGetResource(0x4E20, *(u32*)(work + 0x60));
-            fn_801013A0((u32)model, 0x4E20, 0, *(u32*)(work + 0x5C));
+            loadModel((u32)model, 0x4E20, 0, *(u32*)(work + 0x5C));
             model = GSresGetResource(0x4E20, *(u32*)(work + 0x5C));
             if (model != 0) {
                 GSmodelSetVisibility(model, 0);
@@ -345,7 +345,7 @@ u8* fn_801364A8(u8* work, u8* params) {
         case 2:
             data = params + 0x10;
             for (i = 0; i < (s32)count; i++, data += 0x10) {
-                fn_8013D604(work + 8,
+                envMapAddKey(work + 8,
                             (s32)(((f32)(s32)fn_800D37CC() * (f32)*(s32*)(data + 0x08)) / 60.0f),
                             *(f32*)(data + 0x00),
                             *(f32*)(data + 0x04));
@@ -357,9 +357,9 @@ u8* fn_801364A8(u8* work, u8* params) {
             s32 duration = ((f32)(s32)fn_800D37CC() * (f32)frames) / 60.0f;
             s32 third = duration / 3;
 
-            fn_8013D604(work + 8, third, 0.0f, value);
-            fn_8013D604(work + 8, third, value, value);
-            fn_8013D604(work + 8, third, 0.0f, 0.0f);
+            envMapAddKey(work + 8, third, 0.0f, value);
+            envMapAddKey(work + 8, third, value, value);
+            envMapAddKey(work + 8, third, 0.0f, 0.0f);
             break;
         }
         }
@@ -423,9 +423,9 @@ u8* fn_801364A8(u8* work, u8* params) {
 
             *(u32*)(work + 0x0C) = wazaSequenceSysGetResID();
             *(u32*)(work + 0x10) = wazaSequenceSysGetResID();
-            fn_8010147C((u32)cursor, *(s32*)(params + 0x00), 0x4E20, *(u32*)(work + 0x0C));
+            loadArchivePtr((u32)cursor, *(s32*)(params + 0x00), 0x4E20, *(u32*)(work + 0x0C));
             model = GSresGetResource(0x4E20, *(u32*)(work + 0x0C));
-            fn_801013A0((u32)model, 0x4E20, 0, *(u32*)(work + 0x10));
+            loadModel((u32)model, 0x4E20, 0, *(u32*)(work + 0x10));
             model = GSresGetResource(0x4E20, *(u32*)(work + 0x10));
             if (model != 0) {
                 GSmodelSetVisibility(model, 0);
@@ -491,7 +491,7 @@ u8* fn_801364A8(u8* work, u8* params) {
 
 /* 0x80137114 | 0x248 */
 u8* fn_80137114(u8* work, u8* params, s32 frames) {
-    extern void fn_8013DB64(u8*, s32, f32, f32);
+    extern void blurAddKey(u8*, s32, f32, f32);
     s32 i;
     s32 duration;
     s32 count;
@@ -507,7 +507,7 @@ u8* fn_80137114(u8* work, u8* params, s32 frames) {
         data = params + 0x0C;
         for (i = 0; i < count; i++, data += 0x10) {
             duration = ((f32)*(s32*)(data + 8) * (f32)(s32)fn_800D37CC()) / 60.0f;
-            fn_8013DB64(work, duration, *(f32*)data, *(f32*)(data + 4));
+            blurAddKey(work, duration, *(f32*)data, *(f32*)(data + 4));
         }
         break;
     case 2:
@@ -515,7 +515,7 @@ u8* fn_80137114(u8* work, u8* params, s32 frames) {
         data = params + 8;
         for (i = 0; i < count; i++, data += 0x10) {
             duration = ((f32)*(s32*)(data + 8) * (f32)(s32)fn_800D37CC()) / 60.0f;
-            fn_8013DB64(work, duration, *(f32*)data, *(f32*)(data + 4));
+            blurAddKey(work, duration, *(f32*)data, *(f32*)(data + 4));
         }
         break;
     case 1:
@@ -527,9 +527,9 @@ u8* fn_80137114(u8* work, u8* params, s32 frames) {
         frames = ((f32)frames * (f32)(s32)fn_800D37CC()) / 60.0f;
         duration = frames;
         duration = duration / 3;
-        fn_8013DB64(work, duration, 0.0f, value);
-        fn_8013DB64(work, duration, value, value);
-        fn_8013DB64(work, duration, 0.0f, 0.0f);
+        blurAddKey(work, duration, 0.0f, value);
+        blurAddKey(work, duration, value, value);
+        blurAddKey(work, duration, 0.0f, 0.0f);
         break;
     }
     return data;
@@ -595,9 +595,9 @@ u8* fn_8013735C(u8* work, void* params, s32 frames) {
     *(u32*)(work + 0x7c) = wazaSequenceSysGetResID();
     *(u32*)(work + 0x78) = wazaSequenceSysGetResID();
 
-    fn_8010147C((u32)params, *(u32*)(p + 0x38), 0x4e20, *(u32*)(work + 0x7c));
+    loadArchivePtr((u32)params, *(u32*)(p + 0x38), 0x4e20, *(u32*)(work + 0x7c));
     model = GSresGetResource(0x4e20, *(u32*)(work + 0x7c));
-    fn_801013A0((u32)model, 0x4e20, 0, *(u32*)(work + 0x78));
+    loadModel((u32)model, 0x4e20, 0, *(u32*)(work + 0x78));
     model = GSresGetResource(0x4e20, *(u32*)(work + 0x78));
     if (model != NULL) {
         GSmodelSetVisibility(model, 0);
@@ -674,7 +674,7 @@ u8* fn_80137780(u8* work, u8* params) {
         u8 b;
         u8 a;
     } TraceColor;
-    extern void fn_8013AB60(u8*, TraceColor*, TraceColor*, s32);
+    extern void filterAddKey(u8*, TraceColor*, TraceColor*, s32);
     s32 i;
     TraceColor first;
     s32 count;
@@ -734,9 +734,9 @@ u8* fn_80137780(u8* work, u8* params) {
             second.a = 0xFF;
         }
         if (*(s32*)(data + 8) < 0) {
-            fn_8013AB60(work, &first, &second, -1);
+            filterAddKey(work, &first, &second, -1);
         } else {
-            fn_8013AB60(work, &first, &second,
+            filterAddKey(work, &first, &second,
                         ((f32)*(s32*)(data + 8) * (f32)(s32)fn_800D37CC()) / 60.0f);
         }
     }
@@ -751,11 +751,11 @@ u8* fn_80137780(u8* work, u8* params) {
 
 /* 0x8013796C | 0x78 */
 void* fn_8013796C(void* owner) {
-    void* obj = fn_80131428(owner, 0x2C);
+    void* obj = GSeffectCreate(owner, 0x2C);
     if (obj != (void*)0) {
-        fn_80131200(obj, 0, fn_801379E4, tracefxStartEffect, fn_80137A2C, 0,
+        GSeffectSetCallbacks(obj, 0, fn_801379E4, tracefxStartEffect, fn_80137A2C, 0,
                     fn_80137D14, fn_80137F58);
-        fn_8013139C(obj, 0);
+        GSeffectSetup(obj, 0);
     }
     return obj;
 }

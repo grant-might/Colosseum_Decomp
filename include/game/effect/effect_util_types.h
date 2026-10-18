@@ -611,15 +611,15 @@ extern void GStextureSetWrap(void);
 
 extern void wazaSequenceSysGetResID(void);
 
-extern void fn_8010147C(void);
+extern void loadArchivePtr(void);
 
-extern void fn_801013A0(void);
+extern void loadModel(void);
 
 extern void GSmodelSetVisibility(void);
 
 extern void fn_8013735C(void);
 
-extern void fn_8013D604(void);
+extern void envMapAddKey(void);
 
 extern void fn_80137114(void);
 

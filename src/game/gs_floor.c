@@ -839,7 +839,7 @@ void loadParticle(void* dst, u32 size, void* callback, void* callbackArg) {
 }
 
 /* 0x801012E8 | 0xB8 */
-void fn_801012E8(void* archive, u32 resourceArg, u32 callbackArg) {
+void loadCamera(void* archive, u32 resourceArg, u32 callbackArg) {
     extern void* fn_800D27FC(void*);
     extern void GSresRegisterResource(void*, u32, u32, void*);
     extern void fn_80101A28(void);
@@ -865,7 +865,7 @@ void fn_801012E8(void* archive, u32 resourceArg, u32 callbackArg) {
 }
 
 /* 0x801013A0 | 0xDC */
-void fn_801013A0(void* archive, u32 resourceArg, u32 modelIndex,
+void loadModel(void* archive, u32 resourceArg, u32 modelIndex,
                  u32 callbackArg) {
     extern void* GSmodelLoad(void*);
     extern void GSresRegisterResource(void*, u32, u32, void*);
@@ -900,7 +900,7 @@ void fn_801013A0(void* archive, u32 resourceArg, u32 modelIndex,
 }
 
 /* 0x8010147C | 0x494 */
-void fn_8010147C(u8* data, u32 size, u32 loadParam, u32 callbackArg) {
+void loadArchivePtr(u8* data, u32 size, u32 loadParam, u32 callbackArg) {
     const char* messages = lbl_802717F0;
     HSD_Archive* archive;
     HSD_Archive* copy;

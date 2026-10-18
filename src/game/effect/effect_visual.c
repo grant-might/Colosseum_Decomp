@@ -156,8 +156,8 @@ extern u16   _toolentryAlloc__FUl(u32 size);
 extern void* fn_800E27B0(u16 handle);
 
 /* Effect system core */
-extern u32   fn_80131428(void* callbacks, u16 dataSize);  /* GSEffectAllocSlot */
-extern void  fn_80131200(u32 effectId,
+extern u32   GSeffectCreate(void* callbacks, u16 dataSize);  /* GSEffectAllocSlot */
+extern void  GSeffectSetCallbacks(u32 effectId,
                           GSEffectStartFunc startFunc,
                           GSEffectStopFunc  destroyFunc,
                           GSEffectStartFunc triggerFunc,
@@ -165,7 +165,7 @@ extern void  fn_80131200(u32 effectId,
                           void* extraParam,
                           GSEffectUpdateFunc updateFunc,
                           GSEffectRenderFunc renderFunc);  /* GSEffectRegister */
-extern void  fn_8013139C(u32 effectId, u32 param);        /* GSEffectResetState */
+extern void  GSeffectSetup(u32 effectId, u32 param);        /* GSEffectResetState */
 
 /* Floor resource system */
 extern void* GSresGetResource(u32 group, u32 model);
@@ -367,94 +367,94 @@ extern void fn_800D7E5C(void);
 extern void set__5GSvecFfff(void* dst, f32 x, f32 y, f32 z);
 /* Forward declarations for self-referencing asm blocks */
 extern u32 _lightningRenderMain(void* ptr);
-extern u32 fn_80138630(void* ptr);
-extern u32 fn_80138680(void* ptr);
-extern u32 fn_801386DC(void* ptr);
-extern u32 fn_801387C0(void* ptr, u32 delta);
-extern void fn_80138838(void* ptr, u32 b);
-extern u32 fn_80138B74(void* ptr);
-extern u32 fn_80138BBC(void* ptr);
+extern u32 _lightningDestroy(void* ptr);
+extern u32 _lightningStop(void* ptr);
+extern u32 lightningStartEffect(void* ptr);
+extern u32 _lightningUpdate(void* ptr, u32 delta);
+extern void _lightningGenerate(void* ptr, u32 b);
+extern u32 _leaffxDestroy(void* ptr);
+extern u32 _leaffxStop(void* ptr);
 extern u32 fn_80138CCC(void* ptr);
-extern u32 fn_80138DE4(void* ptr, u32 delta);
-extern void fn_80139074(void* entry, u8* leaf);
+extern u32 _leaffxUpdate(void* ptr, u32 delta);
+extern void _leaffxMoveLeaf(void* entry, u8* leaf);
 extern u8 _leaffxGenerateLeafData(void* ptr, void* entry);
-extern u32 fn_80139898(void* ptr);
-extern u32 fn_801398E0(void* ptr);
-extern u32 fn_80139934(void* ptr);
-extern BOOL fn_80139AC4(void* ptr, u32 tick);
-extern u32 fn_80139D10(void* ptr);
-extern void fn_80139E80(u8* e, u8* p, void* cameraPos, void* modelPos);
+extern u32 _boltDestroy(void* ptr);
+extern u32 _boltStop(void* ptr);
+extern u32 _boltRender(void* ptr);
+extern BOOL _boltUpdate(void* ptr, u32 tick);
+extern u32 boltStartEffect(void* ptr);
+extern void _boltDrawStrip(u8* e, u8* p, void* cameraPos, void* modelPos);
 struct ElectronPoint;
-extern void fn_8013A1D4(u8* entry, u8* parent, struct ElectronPoint* origin, u32 depth, f32 weight);
+extern void _boltSubdivide(u8* entry, u8* parent, struct ElectronPoint* origin, u32 depth, f32 weight);
 extern u32 fn_8013A49C(void* ptr);
-extern u32 fn_8013A520(void* ptr);
-extern u32 fn_8013AA8C(void* ptr, u16 delta);
-extern u32 fn_8013AD68(void* ptr);
-extern u32 fn_8013AD9C(void* ptr, u32 delta);
-extern u32 fn_8013B034(void* ptr);
-extern u32 fn_8013B0A0(void* ptr);
+extern u32 _electronRender(void* ptr);
+extern u32 _electronUpdate(void* ptr, u16 delta);
+extern u32 _filterNextKey(void* ptr);
+extern u32 _filterUpdate(void* ptr, u32 delta);
+extern u32 _filterDestroy(void* ptr);
+extern u32 _filterStop(void* ptr);
 extern u16 filterStart(void* ptr);
-extern void fn_8013B268(void* ptr, u8* color);
-extern u32 fn_8013B504(void* ptr);
-extern u32 fn_8013B558(void* ptr);
+extern void _filterApplyColor(void* ptr, u8* color);
+extern u32 _surfDestroy(void* ptr);
+extern u32 _surfStop(void* ptr);
 extern u16 surfEffectStart(void* ptr);
-extern u32 fn_8013B85C(void* ptr, u32 delta);
-extern void fn_8013BA98(void* ptr);
-extern void fn_8013BC10(void* ptr, f32 t);
-extern void fn_8013BE04(void* ptr, void* mtx, u8* color, f32 x, f32 z, f32 scale);
-extern u32 fn_8013C074(void* ptr, void* arg);
-extern u32 fn_8013C614(void* ptr);
-extern u32 fn_8013C670(void* ptr);
+extern u32 _surfUpdate(void* ptr, u32 delta);
+extern void _surfCalcNormals(void* ptr);
+extern void _surfCalcWaveProfile(void* ptr, f32 t);
+extern void _surfBuildMesh(void* ptr, void* mtx, u8* color, f32 x, f32 z, f32 scale);
+extern u32 _surfSetupMaterial(void* ptr, void* arg);
+extern u32 _seaDestroy(void* ptr);
+extern u32 _seaStop(void* ptr);
 extern u16 seaEffectStart(void* ptr);
-extern u32 fn_8013CA48(void* ptr, u32 delta);
-extern void fn_8013CBF0(void* ptr, void* mtx, u8* color, f32 x, f32 z, f32 scale);
-extern u32 fn_8013CE58(void* inner, void* ptr);
-extern u32 fn_8013D0A8(void* ptr, void* arg);
-extern u32 fn_8013D730(void* ptr);
-extern u32 fn_8013D7CC(void* ptr);
+extern u32 _seaUpdate(void* ptr, u32 delta);
+extern void _seaBuildMesh(void* ptr, void* mtx, u8* color, f32 x, f32 z, f32 scale);
+extern u32 _seaResetMaterial(void* inner, void* ptr);
+extern u32 _seaSetupMaterial(void* ptr, void* arg);
+extern u32 _envMapDestroy(void* ptr);
+extern u32 _envMapStop(void* ptr);
 extern u32 envMapEffectInit(void* ptr);
 extern u32 envMapEffectStart(void* ptr);
 extern void fn_800D4604(u32 mode);
-extern u32 fn_8013D984(void* ptr, u32 delta);
-extern u32 fn_8013DC94(void* ptr);
-extern u32 fn_8013DD10(void* ptr);
-extern u32 fn_8013DD7C(void* ptr);
+extern u32 _envMapUpdate(void* ptr, u32 delta);
+extern u32 _blurDestroy(void* ptr);
+extern u32 _blurInit(void* ptr);
+extern u32 _blurStop(void* ptr);
 extern u32 blurEffectStart(void* ptr);
-extern u32 fn_8013DE6C(void* ptr);
-extern u32 fn_8013E258(void* model, void* unused, void* state);
-extern u32 fn_8013E470(void* ptr, u32 delta);
-extern u32 fn_8013E54C(void* ptr);
-extern u32  fn_8013E5AC(u8* p);
+extern u32 _blurRender(void* ptr);
+extern u32 _blurDrawCapture(void* model, void* unused, void* state);
+extern u32 _blurUpdate(void* ptr, u32 delta);
+extern u32 _auraDestroy(void* ptr);
+extern u32  _auraInit(u8* p);
 extern u32 auraEffectStart(void* ptr);
-extern u32 fn_8013E6C4(u8* ptr);
-extern u32 fn_8013E8A4(void* ptr, u32 delta);
-extern void fn_8013EA44(void* ptr);
-extern u32 fn_8013F078(void* ptr);
-extern u32 fn_8013F114(void* ptr);
+extern u32 _auraRender(u8* ptr);
+extern u32 _auraUpdate(void* ptr, u32 delta);
+extern void _auraDrawModel(void* ptr);
+extern u32 _distortionDestroy(void* ptr);
+extern u32 _distortionInit(void* ptr);
 extern u16 distortionEffectStart(void* ptr);
-extern u32 fn_8013F410(void* ptr);
-extern u32 fn_8013F80C(void* ptr, u32 delta);
+extern u32 _distortionRender(void* ptr);
+extern u32 _distortionUpdate(void* ptr, u32 delta);
 extern void _distortionEffectUpdateMatrices(void* ptr);
-extern u32 fn_8013FC58(void* ptr);
-extern u32 fn_8013FCC4(void* ptr);
-extern u32 fn_8013FD68(void* ptr);
+extern u32 _billboardDestroy(void* ptr);
+extern u32 _billboardInit(void* ptr);
+extern u32 _billboardStop(void* ptr);
 extern u16 billboardEffectStart(void* ptr);
-extern u32 fn_8013FF0C(void* ptr);
+extern u32 _billboardUpdate(void* ptr);
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_801380D4_8013814C)
-u32 fn_801380D4(void* callbacks) {
-    u32 effectId = fn_80131428(callbacks, 0x70);
+u32 lightningEffectCreate(void* callbacks) {
+    u32 effectId = GSeffectCreate(callbacks, 0x70);
     if (effectId) {
-        fn_80131200(effectId,
+        GSeffectSetCallbacks(effectId,
             0,
-            (GSEffectStopFunc)fn_80138630,
-            (GSEffectStartFunc)fn_801386DC,
-            (GSEffectStopFunc)fn_80138680,
+            (GSEffectStopFunc)_lightningDestroy,
+            (GSEffectStartFunc)lightningStartEffect,
+            (GSEffectStopFunc)_lightningStop,
             0,
-            (GSEffectUpdateFunc)fn_801387C0,
+            (GSEffectUpdateFunc)_lightningUpdate,
             (GSEffectRenderFunc)_lightningRenderMain);
-        fn_8013139C(effectId, 0);
+        GSeffectSetup(effectId, 0);
     }
     return effectId;
 }
@@ -623,7 +623,7 @@ __declspec(section ".sdata2") u32 lbl_8047D15C = 0x40C90FDB; /* 6.2831855f */
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_80138630_801386DC)
-u32 fn_80138630(void* ptr) {
+u32 _lightningDestroy(void* ptr) {
     if (ptr) {
         GXDrawDone();
         fn_800B856C();
@@ -636,7 +636,7 @@ u32 fn_80138630(void* ptr) {
 }
 extern void fn_800E24B0(u16 a);
 extern void fn_800E209C(u16 a);
-u32 fn_80138680(void* ptr) {
+u32 _lightningStop(void* ptr) {
     u32 val;
     u32 ret;
     if (ptr) {
@@ -658,7 +658,7 @@ u32 fn_80138680(void* ptr) {
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_801386DC)
 extern u8 lbl_80272B40[];
-u32 fn_801386DC(void* ptr) {
+u32 lightningStartEffect(void* ptr) {
     u8* p;
     u16 handle;
 
@@ -679,7 +679,7 @@ u32 fn_801386DC(void* ptr) {
 
         *(void**)(p + 4) = fn_800E27B0(handle);
         memset(*(void**)(p + 4), 0, *(u16*)(p + 0x8) * 0x97C);
-        fn_80138838(p, 1);
+        _lightningGenerate(p, 1);
         *(u16*)(p + 0x10) = 0;
         return 1;
     }
@@ -691,7 +691,7 @@ u32 fn_801386DC(void* ptr) {
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_801387C0_80138838)
-u32 fn_801387C0(void* ptr, u32 delta) {
+u32 _lightningUpdate(void* ptr, u32 delta) {
     u8* p;
     u32 d;
     u16 limit;
@@ -704,7 +704,7 @@ u32 fn_801387C0(void* ptr, u32 delta) {
     if (limit != 0 && *(u16*)(p + 0x10) >= limit) {
         goto fail;
     }
-    fn_80138838(p, 0);
+    _lightningGenerate(p, 0);
     *(u16*)(p + 0x10) = *(u16*)(p + 0x10) + d;
     return 1;
 fail:
@@ -725,7 +725,7 @@ extern void GSmtxMakeYRotation(void* mtx, f32 angle);
 extern void GSvecTransform(void* dst, void* matrix, void* vec);
 extern void vecScale(void* dst, void* src, f32 scale);
 extern void GSvecAdd(void* dst, void* srcA, void* srcB);
-void fn_80138838(void* ptr, u32 b) {
+void _lightningGenerate(void* ptr, u32 b) {
     u8* p;
     u8* current;
     u8* entry;
@@ -809,22 +809,22 @@ void fn_80138838(void* ptr, u32 b) {
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_80138B00_80138BBC)
 u32 leaffxStartEffect(void* callbacks) {
-    u32 effectId = fn_80131428(callbacks, 0x4c);
+    u32 effectId = GSeffectCreate(callbacks, 0x4c);
     if (effectId) {
-        fn_80131200(effectId,
+        GSeffectSetCallbacks(effectId,
             0,
-            (GSEffectStopFunc)fn_80138B74,
+            (GSEffectStopFunc)_leaffxDestroy,
             (GSEffectStartFunc)fn_80138CCC,
-            (GSEffectStopFunc)fn_80138BBC,
+            (GSEffectStopFunc)_leaffxStop,
             0,
-            (GSEffectUpdateFunc)fn_80138DE4,
+            (GSEffectUpdateFunc)_leaffxUpdate,
             0);
-        fn_8013139C(effectId, 0);
+        GSeffectSetup(effectId, 0);
     }
     return effectId;
 }
 extern void fn_800F9210(u32 a, u32 b);
-u32 fn_80138B74(void* ptr) {
+u32 _leaffxDestroy(void* ptr) {
     if (ptr) {
         fn_800F9210(*(u16*)((u8*)ptr + 0x40), *(u16*)((u8*)ptr + 0x44));
         fn_800F9210(*(u16*)((u8*)ptr + 0x40), *(u16*)((u8*)ptr + 0x42));
@@ -843,7 +843,7 @@ extern void GSmaterialSetAlpha(void* obj, f32 val);
 extern void fn_800DF608(void* handle);
 extern void GSpartFree(void* handle);
 extern u32 lbl_8047D160;
-u32 fn_80138BBC(void* ptr) {
+u32 _leaffxStop(void* ptr) {
     u32 j;
     u32 k;
     void* obj;
@@ -957,7 +957,7 @@ extern u32 lbl_8047D164;
 extern u32 lbl_8047D178;
 extern u32 lbl_8047D160;
 extern const f32 lbl_8047D168;
-u32 fn_80138DE4(void* ptr, u32 delta) {
+u32 _leaffxUpdate(void* ptr, u32 delta) {
     u8* p;
     u32 j;
     u32 i;
@@ -1017,7 +1017,7 @@ u32 fn_80138DE4(void* ptr, u32 delta) {
                 if (*(void**)(entry + 0x58) != NULL) {
                     *(f32*)(entry + 0x54) += deltaScale;
                     if (*(f32*)(entry + 0x54) >= 1.0f) {
-                        fn_80139074(p, entry);
+                        _leaffxMoveLeaf(p, entry);
                     }
 
                     GSbezierCalculateVector(position, entry, *(f32*)(entry + 0x54));
@@ -1057,7 +1057,7 @@ extern void GSmodelSetMatrix();
 extern void fn_800E076C(void* dst, void* src);
 extern u32 lbl_8047D180;
 extern u32 lbl_8047D184;
-void fn_80139074(void* entry, u8* leaf) {
+void _leaffxMoveLeaf(void* entry, u8* leaf) {
     u8* config = entry;
     f32* vec;
     f32 direction[3];
@@ -1315,21 +1315,21 @@ u8 _leaffxGenerateLeafData(void* ptr, void* entry) {
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_80139820_80139AC4)
 u32 electronStartEffect(void* callbacks) {
-    u32 effectId = fn_80131428(callbacks, 0x60);
+    u32 effectId = GSeffectCreate(callbacks, 0x60);
     if (effectId) {
-        fn_80131200(effectId,
+        GSeffectSetCallbacks(effectId,
             0,
-            (GSEffectStopFunc)fn_80139898,
-            (GSEffectStartFunc)fn_80139D10,
-            (GSEffectStopFunc)fn_801398E0,
+            (GSEffectStopFunc)_boltDestroy,
+            (GSEffectStartFunc)boltStartEffect,
+            (GSEffectStopFunc)_boltStop,
             0,
-            (GSEffectUpdateFunc)fn_80139AC4,
-            (GSEffectRenderFunc)fn_80139934);
-        fn_8013139C(effectId, 0);
+            (GSEffectUpdateFunc)_boltUpdate,
+            (GSEffectRenderFunc)_boltRender);
+        GSeffectSetup(effectId, 0);
     }
     return effectId;
 }
-u32 fn_80139898(void* ptr) {
+u32 _boltDestroy(void* ptr) {
     if (ptr) {
         GXDrawDone();
         fn_800B856C();
@@ -1339,7 +1339,7 @@ u32 fn_80139898(void* ptr) {
     }
     return 1;
 }
-u32 fn_801398E0(void* ptr) {
+u32 _boltStop(void* ptr) {
     u32 val;
     if (ptr) {
         val = *(u16*)((u8*)ptr + 0x4);
@@ -1355,7 +1355,7 @@ u32 fn_801398E0(void* ptr) {
 extern u32 fn_800EE7E0(void* obj);
 extern const f32 lbl_8047D190;
 #if 1
-u32 fn_80139934(void* ptr) {
+u32 _boltRender(void* ptr) {
     f32 cameraPos[3];
     f32 pos[3];
     u8* p;
@@ -1403,7 +1403,7 @@ u32 fn_80139934(void* ptr) {
         i = 0;
         while (i < count) {
             if (*(u16*)(entry + 0x12e0) != 0) {
-                fn_80139E80(entry, p, cameraPos, pos);
+                _boltDrawStrip(entry, p, cameraPos, pos);
             }
             i++;
             entry += 0x12e4;
@@ -1413,7 +1413,7 @@ u32 fn_80139934(void* ptr) {
     return 0;
 }
 #else
-u32 fn_80139934(void* ptr) { /* TODO */ }
+u32 _boltRender(void* ptr) { /* TODO */ }
 #endif
 #endif
 
@@ -1422,7 +1422,7 @@ u32 fn_80139934(void* ptr) { /* TODO */ }
 extern u32 lbl_8047D198;
 extern u32 lbl_8047D1A0;
 
-BOOL fn_80139AC4(void* ptr, u32 tick) {
+BOOL _boltUpdate(void* ptr, u32 tick) {
     u8* p;
     u32 frame;
     u16 endFrame;
@@ -1489,7 +1489,7 @@ BOOL fn_80139AC4(void* ptr, u32 tick) {
 extern u8 lbl_80272D08[];
 extern const f32 lbl_8047D190;
 extern u8 lbl_80272D54[];
-u32 fn_80139D10(void* ptr) {
+u32 boltStartEffect(void* ptr) {
     u16 handle;
     u32 size;
     u8* entry;
@@ -1527,7 +1527,7 @@ u32 fn_80139D10(void* ptr) {
         for (i = 0; i < count; i++, entry += 0x12E4) {
             *(u16*)(entry + 0x12E2) = 0;
             set__5GSvecFfff(entry + 0x12C0, 0.0f, *(f32*)(p + 0x38), 0.0f);
-            fn_8013A1D4(entry, p, (struct ElectronPoint*)(entry + 0x12C0), 0, *(f32*)(p + 0x3C));
+            _boltSubdivide(entry, p, (struct ElectronPoint*)(entry + 0x12C0), 0, *(f32*)(p + 0x3C));
             entry[0x12D8] = p[0x5C];
             entry[0x12D9] = p[0x5D];
             entry[0x12DA] = p[0x5E];
@@ -1554,7 +1554,7 @@ extern const f32 lbl_8047D1A8;
 extern const f32 lbl_8047D190;
 extern const f32 lbl_8047D1AC;
 extern const f32 lbl_8047D1B0;
-void fn_80139E80(u8* e, u8* p, void* cameraPos, void* modelPos) {
+void _boltDrawStrip(u8* e, u8* p, void* cameraPos, void* modelPos) {
     extern void fn_800D7E5C(void);
     extern void fn_800D7F14(void*);
     extern void fn_800DFFCC(void*, void*, void*);
@@ -1672,7 +1672,7 @@ typedef struct ElectronPoint {
     f32 endWeight;
 } ElectronPoint;
 
-void fn_8013A1D4(u8* entry, u8* parent, ElectronPoint* origin, u32 depth, f32 weight) {
+void _boltSubdivide(u8* entry, u8* parent, ElectronPoint* origin, u32 depth, f32 weight) {
     ElectronPoint* first;
     u32 i;
     u32 j;
@@ -1738,7 +1738,7 @@ void fn_8013A1D4(u8* entry, u8* parent, ElectronPoint* origin, u32 depth, f32 we
         first->startWeight = weight;
         weight = first->endWeight = weight - branchDecay;
         if (branchChance > fn_800E0BE4()) {
-            fn_8013A1D4(entry, parent, first->prev, depth + 1,
+            _boltSubdivide(entry, parent, first->prev, depth + 1,
                         0.5f * weight);
         }
     }
@@ -1749,18 +1749,18 @@ void fn_8013A1D4(u8* entry, u8* parent, ElectronPoint* origin, u32 depth, f32 we
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_8013A42C_8013A520)
-u32 fn_8013A42C(void* callbacks) {
-    u32 effectId = fn_80131428(callbacks, 0x24);
+u32 electronEffectCreate(void* callbacks) {
+    u32 effectId = GSeffectCreate(callbacks, 0x24);
     if (effectId) {
-        fn_80131200(effectId,
+        GSeffectSetCallbacks(effectId,
             0,
             0,
             (GSEffectStartFunc)fn_8013A49C,
             0,
             0,
-            (GSEffectUpdateFunc)fn_8013AA8C,
-            (GSEffectRenderFunc)fn_8013A520);
-        fn_8013139C(effectId, 0);
+            (GSEffectUpdateFunc)_electronUpdate,
+            (GSEffectRenderFunc)_electronRender);
+        GSeffectSetup(effectId, 0);
     }
     return effectId;
 }
@@ -1798,7 +1798,7 @@ extern const f32 lbl_8047D1C8;
 extern const f32 lbl_8047D1CC;
 extern const f32 lbl_8047D1D0;
 extern u32 lbl_8047D1D8;
-u32 fn_8013A520(void* ptr) {
+u32 _electronRender(void* ptr) {
     extern u32 fn_800EE0E8(void*);
     extern f64 sin(f64);
     extern f64 cos(f64);
@@ -1979,7 +1979,7 @@ u32 fn_8013A520(void* ptr) {
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_8013AA8C_8013AB60)
-u32 fn_8013AA8C(void* ptr, u16 delta) {
+u32 _electronUpdate(void* ptr, u16 delta) {
     u16 cur;
     u16 max;
     if (ptr) {
@@ -1992,22 +1992,22 @@ u32 fn_8013AA8C(void* ptr, u16 delta) {
     }
     return 0;
 }
-u32 fn_8013AABC(void* callbacks) {
-    u32 effectId = fn_80131428(callbacks, 0x5c);
+u32 filterEffectCreate(void* callbacks) {
+    u32 effectId = GSeffectCreate(callbacks, 0x5c);
     if (effectId) {
-        fn_80131200(effectId,
+        GSeffectSetCallbacks(effectId,
             0,
-            (GSEffectStopFunc)fn_8013B034,
+            (GSEffectStopFunc)_filterDestroy,
             (GSEffectStartFunc)filterStart,
-            (GSEffectStopFunc)fn_8013B0A0,
-            (void*)fn_8013AD68,
-            (GSEffectUpdateFunc)fn_8013AD9C,
+            (GSEffectStopFunc)_filterStop,
+            (void*)_filterNextKey,
+            (GSEffectUpdateFunc)_filterUpdate,
             0);
-        fn_8013139C(effectId, 0);
+        GSeffectSetup(effectId, 0);
     }
     return effectId;
 }
-u32 fn_8013AB34(void* ptr) {
+u32 filterIsHolding(void* ptr) {
     void* inner;
     u32 val;
     inner = *(void**)((u8*)ptr + 0x54);
@@ -2025,7 +2025,7 @@ u32 fn_8013AB34(void* ptr) {
     defined(EFFECT_VISUAL_EXACT_8013AB60)
 extern u32 lbl_8047D1E8;
 extern const f32 lbl_8047D1E0;
-u32 fn_8013AB60(void* ptr, u8* src, u8* dst, u32 alpha) {
+u32 filterAddKey(void* ptr, u8* src, u8* dst, u32 alpha) {
     u8* p;
     u8* node;
     u8* tail;
@@ -2083,7 +2083,7 @@ u32 fn_8013AB60(void* ptr, u8* src, u8* dst, u32 alpha) {
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_8013AD68_8013AD9C)
-u32 fn_8013AD68(void* ptr) {
+u32 _filterNextKey(void* ptr) {
     void* ptr2;
     if (ptr) {
         ptr2 = *(void**)((u8*)ptr + 0x54);
@@ -2103,7 +2103,7 @@ extern void fn_80168408(void* filter, u8* color);
 extern u32 lbl_8047D1E8;
 extern const f32 lbl_8047D1F0;
 extern const f32 lbl_8047D1F4;
-u32 fn_8013AD9C(void* ptr, u32 delta) {
+u32 _filterUpdate(void* ptr, u32 delta) {
     u8* p;
     u8* node;
     u8* previous;
@@ -2133,7 +2133,7 @@ u32 fn_8013AD9C(void* ptr, u32 delta) {
         *(void**)(p + 0x54) = node;
         if (node == NULL) {
             if (*(u8*)(p + 0x4C) != 0) {
-                fn_8013B268(p, previous + 4);
+                _filterApplyColor(p, previous + 4);
             } else {
                 filter = *(void**)p;
                 if (filter != NULL) {
@@ -2170,7 +2170,7 @@ u32 fn_8013AD9C(void* ptr, u32 delta) {
     color[3] = start + ratio * (end - start);
 
     if (*(u8*)(p + 0x4C) != 0) {
-        fn_8013B268(p, color);
+        _filterApplyColor(p, color);
     } else {
         filter = *(void**)p;
         if (filter != NULL) {
@@ -2189,7 +2189,7 @@ done:
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_8013B034_8013B268)
-u32 fn_8013B034(void* ptr) {
+u32 _filterDestroy(void* ptr) {
     void* next;
     u32 val;
     u32 ret;
@@ -2211,7 +2211,7 @@ u32 fn_8013B034(void* ptr) {
 extern void GSmodelDisableModulation(void* texture);
 extern void GSmodelResetPEdescr(void* texture);
 extern void fn_801684F0(void* texture);
-u32 fn_8013B0A0(void* ptr) {
+u32 _filterStop(void* ptr) {
     u8 flag2;
     u8 flag1;
     u16 i;
@@ -2329,7 +2329,7 @@ static inline u8 effectColorMultiply(u8 base, u8 color) {
     return ((f32)base * (f32)color) / 255.0f;
 }
 
-void fn_8013B268(void* ptr, u8* color) {
+void _filterApplyColor(void* ptr, u8* color) {
     u8* p;
     void** textures;
     u16 count;
@@ -2363,22 +2363,22 @@ void fn_8013B268(void* ptr, u8* color) {
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_8013B490_8013B5E4)
-u32 fn_8013B490(void* callbacks) {
-    u32 effectId = fn_80131428(callbacks, 0xd0);
+u32 surfEffectCreate(void* callbacks) {
+    u32 effectId = GSeffectCreate(callbacks, 0xd0);
     if (effectId) {
-        fn_80131200(effectId,
+        GSeffectSetCallbacks(effectId,
             0,
-            (GSEffectStopFunc)fn_8013B504,
+            (GSEffectStopFunc)_surfDestroy,
             (GSEffectStartFunc)surfEffectStart,
-            (GSEffectStopFunc)fn_8013B558,
+            (GSEffectStopFunc)_surfStop,
             0,
-            (GSEffectUpdateFunc)fn_8013B85C,
+            (GSEffectUpdateFunc)_surfUpdate,
             0);
-        fn_8013139C(effectId, 0);
+        GSeffectSetup(effectId, 0);
     }
     return effectId;
 }
-u32 fn_8013B504(void* ptr) {
+u32 _surfDestroy(void* ptr) {
     if (ptr) {
         if (*(s32*)((u8*)ptr + 0x58) != 0) {
             fn_800F9210(*(u32*)((u8*)ptr + 0x50), *(u32*)((u8*)ptr + 0x54));
@@ -2387,7 +2387,7 @@ u32 fn_8013B504(void* ptr) {
     }
     return 1;
 }
-u32 fn_8013B558(void* ptr) {
+u32 _surfStop(void* ptr) {
     u16 val;
     if (ptr) {
         if (*(void**)ptr != NULL) {
@@ -2520,9 +2520,9 @@ u16 surfEffectStart(void* ptr) {
         goto fail;
     }
 
-    fn_8013BE04(p, p + 0x24, p + 0x3C, *(f32*)(p + 0x40), *(f32*)(p + 0x44),
+    _surfBuildMesh(p, p + 0x24, p + 0x3C, *(f32*)(p + 0x40), *(f32*)(p + 0x44),
                 *(f32*)(p + 0x48));
-    if (!(u8)fn_8013C074(model, p)) {
+    if (!(u8)_surfSetupMaterial(model, p)) {
         goto cleanup;
     }
     if (!surfAllocColumn(p)) {
@@ -2557,7 +2557,7 @@ fail:
 }
 extern void fn_800E09E8(void* dst, void* src, u32 count);
 extern u32 lbl_8047D208;
-u32 fn_8013B85C(void* ptr, u32 delta) {
+u32 _surfUpdate(void* ptr, u32 delta) {
     u8* p;
     s32 half;
     s32 column;
@@ -2574,7 +2574,7 @@ u32 fn_8013B85C(void* ptr, u32 delta) {
         p = ptr;
         t = (f32)*(u16*)(p + 0xCC) / (f32)*(u16*)(p + 0xCE);
         GSmodelSetVisibility(*(void**)p, 1);
-        fn_8013BC10(p, t);
+        _surfCalcWaveProfile(p, t);
 
         count = *(u16*)(p + 0x1E);
         if (count % 2 != 0) {
@@ -2599,7 +2599,7 @@ u32 fn_8013B85C(void* ptr, u32 delta) {
             }
         }
 
-        fn_8013BA98(p);
+        _surfCalcNormals(p);
         *(u16*)(p + 0xCC) = *(u16*)(p + 0xCC) + delta;
         return (*(u16*)(p + 0xCC) < *(u16*)(p + 0xCE));
     }
@@ -2617,7 +2617,7 @@ static inline void surfCopyColumn(u8* column, s32 depth, s32 width) {
     }
 }
 
-void fn_8013BA98(void* ptr) {
+void _surfCalcNormals(void* ptr) {
     s32 width;
     s32 depth;
     u8* p;
@@ -2668,7 +2668,7 @@ extern const f32 lbl_8047D210;
 extern const f32 lbl_8047D214;
 extern const f32 lbl_8047D218;
 extern const f32 lbl_8047D21C;
-void fn_8013BC10(void* ptr, f32 t) {
+void _surfCalcWaveProfile(void* ptr, f32 t) {
     u8* p;
     f32 upperLeft[3];
     f32 upperRight[3];
@@ -2731,7 +2731,7 @@ extern const f32 lbl_8047D204;
 extern u32 lbl_8047D228;
 extern const f32 lbl_8047D21C;
 extern u32 lbl_8047D208;
-void fn_8013BE04(void* ptr, void* mtx, u8* color, f32 x, f32 z, f32 scale) {
+void _surfBuildMesh(void* ptr, void* mtx, u8* color, f32 x, f32 z, f32 scale) {
     u8* p = ptr;
     u16 row;
     u16 rows = *(u16*)(p + 0x1C);
@@ -2867,7 +2867,7 @@ static inline void surfBuildStrips(SurfRenderState* state) {
     }
 }
 
-u32 fn_8013C074(void* ptr, void* arg) {
+u32 _surfSetupMaterial(void* ptr, void* arg) {
     SurfRenderState* state = arg;
     SurfRenderDObj* dobj = fn_8019FF48(*(void**)((u8*)ptr + 0x8));
     SurfRenderPObj* pobj;
@@ -2985,22 +2985,22 @@ u32 fn_8013C074(void* ptr, void* arg) {
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_8013C5A0_8013C670)
-u32 fn_8013C5A0(void* callbacks) {
-    u32 effectId = fn_80131428(callbacks, 0xac);
+u32 seaEffectCreate(void* callbacks) {
+    u32 effectId = GSeffectCreate(callbacks, 0xac);
     if (effectId) {
-        fn_80131200(effectId,
+        GSeffectSetCallbacks(effectId,
             0,
-            (GSEffectStopFunc)fn_8013C614,
+            (GSEffectStopFunc)_seaDestroy,
             (GSEffectStartFunc)seaEffectStart,
-            (GSEffectStopFunc)fn_8013C670,
+            (GSEffectStopFunc)_seaStop,
             0,
-            (GSEffectUpdateFunc)fn_8013CA48,
+            (GSEffectUpdateFunc)_seaUpdate,
             0);
-        fn_8013139C(effectId, 0);
+        GSeffectSetup(effectId, 0);
     }
     return effectId;
 }
-u32 fn_8013C614(void* ptr) {
+u32 _seaDestroy(void* ptr) {
     if (ptr) {
         GXDrawDone();
         fn_800B856C();
@@ -3015,7 +3015,7 @@ u32 fn_8013C614(void* ptr) {
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE)
 extern void GSmodelStopTexAnimation(void* a);
-u32 fn_8013C670(void* arg) {
+u32 _seaStop(void* arg) {
     void* ptr;
     void* inner;
 
@@ -3028,7 +3028,7 @@ u32 fn_8013C670(void* arg) {
         }
         GXDrawDone();
         fn_800B856C();
-        fn_8013CE58(inner, ptr);
+        _seaResetMaterial(inner, ptr);
 
         {
             u16 val;
@@ -3174,9 +3174,9 @@ u16 seaEffectStart(void* ptr) {
         goto fail;
     }
 
-    fn_8013CBF0(p, p + 0x48, p + 0x60, *(f32*)(p + 0x64), *(f32*)(p + 0x68),
+    _seaBuildMesh(p, p + 0x48, p + 0x60, *(f32*)(p + 0x64), *(f32*)(p + 0x68),
                 *(f32*)(p + 0x6C));
-    if (!(u8)fn_8013D0A8(model, p)) {
+    if (!(u8)_seaSetupMaterial(model, p)) {
         goto cleanup;
     }
     if (!seaAllocRandomTable(p)) {
@@ -3248,7 +3248,7 @@ extern u8 lbl_80363CB8[];
 extern const f32 lbl_8047D240;
 extern const f32 lbl_8047D244;
 extern u32 lbl_8047D250;
-u32 fn_8013CA48(void* ptr, u32 delta) {
+u32 _seaUpdate(void* ptr, u32 delta) {
     u8* p;
     f32 angleStep;
     f32 rowAngleStep;
@@ -3303,7 +3303,7 @@ u32 fn_8013CA48(void* ptr, u32 delta) {
 }
 extern u32 lbl_8047D250;
 extern u32 lbl_8047D248;
-void fn_8013CBF0(void* ptr, void* mtx, u8* color, f32 x, f32 z, f32 scale) {
+void _seaBuildMesh(void* ptr, void* mtx, u8* color, f32 x, f32 z, f32 scale) {
     u8* p = ptr;
     u32 rows = *(u16*)(p + 0x18);
     u32 columns = *(u16*)(p + 0x1A);
@@ -3354,7 +3354,7 @@ void fn_8013CBF0(void* ptr, void* mtx, u8* color, f32 x, f32 z, f32 scale) {
 #endif
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE)
-u32 fn_8013CE58(void* inner, void* ptr) {
+u32 _seaResetMaterial(void* inner, void* ptr) {
     u8* p = ptr;
     u8* displayObject;
     u8* material;
@@ -3555,7 +3555,7 @@ static inline void blurBuildStrips(BlurRenderState* state) {
     }
 }
 
-u32 fn_8013D0A8(void* ptr, void* arg) {
+u32 _seaSetupMaterial(void* ptr, void* arg) {
     BlurRenderState* state = arg;
     BlurRenderDObj* dobj = fn_8019FF48(*(void**)((u8*)ptr + 0x8));
     BlurRenderPObj* pobj;
@@ -3680,7 +3680,7 @@ u32 fn_8013D0A8(void* ptr, void* arg) {
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_8013D604_8013D984)
-u32 fn_8013D604(void* ptr, u32 val, f32 f1, f32 f2) {
+u32 envMapAddKey(void* ptr, u32 val, f32 f1, f32 f2) {
     u16 handle;
     void* node;
     void* cur;
@@ -3704,24 +3704,24 @@ u32 fn_8013D604(void* ptr, u32 val, f32 f1, f32 f2) {
     }
     return 0;
 }
-u32 fn_8013D6B8(void* callbacks) {
-    u32 effectId = fn_80131428(callbacks, 0x18);
+u32 envMapEffectCreate(void* callbacks) {
+    u32 effectId = GSeffectCreate(callbacks, 0x18);
     if (effectId) {
-        fn_80131200(effectId,
+        GSeffectSetCallbacks(effectId,
             (GSEffectStartFunc)envMapEffectInit,
-            (GSEffectStopFunc)fn_8013D730,
+            (GSEffectStopFunc)_envMapDestroy,
             (GSEffectStartFunc)envMapEffectStart,
-            (GSEffectStopFunc)fn_8013D7CC,
+            (GSEffectStopFunc)_envMapStop,
             0,
-            (GSEffectUpdateFunc)fn_8013D984,
+            (GSEffectUpdateFunc)_envMapUpdate,
             0);
-        fn_8013139C(effectId, 0);
+        GSeffectSetup(effectId, 0);
     }
     return effectId;
 }
 extern u32 lbl_8047AEE0;
 extern u16 lbl_8047AEE4;
-u32 fn_8013D730(void* ptr) {
+u32 _envMapDestroy(void* ptr) {
     void* next;
     u32 val;
     u32 ret;
@@ -3748,7 +3748,7 @@ u32 fn_8013D730(void* ptr) {
     return ret;
 }
 extern void GSmodelDisableEnvMap(void* ptr);
-u32 fn_8013D7CC(void* ptr) {
+u32 _envMapStop(void* ptr) {
     void* inner;
     if (ptr != NULL) {
         inner = *(void**)ptr;
@@ -3829,7 +3829,7 @@ extern u8 GSmodelIsEnvMapEnabled(void* model);
 extern void GSmodelSetEnvMapBlendValue(void* model, f32 value);
 extern u32 lbl_8047AEE0;
 extern u32 lbl_8047D260;
-u32 fn_8013D984(void* ptr, u32 delta) {
+u32 _envMapUpdate(void* ptr, u32 delta) {
     u8* p;
     u8* node;
     void* model;
@@ -3897,7 +3897,7 @@ u32 fn_8013D984(void* ptr, u32 delta) {
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_8013DB64_8013DE6C)
-u32 fn_8013DB64(void* ptr, u32 val, f32 f1, f32 f2) {
+u32 blurAddKey(void* ptr, u32 val, f32 f1, f32 f2) {
     u16 handle;
     void* node;
     void* cur;
@@ -3921,22 +3921,22 @@ u32 fn_8013DB64(void* ptr, u32 val, f32 f1, f32 f2) {
     }
     return 0;
 }
-u32 fn_8013DC18(void* callbacks) {
-    u32 effectId = fn_80131428(callbacks, 0x20);
+u32 blurEffectCreate(void* callbacks) {
+    u32 effectId = GSeffectCreate(callbacks, 0x20);
     if (effectId) {
-        fn_80131200(effectId,
-            (GSEffectStartFunc)fn_8013DD10,
-            (GSEffectStopFunc)fn_8013DC94,
+        GSeffectSetCallbacks(effectId,
+            (GSEffectStartFunc)_blurInit,
+            (GSEffectStopFunc)_blurDestroy,
             (GSEffectStartFunc)blurEffectStart,
-            (GSEffectStopFunc)fn_8013DD7C,
+            (GSEffectStopFunc)_blurStop,
             0,
-            (GSEffectUpdateFunc)fn_8013E470,
-            (GSEffectRenderFunc)fn_8013DE6C);
-        fn_8013139C(effectId, 0);
+            (GSEffectUpdateFunc)_blurUpdate,
+            (GSEffectRenderFunc)_blurRender);
+        GSeffectSetup(effectId, 0);
     }
     return effectId;
 }
-u32 fn_8013DC94(void* ptr) {
+u32 _blurDestroy(void* ptr) {
     void* node;
     u16 val;
     if (ptr) {
@@ -3955,7 +3955,7 @@ u32 fn_8013DC94(void* ptr) {
     }
     return 1;
 }
-u32 fn_8013DD10(void* ptr) {
+u32 _blurInit(void* ptr) {
     if (ptr) {
         if (*(s32*)((u8*)ptr + 0x10) != 0) {
             *(void**)((u8*)ptr + 0xc) = GStextureCreate(0, 0, 0x44, 0, 0);
@@ -3968,7 +3968,7 @@ u32 fn_8013DD10(void* ptr) {
 }
 extern void GSgfxEndBackFBCapture(void* a);
 extern void fn_800E5790(void* a);
-u32 fn_8013DD7C(void* ptr) {
+u32 _blurStop(void* ptr) {
     void* inner;
     if (ptr) {
         if (*(s32*)((u8*)ptr + 0x10) != 0) {
@@ -3991,7 +3991,7 @@ u32 blurEffectStart(void* ptr) {
         *(u32*)((u8*)ptr + 0x1c) = 0;
         if (*(s32*)((u8*)ptr + 0x10) != 0) {
             if (*(void**)((u8*)ptr + 0xc) != NULL) {
-                GSgfxBeginBackFBCapture(*(void**)((u8*)ptr + 0xc), (void*)fn_8013E258, ptr);
+                GSgfxBeginBackFBCapture(*(void**)((u8*)ptr + 0xc), (void*)_blurDrawCapture, ptr);
                 return 1;
             }
         } else {
@@ -4031,7 +4031,7 @@ extern u32 lbl_8047D290;
 extern const f32 lbl_8047D27C;
 extern u8 lbl_80363CC8[];
 extern const f32 lbl_8047D280;
-u32 fn_8013DE6C(void* ptr) {
+u32 _blurRender(void* ptr) {
     extern void fn_800D4604(s32);
     u8* timing;
     f32 halfRate;
@@ -4155,7 +4155,7 @@ extern const f32 lbl_8047D29C;
 extern const f32 lbl_8047D2A0;
 extern u8 lbl_80314AE8[];
 extern const f32 lbl_8047D280;
-u32 fn_8013E258(void* model, void* unused, void* state) {
+u32 _blurDrawCapture(void* model, void* unused, void* state) {
     struct EffectVisualState {
         f32 start;
         f32 end;
@@ -4213,7 +4213,7 @@ ret0:
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_8013E470_8013E54C)
-u32 fn_8013E470(void* ptr, u32 delta) {
+u32 _blurUpdate(void* ptr, u32 delta) {
     void* node;
     if (ptr == NULL) {
         goto ret0;
@@ -4235,25 +4235,25 @@ u32 fn_8013E470(void* ptr, u32 delta) {
 ret0:
     return 0;
 }
-u32 fn_8013E4D4(void* callbacks) {
-    u32 effectId = fn_80131428(callbacks, 0x34);
+u32 auraEffectCreate(void* callbacks) {
+    u32 effectId = GSeffectCreate(callbacks, 0x34);
     if (effectId) {
-        fn_80131200(effectId,
-            (GSEffectStartFunc)fn_8013E5AC,
-            (GSEffectStopFunc)fn_8013E54C,
+        GSeffectSetCallbacks(effectId,
+            (GSEffectStartFunc)_auraInit,
+            (GSEffectStopFunc)_auraDestroy,
             (GSEffectStartFunc)auraEffectStart,
             0,
             0,
-            (GSEffectUpdateFunc)fn_8013E8A4,
-            (GSEffectRenderFunc)fn_8013E6C4);
-        fn_8013139C(effectId, 0);
+            (GSEffectUpdateFunc)_auraUpdate,
+            (GSEffectRenderFunc)_auraRender);
+        GSeffectSetup(effectId, 0);
     }
     return effectId;
 }
 #endif
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE)
-u32 fn_8013E54C(void* arg) {
+u32 _auraDestroy(void* arg) {
     void* ptr;
     if (arg != 0) {
         ptr = arg;
@@ -4270,7 +4270,7 @@ u32 fn_8013E54C(void* arg) {
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_8013E5AC_8013E8A4)
-u32 fn_8013E5AC(u8* p) {
+u32 _auraInit(u8* p) {
     extern u8 lbl_80466BC0[];
     extern void* GStextureCreate(u32 a, u32 b, u32 size, u32 d, u32 e);
     extern void* GStextureLockImage(void* buf, u32 b);
@@ -4309,7 +4309,7 @@ extern const f32 lbl_8047D2B0;
 extern const f32 lbl_8047D2B4;
 extern const f32 lbl_8047D2A8;
 #if 1
-u32 fn_8013E6C4(u8* ptr)
+u32 _auraRender(u8* ptr)
 {
     void* model;
 
@@ -4318,7 +4318,7 @@ u32 fn_8013E6C4(u8* ptr)
         if (model == NULL) {
             return 0;
         }
-        fn_8013EA44(ptr);
+        _auraDrawModel(ptr);
         gfxSetOrtho(*(f32*)&lbl_8047D2AC, *(f32*)&lbl_8047D2AC,
                     *(f32*)&lbl_8047D2B0, *(f32*)&lbl_8047D2B4);
         if (ptr[0x19] & 4) {
@@ -4357,7 +4357,7 @@ u32 fn_8013E6C4(u8* ptr)
     return 0;
 }
 #else
-void fn_8013E6C4(void) { /* TODO */ }
+void _auraRender(void) { /* TODO */ }
 #endif
 #endif
 
@@ -4375,7 +4375,7 @@ extern const f32 lbl_8047D2C0;
 extern u32 lbl_8047D2C8;
 extern const f32 lbl_8047D2D0;
 extern const f32 lbl_8047D2D4;
-u32 fn_8013E8A4(void* ptr, u32 delta) {
+u32 _auraUpdate(void* ptr, u32 delta) {
     u8* p;
     u8 flags;
     f32 period;
@@ -4498,7 +4498,7 @@ typedef struct LayerVec {
         LAYER_JOBJ_FLUSH(jobj);                                                 \
     } while (0)
 
-void fn_8013EA44(void* ptr) {
+void _auraDrawModel(void* ptr) {
     extern void fn_800EC134(void*);
     u8* p;
     void* model;
@@ -4611,25 +4611,25 @@ void fn_8013EA44(void* ptr) {
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_8013F000_8013F344)
-u32 fn_8013F000(void* callbacks) {
-    u32 effectId = fn_80131428(callbacks, 0xb4);
+u32 distortionEffectCreate(void* callbacks) {
+    u32 effectId = GSeffectCreate(callbacks, 0xb4);
     if (effectId) {
-        fn_80131200(effectId,
-            (GSEffectStartFunc)fn_8013F114,
-            (GSEffectStopFunc)fn_8013F078,
+        GSeffectSetCallbacks(effectId,
+            (GSEffectStartFunc)_distortionInit,
+            (GSEffectStopFunc)_distortionDestroy,
             (GSEffectStartFunc)distortionEffectStart,
             0,
             0,
-            (GSEffectUpdateFunc)fn_8013F80C,
-            (GSEffectRenderFunc)fn_8013F410);
-        fn_8013139C(effectId, 0);
+            (GSEffectUpdateFunc)_distortionUpdate,
+            (GSEffectRenderFunc)_distortionRender);
+        GSeffectSetup(effectId, 0);
     }
     return effectId;
 }
 extern void fn_800D75F4(void* a);
 extern u32 lbl_8047AEE8;
 extern u32 lbl_8047AEEC;
-u32 fn_8013F078(void* ptr) {
+u32 _distortionDestroy(void* ptr) {
     if (ptr) {
         GXDrawDone();
         fn_800B856C();
@@ -4657,7 +4657,7 @@ extern void fn_800D7868(void* handle, u32 a, u32 b, u32 c, u32 d, u32 e, u32 f, 
 extern u32 lbl_8047AEE8;
 extern u32 lbl_8047AEEC;
 #if 1
-u32 fn_8013F114(void* ptr) {
+u32 _distortionInit(void* ptr) {
     u8* p;
 
     p = ptr;
@@ -4726,7 +4726,7 @@ u32 fn_8013F114(void* ptr) {
     return 0;
 }
 #else
-u32 fn_8013F114(void* ptr) { /* TODO */ }
+u32 _distortionInit(void* ptr) { /* TODO */ }
 #endif
 #endif
 
@@ -4811,7 +4811,7 @@ extern const f32 lbl_8047D304;
 extern const f32 lbl_8047D300;
 extern const f32 lbl_8047D308;
 #if 1
-u32 fn_8013F410(void* ptr) {
+u32 _distortionRender(void* ptr) {
     f32 mtx[12];
     u8* p;
     s32 count;
@@ -4905,7 +4905,7 @@ u32 fn_8013F410(void* ptr) {
     return 0;
 }
 #else
-u32 fn_8013F410(void* ptr) { /* TODO */ }
+u32 _distortionRender(void* ptr) { /* TODO */ }
 #endif
 #endif
 
@@ -4939,7 +4939,7 @@ extern u32 lbl_8047D310;
 /* RULE-EXCEPTION(user-approved): extern-named stand-ins for constants shared with linked code — see docs/RULE_EXCEPTIONS.md */
 extern const f32 lbl_8047D300;
 extern const f32 lbl_8047D308;
-u32 fn_8013F80C(void* ptr, u32 delta) {
+u32 _distortionUpdate(void* ptr, u32 delta) {
     DistortionState* s = ptr;
     void* part;
     f32 threshold;
@@ -5060,22 +5060,22 @@ void _distortionEffectUpdateMatrices(void* ptr) {
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_8013FBE0_8013FF0C)
-u32 patchiruTextureStart(void* callbacks) {
-    u32 effectId = fn_80131428(callbacks, 0x24);
+u32 billboardEffectCreate(void* callbacks) {
+    u32 effectId = GSeffectCreate(callbacks, 0x24);
     if (effectId) {
-        fn_80131200(effectId,
-            (GSEffectStartFunc)fn_8013FCC4,
-            (GSEffectStopFunc)fn_8013FC58,
+        GSeffectSetCallbacks(effectId,
+            (GSEffectStartFunc)_billboardInit,
+            (GSEffectStopFunc)_billboardDestroy,
             (GSEffectStartFunc)billboardEffectStart,
-            (GSEffectStopFunc)fn_8013FD68,
+            (GSEffectStopFunc)_billboardStop,
             0,
-            (GSEffectUpdateFunc)fn_8013FF0C,
+            (GSEffectUpdateFunc)_billboardUpdate,
             0);
-        fn_8013139C(effectId, 0);
+        GSeffectSetup(effectId, 0);
     }
     return effectId;
 }
-u32 fn_8013FC58(void* ptr) {
+u32 _billboardDestroy(void* ptr) {
     if (ptr) {
         if (*(u32*)((u8*)ptr + 0x10) != 0) {
             fn_800F9210(*(u32*)ptr, *(u32*)((u8*)ptr + 0x8));
@@ -5088,7 +5088,7 @@ u32 fn_8013FC58(void* ptr) {
     return 1;
 }
 extern void* gsParticleBankLoad(void* a);
-u32 fn_8013FCC4(void* ptr) {
+u32 _billboardInit(void* ptr) {
     void* res;
     if (ptr) {
         if (*(u32*)((u8*)ptr + 0x4) != 0 && *(u32*)((u8*)ptr + 0x8) != 0) {
@@ -5112,7 +5112,7 @@ u32 fn_8013FCC4(void* ptr) {
 }
 extern void fn_80118874(void* a, u32 b);
 extern void GSmodelStopAnimation(void* a);
-u32 fn_8013FD68(void* ptr) {
+u32 _billboardStop(void* ptr) {
     void* inner;
     if (ptr) {
         inner = *(void**)((u8*)ptr + 0x14);
@@ -5204,7 +5204,7 @@ typedef struct BillboardVec {
     f32 z;
 } BillboardVec;
 
-u32 fn_8013FF0C(void* ptr) {
+u32 _billboardUpdate(void* ptr) {
     u8* p;
     void* camera;
     void* model;
@@ -5267,7 +5267,7 @@ u32 fn_8013FF0C(void* ptr) {
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_80140138_801402AC)
-void Unload__13ModelSequenceFPUc(u8* ptr) {
+void pachiruEffectRelease(u8* ptr) {
     extern void fn_800DF608(void* handle);
     if (*(u32*)(ptr) != 0) {
         fn_800DF608(*(void**)(ptr));
@@ -5280,7 +5280,7 @@ void Unload__13ModelSequenceFPUc(u8* ptr) {
 }
 extern void* _pachiruEffectCreateTexture__FP9GStextureP9GStextureUl(void* tex1, void* tex2, u32 arg);
 extern void GSmaterialSetTexture(void* material, void* texture);
-u32 fn_80140190(void** out, void* model, u32 arg) {
+u32 pachiruEffectSetupModel(void** out, void* model, u32 arg) {
     u32 ret;
     void* handle;
     void* tex1;

@@ -629,15 +629,15 @@ void* fn_80167BB0(u32 size)
     return 0;
 }
 
-void _gsdvdErrorTask_801879AC(void)
+void _gsdvdErrorTask(void)
 {
-    extern void _errorTask_State_None_80187B24(s32 state);
+    extern void _errorTask_State_None(s32 state);
     extern void _gsdvdError_MsgOpen(u32 message);
     s32 driveState = fn_80167E34();
 
     switch (lbl_8047B0F0) {
     case 0:
-        _errorTask_State_None_80187B24(driveState);
+        _errorTask_State_None(driveState);
         break;
     case 1:
         _gsdvdError_MsgOpen(lbl_80478C10);
@@ -698,7 +698,7 @@ void _gsdvdError_MsgOpen(u32 message)
     }
 }
 
-void _errorTask_State_None_80187B24(s32 state)
+void _errorTask_State_None(s32 state)
 {
     switch (state) {
     case -1:

@@ -464,7 +464,7 @@ extern u32 lbl_8047A2D0;
 extern u32 lbl_8047A2C8;
 #pragma push
 #pragma peephole off
-s32 fn_80015374(s32 x, s32 pageIndex, u16* packedRange) {
+s32 menuPocketDrawNameList(s32 x, s32 pageIndex, u16* packedRange) {
     s32 validCount;
     s32 itemIndex;
     s32 displayLine;
@@ -676,7 +676,7 @@ extern u32 lbl_8047A2D0;
 extern u32 lbl_8047A2C8;
 #pragma push
 #pragma peephole off
-s32 fn_80015E3C(s32 x, s32 pageIndex, u16* packedRange) {
+s32 menuPocketDrawItemList(s32 x, s32 pageIndex, u16* packedRange) {
     s32 validCount;
     s32 itemIndex;
     s32 displayLine;
@@ -950,7 +950,7 @@ extern const f32 lbl_8047B774;
 extern const f32 lbl_8047B778;
 #pragma push
 #pragma peephole off
-void fn_800167D0(u8* owner, u8* item, f32 phase, u16 iconId, u8 alpha) {
+void menuPocketDrawMarqueeDot(u8* owner, u8* item, f32 phase, u16 iconId, u8 alpha) {
     f32 stops[5];
     f32 width;
     f32 height;
@@ -1006,7 +1006,7 @@ void fn_800167D0(u8* owner, u8* item, f32 phase, u16 iconId, u8 alpha) {
 
 #if !defined(GS_POKEMON_SUMMARY_ISLAND) || defined(GS_POKEMON_SUMMARY_80016ABC_ONLY)
 /* Defined in the preceding region, which the 80016ABC carve leaves out. */
-void fn_800167D0(u8* owner, u8* item, f32 phase, u16 iconId, u8 alpha);
+void menuPocketDrawMarqueeDot(u8* owner, u8* item, f32 phase, u16 iconId, u8 alpha);
 /* fn_80016ABC - 0x80016ABC | size: 0x458 */
 extern u32 lbl_8047A2D8;
 extern u32 lbl_8047A2E8;
@@ -1065,7 +1065,7 @@ static inline void SummaryDrawGaugeRing(SummaryPageContext* ctx, u8* item, f32 p
     s32 i;
 
     for (i = 0; i < 0x2D; i++) {
-        fn_800167D0((u8*)ctx, item, phase, 0xD1, 255.0f * ((f32)i / 45.0f));
+        menuPocketDrawMarqueeDot((u8*)ctx, item, phase, 0xD1, 255.0f * ((f32)i / 45.0f));
         phase += step;
         if (phase >= 1.0f) {
             phase -= 1.0f;
@@ -1074,7 +1074,7 @@ static inline void SummaryDrawGaugeRing(SummaryPageContext* ctx, u8* item, f32 p
 }
 
 /* Built with -opt nopeephole and -fp_contract off for the whole carve (configure.py). */
-s32 fn_80016ABC(SummaryPageContext* ctx, u8* item) {
+s32 menuPocketDrawMarqueeFrame(SummaryPageContext* ctx, u8* item) {
     f32 step;
 
     if ((s32)lbl_8047A2D8 != -1) {

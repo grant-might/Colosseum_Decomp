@@ -1026,7 +1026,7 @@ extern u8 heroBiosGetSexDataId(u8* ptr);
 extern void heroBiosSetSexDataId(u8* ptr, u8 val);
 extern void heroBiosSetRnd(u8* ptr, u32 val);
 extern u32 heroBiosGetRnd(u8* ptr);
-extern u32 fn_80130CD8(void);
+extern u32 GSeffectGetUpdateGapp(void);
 extern u16 pokemonBiosGetPokemonDataId(u8* ptr);
 extern u32 fn_80128E24(void);
 extern void* floorReadMapPreFunc(void* owner, u32 param, u32 alloc_size);
@@ -1635,6 +1635,6 @@ void heroPokemonGetBlacky(u32 arg1) {
 }
 
 /* Address: 0x80130CD8 | Size: 0x8 | Pattern: sda_getter */
-u32 fn_80130CD8(void) {
+u32 GSeffectGetUpdateGapp(void) {
     return lbl_8047ADC0;
 }

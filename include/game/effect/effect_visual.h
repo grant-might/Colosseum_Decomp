@@ -122,6 +122,6 @@ u16 billboardEffectStart(void);
  *
  * Debug string: "Failed to create Patchiru texture"
  * ----------------------------------------------------------------------- */
-u16 patchiruTextureStart(void);
+u16 billboardEffectCreate(void);
 
 #endif /* GAME_EFFECT_EFFECT_VISUAL_H */

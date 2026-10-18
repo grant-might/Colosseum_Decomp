@@ -1336,7 +1336,7 @@ void windowDrawSprite2(s32, s32, s32, s32, s32, void*, u32, s32);
  */
 #pragma push
 #pragma peephole off
-void fn_8002B594(void* ctx, u8* data, u32 sprite_id, u32 color_byte, f32 pos)
+void menuShopDrawMarqueeDot(void* ctx, u8* data, u32 sprite_id, u32 color_byte, f32 pos)
 {
     f32 thresholds[5];
     f32* next_threshold;
@@ -1455,12 +1455,12 @@ extern f32 lbl_8047B9B4;
 /* RULE-EXCEPTION(user-approved): local peephole-control pragma — see docs/RULE_EXCEPTIONS.md */
 #pragma push
 #pragma peephole off
-s32 fn_8002B880(u8* state, u8* entity)
+s32 menuShopDrawMarqueeFrame(u8* state, u8* entity)
 {
     /* Cross-TU callees (real arg lists inferred from register state at each bl). */
     extern void fn_800FE6D0(s32 x, s32 y);
     extern void spriteSetEnv(void);
-    extern void fn_8002B594(void* panel, u8* entity, u32 mode, s32 step, f32 phase);
+    extern void menuShopDrawMarqueeDot(void* panel, u8* entity, u32 mode, s32 step, f32 phase);
 
     /* r2-relative read-only float constants. */
     extern f64 lbl_8047B998; /* int->float bias double (folds into the casts) */
@@ -1547,7 +1547,7 @@ s32 fn_8002B880(u8* state, u8* entity)
     /* ---- Ring 1: phase starts at the live r13 base ---- */
     phase = lbl_8047A3F0;
     for (i = 0; i < 0x2d; i++) {
-        fn_8002B594(state, entity, 0xd1,
+        menuShopDrawMarqueeDot(state, entity, 0xd1,
                     (s32)(lbl_8047B978 * ((f32)i / lbl_8047B9AC)), phase);
         phase += incr;
         if (phase >= lbl_8047B97C) {
@@ -1561,7 +1561,7 @@ s32 fn_8002B880(u8* state, u8* entity)
         phase -= lbl_8047B97C;
     }
     for (i = 0; i < 0x2d; i++) {
-        fn_8002B594(state, entity, 0xd1,
+        menuShopDrawMarqueeDot(state, entity, 0xd1,
                     (s32)(lbl_8047B978 * ((f32)i / lbl_8047B9AC)), phase);
         phase += incr;
         if (phase >= lbl_8047B97C) {
@@ -1575,7 +1575,7 @@ s32 fn_8002B880(u8* state, u8* entity)
         phase -= lbl_8047B97C;
     }
     for (i = 0; i < 0x2d; i++) {
-        fn_8002B594(state, entity, 0xd1,
+        menuShopDrawMarqueeDot(state, entity, 0xd1,
                     (s32)(lbl_8047B978 * ((f32)i / lbl_8047B9AC)), phase);
         phase += incr;
         if (phase >= lbl_8047B97C) {
@@ -1589,7 +1589,7 @@ s32 fn_8002B880(u8* state, u8* entity)
         phase -= lbl_8047B97C;
     }
     for (i = 0; i < 0x2d; i++) {
-        fn_8002B594(state, entity, 0xd1,
+        menuShopDrawMarqueeDot(state, entity, 0xd1,
                     (s32)(lbl_8047B978 * ((f32)i / lbl_8047B9AC)), phase);
         phase += incr;
         if (phase >= lbl_8047B97C) {

@@ -354,7 +354,7 @@ void fn_801D56B0(void) {
             }
         }
         memset(lbl_804673F8 + 0x61C, 0, 8);
-        fn_801D5A94(0);
+        wazaViewerLoadSequenceFiles(0);
         break;
     case 1:
         memset(lbl_804673F8 + 0x61C, 0, 8);
@@ -440,7 +440,7 @@ void fn_801D58E4(void) {
  * fn_801D5A94 - Move animation helper: combined effect sequence.
  * Address: 0x801D5A94 | Size: 0x30C
  */
-void fn_801D5A94(s32 slot) {
+void wazaViewerLoadSequenceFiles(s32 slot) {
     extern u32 strlen(const char* s);
     extern u16 fn_800E2C04(u32 size, u32 align);
     extern void* fn_800E27B0(u16 block);
@@ -700,7 +700,7 @@ void fn_801D603C(void) {
         }
         break;
     case 0:
-        fn_801D6A64();
+        wazaViewerUpdatePlayMode();
         break;
     }
 }
@@ -939,7 +939,7 @@ void fn_801D624C(void) {
  * fn_801D6A64 - Move animation secondary mega-function.
  * Address: 0x801D6A64 | Size: 0x3F4
  */
-void fn_801D6A64(void) {
+void wazaViewerUpdatePlayMode(void) {
     extern f32 lbl_8047E2F0;
     extern const char lbl_8047E2F4;  /* "STEP" */
     extern const char lbl_8047E2FC;  /* "PAUSED" */
