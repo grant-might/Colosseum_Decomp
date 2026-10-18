@@ -668,7 +668,7 @@ void* _wazaSequenceEffectEntryLoad(void* entryPtr, void* dataPtr)
     extern s32 fn_800D37CC(void);
     extern u8* fn_801364A8(u8* work, u8* desc);
     extern u32 filterEffectCreate(void* callbacks);
-    extern u32 electronStartEffect(void* callbacks);
+    extern u32 boltEffectCreate(void* callbacks);
     extern u32 electronEffectCreate(void* callbacks);
     extern u32 lightningEffectCreate(void* callbacks);
     extern u32 fn_8013796C(void* callbacks);
@@ -709,7 +709,7 @@ void* _wazaSequenceEffectEntryLoad(void* entryPtr, void* dataPtr)
         break;
     case 1:
         entry->field_80 = *(u32*)(parsed + 0x58);
-        entry->resourceId = electronStartEffect(parsed + 8);
+        entry->resourceId = boltEffectCreate(parsed + 8);
         handle = *(u16*)(parsed + 0x52);
         break;
     case 2:

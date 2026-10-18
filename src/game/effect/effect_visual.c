@@ -42,22 +42,32 @@
  *     referenced from here, not from the allocator.
  *     Core logic: fn_80138DE4 (0x290 bytes), fn_80139074 (0x304 bytes)
  *
- *   electronStartEffect    (0x80139820)  -- Electrical arc effect
- *     "electronStartEffect: Could not start electron effect -
- *      invalid model: groupRes %d, modelRes %d!"
- *     "leaffxStartEffect: Could not start electron effect!"
- *     Struct size: 0x78 bytes
- *     Callbacks: start=fn_801398E0, stop=fn_8013A1D4,
- *                update=fn_80139934, render=fn_80139AC4
- *     Core logic: fn_80139D10 (0x170 bytes), fn_80139E80 (0x354 bytes)
+ *   boltEffectCreate       (0x80139820)  -- Electrical arc effect allocator
+ *     GSeffectCreate(callbacks, 0x60) + callback registration; called as
+ *     effect type 1 by the waza effect factory (wazaSequence.c). This
+ *     address heads the bolt block: every callback it registers is
+ *     _bolt*, and the function right after it in address order is
+ *     _boltDestroy (0x80139898).
+ *     Callbacks: start=boltStartEffect (0x80139D10), stop=_boltStop,
+ *                destroy=_boltDestroy, update=_boltUpdate,
+ *                render=_boltRender
+ *     Core logic: boltStartEffect (0x80139D10, 0x170 bytes),
+ *                 _boltDrawStrip (0x80139E80), _boltSubdivide (0x8013A1D4)
  *
- *   filterStart             (fn_8013A42C)  -- Full-screen colour filter
- *     "filterStart: Could not start filter effect - invalid filter!"
- *     "filterStart: Could not start filter effect!"
- *     Struct size: 0x14 bytes
- *     Callbacks: start=fn_8013A520, stop=fn_8013AB60,
- *                update=fn_8013A49C, render=fn_8013AD9C
- *     Core logic: fn_8013A520 (0x56C bytes -- large switch on filter type)
+ *   electronEffectCreate   (0x8013A42C)  -- Electron arc effect allocator
+ *     GSeffectCreate(callbacks, 0x24); registers
+ *     start=electronStartEffect (0x8013A49C), update=_electronUpdate,
+ *     render=_electronRender.
+ *
+ *   electronStartEffect    (0x8013A49C)  -- Electron start callback
+ *     "electronStartEffect: Could not start electron effect -
+ *      invalid model: groupRes %d, modelRes %d!"         (rodata 0x80272D90)
+ *     "leaffxStartEffect: Could not start electron effect!"   (0x80272DF4,
+ *      prefix copy-pasted from the leaf effect in the original build)
+ *
+ * The per-family entries from here down still carry the older naming,
+ * where each family's allocator is called "...Start"; their addresses
+ * are unchanged and are not part of this pass.
  *
  *   surfEffectStart         (fn_8013AABC)  -- Water surface wave effect
  *     "surfEffectStart: Could not start wave effect!"
@@ -267,19 +277,19 @@ extern void  DCFlushRange(void* ptr, u32 size);
 /* fn_80139074: _leaffxStop callback (0x304 bytes) */
 /* _leaffxGenerateLeafData: _leaffxRender callback (0x4A8 bytes) */
 
-/* ---- Electron effect ---- */
-/* electronStartEffect (0x80139820) */
-/* fn_80139898: _electronHelper */
-/* fn_801398E0: _electronStart callback */
-/* fn_80139934: _electronUpdate callback (0x190 bytes) */
-/* fn_80139AC4: _electronRender callback (0x24C bytes) */
-/* fn_80139D10: _electronCalcArc (0x170 bytes) */
-/* fn_80139E80: _electronRenderArc (0x354 bytes) */
-/* fn_8013A1D4: _electronStop callback (0x258 bytes) */
+/* ---- Bolt (electrical arc) effect ---- */
+/* boltEffectCreate (0x80139820) */
+/* _boltDestroy (0x80139898) */
+/* _boltStop callback (0x801398E0) */
+/* _boltRender callback (0x80139934, 0x190 bytes) */
+/* _boltUpdate callback (0x80139AC4, 0x24C bytes) */
+/* boltStartEffect (0x80139D10, 0x170 bytes) */
+/* _boltDrawStrip (0x80139E80, 0x354 bytes) */
+/* _boltSubdivide (0x8013A1D4, 0x258 bytes) */
 
 /* ---- Filter effect ---- */
 /* fn_8013A42C: filterAlloc */
-/* fn_8013A49C: _filterUpdate callback */
+/* electronStartEffect (0x8013A49C) */
 /* fn_8013A520: _filterStart callback (0x56C bytes -- large switch) */
 /* fn_8013AA8C: _filterHelper */
 /* fn_8013AABC: surfEffectStart */
@@ -393,7 +403,7 @@ extern u32 boltStartEffect(void* ptr);
 extern void _boltDrawStrip(u8* e, u8* p, void* cameraPos, void* modelPos);
 struct ElectronPoint;
 extern void _boltSubdivide(u8* entry, u8* parent, struct ElectronPoint* origin, u32 depth, f32 weight);
-extern u32 fn_8013A49C(void* ptr);
+extern u32 electronStartEffect(void* ptr);
 extern u32 _electronRender(void* ptr);
 extern u32 _electronUpdate(void* ptr, u16 delta);
 extern u32 _filterNextKey(void* ptr);
@@ -1321,7 +1331,7 @@ u8 _leaffxGenerateLeafData(void* ptr, void* entry) {
 
 #if !defined(EFFECT_VISUAL_BANK_ACTIVE) || \
     defined(EFFECT_VISUAL_EXACT_80139820_80139AC4)
-u32 electronStartEffect(void* callbacks) {
+u32 boltEffectCreate(void* callbacks) {
     u32 effectId = GSeffectCreate(callbacks, 0x60);
     if (effectId) {
         GSeffectSetCallbacks(effectId,
@@ -1762,7 +1772,7 @@ u32 electronEffectCreate(void* callbacks) {
         GSeffectSetCallbacks(effectId,
             0,
             0,
-            (GSEffectStartFunc)fn_8013A49C,
+            (GSEffectStartFunc)electronStartEffect,
             0,
             0,
             (GSEffectUpdateFunc)_electronUpdate,
@@ -1773,7 +1783,7 @@ u32 electronEffectCreate(void* callbacks) {
 }
 extern u8 lbl_80272D90[];
 extern u8 lbl_80272DF4[];
-u32 fn_8013A49C(void* ptr) {
+u32 electronStartEffect(void* ptr) {
     void* res;
     if (ptr) {
         res = GSresGetResource(*(u16*)((u8*)ptr + 0xc), *(u16*)((u8*)ptr + 0xe));

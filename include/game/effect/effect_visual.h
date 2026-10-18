@@ -36,12 +36,13 @@ u16 lightningStartEffect(u16 group, u16 modelA, u16 modelB);
 u16 leaffxEffectCreate(u16 group, u16 model, u16 param);
 
 /* -----------------------------------------------------------------------
- * Electron arc effect (0x80139820)
+ * Bolt (electrical arc) effect (allocator 0x80139820, start 0x80139D10)
  *
  * Creates arcing electrical discharges. Used for Thunderbolt, Spark,
- * and similar electric-type moves. Allocates 0x78-byte work struct.
+ * and similar electric-type moves. Per-instance data size 0x60, the
+ * dataSize GSeffectCreate is called with.
  * ----------------------------------------------------------------------- */
-u16 electronStartEffect(u16 group, u16 model, u16 param);
+u16 boltEffectCreate(u16 group, u16 model, u16 param);
 
 /* -----------------------------------------------------------------------
  * Full-screen filter effect (fn_8013A42C)
