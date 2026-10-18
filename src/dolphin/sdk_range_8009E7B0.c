@@ -1,14 +1,21 @@
 /**
  * @file sdk_range_8009E7B0.c
- * @brief Dolphin SDK OSLink.c: the REL relocator and linker,
- *        0x8009E7B0 - 0x8009ED4C (OSLink, Link).
+ * @brief Dolphin SDK OSLink.c: the static REL relocator and the linker,
+ *        0x8009E7B0 - 0x8009ED4C (Relocate, Link).
  *
  * Standalone source for exactly this split. The rest of the OSLink.c
  * family lives in the neighbouring units: OSNotifyLink/OSNotifyUnlink
- * stubs (0x8009E7A8/0x8009E7AC), the Link(..., FALSE) wrapper
- * (sdk_exact_8009ED4C.c), and OSLinkFixed/unlink code
+ * stubs (0x8009E7A8/0x8009E7AC), the OSLink wrapper that forwards
+ * Link(..., FALSE) (sdk_exact_8009ED4C.c), and OSLinkFixed/unlink code
  * (sdk_candidate_8009ED70.c). The "unknown relocation type" string at
- * 0x80311818 is referenced only by OSLink, so this unit owns it.
+ * 0x80311818 is referenced only by Relocate, so this unit owns it.
+ *
+ * Relocate is the SDK's file-static relocation walker, not the public
+ * OSLink entry point. Retail has exactly three `bl` sites targeting
+ * 0x8009E7B0 and all three are inside Link (0x8009EC78, 0x8009EC90,
+ * 0x8009ECA4), i.e. it has no caller outside this unit. The public
+ * BOOL OSLink(OSModuleInfo*, void* bss) is 0x8009ED4C, the Link(...,
+ * FALSE) wrapper the game's REL loader calls (0x8017F484).
  */
 #include "dolphin/os/OSModule.h"
 
@@ -24,7 +31,7 @@ extern void* memset(void* destination, s32 value, u32 size);
     ((OSSectionInfo*)((OSModuleInfo*)(module))->sectionInfoOffset)
 #define SECTION_OFFSET(offset) OS_SECTIONINFO_OFFSET(offset)
 
-BOOL OSLink(OSModuleHeader* newModule, OSModuleHeader* module)
+BOOL Relocate(OSModuleHeader* newModule, OSModuleHeader* module)
 {
     u32 idNew;
     OSImportInfo* imp;
@@ -195,13 +202,13 @@ BOOL Link(OSModuleInfo* newModule, void* bss, BOOL fixed)
     if (__OSStringTable != NULL) {
         newModule->nameOffset += (u32)__OSStringTable;
     }
-    OSLink(NULL, moduleHeader);
+    Relocate(NULL, moduleHeader);
     for (moduleInfo = __OSModuleInfoList.head; moduleInfo != NULL;
          moduleInfo = moduleInfo->link.next)
     {
-        OSLink(moduleHeader, (OSModuleHeader*)moduleInfo);
+        Relocate(moduleHeader, (OSModuleHeader*)moduleInfo);
         if (moduleInfo != newModule) {
-            OSLink((OSModuleHeader*)moduleInfo, moduleHeader);
+            Relocate((OSModuleHeader*)moduleInfo, moduleHeader);
         }
     }
     if (fixed) {
