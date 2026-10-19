@@ -6,6 +6,8 @@ A matching decompilation project for the GameCube game **Pokémon Colosseum**
 and keeps the standard
 [dtk-template](https://github.com/encounter/dtk-template) workflow.
 
+Not affiliated with, endorsed by, or sponsored by Nintendo, Creatures, GAME FREAK, or The Pokémon Company.
+
 ## Status
 
 ![Progress over time](docs/progress.png)
